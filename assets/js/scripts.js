@@ -1,0 +1,10 @@
+//@prepros-append vendors/isotope/isotope.pkgd.min.js
+//@prepros-append vendors/featherlight/featherlight.min.js
+//@prepros-append vendors/imagesloaded/imagesloaded.pkgd.min.js
+//@prepros-append vendors/bootstrap/util.js
+//@prepros-append vendors/bootstrap/tab.js
+//@prepros-append vendors/featherlight/featherlight.gallery.min.js
+//@prepros-append vendors/parsley/parsley.min.js
+//@prepros-append vendors/slick/slick.js
+//@prepros-append audio.js
+//@prepros-append magic.js

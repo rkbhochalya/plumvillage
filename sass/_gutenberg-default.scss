@@ -1,0 +1,162 @@
+.wp-block{
+	max-width: 710px;
+}
+
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right]>.block-editor-block-list__block-edit{
+	max-width: 70%;
+	margin-right: -300px;
+	clear: right;
+
+	.wp-block-pullquote{
+		background: $freshearth;
+		padding: 10px;
+	}
+	.block-outside{
+		margin-left: 0;
+		margin-right: 0;
+		.col-lg-5{
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+		.align-right{
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+a{
+  text-decoration: none;
+}
+
+.wp-block-heading{
+	h3, h4, h5{
+		margin: 0;
+		@include font-size(16);
+	}	
+}
+
+.wp-block-image figcaption{
+	text-align: left;
+}
+
+.wp-block-pullquote{
+	text-align: left;
+	border: none;
+	padding: 0;
+}
+.wp-block-pullquote blockquote>.block-editor-rich-text p{
+	font-size: 20px;
+}
+.wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer{
+	text-transform: none;
+}
+
+p.has-large-font-size{
+	color: $grey;
+}
+
+.jump-to.align-wide{
+
+	hr{
+		margin-left: 0;
+	}
+	p{
+		max-width: 580px;
+		margin: 0 auto;
+	}
+}
+
+.editor-styles-wrapper p{
+	margin: 0 0 1.5em;
+}
+
+figcaption{
+	margin-top: .5em;
+  margin-bottom: 1em;
+  color: #555d66;
+  text-align: left;
+  font-size: 13px;
+}
+
+.editor-styles-wrapper .audio-content{
+  p{
+	 font-size: 0.85em;
+  }
+  .link-with-icon{
+    margin-right: 10px;
+    font-size: 0.85em;
+  }
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -7px;
+	margin-right: -7px;
+}
+
+.col, .col-md{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.panel-collapsable .row-collapsable{
+	display: block;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Fix blocks
+
+.load-more-container{
+	display: none;
+}
+.tab-pane{
+	display: none;
+}
+.tab-pane.show{
+	display: block;
+}
+
+.nav-tabs{
+	margin: 0;
+
+	li{
+		list-style: none;
+		display: inline-block;
+		margin-right: 20px;
+
+		a{
+			color: $grey;
+			font-weight: bold;
+		}
+		a.active{
+			color: $earth;
+		}
+	}
+}
+
+.index-item{
+	.entry-title{ 
+		margin: 1.67em 0 0;
+		a{
+			color: $ink;
+			font-weight: normal;
+		}
+	}
+	.entry-meta{
+		@include font-size(12);
+		color: $grey;
+	}
+}
+
+.block-audio, .text-inset{
+	h5{
+		margin: 0;
+	}
+}

@@ -1,0 +1,247 @@
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "assets/fonts" !default;
+
+$icon-external-link: "\e915";
+$icon-download: "\e911";
+$icon-pauze: "\e912";
+$icon-play-small: "\e913";
+$icon-transcript: "\e914";
+$icon-play: "\e910";
+$icon-zoom: "\e90f";
+$icon-gallery-left: "\e90d";
+$icon-gallery-right: "\e90e";
+$icon-article: "\e908";
+$icon-audio: "\e909";
+$icon-book: "\e90a";
+$icon-video: "\e90b";
+$icon-website: "\e90c";
+$icon-star: "\e907";
+$icon-arrow-tiny: "\e906";
+$icon-instagram: "\e905";
+$icon-facebook: "\e902";
+$icon-twitter: "\e903";
+$icon-youtube: "\e904";
+$icon-arrow-left: "\e91a";
+$icon-arrow-right: "\e91b";
+$icon-reply: "\e917";
+$icon-caret-down: "\e916";
+$icon-search: "\e918";
+$icon-caret-right: "\e919";
+$icon-close: "\e901";
+$icon-hamburger: "\e900";
+
+
+
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?m10rwr');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?m10rwr#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?m10rwr') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?m10rwr') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?m10rwr##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.icon-external-link {
+  &:before {
+    content: $icon-external-link; 
+  }
+}
+.icon-download {
+  &:before {
+    content: $icon-download; 
+  }
+}
+.icon-pauze {
+  &:before {
+    content: $icon-pauze; 
+  }
+}
+.icon-play-small {
+  &:before {
+    content: $icon-play-small; 
+  }
+}
+.icon-transcript {
+  &:before {
+    content: $icon-transcript; 
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play; 
+  }
+}
+.icon-zoom {
+  &:before {
+    content: $icon-zoom; 
+  }
+}
+.icon-gallery-left {
+  &:before {
+    content: $icon-gallery-left; 
+  }
+}
+.icon-gallery-right {
+  &:before {
+    content: $icon-gallery-right; 
+  }
+}
+.icon-article {
+  &:before {
+    content: $icon-article; 
+  }
+}
+.icon-audio {
+  &:before {
+    content: $icon-audio; 
+  }
+}
+.icon-book {
+  &:before {
+    content: $icon-book; 
+  }
+}
+.icon-video {
+  &:before {
+    content: $icon-video; 
+  }
+}
+.icon-website {
+  &:before {
+    content: $icon-website; 
+  }
+}
+.icon-star {
+  &:before {
+    content: $icon-star; 
+  }
+}
+.icon-arrow-tiny {
+  &:before {
+    content: $icon-arrow-tiny; 
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-reply {
+  &:before {
+    content: $icon-reply; 
+  }
+}
+.icon-caret-down {
+  &:before {
+    content: $icon-caret-down; 
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-caret-right {
+  &:before {
+    content: $icon-caret-right; 
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close; 
+  }
+}
+.icon-hamburger {
+  &:before {
+    content: $icon-hamburger; 
+  }
+}
+
+
+
+
+
+.dropdown-arrow-comments:before{
+	content: $icon-caret-down;
+	font-size: 8px;
+	color: $ink;
+	position: relative;
+	top: -3px;
+}
+.reply-icon-container:before{
+	content: $icon-reply;
+	font-size: 12px;
+	position: absolute;
+	top: 5px;
+	left: -20px;
+}
+
+.icon{
+	transition: all .4s cubic-bezier(.15,.53,.35,1);
+}
+
+.icon-bg{
+  position: relative;
+}
+
+.icon-bg:before{
+	position: relative;
+	z-index: 1;
+}
+
+.icon-bg:after{
+	content: '';
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	background: $ink;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+	border-radius: 30px;
+}

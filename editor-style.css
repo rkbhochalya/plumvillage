@@ -1,0 +1,12 @@
+.special-link, .special-link a, a .special-link{
+	font-style: italic;
+	box-shadow: inset 0 -0.15em #FFD22A;
+	transition: box-shadow .4s cubic-bezier(.15,.53,.35,1);
+	display: inline-block;
+	color: #000;
+	text-decoration: none;
+}
+.special-link:hover{
+	box-shadow: inset 0 -0.40em #FFD22A;
+	text-decoration: none;	
+}

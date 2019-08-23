@@ -1,0 +1,85 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Variables
+
+
+//Fonts
+
+$font-body: 'Merriweather Sans', sans-serif;;
+$font-headers: 'Cormorant Infant', serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+
+$slick-font-family: "icomoon";
+$slick-font-path: 'assets/fonts/';
+$slick-prev-character: "\e91a";
+$slick-next-character: "\e91b";
+$slick-loader-path: "assets/images/" !default;
+
+
+// Colors
+
+// $sun: #F7CC4C;
+$sun: #FFD22A;
+$earth: #8B572A;
+$ink: #000;
+$cloud: #fff;
+$grey: #9A9A9A;
+$stamp: #EA4334;
+
+$darkink: #272727;
+
+$mediumink: #C7C7C7;
+
+$freshink: #F3F3F3;
+$freshsun: #FEFBF3;
+$freshearth: #FAF1EB;
+$freshtree: #F5F5EF;
+
+// bootstrap override
+$primary: $sun;
+
+
+// responisive widths
+
+$center-lg-max-width: calc(78.6862745098% + 30px);
+$center-xxl-max-width: calc(65.6862745098% + 30px);
+
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #000;
+$color__link-visited: purple;
+$color__link-hover: midnightblue;
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+// Columns
+
+$columns: (
+	1: 100%,
+	2: 50%,
+	3: 33.33%,
+	4: 25%,
+	5: 20%,
+	6: 16.66%,
+	7: 14.28%,
+	8: 12.5%,
+	9: 11.11%
+);
+
+$columns__margin: 3.8%;
