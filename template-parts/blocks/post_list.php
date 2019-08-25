@@ -1,6 +1,9 @@
 
 		<?php 
 
+		$style = get_field('style') ? get_field('style') : 'list';
+
+
 		if(get_field('show') == 'latest') : 
 
 			$maxPosts = get_field('max_posts') ? get_field('max_posts') : 3;
@@ -29,12 +32,12 @@
 
 			// The Loop
 			if ( $posts->have_posts() ) {  ?>
-				<ul class="small post-list">
+				<?php if($style == 'list') : ?><ul class="small post-list"><?php endif; ?>
 					<?php while ( $posts->have_posts() ) { ?>
 						<?php $posts->the_post(); ?>
-						<?php get_template_part( 'template-parts/list', get_post_type() ); ?>
+						<?php get_template_part( 'template-parts/'.$style, get_post_type() ); ?>
 					<?php } ?>
-				</ul>
+				<?php if($style == 'list') : ?></ul><?php endif; ?>
 		<?php } 
 
 		// Restore original Post Data

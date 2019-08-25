@@ -10,8 +10,10 @@ if( function_exists('acf_add_options_page') ) {
  * Google maps API for ACF
  */
 
-function my_acf_init() {	
-    acf_update_setting('google_api_key', 'AIzaSyCvjAYxcXmDNYrapmCsMYvXX-9wtOti4Io');
+function my_acf_init() {  
+    if(get_field('google_maps_api_key', 'options')){
+        acf_update_setting('google_api_key', get_field('google_maps_api_key', 'options'));
+    }
 }
 
 add_action('acf/init', 'my_acf_init');
@@ -282,21 +284,6 @@ function register_acf_block_types() {
 
     // register a Press Releases and Updates Block
     acf_register_block_type(array(
-        'name'              => 'top_tnh',
-        'title'             => __('Top Thich Nhat Hanh'),
-        'description'       => __('Top block for TNH Landing Page'),
-        'render_template'   => 'template-parts/blocks/top_tnh.php',
-        'category'          => 'plumvillage_tnh',
-        'icon'              => 'clipboard',
-        'keywords'          => array( 'thich nhat hanh', 'top', 'landing' ),
-        'align'             => 'wide',        
-        'supports'          => array(
-            'align'     => array('wide')
-        )
-    ));    
-
-    // register a Press Releases and Updates Block
-    acf_register_block_type(array(
         'name'              => 'page_menu',
         'title'             => __('Page Menu'),
         'description'       => __('Menu for the landing pages'),
@@ -336,6 +323,21 @@ function register_acf_block_types() {
             'align'     => false
         )
     ));    
+
+    // Latest Youtube Videos
+    acf_register_block_type(array(
+        'name'              => 'latest_youtube',
+        'title'             => __('Latest Youtube Videos'),
+        'description'       => __('A list with latest youtube videos'),
+        'render_template'   => 'template-parts/blocks/latest_youtube.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'video-alt3',
+        'keywords'          => array( 'youtube', 'video' ),
+        'supports'          => array(
+            'align'     => false
+        )
+    ));    
+
 
 }
 

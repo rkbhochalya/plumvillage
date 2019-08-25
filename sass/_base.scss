@@ -294,6 +294,23 @@ big {
 			}
 		}
 	}
+
+	&.alignfull{
+		blockquote{
+			text-align: center;
+		}
+	}
+	&.is-tnh-quote{
+		cite{
+			background: url('assets/images/sign.png') no-repeat;
+			background-size: 208px 56px;
+			font-size: 0;
+			width: 208px;
+			height: 56px;
+			float: right;
+			margin-top: 20px;
+		}
+	}
 }
 
 .entry-content blockquote{
@@ -315,6 +332,7 @@ big {
 		font-family: $font-headers;
 		padding-left: 30px;
 		line-height: 160%;
+		font-style: italic;
 		color: $grey;
 		@include font-size(24);
 		@include reset-styling();
@@ -325,6 +343,7 @@ big {
 		padding-left: 30px;
 		@include font-size(14);
 		color: $grey;
+		font-style: italic;
 		margin-top: -2em;
 		
 		&::before{
@@ -690,6 +709,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 .wp-block-image.alignwide img, .wp-block-image .alignleft img, .wp-block-image .alignright img, .wp-block-image .aligncenter img{
   max-width: 100%;
 }
+.page-template-default{
 @include media-breakpoint-up(lg) {
 	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol{
 		flex: 0 0 $center-lg-max-width;
@@ -780,6 +800,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		@include reset-styling();
 		@include font-size(16);
 	}
+}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -887,6 +908,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	left: 15px;
 	position: fixed;
 	position: sticky;
+	z-index: 999;
 	transition: color .4s cubic-bezier(.15,.53,.35,1);
 
 	&:hover{
@@ -1865,7 +1887,11 @@ body #youmax, body .youmax{
 	.slider-image{
 		background-position: center;
 		background-size: cover;
-		padding-bottom: 60%;	
+		padding-bottom: 60%;
+		display: none;
+	}
+	.slider-image:first-child{
+		display: block;
 	}
 	&.square{
 		.slider-image{

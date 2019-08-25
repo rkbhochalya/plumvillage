@@ -541,16 +541,35 @@
 }
 
 
-.tnh-top{
-	blockquote{
-		padding-bottom: 0;
-		@include reset-styling();
+.home-landing-top, .entry-content .tnh-landing-top{
 
+	@include media-breakpoint-down(sm) {
+		.wp-block-column{
+			flex-basis: 100%!important;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.wp-block-column:first-child{
+			order:2;
+		}
+		.wp-block-column:last-child{
+			order:1;
+		}
+	}
+
+	.wp-block-column:last-child{
+		@include media-breakpoint-up(lg) {
+			margin-top: -180px;
+		}
+	}
+	.wp-block-pullquote.is-style-solid-color blockquote{
+		padding-left: 0;
 		p{
+			padding-left: 0;
+			padding-bottom: 0;
 			@include font-size(28);
 			line-height: 130%;
 			color: $ink;
-			padding-left: 0;
 			@include media-breakpoint-up(md) {
 				@include font-size(33);
 			}
@@ -561,17 +580,17 @@
 				padding-right: 40px;
 				@include font-size(43);
 			}
-		}
-	}
-	.tnh-top-blockquote img{
-		float: right;
-		margin: 0 40px 0 0;
-	}
 
-	.slider{
-		@include media-breakpoint-up(lg) {
-			margin-top: -180px;
 		}
+	}
+	.wp-block-image .alignright{
+
+			@include media-breakpoint-up(lg) {
+				padding-right: 20px;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-right: 40px;
+			}
 	}
 }
 
@@ -613,46 +632,6 @@
 				color: $ink;
 				font-weight: bold;
 			}
-		}
-	}
-}
-
-.wp-block-media-text{
-	.wp-block-media-text__content{
-		padding: 20px 0 0;
-
-		@media (min-width: 600px){
-			padding: 0 8%;
-		}
-		.wp-block-group{
-			columns: 2 250px;
-			column-gap: 2em;
-		}
-	}
-
-	&.is-image-fill .wp-block-media-text__content figure{
-		min-height: unset;
-		height: auto;
-	}
-	&.has-fresh-tree-background-color{
-		padding: 20px;
-		@include media-breakpoint-up(sm) {
-			margin: 70px -30px;
-		}
-		@include media-breakpoint-up(md) {
-			padding: 30px;
-		}
-		@include media-breakpoint-up(xxl) {
-			padding: 50px;
-		}
-	}
-}
-
-.page-template-page_full-width .wp-block-media-text{
-
-	@include media-breakpoint-up(sm) {
-		&.has-fresh-tree-background-color{
-			margin-left: -30px;
 		}
 	}
 }
@@ -741,8 +720,104 @@ hr.wp-block-separator{
 	align-items: center;
 }
 
+.wp-block-media-text, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text{
+	.wp-block-media-text__content{
+		padding: 20px 0 0;
+
+		@media (min-width: 600px){
+			padding: 0 8%;
+		}
+		.wp-block-group{
+			columns: 2 250px;
+			column-gap: 2em;
+		}
+	}
+
+	&.is-image-fill .wp-block-media-text__content figure{
+		min-height: unset;
+		height: auto;
+	}
+	&.has-fresh-tree-background-color, &.has-fresh-sun-background-color, &.has-fresh-earth-background-color{
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 15px;
+
+		@include media-breakpoint-up(sm) {
+			margin: 70px auto;
+		}
+		@include media-breakpoint-up(md) {
+			padding: 30px;
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: 50px;
+		}
+	}
+}
+
+.page-template-page_full-width .wp-block-media-text{
+
+	@include media-breakpoint-up(sm) {
+		&.has-fresh-tree-background-color{
+			margin-left: -30px;
+		}
+	}
+}
+
+.retreats-block, .page-template-page_full-width .entry-content .retreats-block.has-fresh-earth-background-color{
+
+	@include media-breakpoint-up(lg) {
+		max-width: 1112px;
+		margin-top: 180px;
+		margin-bottom: 100px;
+
+		.wp-block-media-text__media{
+			position: relative;
+			height: 100%;
+			margin-top: -50%;
+			img{
+				position: absolute;
+				right: 0;
+				max-width: 430px;
+			}
+		}
+	}
+	@media (min-width:600px){
+		.wp-block-media-text__media{
+			margin-right: 15px;
+		}
+		.wp-block-media-text__content{
+			padding-left: 15px;
+		}
+	}
+}
+
+.home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block{
+	margin-top: 250px;
+	margin-bottom: 200px;
+	padding-bottom: 50px;
+
+	@include media-breakpoint-down(sm) {
+		.has-text-align-right{
+			text-align: left;
+		}
+		.wp-block-column:last-child{
+			flex-basis: 100%;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		img{
+			margin-top: -50%;
+			margin-bottom: -50%;
+		}
+	}
+}
+
 
 .has-fresh-sun-background-color{
 	background-color: $freshsun;
+}
+.has-fresh-earth-background-color{
+	background-color: $freshearth;
 }
 
