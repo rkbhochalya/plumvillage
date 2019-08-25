@@ -33,8 +33,12 @@ $id = get_option('latest_youtube_id');
 
 $title = get_option('latest_youtube_title');
 
-$video = wp_oembed_get('https://www.youtube.com/watch?v='.$id);
+$video = wp_oembed_get('https://www.youtube.com/watch?v='.$id); ?>
 
-beautifulVideoEmbed($video, false, false, true); ?>
 
-<figcaption><?php echo $title; ?></figcaption>
+<div class="latest-youtube">
+	<?php beautifulVideoEmbed($video, false, false, true); ?>
+
+	<figcaption><?php echo $title; ?></figcaption>
+
+</div>

@@ -1393,31 +1393,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       flex: 0 0 44.444444%;
       max-width: 44.444444%; } }
 
-.block {
+.block, .page-template-default .block {
   z-index: 2;
   background: #fff;
   padding-top: 1.5em;
   padding-bottom: 1.5em; }
   @media (min-width: 768px) {
-    .block.align-right {
+    .block.align-right, .page-template-default .block.align-right {
       margin-top: -25px;
       padding-top: 30px;
       padding-bottom: 30px; } }
-  .block.block-narrow {
+  .block.block-narrow, .page-template-default .block.block-narrow {
     margin-left: 0; }
-  .block p, .block ul, .block ol {
+  .block p, .block ul, .block ol, .page-template-default .block p, .page-template-default .block ul, .page-template-default .block ol {
     font-size: 0.875rem;
     line-height: 180%; }
-  .block li {
+  .block li, .page-template-default .block li {
     margin-bottom: 5px; }
-  .block h5, .block p, .block ul, .block ol {
+  .block h5, .block p, .block ul, .block ol, .page-template-default .block h5, .page-template-default .block p, .page-template-default .block ul, .page-template-default .block ol {
     max-width: 100%;
     border: none;
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
     padding-right: 0; }
-  .block .block-inside {
+  .block .block-inside, .page-template-default .block .block-inside {
     padding: 20px; }
 
 .jump-to {
@@ -1652,15 +1652,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin-top: 0;
     opacity: 1; }
 
-.panel {
+.panel, .page-template-default .entry-content .panel {
   padding-bottom: 0; }
-  .panel.panel-open {
+  .panel.panel-open, .page-template-default .entry-content .panel.panel-open {
     padding-bottom: 30px; }
-  .panel.panel-open.no-title {
+  .panel.panel-open.no-title, .page-template-default .entry-content .panel.panel-open.no-title {
     padding-top: 40px; }
-  .panel > h5 {
+  .panel > h5, .page-template-default .entry-content .panel > h5 {
     margin-bottom: 20px; }
-    .panel > h5 .icon {
+    .panel > h5 .icon, .page-template-default .entry-content .panel > h5 .icon {
       display: none; }
 
 .panel-collapsable > h5 {
@@ -1703,14 +1703,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .panel-collapsable.panel-open .row-collapsable {
   display: block; }
 
-.panel-books .link-zoom {
+.panel-books .link-zoom, .page-template-default .entry-content .panel-books .link-zoom {
   margin-bottom: 15px; }
-  .panel-books .link-zoom .icon-bg:after {
+  .panel-books .link-zoom .icon-bg:after, .page-template-default .entry-content .panel-books .link-zoom .icon-bg:after {
     background: #fff; }
-  .panel-books .link-zoom:hover .icon-bg:after {
+  .panel-books .link-zoom:hover .icon-bg:after, .page-template-default .entry-content .panel-books .link-zoom:hover .icon-bg:after {
     background: #000; }
 
-.panel-books p {
+.panel-books p, .page-template-default .entry-content .panel-books p {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -1720,7 +1720,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-size: 0.875rem;
   padding-bottom: .6em; }
 
-.panel-books h5 {
+.panel-books h5, .page-template-default .entry-content .panel-books h5 {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -1784,16 +1784,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .panel-quotes .index-quote blockquote cite {
       padding-left: 0; }
 
-.media-coverage {
+.media-coverage, .page-template-default .entry-content .media-coverage {
   margin-top: 40px; }
-  .media-coverage p {
+  .media-coverage p, .page-template-default .entry-content .media-coverage p {
     max-width: 100%;
     border: none;
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
     padding-right: 0; }
-  .media-coverage ul {
+  .media-coverage ul, .page-template-default .entry-content .media-coverage ul {
     max-width: 100%;
     border: none;
     -webkit-box-flex: 1;
@@ -1801,35 +1801,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     flex: auto;
     padding-right: 0;
     padding-bottom: 0; }
-    .media-coverage ul li {
+    .media-coverage ul li, .page-template-default .entry-content .media-coverage ul li {
       margin-bottom: 1em;
       font-size: 1rem;
       line-height: 180%; }
-      .media-coverage ul li a {
+      .media-coverage ul li a, .page-template-default .entry-content .media-coverage ul li a {
         -webkit-box-shadow: inset 0 -0.15em #fff;
         box-shadow: inset 0 -0.15em #fff;
         -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
-        .media-coverage ul li a:hover {
+        .media-coverage ul li a:hover, .page-template-default .entry-content .media-coverage ul li a:hover {
           -webkit-box-shadow: inset 0 -0.4em #FFD22A;
           box-shadow: inset 0 -0.4em #FFD22A;
           text-decoration: none; }
-        .media-coverage ul li a .icon-external-link {
+        .media-coverage ul li a .icon-external-link, .page-template-default .entry-content .media-coverage ul li a .icon-external-link {
           color: #9A9A9A;
           margin-left: 5px; }
-        .media-coverage ul li a .link-text {
+        .media-coverage ul li a .link-text, .page-template-default .entry-content .media-coverage ul li a .link-text {
           -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
           -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
           transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
-        .media-coverage ul li a .play-middle {
+        .media-coverage ul li a .play-middle, .page-template-default .entry-content .media-coverage ul li a .play-middle {
           display: block;
           margin-bottom: 10px; }
-      .media-coverage ul li i {
+      .media-coverage ul li i, .page-template-default .entry-content .media-coverage ul li i {
         color: #9A9A9A;
         font-size: 0.875rem;
         display: inline-block; }
-      .media-coverage ul li b {
+      .media-coverage ul li b, .page-template-default .entry-content .media-coverage ul li b {
         font-weight: 700; }
 
 @media (max-width: 767.98px) {
@@ -2066,11 +2066,17 @@ hr.wp-block-separator {
       margin-top: -50%;
       margin-bottom: -50%; } }
 
+.latest-youtube {
+  margin-top: 10px; }
+
 .has-fresh-sun-background-color {
   background-color: #FEFBF3; }
 
 .has-fresh-earth-background-color {
   background-color: #FAF1EB; }
+
+.has-grey-color {
+  color: #9A9A9A; }
 
 /*--------------------------------------------------------------
 # Gutenberg

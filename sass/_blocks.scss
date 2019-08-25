@@ -19,7 +19,7 @@
 	  }
 	}
 }
-.block{
+.block, .page-template-default .block{
 	z-index: 2;
 	@include margin-side-block;
 	
@@ -344,7 +344,7 @@
 	}
 }
 
-.panel{
+.panel, .page-template-default .entry-content .panel{
 	padding-bottom: 0;
 
 	&.panel-open{
@@ -406,7 +406,7 @@
 	}
 }
 
-.panel-books{
+.panel-books, .page-template-default .entry-content .panel-books{
 	.link-zoom{
 		margin-bottom: 15px;
 
@@ -500,7 +500,7 @@
 	}
 }
 
-.media-coverage {
+.media-coverage, .page-template-default .entry-content .media-coverage {
 	margin-top: 40px;
 	p{
 		@include reset-styling();
@@ -813,11 +813,18 @@ hr.wp-block-separator{
 	}
 }
 
+.latest-youtube{
+	margin-top: 10px;
+}
+
 
 .has-fresh-sun-background-color{
 	background-color: $freshsun;
 }
 .has-fresh-earth-background-color{
 	background-color: $freshearth;
+}
+.has-grey-color{
+	color: $grey;
 }
 

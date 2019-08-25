@@ -20,7 +20,7 @@
 						the_field('top_left', 'options');
 					endif; ?>
 					<div class="pfah-wrapper">
-						<form class="subscribe-footer-form pfah-form validate" id="pardot-subscribe" action="http://go.plumvillage.org/l/288242/2019-07-17/mwbvq" method="post">
+						<form class="subscribe-footer-form pfah-form validate" id="pardot-subscribe" action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" method="post">
 							<div class="form-row">
 						    <div class="col">
 						      <input type="text" class="form-control form-control-lg" name="firstname" placeholder="First Name" required />
