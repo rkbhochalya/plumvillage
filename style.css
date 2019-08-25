@@ -9299,7 +9299,8 @@ ul.slick-dots {
 .index-interview .pdf-wrapper {
   position: relative;
   border-radius: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 150px; }
   .index-interview .pdf-wrapper .pdf-label {
     position: absolute;
     bottom: 10px;
