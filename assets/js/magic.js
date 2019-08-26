@@ -328,6 +328,23 @@
   	$(this).closest('.load-more-container').addClass('show-load');
   	e.preventDefault();
   })
+
+
+  // sticky submenu
+  if($('.menu-block').length){
+  	$menuTop = $('.menu-block').offset().top;
+  	$(document).scroll(function(){
+  		if($(document).scrollTop() > $menuTop){
+  			$('.menu-block-container').height($('.menu-block').outerHeight())
+  			$('.menu-block').addClass('fix-menu-top');
+  		} else {
+  			$('.menu-block').removeClass('fix-menu-top');
+  		}
+  	})
+  }
+
+
+
 })(jQuery);
 
 /* the binary Great Common Divisor calculator */
