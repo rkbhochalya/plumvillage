@@ -2024,7 +2024,8 @@ hr.wp-block-separator {
 .wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 15px; }
+  padding: 15px;
+  max-width: none; }
   @media (min-width: 576px) {
     .wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
       margin: 70px auto; } }
