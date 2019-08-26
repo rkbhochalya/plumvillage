@@ -708,6 +708,9 @@ hr.wp-block-separator{
 	&.has-background{
 		padding: 50px 0 40px;
 		@include media-breakpoint-up(md) {
+			padding: 70px 0 60px;
+		}
+		@include media-breakpoint-up(lg) {
 			padding: 100px 0 80px;
 		}
 	}
@@ -800,8 +803,6 @@ hr.wp-block-separator{
 }
 
 .home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block{
-	margin-top: 250px;
-	margin-bottom: 200px;
 	padding-bottom: 50px;
 
 	@include media-breakpoint-down(sm) {
@@ -814,6 +815,9 @@ hr.wp-block-separator{
 	}
 
 	@include media-breakpoint-up(xl) {
+		margin-top: 200px;
+		margin-bottom: 200px;
+
 		img{
 			margin-top: -50%;
 			margin-bottom: -50%;

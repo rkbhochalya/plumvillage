@@ -219,7 +219,54 @@ big {
 	font-size: 125%;
 }
 
+.entry-content blockquote, .page-template-default .entry-content blockquote{
+	margin: 0;
+	padding:0 0 20px;
+	quotes: "“" "”";
+	
+	:first-child:before {
+	    content: open-quote;
+	}
+	p:last-child:after {
+	    content: close-quote;
+	}
+	:nth-last-child(2):after {
+	    content: close-quote;
+	}
 
+	p{
+		font-family: $font-headers;
+		padding-left: 30px;
+		line-height: 160%;
+		font-style: italic;
+		color: $grey;
+		@include font-size(28);
+		@include reset-styling();
+
+	}
+	cite{
+		display: block;
+		padding-left: 30px;
+		@include font-size(14);
+		color: $grey;
+		font-style: italic;
+		margin-top: -2em;
+		
+		&::before{
+			content:'—';
+		}
+	}
+	&.has-earth-color{
+		p, cite{
+			color: $earth;
+		}
+	}
+	&.has-ink-color{
+		p{
+			color: $ink;
+		}
+	}
+}
 .entry-content .wp-block-pullquote, .page-template-default .entry-content .wp-block-pullquote{
 	text-align: left;
 	border: none;
@@ -299,9 +346,15 @@ big {
 	&.alignfull{
 		blockquote{
 			text-align: center;
+			p{
+				padding-left: 0;
+			}
 		}
 	}
 	&.is-tnh-quote{
+		blockquote{
+			@include clearfix();
+		}
 		cite{
 			background: url('assets/images/sign.png') no-repeat;
 			background-size: 208px 56px;
@@ -310,55 +363,6 @@ big {
 			height: 56px;
 			float: right;
 			margin-top: 20px;
-		}
-	}
-}
-
-.entry-content blockquote, .page-template-default .entry-content blockquote{
-	margin: 0;
-	padding:0 0 20px;
-	quotes: "“" "”";
-	
-	:first-child:before {
-	    content: open-quote;
-	}
-	p:last-child:after {
-	    content: close-quote;
-	}
-	:nth-last-child(2):after {
-	    content: close-quote;
-	}
-
-	p{
-		font-family: $font-headers;
-		padding-left: 30px;
-		line-height: 160%;
-		font-style: italic;
-		color: $grey;
-		@include font-size(28);
-		@include reset-styling();
-
-	}
-	cite{
-		display: block;
-		padding-left: 30px;
-		@include font-size(14);
-		color: $grey;
-		font-style: italic;
-		margin-top: -2em;
-		
-		&::before{
-			content:'—';
-		}
-	}
-	&.has-earth-color{
-		p, cite{
-			color: $earth;
-		}
-	}
-	&.has-ink-color{
-		p{
-			color: $ink;
 		}
 	}
 }

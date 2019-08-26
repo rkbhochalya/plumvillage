@@ -7799,6 +7799,43 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.entry-content blockquote, .page-template-default .entry-content blockquote {
+  margin: 0;
+  padding: 0 0 20px;
+  quotes: "“" "”"; }
+  .entry-content blockquote :first-child:before, .page-template-default .entry-content blockquote :first-child:before {
+    content: open-quote; }
+  .entry-content blockquote p:last-child:after, .page-template-default .entry-content blockquote p:last-child:after {
+    content: close-quote; }
+  .entry-content blockquote :nth-last-child(2):after, .page-template-default .entry-content blockquote :nth-last-child(2):after {
+    content: close-quote; }
+  .entry-content blockquote p, .page-template-default .entry-content blockquote p {
+    font-family: "Cormorant Infant", serif;
+    padding-left: 30px;
+    line-height: 160%;
+    font-style: italic;
+    color: #9A9A9A;
+    font-size: 1.75rem;
+    max-width: 100%;
+    border: none;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    padding-right: 0; }
+  .entry-content blockquote cite, .page-template-default .entry-content blockquote cite {
+    display: block;
+    padding-left: 30px;
+    font-size: 0.875rem;
+    color: #9A9A9A;
+    font-style: italic;
+    margin-top: -2em; }
+    .entry-content blockquote cite::before, .page-template-default .entry-content blockquote cite::before {
+      content: '—'; }
+  .entry-content blockquote.has-earth-color p, .entry-content blockquote.has-earth-color cite, .page-template-default .entry-content blockquote.has-earth-color p, .page-template-default .entry-content blockquote.has-earth-color cite {
+    color: #8B572A; }
+  .entry-content blockquote.has-ink-color p, .page-template-default .entry-content blockquote.has-ink-color p {
+    color: #000; }
+
 .entry-content .wp-block-pullquote, .page-template-default .entry-content .wp-block-pullquote {
   text-align: left;
   border: none;
@@ -7856,6 +7893,12 @@ big {
     padding-left: 0; }
   .entry-content .wp-block-pullquote.alignfull blockquote, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote {
     text-align: center; }
+    .entry-content .wp-block-pullquote.alignfull blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote p {
+      padding-left: 0; }
+  .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after {
+    display: block;
+    clear: both;
+    content: ""; }
   .entry-content .wp-block-pullquote.is-tnh-quote cite, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote cite {
     background: url("assets/images/sign.png") no-repeat;
     background-size: 208px 56px;
@@ -7864,43 +7907,6 @@ big {
     height: 56px;
     float: right;
     margin-top: 20px; }
-
-.entry-content blockquote, .page-template-default .entry-content blockquote {
-  margin: 0;
-  padding: 0 0 20px;
-  quotes: "“" "”"; }
-  .entry-content blockquote :first-child:before, .page-template-default .entry-content blockquote :first-child:before {
-    content: open-quote; }
-  .entry-content blockquote p:last-child:after, .page-template-default .entry-content blockquote p:last-child:after {
-    content: close-quote; }
-  .entry-content blockquote :nth-last-child(2):after, .page-template-default .entry-content blockquote :nth-last-child(2):after {
-    content: close-quote; }
-  .entry-content blockquote p, .page-template-default .entry-content blockquote p {
-    font-family: "Cormorant Infant", serif;
-    padding-left: 30px;
-    line-height: 160%;
-    font-style: italic;
-    color: #9A9A9A;
-    font-size: 1.75rem;
-    max-width: 100%;
-    border: none;
-    -webkit-box-flex: 1;
-    -ms-flex: auto;
-    flex: auto;
-    padding-right: 0; }
-  .entry-content blockquote cite, .page-template-default .entry-content blockquote cite {
-    display: block;
-    padding-left: 30px;
-    font-size: 0.875rem;
-    color: #9A9A9A;
-    font-style: italic;
-    margin-top: -2em; }
-    .entry-content blockquote cite::before, .page-template-default .entry-content blockquote cite::before {
-      content: '—'; }
-  .entry-content blockquote.has-earth-color p, .entry-content blockquote.has-earth-color cite, .page-template-default .entry-content blockquote.has-earth-color p, .page-template-default .entry-content blockquote.has-earth-color cite {
-    color: #8B572A; }
-  .entry-content blockquote.has-ink-color p, .page-template-default .entry-content blockquote.has-ink-color p {
-    color: #000; }
 
 .entry-content p.has-large-font-size {
   font-size: 1.375rem;
@@ -9203,6 +9209,10 @@ ul.slick-dots {
         position: absolute;
         left: 0;
         top: 3px; }
+  @media (max-width: 991.98px) {
+    .index-item .col-2 {
+      padding-right: 0;
+      padding-top: 10px; } }
 
 .entry-meta {
   color: #9A9A9A;
@@ -10082,6 +10092,9 @@ hr.wp-block-separator {
   padding: 50px 0 40px; }
   @media (min-width: 768px) {
     .wp-block-group.has-background {
+      padding: 70px 0 60px; } }
+  @media (min-width: 992px) {
+    .wp-block-group.has-background {
       padding: 100px 0 80px; } }
 
 .wp-block-group .wp-block-columns {
@@ -10151,8 +10164,6 @@ hr.wp-block-separator {
     padding-left: 15px; } }
 
 .home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block {
-  margin-top: 250px;
-  margin-bottom: 200px;
   padding-bottom: 50px; }
   @media (max-width: 767.98px) {
     .home-what-who-block .has-text-align-right, .page-template-page_full-width .entry-content .home-what-who-block .has-text-align-right {
@@ -10161,9 +10172,12 @@ hr.wp-block-separator {
       -ms-flex-preferred-size: 100%;
       flex-basis: 100%; } }
   @media (min-width: 1200px) {
-    .home-what-who-block img, .page-template-page_full-width .entry-content .home-what-who-block img {
-      margin-top: -50%;
-      margin-bottom: -50%; } }
+    .home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block {
+      margin-top: 200px;
+      margin-bottom: 200px; }
+      .home-what-who-block img, .page-template-page_full-width .entry-content .home-what-who-block img {
+        margin-top: -50%;
+        margin-bottom: -50%; } }
 
 .latest-youtube {
   margin-top: 10px; }
