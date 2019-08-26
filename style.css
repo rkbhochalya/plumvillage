@@ -10092,6 +10092,11 @@ hr.wp-block-separator {
   -ms-flex-align: center;
   align-items: center; }
 
+@media (max-width: 1199.98px) {
+  .wp-block-columns.has-md-full-width .wp-block-column {
+    -ms-flex-preferred-size: 100% !important;
+    flex-basis: 100% !important; } }
+
 .wp-block-media-text .wp-block-media-text__content, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text .wp-block-media-text__content {
   padding: 20px 0 0; }
   @media (min-width: 600px) {
