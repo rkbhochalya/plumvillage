@@ -7799,17 +7799,17 @@ mark, ins {
 big {
   font-size: 125%; }
 
-.entry-content blockquote, .page-template-default .entry-content blockquote {
+.entry-content blockquote, .page-template-default .entry-content blockquote, .post-template-default .entry-content blockquote {
   margin: 0;
   padding: 0 0 20px;
   quotes: "“" "”"; }
-  .entry-content blockquote :first-child:before, .page-template-default .entry-content blockquote :first-child:before {
+  .entry-content blockquote :first-child:before, .page-template-default .entry-content blockquote :first-child:before, .post-template-default .entry-content blockquote :first-child:before {
     content: open-quote; }
-  .entry-content blockquote p:last-child:after, .page-template-default .entry-content blockquote p:last-child:after {
+  .entry-content blockquote p:last-child:after, .page-template-default .entry-content blockquote p:last-child:after, .post-template-default .entry-content blockquote p:last-child:after {
     content: close-quote; }
-  .entry-content blockquote :nth-last-child(2):after, .page-template-default .entry-content blockquote :nth-last-child(2):after {
+  .entry-content blockquote :nth-last-child(2):after, .page-template-default .entry-content blockquote :nth-last-child(2):after, .post-template-default .entry-content blockquote :nth-last-child(2):after {
     content: close-quote; }
-  .entry-content blockquote p, .page-template-default .entry-content blockquote p {
+  .entry-content blockquote p, .page-template-default .entry-content blockquote p, .post-template-default .entry-content blockquote p {
     font-family: "Cormorant Infant", serif;
     padding-left: 30px;
     line-height: 160%;
@@ -7822,38 +7822,38 @@ big {
     -ms-flex: auto;
     flex: auto;
     padding-right: 0; }
-  .entry-content blockquote cite, .page-template-default .entry-content blockquote cite {
+  .entry-content blockquote cite, .page-template-default .entry-content blockquote cite, .post-template-default .entry-content blockquote cite {
     display: block;
     padding-left: 30px;
     font-size: 0.875rem;
     color: #9A9A9A;
     font-style: italic;
     margin-top: -2em; }
-    .entry-content blockquote cite::before, .page-template-default .entry-content blockquote cite::before {
+    .entry-content blockquote cite::before, .page-template-default .entry-content blockquote cite::before, .post-template-default .entry-content blockquote cite::before {
       content: '—'; }
-  .entry-content blockquote.has-earth-color p, .entry-content blockquote.has-earth-color cite, .page-template-default .entry-content blockquote.has-earth-color p, .page-template-default .entry-content blockquote.has-earth-color cite {
+  .entry-content blockquote.has-earth-color p, .entry-content blockquote.has-earth-color cite, .page-template-default .entry-content blockquote.has-earth-color p, .page-template-default .entry-content blockquote.has-earth-color cite, .post-template-default .entry-content blockquote.has-earth-color p, .post-template-default .entry-content blockquote.has-earth-color cite {
     color: #8B572A; }
-  .entry-content blockquote.has-ink-color p, .page-template-default .entry-content blockquote.has-ink-color p {
+  .entry-content blockquote.has-ink-color p, .page-template-default .entry-content blockquote.has-ink-color p, .post-template-default .entry-content blockquote.has-ink-color p {
     color: #000; }
 
-.entry-content .wp-block-pullquote, .page-template-default .entry-content .wp-block-pullquote {
+.entry-content .wp-block-pullquote, .page-template-default .entry-content .wp-block-pullquote, .post-template-default .entry-content .wp-block-pullquote {
   text-align: left;
   border: none;
   padding: 0;
   margin: 0; }
-  .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
+  .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .post-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
     padding: 15px 20px;
     max-width: 600px; }
     @media (min-width: 992px) {
-      .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
+      .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote, .post-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
         padding: 25px 30px; } }
-    .entry-content .wp-block-pullquote.is-style-solid-color blockquote p, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote p {
+    .entry-content .wp-block-pullquote.is-style-solid-color blockquote p, .page-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote p, .post-template-default .entry-content .wp-block-pullquote.is-style-solid-color blockquote p {
       font-size: 2.5rem;
       line-height: 130%;
       padding-bottom: 1.5em; }
-  .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote, .page-template-default .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote {
+  .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote, .page-template-default .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote, .post-template-default .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote {
     background: #FAF1EB; }
-  .entry-content .wp-block-pullquote.alignright, .page-template-default .entry-content .wp-block-pullquote.alignright {
+  .entry-content .wp-block-pullquote.alignright, .page-template-default .entry-content .wp-block-pullquote.alignright, .post-template-default .entry-content .wp-block-pullquote.alignright {
     background: #fff;
     padding: 30px 0;
     margin-top: -30px;
@@ -7862,9 +7862,9 @@ big {
     margin-left: 1.5em;
     max-width: 45%; }
     @media (min-width: 576px) {
-      .entry-content .wp-block-pullquote.alignright, .page-template-default .entry-content .wp-block-pullquote.alignright {
+      .entry-content .wp-block-pullquote.alignright, .page-template-default .entry-content .wp-block-pullquote.alignright, .post-template-default .entry-content .wp-block-pullquote.alignright {
         max-width: 42.8%; } }
-    .entry-content .wp-block-pullquote.alignright blockquote, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote {
+    .entry-content .wp-block-pullquote.alignright blockquote, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote {
       max-width: 100%;
       border: none;
       -webkit-box-flex: 1;
@@ -7872,34 +7872,34 @@ big {
       flex: auto;
       padding-right: 0;
       padding-right: 30px; }
-      .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
+      .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
         font-size: 1rem;
         padding-left: 0; }
         @media (min-width: 576px) {
-          .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
+          .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
             font-size: 1.25rem; } }
         @media (min-width: 992px) {
-          .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
+          .entry-content .wp-block-pullquote.alignright blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote p, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote p {
             font-size: 1.5rem; } }
-      .entry-content .wp-block-pullquote.alignright blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote cite {
+      .entry-content .wp-block-pullquote.alignright blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote cite, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote cite {
         padding-left: 0;
         font-size: 0.75rem; }
         @media (min-width: 576px) {
-          .entry-content .wp-block-pullquote.alignright blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote cite {
+          .entry-content .wp-block-pullquote.alignright blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignright blockquote cite, .post-template-default .entry-content .wp-block-pullquote.alignright blockquote cite {
             font-size: 0.875rem; } }
-  .entry-content .wp-block-pullquote.alignleft blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignleft blockquote p {
+  .entry-content .wp-block-pullquote.alignleft blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignleft blockquote p, .post-template-default .entry-content .wp-block-pullquote.alignleft blockquote p {
     padding-left: 0; }
-  .entry-content .wp-block-pullquote.alignleft blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignleft blockquote cite {
+  .entry-content .wp-block-pullquote.alignleft blockquote cite, .page-template-default .entry-content .wp-block-pullquote.alignleft blockquote cite, .post-template-default .entry-content .wp-block-pullquote.alignleft blockquote cite {
     padding-left: 0; }
-  .entry-content .wp-block-pullquote.alignfull blockquote, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote {
+  .entry-content .wp-block-pullquote.alignfull blockquote, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote, .post-template-default .entry-content .wp-block-pullquote.alignfull blockquote {
     text-align: center; }
-    .entry-content .wp-block-pullquote.alignfull blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote p {
+    .entry-content .wp-block-pullquote.alignfull blockquote p, .page-template-default .entry-content .wp-block-pullquote.alignfull blockquote p, .post-template-default .entry-content .wp-block-pullquote.alignfull blockquote p {
       padding-left: 0; }
-  .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after {
+  .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after, .post-template-default .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after {
     display: block;
     clear: both;
     content: ""; }
-  .entry-content .wp-block-pullquote.is-tnh-quote cite, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote cite {
+  .entry-content .wp-block-pullquote.is-tnh-quote cite, .page-template-default .entry-content .wp-block-pullquote.is-tnh-quote cite, .post-template-default .entry-content .wp-block-pullquote.is-tnh-quote cite {
     background: url("assets/images/sign.png") no-repeat;
     background-size: 208px 56px;
     font-size: 0;
@@ -8170,24 +8170,24 @@ figure.wp-block-image {
     .entry-content .alignwide.iframe-container {
       width: 904px; } }
 
-.entry-content .alignfull, .page-template-default .entry-content .alignfull {
+.entry-content .alignfull, .page-template-default .entry-content .alignfull, .post-template-default .entry-content .alignfull {
   padding: .5em 0 1.5em;
   max-width: 100%; }
   @media (min-width: 768px) {
-    .entry-content .alignfull, .page-template-default .entry-content .alignfull {
+    .entry-content .alignfull, .page-template-default .entry-content .alignfull, .post-template-default .entry-content .alignfull {
       padding-top: 1em;
       padding-bottom: 2em;
       max-width: 64.70588235294117%; } }
   @media (min-width: 992px) {
-    .entry-content .alignfull, .page-template-default .entry-content .alignfull {
+    .entry-content .alignfull, .page-template-default .entry-content .alignfull, .post-template-default .entry-content .alignfull {
       max-width: 65.21739130434783%; } }
   @media (min-width: 1200px) {
-    .entry-content .alignfull, .page-template-default .entry-content .alignfull {
+    .entry-content .alignfull, .page-template-default .entry-content .alignfull, .post-template-default .entry-content .alignfull {
       max-width: 65.45454545454545%; } }
   @media (min-width: 1400px) {
-    .entry-content .alignfull, .page-template-default .entry-content .alignfull {
+    .entry-content .alignfull, .page-template-default .entry-content .alignfull, .post-template-default .entry-content .alignfull {
       max-width: 65.6641604010025%; } }
-  .entry-content .alignfull > img, .page-template-default .entry-content .alignfull > img {
+  .entry-content .alignfull > img, .page-template-default .entry-content .alignfull > img, .post-template-default .entry-content .alignfull > img {
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
@@ -8222,27 +8222,27 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .hide {
   display: none; }
 
-.page-template-default .wp-block-image.alignwide img, .page-template-default .wp-block-image .alignleft img, .page-template-default .wp-block-image .alignright img, .page-template-default .wp-block-image .aligncenter img {
+.page-template-default .wp-block-image.alignwide img, .page-template-default .wp-block-image .alignleft img, .page-template-default .wp-block-image .alignright img, .page-template-default .wp-block-image .aligncenter img, .post-template-default .wp-block-image.alignwide img, .post-template-default .wp-block-image .alignleft img, .post-template-default .wp-block-image .alignright img, .post-template-default .wp-block-image .aligncenter img {
   max-width: 100%; }
 
 @media (min-width: 992px) {
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .post-template-default .entry-content p, .post-template-default .entry-content blockquote, .post-template-default .center-with-border, .post-template-default figure.aligncenter, .post-template-default .comments-section, .post-template-default .center-without-border, .post-template-default .entry-content h2, .post-template-default .entry-content h3, .post-template-default .entry-content h4, .post-template-default .entry-content h5, .post-template-default .entry-content ul, .post-template-default .entry-content ol {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(78.6862745098% + 30px);
     flex: 0 0 calc(78.6862745098% + 30px);
     max-width: calc(78.6862745098% + 30px); }
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .post-template-default .entry-content p, .post-template-default .entry-content blockquote, .post-template-default .center-with-border, .post-template-default figure.aligncenter, .post-template-default .comments-section, .post-template-default .center-without-border {
     padding-right: 30px;
     margin-bottom: 0;
     padding-bottom: 1.5em;
     position: relative; }
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .post-template-default .entry-content p, .post-template-default .entry-content blockquote, .post-template-default .center-with-border, .post-template-default figure.aligncenter, .post-template-default .comments-section {
     border-right: 1px solid #F3F3F3; }
-  .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5 {
+  .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .post-template-default .entry-content h2, .post-template-default .entry-content h3, .post-template-default .entry-content h4, .post-template-default .entry-content h5 {
     border-right: 1px solid #F3F3F3;
     margin: 0;
     padding-bottom: .3em; }
-  .page-template-default .entry-content ul, .page-template-default .entry-content ol {
+  .page-template-default .entry-content ul, .page-template-default .entry-content ol, .post-template-default .entry-content ul, .post-template-default .entry-content ol {
     border-right: 1px solid #F3F3F3;
     margin-top: 0;
     margin-right: 0;
@@ -8250,34 +8250,34 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     padding-top: 0;
     padding-right: 25px;
     padding-bottom: 2em; }
-  .page-template-default .entry-content p.has-large-font-size, .page-template-default .entry-header {
+  .page-template-default .entry-content p.has-large-font-size, .page-template-default .entry-header, .post-template-default .entry-content p.has-large-font-size, .post-template-default .entry-header {
     border-right: 0;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(85.0588235294% + 30px);
     flex: 0 0 calc(85.0588235294% + 30px);
     max-width: calc(85.0588235294% + 30px); }
-  .page-template-default .wp-block-image img {
+  .page-template-default .wp-block-image img, .post-template-default .wp-block-image img {
     max-width: calc(78.6862745098% + 30px); }
-  .page-template-default .wp-block-image figure.aligncenter {
+  .page-template-default .wp-block-image figure.aligncenter, .post-template-default .wp-block-image figure.aligncenter {
     width: calc(78.6862745098% + 30px); } }
 
 @media (min-width: 1400px) {
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .post-template-default .entry-content p, .post-template-default .entry-content blockquote, .post-template-default .center-with-border, .post-template-default figure.aligncenter, .post-template-default .comments-section, .post-template-default .center-without-border, .post-template-default .entry-content h2, .post-template-default .entry-content h3, .post-template-default .entry-content h4, .post-template-default .entry-content h5, .post-template-default .entry-content ul, .post-template-default .entry-content ol {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(65.6862745098% + 30px);
     flex: 0 0 calc(65.6862745098% + 30px);
     max-width: calc(65.6862745098% + 30px); }
-  .page-template-default .entry-content p.has-large-font-size, .page-template-default .entry-header {
+  .page-template-default .entry-content p.has-large-font-size, .page-template-default .entry-header, .post-template-default .entry-content p.has-large-font-size, .post-template-default .entry-header {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(77.0588235294% + 30px);
     flex: 0 0 calc(77.0588235294% + 30px);
     max-width: calc(77.0588235294% + 30px); }
-  .page-template-default .wp-block-image img {
+  .page-template-default .wp-block-image img, .post-template-default .wp-block-image img {
     max-width: calc(65.6862745098% + 30px); }
-  .page-template-default .wp-block-image figure.aligncenter {
+  .page-template-default .wp-block-image figure.aligncenter, .post-template-default .wp-block-image figure.aligncenter {
     width: calc(65.6862745098% + 30px); } }
 
-.page-template-default .entry-content .center-with-border p, .page-template-default .entry-content .center-with-border blockquote, .page-template-default .entry-content .center-with-border h2, .page-template-default .entry-content .center-with-border h3, .page-template-default .entry-content .center-with-border h4, .page-template-default .entry-content .center-with-border h5, .page-template-default .entry-content .center-with-border ul, .page-template-default .entry-content .center-with-border ol, .page-template-default .entry-content .index-item p, .page-template-default .entry-content .index-item blockquote, .page-template-default .entry-content .index-item h2, .page-template-default .entry-content .index-item h3, .page-template-default .entry-content .index-item h4, .page-template-default .entry-content .index-item h5, .page-template-default .entry-content .index-item ul, .page-template-default .entry-content .index-item ol, .page-template-default .page-template-page_full-width p, .page-template-default .page-template-page_full-width blockquote, .page-template-default .page-template-page_full-width h2, .page-template-default .page-template-page_full-width h3, .page-template-default .page-template-page_full-width h4, .page-template-default .page-template-page_full-width h5, .page-template-default .page-template-page_full-width ul, .page-template-default .page-template-page_full-width ol {
+.page-template-default .entry-content .center-with-border p, .page-template-default .entry-content .center-with-border blockquote, .page-template-default .entry-content .center-with-border h2, .page-template-default .entry-content .center-with-border h3, .page-template-default .entry-content .center-with-border h4, .page-template-default .entry-content .center-with-border h5, .page-template-default .entry-content .center-with-border ul, .page-template-default .entry-content .center-with-border ol, .page-template-default .entry-content .index-item p, .page-template-default .entry-content .index-item blockquote, .page-template-default .entry-content .index-item h2, .page-template-default .entry-content .index-item h3, .page-template-default .entry-content .index-item h4, .page-template-default .entry-content .index-item h5, .page-template-default .entry-content .index-item ul, .page-template-default .entry-content .index-item ol, .page-template-default .page-template-page_full-width p, .page-template-default .page-template-page_full-width blockquote, .page-template-default .page-template-page_full-width h2, .page-template-default .page-template-page_full-width h3, .page-template-default .page-template-page_full-width h4, .page-template-default .page-template-page_full-width h5, .page-template-default .page-template-page_full-width ul, .page-template-default .page-template-page_full-width ol, .post-template-default .entry-content .center-with-border p, .post-template-default .entry-content .center-with-border blockquote, .post-template-default .entry-content .center-with-border h2, .post-template-default .entry-content .center-with-border h3, .post-template-default .entry-content .center-with-border h4, .post-template-default .entry-content .center-with-border h5, .post-template-default .entry-content .center-with-border ul, .post-template-default .entry-content .center-with-border ol, .post-template-default .entry-content .index-item p, .post-template-default .entry-content .index-item blockquote, .post-template-default .entry-content .index-item h2, .post-template-default .entry-content .index-item h3, .post-template-default .entry-content .index-item h4, .post-template-default .entry-content .index-item h5, .post-template-default .entry-content .index-item ul, .post-template-default .entry-content .index-item ol, .post-template-default .page-template-page_full-width p, .post-template-default .page-template-page_full-width blockquote, .post-template-default .page-template-page_full-width h2, .post-template-default .page-template-page_full-width h3, .post-template-default .page-template-page_full-width h4, .post-template-default .page-template-page_full-width h5, .post-template-default .page-template-page_full-width ul, .post-template-default .page-template-page_full-width ol {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -8285,15 +8285,15 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   flex: auto;
   padding-right: 0; }
 
-.page-template-default .entry-content .center-with-border .entry-content .alignwide, .page-template-default .entry-content .index-item .entry-content .alignwide, .page-template-default .page-template-page_full-width .entry-content .alignwide {
+.page-template-default .entry-content .center-with-border .entry-content .alignwide, .page-template-default .entry-content .index-item .entry-content .alignwide, .page-template-default .page-template-page_full-width .entry-content .alignwide, .post-template-default .entry-content .center-with-border .entry-content .alignwide, .post-template-default .entry-content .index-item .entry-content .alignwide, .post-template-default .page-template-page_full-width .entry-content .alignwide {
   max-width: none;
   margin-left: 0; }
 
 @media (min-width: 768px) {
-  .page-template-default .back-to-baseline {
+  .page-template-default .back-to-baseline, .post-template-default .back-to-baseline {
     margin-left: calc(-34.3137254902% - 15px); } }
 
-.page-template-default .center-with-border .entry-header, .page-template-default .center-with-border .wp-block-image img, .page-template-default .center-with-border .center-with-border, .page-template-default .center-with-border h2, .page-template-default .center-with-border h3, .page-template-default .center-with-border h4, .page-template-default .center-with-border h5, .page-template-default .center-with-border blockquote, .page-template-default .index-interview .entry-header, .page-template-default .index-interview .wp-block-image img, .page-template-default .index-interview .center-with-border, .page-template-default .index-interview h2, .page-template-default .index-interview h3, .page-template-default .index-interview h4, .page-template-default .index-interview h5, .page-template-default .index-interview blockquote {
+.page-template-default .center-with-border .entry-header, .page-template-default .center-with-border .wp-block-image img, .page-template-default .center-with-border .center-with-border, .page-template-default .center-with-border h2, .page-template-default .center-with-border h3, .page-template-default .center-with-border h4, .page-template-default .center-with-border h5, .page-template-default .center-with-border blockquote, .page-template-default .index-interview .entry-header, .page-template-default .index-interview .wp-block-image img, .page-template-default .index-interview .center-with-border, .page-template-default .index-interview h2, .page-template-default .index-interview h3, .page-template-default .index-interview h4, .page-template-default .index-interview h5, .page-template-default .index-interview blockquote, .post-template-default .center-with-border .entry-header, .post-template-default .center-with-border .wp-block-image img, .post-template-default .center-with-border .center-with-border, .post-template-default .center-with-border h2, .post-template-default .center-with-border h3, .post-template-default .center-with-border h4, .post-template-default .center-with-border h5, .post-template-default .center-with-border blockquote, .post-template-default .index-interview .entry-header, .post-template-default .index-interview .wp-block-image img, .post-template-default .index-interview .center-with-border, .post-template-default .index-interview h2, .post-template-default .index-interview h3, .post-template-default .index-interview h4, .post-template-default .index-interview h5, .post-template-default .index-interview blockquote {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -8301,7 +8301,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   flex: auto;
   padding-right: 0; }
 
-.page-template-default .center-with-border p, .page-template-default .index-interview p {
+.page-template-default .center-with-border p, .page-template-default .index-interview p, .post-template-default .center-with-border p, .post-template-default .index-interview p {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -9031,17 +9031,17 @@ body #youmax, body .youmax {
 #photo-detail-holder .photo-popup-stats {
   display: none; }
 
-.nav-tabs, .page-template-default .entry-content .nav-tabs {
+.nav-tabs, .page-template-default .entry-content .nav-tabs, .post-template-default .entry-content .nav-tabs {
   margin: 0 0 30px 0;
   padding: 0;
   border-color: #F3F3F3;
   border-right: 0;
   display: block; }
-  .nav-tabs li, .page-template-default .entry-content .nav-tabs li {
+  .nav-tabs li, .page-template-default .entry-content .nav-tabs li, .post-template-default .entry-content .nav-tabs li {
     display: inline-block; }
-  .nav-tabs li:before, .page-template-default .entry-content .nav-tabs li:before {
+  .nav-tabs li:before, .page-template-default .entry-content .nav-tabs li:before, .post-template-default .entry-content .nav-tabs li:before {
     display: none; }
-  .nav-tabs .nav-link, .page-template-default .entry-content .nav-tabs .nav-link {
+  .nav-tabs .nav-link, .page-template-default .entry-content .nav-tabs .nav-link, .post-template-default .entry-content .nav-tabs .nav-link {
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -9053,7 +9053,7 @@ body #youmax, body .youmax {
     font-size: 1rem;
     -webkit-box-shadow: none;
     box-shadow: none; }
-  .nav-tabs .nav-link.active, .page-template-default .entry-content .nav-tabs .nav-link.active {
+  .nav-tabs .nav-link.active, .page-template-default .entry-content .nav-tabs .nav-link.active, .post-template-default .entry-content .nav-tabs .nav-link.active {
     border-color: #8B572A;
     color: #8B572A; }
 
