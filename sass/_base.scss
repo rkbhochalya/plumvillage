@@ -1917,6 +1917,18 @@ body #youmax, body .youmax{
 	}
 }
 
+.single-pv_event .entry-meta{
+	position: relative;
+	padding: 20px 0 0 33px;
+
+	&:before{
+    content: url(assets/images/calendar.svg);
+    position: absolute;
+    top: 22px;
+    left: 0;
+	}
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Slick Slider
 .slider{

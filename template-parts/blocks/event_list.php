@@ -131,7 +131,7 @@
 
 
 	<?php if(count($event_locations) > 1) : ?>
-		<div class="text-with-select"><p class="has-grey-color"><?php _e('Show upcoming retreats in', 'plumvillage'); ?></p>
+		<div class="text-with-select center-with-border"><p class="has-grey-color"><?php _e('Upcoming retreats in', 'plumvillage'); ?></p>
 			<div class="select-inline">
 				<select class="toggle-events-locations" data-error="error">
 					<?php foreach ($event_locations as $location){ ?>

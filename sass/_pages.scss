@@ -80,7 +80,10 @@
 	@include font-size(14);
 	a{
 		color: $grey;
-	}	
+	}
+	b{
+		color: $ink;
+	}
 	.entry-source a{
 		@include underline(darken($freshink, 4%), $sun);
 	}

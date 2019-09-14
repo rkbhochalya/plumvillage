@@ -414,7 +414,7 @@ function create_post_types() {
       'public' => true,
       'has_archive' => false,
       'hierarchical' => false,
-      'taxonomies' => array('practise-centres'), 
+      'taxonomies' => array('practise-centres', 'language'), 
       'show_in_menu' => true,
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-calendar-alt',      
@@ -422,6 +422,44 @@ function create_post_types() {
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Retreat Languages', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Language', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Languages', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Languages', 'plumvillage' ),
+    'all_items'                  => __( 'All Languages', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Language', 'plumvillage' ),
+    'update_item'                => __( 'Edit Language', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Language', 'plumvillage' ),
+    'new_item_name'              => __( 'New Language name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Languages.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Languages', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Languages', 'plumvillage' ),
+    'not_found'                  => __( 'No Languages found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Retreat Languages', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'show_in_rest'          => false,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'language' ),
+  );
+
+  register_taxonomy( 'language', array('pv_event'), $args );
+
+
+
+
 }
 add_action( 'init', 'create_post_types' );
 
