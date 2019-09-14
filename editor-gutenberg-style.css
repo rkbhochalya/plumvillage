@@ -1237,7 +1237,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container {
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -1831,6 +1831,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         display: inline-block; }
       .media-coverage ul li b, .page-template-default .entry-content .media-coverage ul li b {
         font-weight: 700; }
+
+.home-landing-top p, .entry-content .tnh-landing-top p {
+  padding-right: 50px; }
 
 @media (max-width: 767.98px) {
   .home-landing-top .wp-block-column, .entry-content .tnh-landing-top .wp-block-column {

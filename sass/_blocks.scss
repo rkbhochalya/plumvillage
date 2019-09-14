@@ -543,6 +543,10 @@
 
 .home-landing-top, .entry-content .tnh-landing-top{
 
+	p{
+		padding-right: 50px;
+	}
+
 	@include media-breakpoint-down(sm) {
 		.wp-block-column{
 			flex-basis: 100%!important;

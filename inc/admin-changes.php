@@ -154,6 +154,7 @@ function custom_menu_order($menu_ord) {
         'post.php?post=7703&action=edit',
         'edit.php?post_type=pv_book',
         'edit.php?post_type=event',
+        'edit.php?post_type=pv_event',
         'edit.php', // Pages
         'edit-comments.php',
         'edit-tags.php?taxonomy=practise-centres',

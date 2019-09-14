@@ -16,7 +16,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     $uri_segments = explode('/', $menu_item->url);
 
     $i = 2;
-    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = false;
+    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $retreats = false;
     foreach ($uri_segments as $slug) {
       if($slug == 'about') : 
         $about = true;
@@ -39,6 +39,9 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       endif;
       if($slug == 'chanting') : 
         $chanting = true;
+      endif;
+      if($slug == 'when-can-you-visit-us') : 
+        $retreats = true;
       endif;
       $i++;
     }
@@ -83,6 +86,11 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     }    
 
     if( in_category( 'chanting' ) && $chanting && (get_post_type() == 'post')){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+
+    if( is_singular( 'pv_event' ) && $retreats){
       $menu_item->classes[] = 'current-menu-item';
       $menu_item->current = true;
     }
@@ -404,3 +412,16 @@ function add_slug_body_class( $classes ) {
   return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+// Object to array
+function object_to_array($obj) {
+if(is_object($obj)) $obj = (array) $obj;
+    if(is_array($obj)) {
+        $new = array();
+        foreach($obj as $key => $val) {
+            $new[$key] = object_to_array($val);
+        }
+    }
+    else $new = $obj;
+    return $new;       
+}

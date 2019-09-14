@@ -22,9 +22,10 @@ if($videoTimestamp === false || (time() - $videoTimestamp) > 7200) {
 	$videoJson=json_decode($json);
 
 	update_option('latest_youtube_timestamp', time());
-	update_option('latest_youtube_id', $videoJson->items[0]->snippet->resourceId->videoId);
-	update_option('latest_youtube_title', $videoJson->items[0]->snippet->title);
-
+	if(!empty($videoJson)){
+		update_option('latest_youtube_id', $videoJson->items[0]->snippet->resourceId->videoId);
+		update_option('latest_youtube_title', $videoJson->items[0]->snippet->title);
+	}
 }
 
 

@@ -310,6 +310,20 @@ function register_acf_block_types() {
         )
     ));    
 
+    // register events list
+    acf_register_block_type(array(
+        'name'              => 'event_list',
+        'title'             => __('Event List'),
+        'description'       => __('A list of events'),
+        'render_template'   => 'template-parts/blocks/event_list.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'calendar-alt',
+        'keywords'          => array( 'post', 'list' ),
+        'supports'          => array(
+            'align'     => false
+        )
+    ));    
+
     // Photo Slider
     acf_register_block_type(array(
         'name'              => 'photo_slider',

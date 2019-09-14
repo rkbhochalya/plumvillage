@@ -28,9 +28,21 @@
 		trigger: 'change'
 	})
 
-	$('select').select2({
-		width: '100%'
-	});
+  $('form select').each(function(){
+  	var el = $(this);
+		el.select2({
+			width: '100%'
+		});
+  })
+
+  $('.select-inline select').each(function(){
+  	var el = $(this);
+		el.select2({
+			width: '100%',
+			theme: 'select2-container--inline',
+			minimumResultsForSearch: 'Infinity'
+		});
+  })
 
 	$('select').change(function() {
     $(this).parsley().validate();
@@ -342,6 +354,11 @@
   		}
   	})
   }
+
+  // toggle event locations
+  $('.toggle-events-locations').on('change', function(){
+  	$('.'+$(this).val()).removeClass('hide').siblings().addClass('hide');
+  })
 
 
 

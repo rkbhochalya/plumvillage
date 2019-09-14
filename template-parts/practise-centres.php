@@ -1,7 +1,8 @@
 <?php
 	$practise_centres = get_terms( array( 
 		'taxonomy' => 'practise-centres',
-		'hide_empty' => false
+		'hide_empty' => false,
+		'parent' => 0
 	) );
 	if  ($practise_centres) {
 		foreach ($practise_centres  as $practise_centre ) { ?>

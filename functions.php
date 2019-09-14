@@ -190,7 +190,7 @@ function create_post_types() {
   );
 
   $args = array(
-    'hierarchical'          => false,
+    'hierarchical'          => true,
     'labels'                => $labels,
     'show_ui'               => true,
     'show_in_menu'					=> true,
@@ -200,7 +200,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'practise-centres' ),
   );
 
-  register_taxonomy( 'practise-centres', 'post', $args );
+  register_taxonomy( 'practise-centres', array('post', 'pv_event'), $args );
 
   // Add new taxonomy
   $labels = array(
@@ -389,6 +389,37 @@ function create_post_types() {
       'show_in_rest' => true,
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/press'),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes')
+    )
+  );
+
+
+  register_post_type( 'pv_event',
+    array(
+      'labels' => array(
+        'name'               => _x( 'PV Event', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'PV Event', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'PV Event', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'PV Event', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit PV Event', 'plumvillage' ),
+        'view_item'          => __( 'View PV Event', 'plumvillage' ),
+        'all_items'          => __( 'PV Events', 'plumvillage' ),
+        'search_items'       => __( 'Search PV Events', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No PV Event found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('practise-centres'), 
+      'show_in_menu' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-calendar-alt',      
+      'rewrite' => array('slug' => 'retreats/info'),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
 }

@@ -50,6 +50,7 @@ textarea {
 	}
 }
 
+
 .select2-container--default .select2-selection--single{
 	border-radius: 0px;
 	background-color: $freshtree;
@@ -87,6 +88,82 @@ textarea {
 	box-shadow: 0 0 0 0.2rem rgba(255, 210, 42, 0.25);
 	outline: 0;
 	border-color: #fff;
+}
+
+.select-inline{
+	display: inline-block;
+
+	.select2{
+		padding-right: 20px;
+		margin-bottom: 5px;
+	}
+
+	.select2-container .select2-selection--single{
+		background: none;
+		border: none;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 0;
+
+		.select2-selection__rendered{
+			color: $ink;
+			text-decoration: underline;
+			font-style: italic;
+			@include font-size(16);
+		}
+		.select2-selection__arrow{
+			font-size: 8px;
+			position: absolute;
+			right: -3px;
+			top: 2px;
+			padding-left: 20px;
+
+		  b:before {
+		    content: $icon-caret-down; 
+		  }
+		}
+	}
+	.select2-container--focus .select2-selection--single{
+		box-shadow: none;
+	}
+	.select2-container--open .select2-selection--single .select2-selection__arrow b:before{
+		transform: rotate(180deg);
+		display: inline-block;
+	}
+}
+
+.select2-container--select2-container--inline{
+
+	.select2-dropdown{
+		min-width: 200px;
+		margin-left: -10px;
+	}
+	ul{
+		padding: 10px 0;
+
+		li{
+			font-weight: 300;
+			padding: 5px 15px;
+			@include font-size(15);
+
+			&:before{
+				display: none;
+			}
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	&.select2-container--open .select2-dropdown--below{
+		border: none;
+	}
+}
+
+.text-with-select{
+	p{
+		display: inline;
+	}
 }
 
 textarea {

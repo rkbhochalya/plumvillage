@@ -44,7 +44,7 @@ $icon-hamburger: "\e900";
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container {
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: '#{$icomoon-font-family}' !important;
   speak: none;
