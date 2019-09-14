@@ -9187,6 +9187,17 @@ body #youmax, body .youmax {
     top: 22px;
     left: 0; }
 
+.single-pv_event form.left {
+  float: left; }
+  .single-pv_event form.left p, .single-pv_event form.left h3 {
+    border: none; }
+  .single-pv_event form.left ul {
+    padding: 0;
+    margin: 0;
+    border: none; }
+    .single-pv_event form.left ul li:before {
+      display: none; }
+
 .slider .slider-image {
   background-position: center;
   background-size: cover;

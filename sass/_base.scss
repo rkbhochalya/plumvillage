@@ -1917,18 +1917,39 @@ body #youmax, body .youmax{
 	}
 }
 
-.single-pv_event .entry-meta{
-	position: relative;
-	padding: 20px 0 0 33px;
+.single-pv_event{
+	.entry-meta{
+		position: relative;
+		padding: 20px 0 0 33px;
 
-	&:before{
-    content: url(assets/images/calendar.svg);
-    position: absolute;
-    top: 22px;
-    left: 0;
+		&:before{
+	    content: url(assets/images/calendar.svg);
+	    position: absolute;
+	    top: 22px;
+	    left: 0;
+		}
+	}
+
+	form.left{
+		float: left;
+
+		p, h3{
+			border: none;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+			border: none;
+
+
+			li{				
+				&:before{
+					display: none;
+				}
+			}
+		}
 	}
 }
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Slick Slider
 .slider{
