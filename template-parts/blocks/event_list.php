@@ -129,15 +129,18 @@
 
 	?>
 
-	<div class="text-with-select"><p class="has-grey-color"><?php _e('Show upcoming retreats in', 'plumvillage'); ?></p>
-		<div class="select-inline">
-			<select class="toggle-events-locations" data-error="error">
-				<?php foreach ($event_locations as $location){ ?>
-					<option value="location-<?php echo $location['slug']; ?>"><?php echo $location['name']; ?></option> 
-				<?php } ?>
-			</select>
+
+	<?php if(count($event_locations) > 1) : ?>
+		<div class="text-with-select"><p class="has-grey-color"><?php _e('Show upcoming retreats in', 'plumvillage'); ?></p>
+			<div class="select-inline">
+				<select class="toggle-events-locations" data-error="error">
+					<?php foreach ($event_locations as $location){ ?>
+						<option value="location-<?php echo $location['slug']; ?>"><?php echo $location['name']; ?></option> 
+					<?php } ?>
+				</select>
+			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div class="event-list">
 		<?php 
