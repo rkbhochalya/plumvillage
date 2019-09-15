@@ -68,29 +68,37 @@
  		el.append(link);
  	})
 
+ 	$()
 
- // 	// featherlight defaults
-	// $.extend($.featherlight.defaults, {
-	// 	beforeOpen: function(e){
-	// 		if(e){
-	// 			var el = $(e.currentTarget);
-	// 			if(el.data('isPress')){
-	// 				$('body').addClass('is-press')
-	// 			} else {
-	// 				$('body').removeClass('is-press')
-	// 			}
-	// 		}
-	// 	}
-	// })
+
+
+ 	// set fancybox default settings
+	$.extend($.fancybox.defaults, {
+		beforeLoad: function(e){
+			if(this.opts.isPress){
+				$('body').addClass('is-press')
+			} else {
+				$('body').removeClass('is-press')
+			}
+		},
+		caption : function(instance,item) {
+      return $(this).closest('figure').find('figcaption').html();
+    },
+    buttons: [
+    	"slideShow",
+    	"close"
+    ]		
+	});
+
+
+	// open images in fancybox
+	$('figure.wp-block-image a[href*="uploads"]').fancybox({
+		type: 'image'
+	})
+
+
 
  // 	$('.gallery-embed').each(function(){
- // 		var el = $(this);
- // 		el.on('click', function(){
-	// 		if(el.data('isPress')){
-	// 			$('body').addClass('is-press')
-	// 		} else {
-	// 			$('body').removeClass('is-press')
-	// 		}
 	//  		$.featherlightGallery(el.find('a.gallery'), {
 	// 			previousIcon: '<span class="icon icon-gallery-left"></span>',
 	// 			nextIcon: '<span class="icon icon-gallery-right"></span>',
@@ -322,11 +330,6 @@
 			$gallery.isotope('layout');				
 		})
 
-		// gallery
-		// $(this).find('.gallery-image a').featherlightGallery({
-		// 	previousIcon: '<span class="icon icon-gallery-left"></span>',
-		// 	nextIcon: '<span class="icon icon-gallery-right"></span>'
-		// });		
 	})
 
 	// Slick Slider

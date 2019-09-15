@@ -1,5 +1,5 @@
 <div class="block-outside">
-    <div class="gallery-embed block <?php if(get_field('narrow')) : ?>col-lg-4 block-narrow <?php else : ?>col-xs-8 col-sm-7 col-lg-6 col-xl-5<?php endif; ?> align-<?php echo $block['align']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>">
+    <div data-fancybox-trigger="<?php echo sanitize_title(get_field('title')); ?>" class="gallery-embed block <?php if(get_field('narrow')) : ?>col-lg-4 block-narrow <?php else : ?>col-xs-8 col-sm-7 col-lg-6 col-xl-5<?php endif; ?> align-<?php echo $block['align']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>">
         <div class="gallery-embed-inside">
             <div class="row">
                 <div class="col">
@@ -25,16 +25,12 @@
                 <ul class="gallery-images">
                     <?php foreach( $images as $image ): ?>
                         <li>
-                        	<a class="gallery" href="<?php echo get_attachment_link( $image ); ?>">
-        						<?php 
-        							$caption = wp_get_attachment_caption($image);
-        							if($caption) { 
-        								echo $caption; 
-        							} else {
-        								echo get_the_title($image );
-        							} 
-                                ?>            		
-                        	</a>
+                            <figure>
+                            	<a data-fancybox="<?php echo sanitize_title(get_field('title')); ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="gallery" href="<?php echo wp_get_attachment_image_src( $image, 'large' )[0]; ?>">
+                            	</a>
+                                <?php set_query_var( 'image_id', $image ); ?>
+                                <?php get_template_part( 'template-parts/figcaption' ); ?>
+                            </figure>
                         </li>
                     <?php endforeach; ?>
                 </ul>

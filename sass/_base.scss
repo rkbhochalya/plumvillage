@@ -1270,9 +1270,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	line-height: 180%;
 }
 .image-credits{
-	border-top: 1px solid $freshink;
-	padding-top: 20px;
-
 	p{
 		@include font-size(14);
 		color: $grey;
@@ -1283,131 +1280,29 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			@include underline($freshink, $sun);
 		}
 	}
-	
-	.contact-options{
-		margin-top: 20px;
-	}
 }
 
 .for-press{
 	display: none;
 }
 .is-press .for-press{
-	display: block;
+	display: inline-block;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Featherlight
+// Fancybox
 
-.featherlight:last-of-type {
-	background: $darkink;
-}
-
-.featherlight .featherlight-close-icon{
-	color: $cloud;
-	background: none;
-	font-size: 20px;
-	padding: 15px;
-	width: auto;
-	outline: 0;
-
-	&:hover{
-		color: $sun;
+.fancybox-caption__body{
+	h4{
+		margin-bottom: 4px;
 	}
 }
 
-.featherlight .featherlight-content{
-	position: static;
-	background: $darkink;
-	border: 0;
-	width: 100%;
-	margin: 0;
-	padding: 20px 0 0;
-
-	@include media-breakpoint-up(md) {
-		padding: 0;
-	}
-
-
-	.image-content{
-		h1, p{
-			color: $cloud;
-		}
-	}
-
-	.image-credits{
-		border-color: lighten($darkink, 10%);
-		p a{
-			@include underline(lighten($darkink, 10%), lighten($darkink, 20%));
-		}
-	}
-
-
-	.featherlight-previous, .featherlight-next{
-		@include font-size(30);
-		margin-right: 10px;
-		color: $sun;
-		cursor: pointer;
-
-		&:hover{
-			color: $cloud;
-		}
-	}
-
-	> .featherlight-previous, > .featherlight-next{
-		position: absolute;
-		top: 0;
-		height: 100%;
-		width: 40px;
-		margin: 0;
-
-		.icon{
-			position: absolute;
-			bottom: 20px;
-			margin: -13px 15px 0;
-		}
-	}
-
-	> .featherlight-previous{
-		left: 0;
-		.icon{
-			left: 0;
-		}
-	}
-	> .featherlight-next{
-		right: 0;
-		.icon{
-			right: 0;
-		}
-	}
-
-	@include media-breakpoint-up(md) {
-		> .featherlight-previous{
-			left: auto;
-			right: 60px;
-		}
-	}
-
-	.attachment{
-		max-height: 90vh;
-	}
-	.attachment img{
-		display: block;
-		width: auto;
-		margin: 0 auto 10px;
-		max-height: 90vh;
-	}
-
-	.next-prev{
-		position: absolute;
-		bottom: 0;
-		line-height: 0;
-
-		span{
-			display: inline-block;
-			float: left;
-		}
-	}
+.fancybox-button:hover{
+	color: $sun;
+}
+.fancybox-progress{
+	background: $earth;
 }
 
 
@@ -1826,6 +1721,9 @@ body #youmax, body .youmax{
 
 .admin-bar .menu-toggle{
 	top: 45px;
+}
+.admin-bar .menu-block-container .menu-block.fix-menu-top{
+	top: 32px;
 }
 
 

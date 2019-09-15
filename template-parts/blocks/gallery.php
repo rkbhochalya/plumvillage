@@ -14,10 +14,12 @@ if( $images ) :
                     <div class="grid-sizer <?php echo $cols; ?>"></div>
                     <?php foreach( $images as $image ): ?>
                         <div class="gallery-image <?php echo $cols; ?>">
-                        	<a data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="link-zoom" href="<?php echo get_attachment_link( $image ); ?>">
-                                <span class="icon icon-bg icon-zoom"></span>
-                                <?php echo wp_get_attachment_image($image, 'medium') ?>
-                        	</a>
+                            <figure>
+                                <a data-fancybox="<?php echo $block['id']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="gallery" href="<?php echo wp_get_attachment_image_src( $image, 'large' )[0]; ?>">
+                                </a>
+                                <?php set_query_var( 'image_id', $image ); ?>
+                                <?php get_template_part( 'template-parts/figcaption' ); ?>
+                            </figure>
                         </div>
                     <?php endforeach; ?>
                 </div>

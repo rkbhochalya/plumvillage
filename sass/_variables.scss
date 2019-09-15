@@ -83,3 +83,12 @@ $columns: (
 );
 
 $columns__margin: 3.8%;
+
+// fix sass not allowing env inside of a max function, breaks fancybox
+@function max($numbers...){
+  @return m#{a}x(#{$numbers})
+}
+
+@function min($numbers...){
+  @return m#{i}n(#{$numbers})
+}
