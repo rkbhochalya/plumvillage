@@ -1306,6 +1306,27 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Wonder Plugin
+
+.wonderplugingallery-container{
+	margin: 0!important;
+}
+
+a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
+	position: absolute;
+	left: -99999999px;
+}
+.html5gallery-box-2{
+	left: 0!important;
+}
+.html5gallery-elem-2{
+	box-shadow: none!important;
+}
+.html5gallery-title-text-2{
+	display: none;
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Thrive Comments
