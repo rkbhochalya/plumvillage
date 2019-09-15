@@ -92,7 +92,7 @@
 
 
 	// open images in fancybox
-	$('figure.wp-block-image a[href*="uploads"], wp-block-image figure a[href*="uploads"]').fancybox({
+	$('figure.wp-block-image a[href*="uploads"], .wp-block-image figure a[href*="uploads"]').fancybox({
 		type: 'image'
 	})
 
