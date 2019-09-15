@@ -354,15 +354,19 @@ big {
 	&.is-tnh-quote{
 		blockquote{
 			@include clearfix();
-		}
-		cite{
-			background: url('assets/images/sign.png') no-repeat;
-			background-size: 208px 56px;
-			font-size: 0;
-			width: 208px;
-			height: 56px;
-			float: right;
-			margin-top: 20px;
+
+			p{
+				padding-bottom: 0;
+			}
+			cite{
+				background: url('assets/images/sign.png') no-repeat;
+				background-size: 208px 56px;
+				font-size: 0;
+				width: 208px;
+				height: 56px;
+				float: right;
+				margin-top: 20px;
+			}
 		}
 	}
 }
@@ -911,7 +915,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 }
 
 .menu-toggle{
-	top: 13px;
+	top: 11px;
 	left: 15px;
 	position: fixed;
 	position: sticky;
@@ -1504,9 +1508,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		float: right;
 
 		#tcm-sort-by.tcm-dropdown{
-			float: right;
 			margin-right: 0;
-			margin-left: 10px;
 
 			.tcm-toggle-button{
 				@include font-size(14);

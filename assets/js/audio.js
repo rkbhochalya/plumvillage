@@ -26,54 +26,18 @@ function initProgressBar() {
   }
 };
 
-// function initPlayers(num) {
-//   // pass num in if there are multiple audio players e.g 'player' + i
-
-//   for (var i = 0; i < num; i++) {
-//     (function() {
-
-//       // Variables
-//       // ----------------------------------------------------------
-//       // audio embed object
-//       var playerContainer = document.getElementById('player-container'),
-//         player = document.getElementById('player'),
-//         isPlaying = false,
-//         playBtn = document.getElementById('play-btn');
-
-//       // Controls Listeners
-//       // ----------------------------------------------------------
-//       if (playBtn != null) {
-//         playBtn.addEventListener('click', function() {
-//           togglePlay()
-//         });
-//       }
-
-//       // Controls & Sounds Methods
-//       // ----------------------------------------------------------
-//       function togglePlay() {
-//         if (player.paused === false) {
-//           player.pause();
-//           isPlaying = false;
-//           document.getElementById('play-btn').className = "";
-
-//         } else {
-//           player.play();
-//           document.getElementById('play-btn').className = "pause";
-//           isPlaying = true;
-//         }
-//       }
-//     }());
-//   }
-// }
-
 function calculateTotalValue(length) {
-  var minutes = Math.floor(length / 60),
-    seconds_int = length - minutes * 60,
-    seconds_str = seconds_int.toString(),
-    seconds = seconds_str.substr(0, 2),
-    time = minutes + ':' + seconds
 
-  return time;
+  dateObj = new Date(length * 1000);
+  hours = dateObj.getUTCHours();
+  minutes = dateObj.getUTCMinutes();
+  seconds = dateObj.getSeconds();
+
+  timeString = (hours != 0 ? hours.toString().padStart(2, '0') + ':' : '') + 
+    minutes.toString().padStart(2, '0') + ':' + 
+    seconds.toString().padStart(2, '0');
+
+  return timeString;
 }
 
 function calculateCurrentValue(currentTime) {
@@ -109,10 +73,12 @@ function calculateCurrentValue(currentTime) {
 		  var length = player[0].duration
 		  var current_time = player[0].currentTime;
 
-		  // calculate total length of value
-		  var totalLength = calculateTotalValue(length)
-		  audioPlayer.find('.end-time').text(totalLength);
-
+      var audio = new Audio();
+      $(audio).on("loadedmetadata", function(){
+        var totalLength = calculateTotalValue(audio.duration)
+        audioPlayer.find('.end-time').text(totalLength);
+      });
+      audio.src = player.find('source').attr('src');
 
       player.on('timeupdate', function(){
 			  var length = player[0].duration

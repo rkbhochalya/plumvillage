@@ -607,6 +607,7 @@
 		margin: 0;
 		padding: 0;
 
+
 		ul{
 			@include reset-styling();
 			margin-bottom: 0;
@@ -646,15 +647,17 @@
 			}
 		}
 		&.fix-menu-top{
+			transition: background .4s cubic-bezier(.15,.53,.35,1);
 			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
 			background: $cloud;
 			z-index: 99;
+			border-bottom: 1px solid $freshink;
 
-			#block-menu > li{
-				border-bottom: 1px solid $freshink;
+			#block-menu > li a{
+				color: $darkink;
 			}
 		}
 	}

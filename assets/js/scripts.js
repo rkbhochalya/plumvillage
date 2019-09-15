@@ -1,10 +1,9 @@
-//@prepros-append vendors/isotope/isotope.pkgd.min.js
-//@prepros-append vendors/featherlight/featherlight.min.js
-//@prepros-append vendors/imagesloaded/imagesloaded.pkgd.min.js
-//@prepros-append vendors/bootstrap/util.js
-//@prepros-append vendors/bootstrap/tab.js
-//@prepros-append vendors/featherlight/featherlight.gallery.min.js
-//@prepros-append vendors/parsley/parsley.min.js
-//@prepros-append vendors/slick/slick.js
+//@prepros-append ../../node_modules/isotope-layout/dist/isotope.pkgd.js
+//@prepros-append ../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js
+//@prepros-append ../../node_modules/imagesloaded/imagesloaded.pkgd.js
+//@prepros-append ../../node_modules/bootstrap/js/dist/util.js
+//@prepros-append ../../node_modules/bootstrap/js/dist/tab.js
+//@prepros-append ../../node_modules/parsleyjs/dist/parsley.js
+//@prepros-append ../../node_modules/slick-carousel/slick/slick.js
 //@prepros-append audio.js
 //@prepros-append magic.js

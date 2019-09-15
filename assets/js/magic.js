@@ -69,48 +69,48 @@
  	})
 
 
- 	// featherlight defaults
-	$.extend($.featherlight.defaults, {
-		beforeOpen: function(e){
-			if(e){
-				var el = $(e.currentTarget);
-				if(el.data('isPress')){
-					$('body').addClass('is-press')
-				} else {
-					$('body').removeClass('is-press')
-				}
-			}
-		}
-	})
+ // 	// featherlight defaults
+	// $.extend($.featherlight.defaults, {
+	// 	beforeOpen: function(e){
+	// 		if(e){
+	// 			var el = $(e.currentTarget);
+	// 			if(el.data('isPress')){
+	// 				$('body').addClass('is-press')
+	// 			} else {
+	// 				$('body').removeClass('is-press')
+	// 			}
+	// 		}
+	// 	}
+	// })
 
- 	$('.gallery-embed').each(function(){
- 		var el = $(this);
- 		el.on('click', function(){
-			if(el.data('isPress')){
-				$('body').addClass('is-press')
-			} else {
-				$('body').removeClass('is-press')
-			}
-	 		$.featherlightGallery(el.find('a.gallery'), {
-				previousIcon: '<span class="icon icon-gallery-left"></span>',
-				nextIcon: '<span class="icon icon-gallery-right"></span>',
-	 		});
-	 	})
- 	})
+ // 	$('.gallery-embed').each(function(){
+ // 		var el = $(this);
+ // 		el.on('click', function(){
+	// 		if(el.data('isPress')){
+	// 			$('body').addClass('is-press')
+	// 		} else {
+	// 			$('body').removeClass('is-press')
+	// 		}
+	//  		$.featherlightGallery(el.find('a.gallery'), {
+	// 			previousIcon: '<span class="icon icon-gallery-left"></span>',
+	// 			nextIcon: '<span class="icon icon-gallery-right"></span>',
+	//  		});
+	//  	})
+ // 	})
 
-	$('.wp-block-image figure a').featherlight({
-		afterContent: function(){
-			if($maxHeight == 0){
-				$('.featherlight .attachment').imagesLoaded()
-				  .always( function( instance ) {
-						$maxHeight = $('.featherlight .attachment img').height();
-						$('.featherlight .attachment').height($maxHeight);
-				  });
-			} else {
-				$('.featherlight .attachment').height($maxHeight);
-			}			
-		}
-	})
+	// $('.wp-block-image figure a').featherlight({
+	// 	afterContent: function(){
+	// 		if($maxHeight == 0){
+	// 			$('.featherlight .attachment').imagesLoaded()
+	// 			  .always( function( instance ) {
+	// 					$maxHeight = $('.featherlight .attachment img').height();
+	// 					$('.featherlight .attachment').height($maxHeight);
+	// 			  });
+	// 		} else {
+	// 			$('.featherlight .attachment').height($maxHeight);
+	// 		}			
+	// 	}
+	// })
 
 
 	$('.play').click(function(e){
@@ -323,10 +323,10 @@
 		})
 
 		// gallery
-		$(this).find('.gallery-image a').featherlightGallery({
-			previousIcon: '<span class="icon icon-gallery-left"></span>',
-			nextIcon: '<span class="icon icon-gallery-right"></span>'
-		});		
+		// $(this).find('.gallery-image a').featherlightGallery({
+		// 	previousIcon: '<span class="icon icon-gallery-left"></span>',
+		// 	nextIcon: '<span class="icon icon-gallery-right"></span>'
+		// });		
 	})
 
 	// Slick Slider

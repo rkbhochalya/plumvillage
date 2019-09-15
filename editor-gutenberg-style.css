@@ -1929,14 +1929,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #000;
         font-weight: bold; }
     .menu-block-container .menu-block.fix-menu-top {
+      -webkit-transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      -o-transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background: #fff;
-      z-index: 99; }
-      .menu-block-container .menu-block.fix-menu-top #block-menu > li {
-        border-bottom: 1px solid #F3F3F3; }
+      z-index: 99;
+      border-bottom: 1px solid #F3F3F3; }
+      .menu-block-container .menu-block.fix-menu-top #block-menu > li a {
+        color: #272727; }
 
 .wp-block-cover {
   padding-bottom: 0; }

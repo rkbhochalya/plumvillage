@@ -5,6 +5,8 @@ add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
 
 // filter_hook function to react on sub_menu flag
 function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
+  $post = get_queried_object();   
+  $parent = false;
   foreach ( $sorted_menu_items as $menu_item ) {
     // var_export($menu_item);
     // var_export($menu_item->current);
@@ -16,7 +18,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     $uri_segments = explode('/', $menu_item->url);
 
     $i = 2;
-    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $retreats = false;
+    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = false;
     foreach ($uri_segments as $slug) {
       if($slug == 'about') : 
         $about = true;
@@ -37,11 +39,23 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       if($slug == 'news') : 
         $news = true;
       endif;
+      if($slug == 'key-practice-texts') : 
+        $practice = true;
+      endif;
       if($slug == 'chanting') : 
         $chanting = true;
       endif;
+      if($slug == 'sutra') : 
+        $sutra = true;
+      endif;
+      if($slug == 'songs') : 
+        $songs = true;
+      endif;
       if($slug == 'when-can-you-visit-us') : 
         $retreats = true;
+      endif;
+      if($slug == 'register') : 
+        $register = true;
       endif;
       $i++;
     }
@@ -85,7 +99,28 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       $menu_item->current = true;
     }    
 
+    if($practice &! $parent && in_category(array('chanting', 'sutra', 'key-practice-texts', 'songs'))){
+      $menu_item->classes[] = 'current-menu-ancestor';
+      $menu_item->current = true;
+      $parent = true;
+    }
+
     if( in_category( 'chanting' ) && $chanting && (get_post_type() == 'post')){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+
+    if( in_category( 'key-practice-texts' ) && $practice && (get_post_type() == 'post')){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+
+    if( in_category( 'sutra' ) && $sutra && (get_post_type() == 'post')){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+
+    if( in_category( 'songs' ) && $songs && (get_post_type() == 'post')){
       $menu_item->classes[] = 'current-menu-item';
       $menu_item->current = true;
     }
