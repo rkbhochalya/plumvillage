@@ -24,7 +24,7 @@
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', <?php the_field('google_analytics_code', 'options'); ?>, { 'anonymize_ip': true });
+	  gtag('config', '<?php the_field('google_analytics_code', 'options'); ?>', { 'anonymize_ip': true });
 	</script>
 	
 	<?php wp_head(); ?>
