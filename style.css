@@ -9428,6 +9428,21 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .fancybox-progress {
   background: #8B572A; }
 
+.fancybox-content.book-content {
+  max-width: 1000px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .fancybox-content.book-content h1 {
+    font-size: 2.5rem; }
+  .fancybox-content.book-content p {
+    max-width: 100%;
+    border: none;
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    padding-right: 0;
+    font-size: 0.9375rem; }
+
 .wonderplugingallery-container {
   margin: 0 !important; }
 

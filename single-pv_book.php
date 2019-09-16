@@ -7,10 +7,12 @@
  * @package Plum_Village
  */
 
-get_header();
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {} else {
+	get_header();
+}
 ?>
-
-	<div class="container">
+	
+	<div class="container book-content">
 		<div class="row">
 
 		<?php
@@ -67,5 +69,6 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
-get_footer();
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {} else {
+	get_footer();
+}

@@ -1306,6 +1306,24 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 }
 
 
+/// books in fancybox
+
+.fancybox-content.book-content{
+	max-width: 1000px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	h1{
+		@include font-size(40);
+	}
+
+	p{
+		@include reset-styling();
+		@include font-size(15);
+	}
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Wonder Plugin
 

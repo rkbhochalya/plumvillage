@@ -96,8 +96,6 @@
 		type: 'image'
 	})
 
-
-
  // 	$('.gallery-embed').each(function(){
 	//  		$.featherlightGallery(el.find('a.gallery'), {
 	// 			previousIcon: '<span class="icon icon-gallery-left"></span>',
