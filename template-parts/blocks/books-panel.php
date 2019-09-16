@@ -10,9 +10,9 @@ if( have_rows('books') ): ?>
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
         <?php endif; ?>
-        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('books')) > 3)) : echo 'back-to-baseline'; endif;?>">
+        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('books')) > 1)) : echo 'back-to-baseline'; endif;?>">
             <div class="col-md-12">
-                <div class="row">
+                <div class="row <?php if(count(get_field('books')) > 1) : ?>justify-content-center<?php endif; ?>">
                     <?php while ( have_rows('books') ) : the_row(); ?>
                         <?php $bookId = get_sub_field('book'); ?>
                         <div class="col-6 col-md-3 mb-4">

@@ -47,7 +47,7 @@
 <body <?php body_class(); ?>>
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
 
-<div class="mega-menu-container">
+<div class="mega-menu-container hidden">
 		<button class="menu-toggle unbutton" aria-controls="primary-menu" aria-expanded="false"><span class="icon-close"></span></button>
 			<?php
 			wp_nav_menu( array(

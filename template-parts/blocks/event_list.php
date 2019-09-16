@@ -23,7 +23,7 @@
 			'posts_per_page'				 => $max_items,
 			'meta_query'=>array(
 				 array(
-				    'key' => 'start_date',
+				    'key' => 'end_date',
 				    'value' => date('Ymd'),
 				    'compare' => '>=',
 				    'type' => 'NUMERIC'
@@ -68,7 +68,7 @@
 				'posts_per_page'				 => $max_items,
 				'meta_query'=>array(
 					 array(
-					    'key' => 'start_date',
+					    'key' => 'end_date',
 					    'value' => date('Ymd'),
 					    'compare' => '>=',
 					    'type' => 'NUMERIC'
@@ -100,7 +100,7 @@
 		'posts_per_page'				 => $max_items,
 		'meta_query'=>array(
 			 array(
-			    'key' => 'start_date',
+			    'key' => 'end_date',
 			    'value' => date('Ymd'),
 			    'compare' => '>=',
 			    'type' => 'NUMERIC'

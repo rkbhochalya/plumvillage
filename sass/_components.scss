@@ -145,6 +145,7 @@ textarea {
 			font-weight: 300;
 			padding: 5px 15px;
 			@include font-size(15);
+			margin-left: 0;
 
 			&:before{
 				display: none;

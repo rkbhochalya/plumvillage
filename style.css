@@ -8226,7 +8226,8 @@ textarea {
   .select2-container--select2-container--inline ul li {
     font-weight: 300;
     padding: 5px 15px;
-    font-size: 0.9375rem; }
+    font-size: 0.9375rem;
+    margin-left: 0; }
     .select2-container--select2-container--inline ul li:before {
       display: none; }
     .select2-container--select2-container--inline ul li:hover {
@@ -8463,6 +8464,11 @@ textarea {
 
 h1, h2 {
   font-family: "Cormorant Infant", serif; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem; }
 
 h1 {
   clear: both;
@@ -8961,6 +8967,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .hide {
   display: none; }
 
+.hidden {
+  visibility: hidden; }
+
 .page-template-default .wp-block-image.alignwide img, .page-template-default .wp-block-image .alignleft img, .page-template-default .wp-block-image .alignright img, .page-template-default .wp-block-image .aligncenter img, .single .wp-block-image.alignwide img, .single .wp-block-image .alignleft img, .single .wp-block-image .alignright img, .single .wp-block-image .aligncenter img {
   max-width: 100%; }
 
@@ -9149,9 +9158,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     background: #000;
     color: #fff; } }
 
-.loaded .mega-menu-container {
-  display: block; }
-
 .mega-menu-container {
   position: fixed;
   top: 0;
@@ -9164,8 +9170,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   z-index: 0;
   padding-top: 13px;
   padding-left: 4.25vw;
-  padding-right: 4.25vw;
-  display: none; }
+  padding-right: 4.25vw; }
   @media (min-width: 768px) {
     .mega-menu-container {
       width: 50vw; } }
@@ -10150,7 +10155,8 @@ ul.slick-dots {
 
 .page-template-page_full-width .entry-content h2.has-text-align-center {
   max-width: 760px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 2.125rem;
   line-height: 140%; }
 
@@ -10744,7 +10750,8 @@ ul.slick-dots {
       margin-bottom: 0; }
     .menu-block-container .menu-block #block-menu li {
       display: inline-block;
-      padding: 0 5px; }
+      padding: 0 5px;
+      margin-left: 0; }
       @media (min-width: 768px) {
         .menu-block-container .menu-block #block-menu li {
           padding: 0 10px; } }

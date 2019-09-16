@@ -1898,7 +1898,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin-bottom: 0; }
     .menu-block-container .menu-block #block-menu li {
       display: inline-block;
-      padding: 0 5px; }
+      padding: 0 5px;
+      margin-left: 0; }
       @media (min-width: 768px) {
         .menu-block-container .menu-block #block-menu li {
           padding: 0 10px; } }

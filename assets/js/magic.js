@@ -1,20 +1,26 @@
 (function($){
-	// fix showing the menu and yellow background while loading the page
-	$('html').addClass('loaded');
 
 	// mega menu toggle
   $('.menu-toggle').click(function(e){
     $('body').toggleClass('menu-open');
+    $('.mega-menu-container').removeClass('hidden');
     e.preventDefault();
     e.stopPropagation();
   })
   $('.site').on('click', function(e){
   	if($('body').hasClass('menu-open')){
-  		$('body').toggleClass('menu-open');
+  		$('.menu-toggle:first').trigger('click');
 	    e.preventDefault();
 	    e.stopPropagation();
   	}
   })
+
+  // hide menu when not needed, prevents glitches/showing it when loading and scrolling
+	$('.site').on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(){
+		if(!$('body').is('.menu-open')){
+			$('.mega-menu-container').addClass('hidden');
+		}
+	})
 
 
   $("form.validate").parsley({
