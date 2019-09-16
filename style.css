@@ -8400,8 +8400,10 @@ figure {
   background: #FFD22A; }
 
 ul, ol {
-  margin: 0 0 1.5em 1.6em;
+  margin: 0 0 1.5em 0;
   padding-left: 0; }
+  ul li, ol li {
+    margin-left: 1.6em; }
 
 ul {
   list-style: disc; }
@@ -9073,7 +9075,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .main-navigation li {
   float: left;
   position: relative;
-  line-height: 100%; }
+  line-height: 100%;
+  margin-left: 0; }
 
 .main-navigation li:before {
   display: none; }
@@ -9183,7 +9186,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
       margin-left: 25px;
       padding: 0; }
       .mega-menu-container #menu-mega-menu ul li {
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        margin-left: 0; }
         .mega-menu-container #menu-mega-menu ul li a {
           color: #9A9A9A;
           -webkit-transition: color .3s ease;
@@ -9341,7 +9345,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   padding: 0 0 20px; }
   .footer-menu li {
     display: inline-block;
-    margin-right: 30px; }
+    margin-right: 30px;
+    margin-left: 0; }
     .footer-menu li:before {
       display: none; }
     .footer-menu li a {
@@ -9371,7 +9376,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .social li {
     display: inline-block;
     margin-right: 10px;
-    font-size: 2.2em; }
+    font-size: 2.2em;
+    margin-left: 0; }
     .social li:before {
       display: none; }
     .social li a {
@@ -9989,6 +9995,8 @@ ul.slick-dots {
 .entry-meta {
   font-size: 1.125rem;
   padding: 0 0 20px; }
+  .entry-meta a {
+    color: #9A9A9A; }
 
 .entry-source {
   position: relative; }

@@ -57,8 +57,12 @@ figure {
 // Lists
 
 ul, ol {
-	margin: 0 0 1.5em 1.6em;
+	margin: 0 0 1.5em 0;
 	padding-left: 0;
+
+	li{
+		margin-left: 1.6em;
+	}
 }
 
 ul {
@@ -864,6 +868,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		float: left;
 		position: relative;
 		line-height: 100%;
+		margin-left: 0;
 
 		&:hover > a,
 		&.focus > a {
@@ -994,6 +999,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	  	li{
 	  		margin-bottom: 15px;
+	  		margin-left: 0;
 
 	  		a{
 	  			color: $grey;
@@ -1190,6 +1196,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	li{
 		display: inline-block;
 		margin-right: 30px;
+		margin-left: 0;
 
 		&:before{
 			display: none;
@@ -1228,6 +1235,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		display: inline-block;
 		margin-right: 10px;
 		font-size: 2.2em;
+		margin-left: 0;
 
 		&:before{
 			display: none;

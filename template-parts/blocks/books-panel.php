@@ -15,7 +15,7 @@ if( have_rows('books') ): ?>
                 <div class="row">
                     <?php while ( have_rows('books') ) : the_row(); ?>
                         <?php $bookId = get_sub_field('book'); ?>
-                        <div class="col-6 col-md mb-4">
+                        <div class="col-6 col-md-3 mb-4">
                             <a class="link-zoom" data-fancybox="<?php echo $block['id']; ?>" data-type="ajax" href="<?php echo get_permalink($bookId); ?>"><span class="icon icon-bg icon-zoom"></span><?php echo get_the_post_thumbnail($bookId); ?></a>
                             <?php if(get_field('show_excerpt')) : ?>
                                 <h5><a href="<?php echo get_permalink($bookId); ?>"><?php echo get_the_title($bookId); ?></a></h5>
