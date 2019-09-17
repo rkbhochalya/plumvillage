@@ -368,6 +368,11 @@
   })
 
 
+  // set cookie
+  $('.cookies-ok').on('click', function(){
+  	createCookie('cookieok', 'yes', 365);
+  	$('#cookie-notice').fadeOut(200);
+  })
 
 })(jQuery);
 
@@ -403,4 +408,14 @@ function getHashFilter() {
   var matches = location.hash.match( /filter=([^&]+)/i );
   var hashFilter = matches && matches[1];
   return hashFilter && decodeURIComponent( hashFilter );
+}
+
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/; domain="+window.location.hostname;
 }

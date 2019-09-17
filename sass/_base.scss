@@ -1971,3 +1971,22 @@ ul.slick-dots{
 	background: $freshtree;
 }
 
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Cookie Notice
+
+#cookie-notice{
+	background: $sun;
+	max-width: 230px;
+	padding: 20px;
+	border-radius: 7px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index:99;
+
+	p{
+		@include font-size(15);
+	}
+}

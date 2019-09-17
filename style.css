@@ -8101,11 +8101,35 @@ button.unbutton {
     outline: 0; }
 
 .btn {
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.1rem 0.4em; }
 
 .btn-lg {
   font-size: 0.875rem;
   padding: 1.14rem 1rem .85rem; }
+
+.btn-light:hover {
+  background-color: #fcf2d7;
+  border-color: #fcf2d7; }
+
+.btn-light:hover {
+  background-color: #fcf2d7;
+  border-color: #fcf2d7; }
+
+.btn-light:focus, .btn-light.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 190, 2, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(241, 190, 2, 0.5); }
+
+.btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+  background: #ffe890;
+  border-color: #ffe586; }
+
+.btn-light.btn-super-light {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
+  font-weight: 300; }
 
 input[type="text"],
 input[type="email"],
@@ -9893,6 +9917,18 @@ ul.slick-dots {
 
 .has-fresh-tree-background-color {
   background: #F5F5EF; }
+
+#cookie-notice {
+  background: #FFD22A;
+  max-width: 230px;
+  padding: 20px;
+  border-radius: 7px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99; }
+  #cookie-notice p {
+    font-size: 0.9375rem; }
 
 /*--------------------------------------------------------------
 # Pages
