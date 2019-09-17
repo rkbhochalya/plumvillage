@@ -9791,8 +9791,8 @@ body #youmax, body .youmax {
 .admin-bar .menu-block-container .menu-block.fix-menu-top {
   top: 32px; }
 
-.entry-content .gallery-images .gallery-image {
-  margin-bottom: 30px; }
+.entry-content .gallery-images figcaption {
+  display: none; }
 
 @media (min-width: 768px) {
   .entry-content .back-to-baseline .gallery-images {

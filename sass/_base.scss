@@ -1782,8 +1782,8 @@ body #youmax, body .youmax{
 
 
 .entry-content .gallery-images{
-	.gallery-image{
-		margin-bottom: 30px;
+	figcaption{
+		display: none;
 	}
 }
 

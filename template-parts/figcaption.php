@@ -7,14 +7,12 @@
 
 ?>
 <figcaption>
-    <h4><?php 
-        if(wp_get_attachment_caption($image_id)) { 
-            echo wp_get_attachment_caption($image_id); 
-        } else {
-            echo get_the_title($image_id );
-        } 
-    ?></h4>
-    <p><?php echo get_the_content(false, false, $image_id); ?></p>
+    <?php if(wp_get_attachment_caption($image_id)) : ?>
+        <h4><?php echo wp_get_attachment_caption($image_id); ?></h4>
+    <?php endif; ?>
+    <?php if(get_the_content(false, false, $image_id)) : ?>
+        <p><?php echo get_the_content(false, false, $image_id); ?></p>
+    <?php endif; ?>
     <?php 
         $credits = get_field('credits', $image_id); 
         $credits_url = get_field('credits_url', $image_id);
