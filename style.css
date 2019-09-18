@@ -8450,10 +8450,9 @@ ul li::before {
   color: #FFD22A;
   display: inline-block;
   font-size: 1.8em;
-  width: 22px;
-  left: 0;
+  left: -22px;
   position: absolute;
-  top: 5px; }
+  top: 1px; }
 
 ul.list-unstyled {
   margin: 0;
@@ -8999,7 +8998,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   max-width: 100%; }
 
 @media (min-width: 992px) {
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5, .single .entry-content ul, .single .entry-content ol {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .page-template-default .entry-content .slider, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5, .single .entry-content ul, .single .entry-content ol, .single .entry-content .slider {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(78.6862745098% + 30px);
     flex: 0 0 calc(78.6862745098% + 30px);
@@ -9035,7 +9034,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     width: calc(78.6862745098% + 30px); } }
 
 @media (min-width: 1400px) {
-  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5, .single .entry-content ul, .single .entry-content ol {
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .page-template-default .entry-content .slider, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5, .single .entry-content ul, .single .entry-content ol, .single .entry-content .slider {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 calc(65.6862745098% + 30px);
     flex: 0 0 calc(65.6862745098% + 30px);
@@ -9888,15 +9887,19 @@ body #youmax, body .youmax {
 .slider.portrait .slider-image {
   padding-bottom: 180%; }
 
-ul.slick-dots {
+.entry-content .slider {
+  margin-bottom: 80px; }
+
+ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   padding: 0;
   text-align: left;
-  margin-left: -8px; }
-  ul.slick-dots li {
+  margin-left: -8px;
+  border: none; }
+  ul.slick-dots li, .page-template-default .entry-content ul.slick-dots li {
     margin: 0 2px; }
-    ul.slick-dots li:before {
+    ul.slick-dots li:before, .page-template-default .entry-content ul.slick-dots li:before {
       display: none; }
-    ul.slick-dots li button:before {
+    ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-dots li button:before {
       font-size: 20px; }
 
 .slick-prev,
