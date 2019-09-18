@@ -776,6 +776,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.wp-block-image figure.aligncenter{
 		width: $center-lg-max-width;
 	}
+	.entry-content .slider.alignwide{
+		max-width: 884px;
+	}
 }
 
 @include media-breakpoint-up(xxl) {
@@ -1924,7 +1927,8 @@ body #youmax, body .youmax{
 	}
 }
 .entry-content .slider{
-	margin-bottom: 80px;
+	margin-bottom: 60px;
+	padding-bottom: 0;
 }
 
 ul.slick-dots, .page-template-default .entry-content ul.slick-dots{

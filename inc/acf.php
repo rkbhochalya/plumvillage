@@ -334,7 +334,7 @@ function register_acf_block_types() {
         'icon'              => 'slides',
         'keywords'          => array( 'slider', 'photo', 'gallery' ),
         'supports'          => array(
-            'align'     => false
+            'align'     => array('wide')
         )
     ));    
 

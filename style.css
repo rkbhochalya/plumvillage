@@ -9031,7 +9031,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .page-template-default .wp-block-image img, .single .wp-block-image img {
     max-width: calc(78.6862745098% + 30px); }
   .page-template-default .wp-block-image figure.aligncenter, .single .wp-block-image figure.aligncenter {
-    width: calc(78.6862745098% + 30px); } }
+    width: calc(78.6862745098% + 30px); }
+  .page-template-default .entry-content .slider.alignwide, .single .entry-content .slider.alignwide {
+    max-width: 884px; } }
 
 @media (min-width: 1400px) {
   .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content ul, .page-template-default .entry-content ol, .page-template-default .entry-content .slider, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5, .single .entry-content ul, .single .entry-content ol, .single .entry-content .slider {
@@ -9888,7 +9890,8 @@ body #youmax, body .youmax {
   padding-bottom: 180%; }
 
 .entry-content .slider {
-  margin-bottom: 80px; }
+  margin-bottom: 60px;
+  padding-bottom: 0; }
 
 ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   padding: 0;
