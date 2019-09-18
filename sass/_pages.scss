@@ -305,6 +305,8 @@
 .index-post{
 	h2{
 		@include font-size(28);
+		margin-top: 0;
+		margin-bottom: 0.2rem;
 	}
 	p{
 		@include reset-styling();
