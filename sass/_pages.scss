@@ -251,7 +251,42 @@
 				color: $ink;
 			}
 		}
-	}	
+		.toggle-filter-list{
+			display: none;
+		}		
+	}
+	.filter-list.too-high{
+		max-height: 30px;
+		overflow: hidden;
+		position: relative;
+		padding-right: 20px;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		.toggle-filter-list{
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 0;
+			background: #fff;
+			box-shadow: -10px 0px 5px #fff;
+			color: $grey;
+			cursor: pointer;
+	  	transition: color .3s ease;
+		}
+		.toggle-filter-list:hover{
+			color: $ink;
+		}
+
+		&.show-all{
+			max-height: 100%;
+			white-space: normal;
+
+			.toggle-filter-list{
+				transform: rotate(180deg);
+			}
+		}
+	}
 	hr{
 		clear: both;
 	}
@@ -260,7 +295,7 @@
 .filters{
 
 	.filter-block:first-child{
-		padding-bottom: 0;
+		padding-bottom: 10px;
 		hr{
 			display: none;
 		}

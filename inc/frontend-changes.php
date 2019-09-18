@@ -431,6 +431,7 @@ function get_filter_menu($posts, $taxonomy){
               echo ', ';
             }
           } ?>
+            <span class="toggle-filter-list icon-circle-caret-down"></span>
         </div>
         <hr>
       </div>

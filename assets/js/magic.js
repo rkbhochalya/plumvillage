@@ -374,6 +374,17 @@
   	$('#cookie-notice').fadeOut(200);
   })
 
+  // if the filter list is too long, make it togglable
+  $('.filter-list').each(function(){
+  	if($(this).height() > 40){
+  		$(this).addClass('too-high')
+  	}
+  })
+
+  $('.toggle-filter-list').on('click', function(){
+  	$('.filter-list').toggleClass('show-all')
+  })
+
 })(jQuery);
 
 /* the binary Great Common Divisor calculator */

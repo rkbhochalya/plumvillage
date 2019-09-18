@@ -1,6 +1,7 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "assets/fonts" !default;
 
+$icon-circle-caret-down: "\e91a";
 $icon-external-link: "\e915";
 $icon-download: "\e911";
 $icon-pauze: "\e912";
@@ -60,7 +61,11 @@ $icon-hamburger: "\e900";
 }
 
 
-
+.icon-circle-caret-down {
+  &:before {
+    content: $icon-circle-caret-down; 
+  }
+}
 .icon-external-link {
   &:before {
     content: $icon-external-link; 

@@ -7968,6 +7968,9 @@ body.compensate-for-scrollbar {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-circle-caret-down:before {
+  content: ""; }
+
 .icon-external-link:before {
   content: ""; }
 
@@ -10149,12 +10152,45 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
     color: #9A9A9A; }
     .filter-block .filter-list a.selected {
       color: #000; }
+  .filter-block .filter-list .toggle-filter-list {
+    display: none; }
+
+.filter-block .filter-list.too-high {
+  max-height: 30px;
+  overflow: hidden;
+  position: relative;
+  padding-right: 20px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+  .filter-block .filter-list.too-high .toggle-filter-list {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background: #fff;
+    -webkit-box-shadow: -10px 0px 5px #fff;
+    box-shadow: -10px 0px 5px #fff;
+    color: #9A9A9A;
+    cursor: pointer;
+    -webkit-transition: color .3s ease;
+    -o-transition: color .3s ease;
+    transition: color .3s ease; }
+  .filter-block .filter-list.too-high .toggle-filter-list:hover {
+    color: #000; }
+  .filter-block .filter-list.too-high.show-all {
+    max-height: 100%;
+    white-space: normal; }
+    .filter-block .filter-list.too-high.show-all .toggle-filter-list {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
 
 .filter-block hr {
   clear: both; }
 
 .filters .filter-block:first-child {
-  padding-bottom: 0; }
+  padding-bottom: 10px; }
   .filters .filter-block:first-child hr {
     display: none; }
 
