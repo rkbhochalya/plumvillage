@@ -8442,7 +8442,8 @@ li > ol {
   margin-left: 1.5em; }
 
 ul li {
-  list-style: none; }
+  list-style: none;
+  position: relative; }
 
 ul li::before {
   content: "•";
@@ -8450,8 +8451,8 @@ ul li::before {
   display: inline-block;
   font-size: 1.8em;
   width: 22px;
-  margin-left: -26px;
-  position: relative;
+  left: 0;
+  position: absolute;
   top: 5px; }
 
 ul.list-unstyled {

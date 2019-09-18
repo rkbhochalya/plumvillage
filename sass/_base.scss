@@ -80,14 +80,15 @@ li > ol {
 }
 ul li{
 	list-style: none;
+	position: relative;
 }
 ul li::before {
 	content: "•"; color: $sun;
   display: inline-block; 
   font-size: 1.8em;
   width: 22px;
-  margin-left: -26px;
-  position: relative;
+  left: 0;
+  position: absolute;
   top: 5px;
 }
 
