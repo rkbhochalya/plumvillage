@@ -8297,7 +8297,7 @@ object {
 .custom-logo-link {
   display: inline-block; }
 
-.gallery {
+.block.gallery {
   margin-bottom: 1.5em; }
 
 .gallery-item {
@@ -8460,6 +8460,8 @@ ul li::before {
 ul.list-unstyled {
   margin: 0;
   padding: 0; }
+  ul.list-unstyled li {
+    margin-left: 0; }
   ul.list-unstyled li::before {
     display: none; }
 
@@ -9009,8 +9011,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .page-template-default .center-without-border, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section, .single .center-without-border {
     padding-right: 30px;
     margin-bottom: 0;
-    padding-bottom: 1.5em;
     position: relative; }
+  .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default figure.aligncenter, .page-template-default .comments-section, .single .entry-content p, .single .entry-content blockquote, .single figure.aligncenter, .single .comments-section {
+    padding-bottom: 1.5em; }
   .page-template-default .entry-content p, .page-template-default .entry-content blockquote, .page-template-default .center-with-border, .page-template-default figure.aligncenter, .page-template-default .comments-section, .single .entry-content p, .single .entry-content blockquote, .single .center-with-border, .single figure.aligncenter, .single .comments-section {
     border-right: 1px solid #F3F3F3; }
   .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .single .entry-content h2, .single .entry-content h3, .single .entry-content h4, .single .entry-content h5 {
@@ -10719,6 +10722,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
 
 .media-coverage, .page-template-default .entry-content .media-coverage {
   margin-top: 40px; }
+  .media-coverage h4, .page-template-default .entry-content .media-coverage h4 {
+    margin-bottom: 10px; }
   .media-coverage p, .page-template-default .entry-content .media-coverage p {
     max-width: 100%;
     border: none;
@@ -10735,7 +10740,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
     padding-right: 0;
     padding-bottom: 0; }
     .media-coverage ul li, .page-template-default .entry-content .media-coverage ul li {
-      margin-bottom: 1em;
+      margin-bottom: 1.2em;
       font-size: 1rem;
       line-height: 180%; }
       .media-coverage ul li a, .page-template-default .entry-content .media-coverage ul li a {
@@ -10748,6 +10753,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
           -webkit-box-shadow: inset 0 -0.4em #FFD22A;
           box-shadow: inset 0 -0.4em #FFD22A;
           text-decoration: none; }
+        .media-coverage ul li a img, .page-template-default .entry-content .media-coverage ul li a img {
+          margin-bottom: 10px; }
         .media-coverage ul li a .icon-external-link, .page-template-default .entry-content .media-coverage ul li a .icon-external-link {
           color: #9A9A9A;
           margin-left: 5px; }
@@ -10756,8 +10763,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
           -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
           transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
         .media-coverage ul li a .play-middle, .page-template-default .entry-content .media-coverage ul li a .play-middle {
-          display: block;
-          margin-bottom: 10px; }
+          display: block; }
       .media-coverage ul li i, .page-template-default .entry-content .media-coverage ul li i {
         color: #9A9A9A;
         font-size: 0.875rem;

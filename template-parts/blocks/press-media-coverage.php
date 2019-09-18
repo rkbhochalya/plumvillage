@@ -2,7 +2,7 @@
 <div class="row media-coverage">
 	<?php if( have_rows('highlights') ): ?>
 		<div class="col-md-4">
-			<h6>- <?php _e('Recent Highlights', 'plumvillage'); ?></h6>
+			<h4><?php _e('Recent Highlights', 'plumvillage'); ?></h4>
 			<ul class="list-unstyled">
 			  <?php while ( have_rows('highlights') ) : the_row(); ?>
 			  	<li>
@@ -12,9 +12,10 @@
 				    	$title = ($link_type == 'internal') ? get_the_title($postId) : get_sub_field('title');
 				    	$url = ($link_type == 'internal') ? get_the_permalink($postId) : get_sub_field('url');
 				    	$publication = ($link_type == 'internal') ? get_field('source', $postId) : get_sub_field('publication');
-				    	$image = ($link_type == 'internal') ? get_the_post_thumbnail($postId, 'landscape') : get_sub_field('image');
+				    	$image = ($link_type == 'internal') ? get_the_post_thumbnail($postId, 'landscape') : get_image_tag(get_sub_field('image'), '', '', '', 'landscape');
 				    ?>				    
-				    <a href="<?php echo $url; ?>"<?php if($link_type == 'external') : ?> target="_blank"<?php endif; ?>><b><?php echo $publication; ?>:</b> "<?php echo $title; ?>"<?php if($link_type == 'external') : ?><span class="icon icon-external-link"></span><?php endif; ?></a>
+				    <a href="<?php echo $url; ?>"<?php if($link_type == 'external') : ?> target="_blank"<?php endif; ?>>
+				    	<?php echo $image; ?><b><?php echo $publication; ?>:</b> "<?php echo $title; ?>"<?php if($link_type == 'external') : ?><span class="icon icon-external-link"></span><?php endif; ?></a>
 			  	</li>
 			  <?php endwhile; ?>
 	  	</ul>
@@ -22,7 +23,7 @@
 	<?php endif; ?>
 	<?php if( have_rows('interview') ): ?>
 		<div class="col-md-4">
-			<h6>- <?php _e('Filmed Interviews', 'plumvillage'); ?></h6>
+			<h4><?php _e('Filmed Interviews', 'plumvillage'); ?></h4>
 			<ul class="list-unstyled">
 			  <?php while ( have_rows('interview') ) : the_row(); ?>
 			  	<li>
@@ -49,7 +50,7 @@
 	<?php endif; ?>
 	<?php if( have_rows('press_archive') ): ?>
 		<div class="col-md-4">
-			<h6>- <?php _e('Press Archive', 'plumvillage'); ?></h6>
+			<h4><?php _e('Press Archive', 'plumvillage'); ?></h4>
 			<ul class="list-unstyled">
 			  <?php while ( have_rows('press_archive') ) : the_row(); ?>
 			  	<li>

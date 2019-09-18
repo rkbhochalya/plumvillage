@@ -15,7 +15,8 @@ if( $images ) :
                     <?php foreach( $images as $image ): ?>
                         <div class="gallery-image <?php echo $cols; ?>">
                             <figure>
-                                <a data-fancybox="<?php echo $block['id']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="gallery" href="<?php echo wp_get_attachment_image_src( $image, 'large' )[0]; ?>">
+                                <a data-fancybox="<?php echo $block['id']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="gallery link-zoom" href="<?php echo wp_get_attachment_image_src( $image, 'large' )[0]; ?>">
+                                    <span class="icon icon-bg icon-zoom"></span>
                                     <?php echo wp_get_attachment_image($image, 'medium'); ?>
                                 </a>
                                 <?php set_query_var( 'image_id', $image ); ?>

@@ -95,6 +95,10 @@ ul.list-unstyled{
 	margin: 0;
 	padding: 0;
 
+	li{
+		margin-left: 0;
+	}
+
 	li::before{
 		display: none;
 	}
@@ -742,9 +746,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border{
 	  padding-right: 30px;
 	  margin-bottom: 0;
-	  padding-bottom: 1.5em;
 	  position: relative;
 	}
+	.entry-content p, .entry-content blockquote, figure.aligncenter, .comments-section{
+	  padding-bottom: 1.5em;
+	 }
+
 	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section{
 	  border-right: 1px solid $freshink;
 	}

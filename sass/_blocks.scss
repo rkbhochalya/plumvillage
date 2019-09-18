@@ -502,6 +502,10 @@
 
 .media-coverage, .page-template-default .entry-content .media-coverage {
 	margin-top: 40px;
+
+	h4{
+		margin-bottom: 10px;
+	}
 	p{
 		@include reset-styling();
 	}
@@ -509,12 +513,16 @@
 		@include reset-styling();
 		padding-bottom: 0;
 		li{
-			margin-bottom: 1em;
+			margin-bottom: 1.2em;
 			@include font-size(16);
 			line-height: 180%;
 
 			a{
 				@include underline($cloud, $sun);
+
+				img{
+					margin-bottom: 10px;
+				}
 
 				.icon-external-link{
 					color: $grey;
@@ -525,7 +533,6 @@
 				}
 				.play-middle{
 					display: block;
-					margin-bottom: 10px;
 				}
 			}
 			i{
