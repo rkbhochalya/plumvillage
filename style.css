@@ -7057,9 +7057,9 @@ a.text-dark:hover, a.text-dark:focus {
     left: auto;
     right: -25px; }
   .slick-prev:before {
-    content: ""; }
+    content: ""; }
     [dir="rtl"] .slick-prev:before {
-      content: ""; }
+      content: ""; }
 
 .slick-next {
   right: -25px; }
@@ -7067,9 +7067,9 @@ a.text-dark:hover, a.text-dark:focus {
     left: -25px;
     right: auto; }
   .slick-next:before {
-    content: ""; }
+    content: ""; }
     [dir="rtl"] .slick-next:before {
-      content: ""; }
+      content: ""; }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -8032,10 +8032,10 @@ body.compensate-for-scrollbar {
   content: ""; }
 
 .icon-arrow-left:before {
-  content: ""; }
+  content: ""; }
 
 .icon-arrow-right:before {
-  content: ""; }
+  content: ""; }
 
 .icon-reply:before {
   content: ""; }
