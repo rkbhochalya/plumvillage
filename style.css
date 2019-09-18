@@ -10723,7 +10723,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
 .media-coverage, .page-template-default .entry-content .media-coverage {
   margin-top: 40px; }
   .media-coverage h4, .page-template-default .entry-content .media-coverage h4 {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    border: none; }
   .media-coverage p, .page-template-default .entry-content .media-coverage p {
     max-width: 100%;
     border: none;
@@ -10770,6 +10771,13 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
         display: inline-block; }
       .media-coverage ul li b, .page-template-default .entry-content .media-coverage ul li b {
         font-weight: 700; }
+  .media-coverage ul.highlights li.has-image, .page-template-default .entry-content .media-coverage ul.highlights li.has-image {
+    padding-left: 66px;
+    display: inline-block; }
+    .media-coverage ul.highlights li.has-image a img, .page-template-default .entry-content .media-coverage ul.highlights li.has-image a img {
+      float: left;
+      max-width: 50px;
+      margin: 5px 0 0 -66px; }
 
 .home-landing-top p, .entry-content .tnh-landing-top p {
   padding-right: 50px; }

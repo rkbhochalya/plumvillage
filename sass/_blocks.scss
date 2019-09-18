@@ -505,6 +505,7 @@
 
 	h4{
 		margin-bottom: 10px;
+		border: none;
 	}
 	p{
 		@include reset-styling();
@@ -544,6 +545,19 @@
 				font-weight: 700;
 			}
 		}		
+	}
+	ul.highlights{
+		li.has-image{
+			padding-left: 66px;
+			display: inline-block;
+			a{
+				img{
+					float: left;
+					max-width: 50px;
+					margin: 5px 0 0 -66px;
+				}
+			}
+		}
 	}
 }
 
