@@ -9771,7 +9771,8 @@ body #youmax, body .youmax {
   border-right: 0;
   display: block; }
   .nav-tabs li, .page-template-default .entry-content .nav-tabs li, .single .entry-content .nav-tabs li {
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 0; }
   .nav-tabs li:before, .page-template-default .entry-content .nav-tabs li:before, .single .entry-content .nav-tabs li:before {
     display: none; }
   .nav-tabs .nav-link, .page-template-default .entry-content .nav-tabs .nav-link, .single .entry-content .nav-tabs .nav-link {
@@ -10144,6 +10145,14 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
     color: #FFD22A;
     font-size: 1.8em;
     top: 8px; }
+
+.index-small p {
+  margin-top: -4px;
+  margin-bottom: 18px; }
+
+.index-small .entry-meta {
+  padding-bottom: 0;
+  margin-top: -10px; }
 
 .filter-block .filter-list {
   color: #9A9A9A;

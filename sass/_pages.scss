@@ -231,7 +231,17 @@
 	  font-size: 1.8em;
 	  top: 8px;
 	}
+}
 
+.index-small{
+	p{
+		margin-top: -4px;
+		margin-bottom: 18px;
+	}
+	.entry-meta{
+		padding-bottom: 0;
+		margin-top: -10px;
+	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter
