@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('index-post index-item index-small center-with-border'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('index-post index-item index-small'); ?>>
 	<div class="row">
 		<?php if(has_post_thumbnail()) : ?>
 		<div class="col-2 col-md-3"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
