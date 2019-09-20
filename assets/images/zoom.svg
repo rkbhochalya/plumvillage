@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Zoom</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Zoom" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.526646205">
+        <g id="Oval-57-+-Line">
+            <circle id="Zoom" fill="#000000" cx="12.5" cy="12.5" r="12.5"></circle>
+            <path d="M11.5,17 C8.46243388,17 6,14.5375661 6,11.5 C6,8.46243388 8.46243388,6 11.5,6 C14.5375661,6 17,8.46243388 17,11.5 C17,14.5375661 14.5375661,17 11.5,17 Z M11.5,15 C13.4329966,15 15,13.4329966 15,11.5 C15,9.56700338 13.4329966,8 11.5,8 C9.56700338,8 8,9.56700338 8,11.5 C8,13.4329966 9.56700338,15 11.5,15 Z" id="Oval-57" fill="#FFFFFF" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#FFFFFF" points="14.5857864 16 16 14.5857864 19.4142136 18 18 19.4142136"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="11 10 12 10 12 13 11 13"></polygon>
+            <polygon id="Path" fill="#FFFFFF" points="10 12 10 11 13 11 13 12"></polygon>
+        </g>
+    </g>
+</svg>

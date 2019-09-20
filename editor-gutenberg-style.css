@@ -1756,6 +1756,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .link-zoom:hover .icon:after {
     background: #000; }
 
+.link-zoom-cursor {
+  cursor: url(assets/images/zoom.svg) 14 14, auto; }
+
 .panel-videos .iframe-target.open {
   margin-bottom: 30px; }
 
@@ -2099,7 +2102,8 @@ hr.wp-block-separator {
     padding-left: 15px; } }
 
 .home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block {
-  padding-bottom: 50px; }
+  padding-bottom: 20px;
+  padding-top: 50px; }
   @media (max-width: 767.98px) {
     .home-what-who-block .has-text-align-right, .page-template-page_full-width .entry-content .home-what-who-block .has-text-align-right {
       text-align: left; }
@@ -2111,7 +2115,7 @@ hr.wp-block-separator {
       margin-top: 200px;
       margin-bottom: 200px; }
       .home-what-who-block img, .page-template-page_full-width .entry-content .home-what-who-block img {
-        margin-top: -50%;
+        margin-top: -37%;
         margin-bottom: -50%; } }
 
 .latest-youtube {
@@ -2125,6 +2129,52 @@ hr.wp-block-separator {
 
 .has-grey-color {
   color: #9A9A9A; }
+
+.slider .slider-image {
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 60%;
+  display: none; }
+
+.slider .slider-image:first-child {
+  display: block; }
+
+.slider.square .slider-image {
+  padding-bottom: 100%; }
+
+.slider.portrait .slider-image {
+  padding-bottom: 180%; }
+
+.entry-content .slider {
+  margin-bottom: 60px;
+  padding-bottom: 0; }
+
+ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
+  padding: 0;
+  text-align: left;
+  margin-left: -8px;
+  border: none; }
+  ul.slick-dots li, .page-template-default .entry-content ul.slick-dots li {
+    margin: 0 2px; }
+    ul.slick-dots li:before, .page-template-default .entry-content ul.slick-dots li:before {
+      display: none; }
+    ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-dots li button:before {
+      font-size: 20px; }
+
+.slick-prev, .slick-next {
+  bottom: -35px;
+  top: unset;
+  z-index: 2; }
+  .slick-prev:before, .slick-next:before {
+    color: #000;
+    font-size: 15px; }
+
+.slick-prev {
+  right: 40px;
+  left: unset; }
+
+.slick-next {
+  right: 0px; }
 
 /*--------------------------------------------------------------
 # Gutenberg

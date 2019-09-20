@@ -463,6 +463,10 @@
 	}
 }
 
+.link-zoom-cursor{
+	cursor: url(assets/images/zoom.svg) 14 14, auto;
+}
+
 .panel-videos .iframe-target.open{
 	margin-bottom: 30px;
 }
@@ -853,7 +857,8 @@ hr.wp-block-separator{
 }
 
 .home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block{
-	padding-bottom: 50px;
+	padding-bottom: 20px;
+	padding-top: 50px;
 
 	@include media-breakpoint-down(sm) {
 		.has-text-align-right{
@@ -869,7 +874,7 @@ hr.wp-block-separator{
 		margin-bottom: 200px;
 
 		img{
-			margin-top: -50%;
+			margin-top: -37%;
 			margin-bottom: -50%;
 		}
 	}
@@ -890,3 +895,67 @@ hr.wp-block-separator{
 	color: $grey;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Slick Slider
+.slider{
+	.slider-image{
+		background-position: center;
+		background-size: cover;
+		padding-bottom: 60%;
+		display: none;
+	}
+	.slider-image:first-child{
+		display: block;
+	}
+	&.square{
+		.slider-image{
+			padding-bottom: 100%;
+		}
+	}
+	&.portrait{
+		.slider-image{
+			padding-bottom: 180%;
+		}
+	}
+}
+.entry-content .slider{
+	margin-bottom: 60px;
+	padding-bottom: 0;
+}
+
+ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
+	padding: 0;
+	text-align: left;
+	margin-left: -8px;
+	border: none;
+
+	li{
+		margin: 0 2px;
+
+		&:before{
+			display: none;
+		}
+		button:before{
+			font-size: 20px; 
+		}
+	}
+}
+
+.slick-prev, .slick-next{
+	bottom: -35px;
+	top: unset;
+	z-index: 2;
+
+	&:before{
+		color: $ink;
+		font-size: 15px;
+	}
+}
+
+.slick-prev{
+	right: 40px;
+	left: unset;
+}
+.slick-next{
+	right: 0px;
+}

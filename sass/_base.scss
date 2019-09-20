@@ -297,6 +297,7 @@ big {
 				@include font-size(40);
 				line-height: 130%;
 				padding-bottom: 1.5em;
+				max-width: 100%;
 			}
 		}
 	}
@@ -1911,74 +1912,7 @@ body #youmax, body .youmax{
 		}
 	}
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Slick Slider
-.slider{
-	.slider-image{
-		background-position: center;
-		background-size: cover;
-		padding-bottom: 60%;
-		display: none;
-	}
-	.slider-image:first-child{
-		display: block;
-	}
-	&.square{
-		.slider-image{
-			padding-bottom: 100%;
-		}
-	}
-	&.portrait{
-		.slider-image{
-			padding-bottom: 180%;
-		}
-	}
-}
-.entry-content .slider{
-	margin-bottom: 60px;
-	padding-bottom: 0;
-}
 
-ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
-	padding: 0;
-	text-align: left;
-	margin-left: -8px;
-	border: none;
-
-	li{
-		margin: 0 2px;
-
-		&:before{
-			display: none;
-		}
-		button:before{
-			// color: $earth;
-			font-size: 20px; 
-		}
-	}
-	li.slick-active button:before{
-		// color: $earth;
-	}
-}
-
-.slick-prev, .slick-next{
-	bottom: -35px;
-	top: unset;
-	z-index: 2;
-
-	&:before{
-		color: $ink;
-		font-size: 15px;
-	}
-}
-
-.slick-prev{
-	right: 40px;
-	left: unset;
-}
-.slick-next{
-	right: 0px;
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Colors

@@ -338,7 +338,8 @@
 
 	// Slick Slider
 	$('.slider').slick({
-		dots: true
+		dots: true,
+  	infinite: false
 	});
 
 
