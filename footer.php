@@ -343,7 +343,7 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<?php if(!$_COOKIE['cookieok']) :?>
+<?php if(!isset($_COOKIE['cookieok'])) :?>
 	<div id="cookie-notice">
 		<p><?php the_field('cookie_notice_text', 'options'); ?></p>
 		<a href="<?php echo get_field('cookie_read_more_link', 'options')['url']; ?>" class="btn btn-light btn-super-light"><?php _e('Read More', 'plumvillage'); ?></a> <button class="btn btn-light cookies-ok"><?php _e('OK', 'plumvillage'); ?></button>
