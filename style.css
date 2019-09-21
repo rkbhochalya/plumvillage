@@ -9887,15 +9887,20 @@ body #youmax, body .youmax {
 
 #cookie-notice {
   background: #FFD22A;
-  max-width: 230px;
+  max-width: 100%;
   padding: 20px;
   border-radius: 7px;
   position: fixed;
   bottom: 20px;
   right: 20px;
+  left: 20px;
   z-index: 99; }
   #cookie-notice p {
     font-size: 0.9375rem; }
+  @media (min-width: 576px) {
+    #cookie-notice {
+      left: auto;
+      max-width: 230px; } }
 
 /*--------------------------------------------------------------
 # Pages
