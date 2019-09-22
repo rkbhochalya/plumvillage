@@ -134,20 +134,14 @@ add_action( 'after_setup_theme', 'plumvillage_content_width', 0 );
  */
 function plumvillage_scripts() {
 	// load styles
-	wp_enqueue_style( 'plumvillage-select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css');
 	wp_enqueue_style( 'plumvillage-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
 	// load fonts
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Infant:300i,500,500i,600|Merriweather+Sans:300,300i,400,700&display=swap');
 
 	// load magic
-	// load magic
-	wp_enqueue_script( 'plumvillage-js-select2', 'https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js' );
 	wp_enqueue_script( 'plumvillage-js-scripts', get_template_directory_uri() . '/assets/js/scripts-dist.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/scripts-dist.js' ), true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'plumvillage_scripts', 100 );
 

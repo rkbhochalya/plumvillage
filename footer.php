@@ -343,6 +343,9 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<pre>
+<?php var_export($_COOKIE); ?>
+</pre>
 <?php if(!isset($_COOKIE['cookieok'])) :?>
 	<div id="cookie-notice">
 		<p><?php the_field('cookie_notice_text', 'options'); ?></p>
