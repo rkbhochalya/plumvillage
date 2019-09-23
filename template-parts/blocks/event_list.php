@@ -129,31 +129,34 @@
 
 	?>
 
-
-	<?php if(count($event_locations) > 1) : ?>
-		<div class="text-with-select center-with-border"><p class="has-grey-color"><?php _e('Upcoming retreats in', 'plumvillage'); ?></p>
-			<div class="select-inline">
-				<select class="toggle-events-locations" data-error="error">
-					<?php foreach ($event_locations as $location){ ?>
-						<option value="location-<?php echo $location['slug']; ?>"><?php echo $location['name']; ?></option> 
-					<?php } ?>
-				</select>
+	<?php if(!isset($events)) : ?>
+		<p><?php _e('No upcoming events', 'plumvillage'); ?></p>
+	<?php else : ?>
+		<?php if(count($event_locations) > 1) : ?>
+			<div class="text-with-select center-with-border"><p class="has-grey-color"><?php _e('Upcoming retreats in', 'plumvillage'); ?></p>
+				<div class="select-inline">
+					<select class="toggle-events-locations" data-error="error">
+						<?php foreach ($event_locations as $location){ ?>
+							<option value="location-<?php echo $location['slug']; ?>"><?php echo $location['name']; ?></option> 
+						<?php } ?>
+					</select>
+				</div>
 			</div>
+		<?php endif; ?>
+
+		<div class="event-list">
+			<?php 
+			$i = 0;
+			foreach ($events as $posts){ ?>
+				<div class="row location-<?php echo $event_locations[$i]['slug']; if($i != 0) : echo ' hide'; endif; ?>">
+						<?php while ( $posts->have_posts() ) { ?>
+							<?php $posts->the_post(); ?>
+							<div class="<?php if(get_field('style') == 'list') : ?>col-md-12<?php else : ?>col-md-4<?php endif; ?>">
+								<?php get_template_part( 'template-parts/index', get_post_type() ); ?>
+							</div>
+						<?php } ?>
+				</div>
+				<?php $i++; ?>
+			<?php } ?>
 		</div>
 	<?php endif; ?>
-
-	<div class="event-list">
-		<?php 
-		$i = 0;
-		foreach ($events as $posts){ ?>
-			<div class="row location-<?php echo $event_locations[$i]['slug']; if($i != 0) : echo ' hide'; endif; ?>">
-					<?php while ( $posts->have_posts() ) { ?>
-						<?php $posts->the_post(); ?>
-						<div class="<?php if(get_field('style') == 'list') : ?>col-md-12<?php else : ?>col-md-4<?php endif; ?>">
-							<?php get_template_part( 'template-parts/index', get_post_type() ); ?>
-						</div>
-					<?php } ?>
-			</div>
-			<?php $i++; ?>
-		<?php } ?>
-	</div>

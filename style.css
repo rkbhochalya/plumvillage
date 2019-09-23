@@ -8503,7 +8503,7 @@ body.compensate-for-scrollbar {
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b {
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -9282,6 +9282,23 @@ a {
 
 .link-italic {
   font-style: italic; }
+
+a.has-arrow {
+  font-style: italic;
+  position: relative;
+  margin-left: 25px; }
+  a.has-arrow:before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    color: #FFD22A;
+    font-size: 0.75rem;
+    -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+  a.has-arrow:hover:before {
+    left: -20px; }
 
 .link-with-icon {
   font-size: 1rem;

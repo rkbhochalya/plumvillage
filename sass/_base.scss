@@ -451,6 +451,28 @@ a {
 	font-style: italic;
 }
 
+a.has-arrow{
+	font-style: italic;
+	position: relative;
+	margin-left: 25px;
+
+	&:before{
+		content: $icon-arrow-tiny; 
+		position: absolute;
+		left: -25px;
+		top: 5px;
+		color: $sun;
+		@include font-size(12);
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
+	}
+
+	&:hover{
+		&:before{
+			left: -20px;
+		}
+	}
+}
+
 .link-with-icon{
 	@include font-size(16);
 	display: inline-block;
