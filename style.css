@@ -11462,6 +11462,9 @@ body #youmax, body .youmax {
   font-size: 0.8125rem;
   padding-bottom: 0; }
 
+.post-list article.index-post:last-child {
+  padding-bottom: 20px; }
+
 hr.wp-block-separator {
   margin: 80px 0; }
 

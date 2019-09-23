@@ -32,12 +32,13 @@
 
 			// The Loop
 			if ( $posts->have_posts() ) {  ?>
-				<?php if($style == 'list') : ?><ul class="small post-list"><?php endif; ?>
+
+				<?php if($style == 'list') : ?><ul class="small post-list"><?php else : ?><div class="post-list"><?php endif; ?>
 					<?php while ( $posts->have_posts() ) { ?>
 						<?php $posts->the_post(); ?>
 						<?php get_template_part( 'template-parts/'.$style, get_post_type() ); ?>
 					<?php } ?>
-				<?php if($style == 'list') : ?></ul><?php endif; ?>
+				<?php if($style == 'list') : ?></ul><?php else : ?></div><?php endif; ?>
 		<?php } 
 
 		// Restore original Post Data
