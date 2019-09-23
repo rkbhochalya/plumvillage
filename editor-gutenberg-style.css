@@ -1237,7 +1237,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b {
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -2179,6 +2179,9 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
 /*--------------------------------------------------------------
 # Gutenberg
 --------------------------------------------------------------*/
+.components-button {
+  margin-top: 0; }
+
 .wp-block {
   max-width: 710px; }
 
