@@ -9623,7 +9623,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .page-template-default .wp-block-image figure.aligncenter, .single .wp-block-image figure.aligncenter {
     width: calc(65.6862745098% + 30px); } }
 
-.page-template-default .entry-content .center-with-border p, .page-template-default .entry-content .center-with-border blockquote, .page-template-default .entry-content .center-with-border h2, .page-template-default .entry-content .center-with-border h3, .page-template-default .entry-content .center-with-border h4, .page-template-default .entry-content .center-with-border h5, .page-template-default .entry-content .center-with-border ul, .page-template-default .entry-content .center-with-border ol, .page-template-default .entry-content .index-item p, .page-template-default .entry-content .index-item blockquote, .page-template-default .entry-content .index-item h2, .page-template-default .entry-content .index-item h3, .page-template-default .entry-content .index-item h4, .page-template-default .entry-content .index-item h5, .page-template-default .entry-content .index-item ul, .page-template-default .entry-content .index-item ol, .page-template-default .page-template-page_full-width p, .page-template-default .page-template-page_full-width blockquote, .page-template-default .page-template-page_full-width h2, .page-template-default .page-template-page_full-width h3, .page-template-default .page-template-page_full-width h4, .page-template-default .page-template-page_full-width h5, .page-template-default .page-template-page_full-width ul, .page-template-default .page-template-page_full-width ol, .single .entry-content .center-with-border p, .single .entry-content .center-with-border blockquote, .single .entry-content .center-with-border h2, .single .entry-content .center-with-border h3, .single .entry-content .center-with-border h4, .single .entry-content .center-with-border h5, .single .entry-content .center-with-border ul, .single .entry-content .center-with-border ol, .single .entry-content .index-item p, .single .entry-content .index-item blockquote, .single .entry-content .index-item h2, .single .entry-content .index-item h3, .single .entry-content .index-item h4, .single .entry-content .index-item h5, .single .entry-content .index-item ul, .single .entry-content .index-item ol, .single .page-template-page_full-width p, .single .page-template-page_full-width blockquote, .single .page-template-page_full-width h2, .single .page-template-page_full-width h3, .single .page-template-page_full-width h4, .single .page-template-page_full-width h5, .single .page-template-page_full-width ul, .single .page-template-page_full-width ol {
+.page-template-default .entry-content .center-with-border p, .page-template-default .entry-content .center-with-border blockquote, .page-template-default .entry-content .center-with-border h2, .page-template-default .entry-content .center-with-border h3, .page-template-default .entry-content .center-with-border h4, .page-template-default .entry-content .center-with-border h5, .page-template-default .entry-content .center-with-border ul, .page-template-default .entry-content .center-with-border ol, .page-template-default .entry-content .index-item p, .page-template-default .entry-content .index-item blockquote, .page-template-default .entry-content .index-item h2, .page-template-default .entry-content .index-item h3, .page-template-default .entry-content .index-item h4, .page-template-default .entry-content .index-item h5, .page-template-default .entry-content .index-item ul, .page-template-default .entry-content .index-item ol, .page-template-default .page-template-page_full-width p, .page-template-default .page-template-page_full-width blockquote, .page-template-default .page-template-page_full-width h2, .page-template-default .page-template-page_full-width h3, .page-template-default .page-template-page_full-width h4, .page-template-default .page-template-page_full-width h5, .page-template-default .page-template-page_full-width ul, .page-template-default .page-template-page_full-width ol, .page-template-default .entry-content .wp-block-column p, .page-template-default .entry-content .wp-block-column blockquote, .page-template-default .entry-content .wp-block-column h2, .page-template-default .entry-content .wp-block-column h3, .page-template-default .entry-content .wp-block-column h4, .page-template-default .entry-content .wp-block-column h5, .page-template-default .entry-content .wp-block-column ul, .page-template-default .entry-content .wp-block-column ol, .single .entry-content .center-with-border p, .single .entry-content .center-with-border blockquote, .single .entry-content .center-with-border h2, .single .entry-content .center-with-border h3, .single .entry-content .center-with-border h4, .single .entry-content .center-with-border h5, .single .entry-content .center-with-border ul, .single .entry-content .center-with-border ol, .single .entry-content .index-item p, .single .entry-content .index-item blockquote, .single .entry-content .index-item h2, .single .entry-content .index-item h3, .single .entry-content .index-item h4, .single .entry-content .index-item h5, .single .entry-content .index-item ul, .single .entry-content .index-item ol, .single .page-template-page_full-width p, .single .page-template-page_full-width blockquote, .single .page-template-page_full-width h2, .single .page-template-page_full-width h3, .single .page-template-page_full-width h4, .single .page-template-page_full-width h5, .single .page-template-page_full-width ul, .single .page-template-page_full-width ol, .single .entry-content .wp-block-column p, .single .entry-content .wp-block-column blockquote, .single .entry-content .wp-block-column h2, .single .entry-content .wp-block-column h3, .single .entry-content .wp-block-column h4, .single .entry-content .wp-block-column h5, .single .entry-content .wp-block-column ul, .single .entry-content .wp-block-column ol {
   max-width: 100%;
   border: none;
   -webkit-box-flex: 1;
@@ -9631,7 +9631,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   flex: auto;
   padding-right: 0; }
 
-.page-template-default .entry-content .center-with-border .entry-content .alignwide, .page-template-default .entry-content .index-item .entry-content .alignwide, .page-template-default .page-template-page_full-width .entry-content .alignwide, .single .entry-content .center-with-border .entry-content .alignwide, .single .entry-content .index-item .entry-content .alignwide, .single .page-template-page_full-width .entry-content .alignwide {
+.page-template-default .entry-content .center-with-border .entry-content .alignwide, .page-template-default .entry-content .index-item .entry-content .alignwide, .page-template-default .page-template-page_full-width .entry-content .alignwide, .page-template-default .entry-content .wp-block-column .entry-content .alignwide, .single .entry-content .center-with-border .entry-content .alignwide, .single .entry-content .index-item .entry-content .alignwide, .single .page-template-page_full-width .entry-content .alignwide, .single .entry-content .wp-block-column .entry-content .alignwide {
   max-width: none;
   margin-left: 0; }
 
@@ -10456,16 +10456,28 @@ body #youmax, body .youmax {
   padding: 20px;
   border-radius: 7px;
   position: fixed;
-  bottom: 20px;
+  bottom: 0;
   right: 20px;
   left: 20px;
-  z-index: 99; }
+  z-index: 99;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
   #cookie-notice p {
     font-size: 0.9375rem; }
   @media (min-width: 576px) {
     #cookie-notice {
       left: auto;
       max-width: 230px; } }
+
+#cookie-notice.show-cookie {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  bottom: 20px; }
 
 /*--------------------------------------------------------------
 # Pages

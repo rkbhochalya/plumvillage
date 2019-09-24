@@ -829,7 +829,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}	
 }
 
-.entry-content .center-with-border, .entry-content .index-item, .page-template-page_full-width{
+.entry-content .center-with-border, .entry-content .index-item, .page-template-page_full-width, .entry-content .wp-block-column{
 	p, blockquote, h2, h3, h4, h5, ul, ol{
 		@include reset-styling();
 	}
@@ -1954,10 +1954,12 @@ body #youmax, body .youmax{
 	padding: 20px;
 	border-radius: 7px;
 	position: fixed;
-	bottom: 20px;
+	bottom: 0;
 	right: 20px;
 	left: 20px;
 	z-index:99;
+	transform: translateY(100%);
+	transition: all .4s cubic-bezier(.15,.53,.35,1);
 
 	p{
 		@include font-size(15);
@@ -1967,4 +1969,8 @@ body #youmax, body .youmax{
 		left: auto;
 		max-width: 230px;
 	}
+}
+#cookie-notice.show-cookie{
+	transform: translateY(0);
+	bottom: 20px;
 }

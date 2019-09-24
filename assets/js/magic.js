@@ -372,8 +372,14 @@
   // set cookie
   $('.cookies-ok').on('click', function(){
   	createCookie('cookieok', 'yes', 365);
-  	$('#cookie-notice').fadeOut(200);
+  	$('#cookie-notice').removeClass('show-cookie');
   })
+
+  if (!document.cookie.split(';').filter(function(item) {
+    return item.trim().indexOf('cookieok=') == 0
+	}).length) {
+		$('#cookie-notice').addClass('show-cookie');
+	}
 
   // if the filter list is too long, make it togglable
   $('.filter-list').each(function(){

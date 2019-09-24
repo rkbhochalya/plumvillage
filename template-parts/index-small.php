@@ -30,12 +30,6 @@
 					?>
 				<?php endif; ?>
 			</header><!-- .entry-header -->
-
-			<?php if(get_comments_number() > 0) : ?>
-				<footer class="entry-footer">
-					<a href="<?php the_permalink(); ?>#comments"><span class="icon icon-reply"></span><?php echo get_comments_number() . ' ' . __('responses', 'plumvillage'); ?></a>			
-				</footer>
-			<?php endif; ?>			
 		</div>
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
