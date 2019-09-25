@@ -245,6 +245,18 @@
 	}
 	padding-bottom: 0;
 }
+
+.index-book, .page-template-default .index-book .entry-content{
+	.entry-meta{
+		margin-top: 3px;
+		color: $grey;
+		font-weight: 300;
+		line-height: 180%;
+	}
+	p, .entry-header{
+		@include reset-styling();
+	}
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter
 
@@ -451,4 +463,76 @@
 		}
 	}
 
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Home page and TNH Landing
+
+.home-landing-top, .entry-content .tnh-landing-top{
+
+	@include media-breakpoint-up(xxl) {
+		p, h3{
+			padding-right: 50px;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.wp-block-column{
+			flex-basis: 100%!important;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+
+	.wp-block-column:last-child{
+		@include media-breakpoint-up(xxl) {
+			margin-top: -180px;
+		}
+	}
+	.wp-block-pullquote.is-style-solid-color blockquote{
+		padding-left: 0;
+		p{
+			padding-left: 0;
+			padding-bottom: 0;
+			@include font-size(28);
+			line-height: 130%;
+			color: $ink;
+			@include media-breakpoint-up(md) {
+				@include font-size(33);
+			}
+			@include media-breakpoint-up(lg) {
+				padding-right: 20px;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-right: 40px;
+				@include font-size(43);
+			}
+
+		}
+	}
+	.wp-block-image .alignright{
+
+			@include media-breakpoint-up(lg) {
+				padding-right: 20px;
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-right: 40px;
+			}
+	}
+}
+
+.entry-content .tnh-landing-top{
+	@include media-breakpoint-down(sm) {
+		.wp-block-column:first-child{
+			order:2;
+		}
+		.wp-block-column:last-child{
+			order:1;
+		}
+	}
+	.wp-block-column:last-child{
+		@include media-breakpoint-up(lg) {
+			margin-top: -180px;
+		}
+	}	
 }

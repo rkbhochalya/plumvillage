@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" class="index-item index-letter col-6 <?php echo implode(' ', get_all_term_classes(get_the_id(), 'topics')); ?> <?php echo implode(' ', get_all_term_classes(get_the_id(), 'genre')); ?>">
+<article id="post-<?php the_ID(); ?>" class="index-item index-book col-6 <?php echo implode(' ', get_all_term_classes(get_the_id(), 'topics')); ?> <?php echo implode(' ', get_all_term_classes(get_the_id(), 'genre')); ?>">
 	<div class="row">
 		<div class="col"><?php the_post_thumbnail() ?></div>
 		<div class="col">

@@ -25,12 +25,8 @@
                 <ul class="gallery-items">
                     <?php foreach( $items as $item ): ?>
                         <li>
-                            <figure>
-                            	<a data-fancybox="<?php echo sanitize_title(get_field('title')); ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>" class="gallery" href="<?php echo wp_get_attachment_image_src( $item, 'large' )[0]; ?>">
-                            	</a>
-                                <?php set_query_var( 'image_id', $item ); ?>
-                                <?php get_template_part( 'template-parts/figcaption' ); ?>
-                            </figure>
+                        	<a data-fancybox="<?php echo sanitize_title(get_field('title')); ?>" data-type="ajax" class="gallery" href="<?php echo get_permalink($item->ID); ?>">
+                        	</a>
                         </li>
                     <?php endforeach; ?>
                 </ul>

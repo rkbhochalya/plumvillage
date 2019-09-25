@@ -53,7 +53,19 @@ get_header();
 							'nopaging'               => true,
 							'order'                  => 'ASC',
 							'orderby'                => 'title',
-							'posts_per_page' 				 => 100
+							'posts_per_page' 				 => 100,
+							'meta_query'						 => array(
+								'relation' => 'OR',
+								array(
+									'key' => 'exclude_from_index',
+									'compare' => 'NOT EXISTS'
+								),
+								array(
+									'key' => 'exclude_from_index',
+									'value' => '1',
+									'compare' => '!='
+								)
+							)
 						);
 
 						// The Query

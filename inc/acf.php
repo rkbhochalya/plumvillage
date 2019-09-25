@@ -124,7 +124,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // register a Gallery Embed
+    // register a Gallery
     acf_register_block_type(array(
         'name'              => 'gallery',
         'title'             => __('Gallery', 'plumvillage'),
@@ -142,14 +142,29 @@ function register_acf_block_types() {
     acf_register_block_type(array(
         'name'              => 'gallery_embed',
         'title'             => __('Gallery Popover', 'plumvillage'),
-        'description'       => __('Embed a gallery', 'plumvillage'),
+        'description'       => __('A block which opens a gallery in a popover', 'plumvillage'),
         'render_template'   => 'template-parts/blocks/gallery-embed.php',
         'category'          => 'plumvillage',
         'icon'              => 'format-gallery',
         'keywords'          => array( 'gallery', 'photos', 'photo' ),
-        'align'				=> 'right',
-        'supports'			=> array(
-        	'align' 	=> array('left', 'right')
+        'align'             => 'right',
+        'supports'          => array(
+            'align'     => array('left', 'right')
+        )
+    ));
+
+    // register a Gallery Books Embed
+    acf_register_block_type(array(
+        'name'              => 'gallery_book_embed',
+        'title'             => __('Gallery Books Popover', 'plumvillage'),
+        'description'       => __('A block which opens a gallery of books in a popover', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/gallery-book-embed.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'format-gallery',
+        'keywords'          => array( 'gallery', 'book', 'books' ),
+        'align'             => 'right',
+        'supports'          => array(
+            'align'     => array('left', 'right')
         )
     ));
 
