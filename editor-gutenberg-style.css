@@ -1849,7 +1849,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       max-width: 50px;
       margin: 5px 0 0 -66px; }
 
-.home-landing-top p, .entry-content .tnh-landing-top p {
+.home-landing-top p, .home-landing-top h3, .entry-content .tnh-landing-top p, .entry-content .tnh-landing-top h3 {
   padding-right: 50px; }
 
 @media (max-width: 767.98px) {

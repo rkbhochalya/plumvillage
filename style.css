@@ -9039,8 +9039,9 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2 {
-  font-family: "Cormorant Infant", serif; }
+h1, h2, h3 {
+  font-family: "Cormorant Infant", serif;
+  line-height: 130%; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -9055,13 +9056,16 @@ h1 {
 h2 {
   font-size: 2.375rem; }
 
-h3, h4, h5 {
+h3 {
+  font-size: 2rem; }
+
+h4, h5 {
   font-weight: 700;
   line-height: 160%;
   margin-bottom: 0;
   font-size: 1.125rem; }
   @media (min-width: 576px) {
-    h3, h4, h5 {
+    h4, h5 {
       font-size: 1rem; } }
 
 h6 {
@@ -11328,7 +11332,7 @@ body #youmax, body .youmax {
       max-width: 50px;
       margin: 5px 0 0 -66px; }
 
-.home-landing-top p, .entry-content .tnh-landing-top p {
+.home-landing-top p, .home-landing-top h3, .entry-content .tnh-landing-top p, .entry-content .tnh-landing-top h3 {
   padding-right: 50px; }
 
 @media (max-width: 767.98px) {

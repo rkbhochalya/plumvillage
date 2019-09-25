@@ -129,6 +129,8 @@ function plumvillage_content_width() {
 add_action( 'after_setup_theme', 'plumvillage_content_width', 0 );
 
 
+add_filter( 'auto_update_plugin', '__return_true' );
+
 /**
  * Enqueue scripts and styles.
  */
