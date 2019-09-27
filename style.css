@@ -9271,7 +9271,9 @@ big {
   font-size: 1rem; }
 
 .footnote.show {
-  display: block; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 a {
   -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);

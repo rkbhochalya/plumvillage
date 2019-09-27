@@ -3,25 +3,23 @@
 $jump_to_name = get_field('jump_to_name');
 $jump_to_url = sanitize_title($jump_to_name);
 
-if(!$is_preview){
-	$post = get_post($post_id);
+$post = get_post($post_id);
 
-	if ( has_blocks( $post->post_content ) ) {
-	    $blocks = parse_blocks( $post->post_content );
+if ( has_blocks( $post->post_content ) ) {
+    $blocks = parse_blocks( $post->post_content );
 
-	   	$i = 0;
-	   	$sections = array();
-	   	while ($i < count($blocks)){
-	   		if($blocks[$i]['blockName'] === 'acf/jump-to-divider'){
-	   			if(isset($blocks[$i]['attrs']['data']['jump_to_name'])){
-	   				$sections[] = $blocks[$i]['attrs']['data']['jump_to_name'];		
-	   			} else {
-	   				$sections[] = array_values($blocks[$i]['attrs']['data'])[0];
-	   			}
-	   		}	
-	   		$i++;
-	   	}
-	}
+   	$i = 0;
+   	$sections = array();
+   	while ($i < count($blocks)){
+   		if($blocks[$i]['blockName'] === 'acf/jump-to-divider'){
+   			if(isset($blocks[$i]['attrs']['data']['jump_to_name'])){
+   				$sections[] = $blocks[$i]['attrs']['data']['jump_to_name'];		
+   			} else {
+   				$sections[] = array_values($blocks[$i]['attrs']['data'])[0];
+   			}
+   		}	
+   		$i++;
+   	}
 }
 ?>
 

@@ -430,7 +430,7 @@ big {
 	@include font-size(16);
 }
 .footnote.show{
-	display: block;
+	display: flex;
 }
 
 
