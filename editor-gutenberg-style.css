@@ -1423,30 +1423,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .block .block-inside, .page-template-default .block .block-inside {
     padding: 20px; }
 
-.jump-to {
-  margin: 40px 0 60px;
+.jump-to, .page-template-default .entry-content .jump-to {
+  margin: 40px 0 0;
   clear: both; }
-  .jump-to.align-wide hr {
+  .jump-to.align-wide hr, .page-template-default .entry-content .jump-to.align-wide hr {
     margin-left: -34.3137254902%;
     margin-top: 0; }
-  .jump-to p {
+  .jump-to p, .page-template-default .entry-content .jump-to p {
     font-size: 0.875rem;
     color: #9A9A9A;
-    border: none; }
-    .jump-to p .label {
+    border: none;
+    margin-bottom: 60px; }
+    .jump-to p .label, .page-template-default .entry-content .jump-to p .label {
       font-size: 0.75rem;
       text-transform: uppercase;
       font-weight: 700;
       margin-right: 10px; }
-      .jump-to p .label .icon {
+      .jump-to p .label .icon, .page-template-default .entry-content .jump-to p .label .icon {
         font-size: 0.625rem; }
-    .jump-to p a {
+    .jump-to p a, .page-template-default .entry-content .jump-to p a {
       color: #9A9A9A;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      .jump-to p a:hover {
+      .jump-to p a:hover, .page-template-default .entry-content .jump-to p a:hover {
         color: #000; }
-    .jump-to p a.active {
+    .jump-to p a.active, .page-template-default .entry-content .jump-to p a.active {
       color: #000;
       font-weight: 400; }
 
@@ -2129,6 +2130,12 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
 
 .slick-next {
   right: 0px; }
+
+pre.wp-block-verse, .wp-block-verse pre {
+  background: #FEFBF3;
+  font-family: 'Merriweather';
+  font-size: 1rem;
+  line-height: 190%; }
 
 /*--------------------------------------------------------------
 # Gutenberg

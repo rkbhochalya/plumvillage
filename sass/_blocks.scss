@@ -43,8 +43,8 @@
 	}
 }
 
-.jump-to{
-	margin: 40px 0 60px;
+.jump-to, .page-template-default .entry-content .jump-to{
+	margin: 40px 0 0;
 	clear: both;
 
 	&.align-wide hr{
@@ -56,6 +56,7 @@
 		@include font-size(14);
 		color: $grey;
 		border: none;
+		margin-bottom: 60px;
 
 		.label{
 			@include font-size(12);
@@ -907,4 +908,15 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 }
 .slick-next{
 	right: 0px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Verse Block
+
+pre.wp-block-verse, .wp-block-verse pre{
+	background: $freshsun;
+	font-family: 'Merriweather';
+	@include font-size(16);
+	line-height: 190%;
 }
