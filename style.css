@@ -8827,6 +8827,11 @@ textarea {
 .invalid-feedback.filled {
   margin: 0 0 20px; }
 
+ul.select2-results__options li.select2-results__option {
+  margin: 0; }
+  ul.select2-results__options li.select2-results__option:before {
+    display: none; }
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {

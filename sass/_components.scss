@@ -207,6 +207,13 @@ textarea {
 	margin: 0 0 20px;
 }
 
+ul.select2-results__options li.select2-results__option{
+	margin: 0;
+
+	&:before{
+		display: none;
+	}
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Media
