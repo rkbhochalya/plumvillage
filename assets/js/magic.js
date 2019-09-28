@@ -37,7 +37,8 @@
   $('form select').each(function(){
   	var el = $(this);
 		el.select2({
-			width: '100%'
+			width: '100%',
+			minimumResultsForSearch: 20
 		});
   })
 
