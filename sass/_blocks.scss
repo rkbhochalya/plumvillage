@@ -696,31 +696,7 @@ hr.wp-block-separator{
 	margin: 80px 0;
 }
 
-.wp-block-group{
-	&.alignfull{
-		margin: 40px 0;
-		@include media-breakpoint-up(md) {
-			margin: 80px 0;
-		}
 
-		.wp-block-group__inner-container{
-			@include make-container();
-      @include make-container-max-widths();
-		}
-	}
-	&.has-background{
-		padding: 50px 0 40px;
-		@include media-breakpoint-up(md) {
-			padding: 70px 0 60px;
-		}
-		@include media-breakpoint-up(lg) {
-			padding: 100px 0 80px;
-		}
-	}
-	.wp-block-columns{
-		margin-bottom: 0;
-	}
-}
 
 .wp-block-columns.align-items-center{
 	align-items: center;
@@ -806,7 +782,54 @@ hr.wp-block-separator{
 	}
 }
 
-.home-what-who-block, .page-template-page_full-width .entry-content .home-what-who-block{
+.page-template-page_full-width .wp-block-group{
+	&.has-background{
+		padding: 50px 0 40px;
+		@include media-breakpoint-up(md) {
+			padding: 70px 0 60px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 100px 0 80px;
+		}
+	}
+	.wp-block-columns{
+		margin-bottom: 0;
+	}
+}
+
+.page-template-page_full-width, .page-template-default, .post {
+	.wp-block-group.alignfull{
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@include media-breakpoint-up(md) {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		.wp-block-group__inner-container{
+			@include make-container();
+      @include make-container-max-widths();
+		}
+	}
+}
+
+.page-template-default, .post {
+	.wp-block-group.alignfull{
+		left: 50%;
+		@include media-breakpoint-up(md){
+			left: 32.6%;
+		}
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: calc(50% + 15px);
+		width: 100vw;
+		border-right: 0;
+	}
+}
+
+.home-what-who-block, .page-template-page_full-width .entry-content .wp-block-group.home-what-who-block{
 	padding-bottom: 20px;
 	padding-top: 50px;
 
@@ -826,6 +849,15 @@ hr.wp-block-separator{
 		img{
 			margin-top: -37%;
 			margin-bottom: -50%;
+		}
+	}
+}
+
+.page-template-default, .post{
+	.wp-block-group{
+		&.has-background{
+			padding: 20px 20px 0 20px;
+			display: flex;
 		}
 	}
 }

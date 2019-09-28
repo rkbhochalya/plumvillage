@@ -8,8 +8,8 @@
 
 
 .block-editor-block-list__layout .block-editor-block-list__block[data-align=right]>.block-editor-block-list__block-edit{
-	max-width: 70%;
-	margin-right: -300px;
+	max-width: 40%;
+	margin-right: -100px;
 	clear: right;
 
 	.wp-block-pullquote{
@@ -19,7 +19,7 @@
 	.block-outside{
 		margin-left: 0;
 		margin-right: 0;
-		.col-lg-5{
+		.col-lg-5, .col-lg-4{
 			max-width: 100%;
 			flex: 0 0 100%;
 		}
@@ -61,17 +61,20 @@ p.has-large-font-size{
 	color: $grey;
 }
 
-.jump-to.align-wide{
-
-	hr{
-		margin-left: 0;
-	}
+.editor-styles-wrapper .jump-to{
 	p{
-		max-width: 580px;
-		margin: 0 auto;
+		margin: 0 auto 60px;
+	}
+
+	&.align-wide{
+		hr{
+			margin-left: 0;
+		}
+		p{
+			max-width: 680px;
+		}
 	}
 }
-
 .editor-styles-wrapper p{
 	margin: 0 0 1.5em;
 }
@@ -159,8 +162,34 @@ figcaption{
 	}
 }
 
-.block-audio, .text-inset{
-	h5{
-		margin: 0;
+.editor-styles-wrapper{
+	.block-audio, .text-inset{
+		
+		.block-inside.text-inset-inside{
+			padding: 20px 20px 10px;			
+		}
+		h5{
+			margin: 0;
+		}
+		p{
+			margin-top: 0;
+		}
+		ul, ol{
+			padding-top: 5px;
+		}
 	}
+}
+
+.gallery-image{
+	figure{
+		margin-left: 0;
+		margin-right: 0;
+	}
+	figcaption{
+		display: none;
+	}
+}
+
+.block-outside .col-lg-4{
+	max-width: 100%;
 }

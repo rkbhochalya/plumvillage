@@ -765,7 +765,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 
 @include media-breakpoint-up(lg) {
-	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content .slider, pre.wp-block-verse{
+	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content .slider, pre.wp-block-verse, .wp-block-group{
 		flex: 0 0 $center-lg-max-width;
 	  max-width: $center-lg-max-width;
 	}
@@ -779,7 +779,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	  padding-bottom: 1.5em;
 	 }
 
-	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, pre.wp-block-verse{
+	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, pre.wp-block-verse, .wp-block-group{
 	  border-right: 1px solid $freshink;
 	}
 
@@ -810,13 +810,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.wp-block-image figure.aligncenter{
 		width: $center-lg-max-width;
 	}
-	.entry-content .slider.alignwide{
+	.entry-content .slider.alignwide, .wp-block-group{
 		max-width: 884px;
 	}
 }
 
 @include media-breakpoint-up(xxl) {
-	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content .slider, pre.wp-block-verse{
+	.entry-content p, .entry-content blockquote, .center-with-border, figure.aligncenter, .comments-section, .center-without-border, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content ul, .entry-content ol, .entry-content .slider, pre.wp-block-verse, .wp-block-group{
 		flex: 0 0 $center-xxl-max-width;
 	  max-width: $center-xxl-max-width;
 	}
@@ -831,9 +831,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.wp-block-image figure.aligncenter{
 		width: $center-xxl-max-width;
 	}	
+	.entry-content .slider.alignwide, .wp-block-group{
+		max-width: 884px;
+	}
+
 }
 
-.entry-content .center-with-border, .entry-content .index-item, .page-template-page_full-width, .entry-content .wp-block-column{
+.entry-content .center-with-border, .entry-content .index-item, .page-template-page_full-width, .entry-content .wp-block-column, .wp-block-group{
 	p, blockquote, h2, h3, h4, h5, ul, ol{
 		@include reset-styling();
 	}
