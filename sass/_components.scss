@@ -70,6 +70,7 @@ textarea {
 
 	&:focus {
 		color: $color__text-input-focus;
+		box-shadow: 0 0 0 0.2rem $freshtree;
 	}
 }
 
@@ -90,9 +91,10 @@ textarea {
 	height: 100%;
 	width: 40px;
 }
-.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple, .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple{
-	border-color: #ffedaa;
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple, .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple, .select2-dropdown{
+	border-color: $freshtree;
 	background: #fff;
+	box-shadow: 0 0 0 0.2rem $freshtree;
 }
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{
 	border-bottom: 1px solid #fff;
@@ -101,14 +103,14 @@ textarea {
 	border-top: 1px solid #fff;
 }
 .select2-container--open .select2-dropdown--below{
-	border-color: #ffedaa;
+	border-color: $freshtree;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field{
 	background: #fff;
 }
 .select2-container--focus .select2-selection--single{
 	background: #fff;
-	box-shadow: 0 0 0 0.2rem rgba(255, 210, 42, 0.25);
+	box-shadow: 0 0 0 0.2rem $freshtree;
 	outline: 0;
 	border-color: #fff;
 }
