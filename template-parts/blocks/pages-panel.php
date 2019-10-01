@@ -15,7 +15,7 @@ if( have_rows('pages') ): ?>
                 <div class="row">
                     <?php while ( have_rows('pages') ) : the_row(); ?>
                         <?php $pageId = get_sub_field('page'); ?>
-                        <div class="col-md-4 index-item index-page">
+                        <div class="index-item index-page <?php if(count(get_field('pages')) == 2) : ?>col-md-6<?php elseif(count(get_field('pages')) >= 3) : ?>col-md-4<?php else : ?>col-md-12<?php endif; ?> ">
                             <a href="<?php echo get_permalink($pageId); ?>"><?php echo get_the_post_thumbnail($pageId, 'landscape'); ?></a>
                             <h5><a href="<?php echo get_permalink($pageId); ?>"><?php echo get_the_title($pageId); ?></a></h5>
                             <?php if(get_sub_field('excerpt')) : ?>
