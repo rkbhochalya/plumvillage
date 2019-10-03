@@ -9191,20 +9191,14 @@ big {
     .entry-content .wp-block-pullquote.alignright blockquote {
       padding-right: 30px; }
       .entry-content .wp-block-pullquote.alignright blockquote p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding-left: 0; }
-        @media (min-width: 576px) {
-          .entry-content .wp-block-pullquote.alignright blockquote p {
-            font-size: 1.25rem; } }
         @media (min-width: 992px) {
           .entry-content .wp-block-pullquote.alignright blockquote p {
             font-size: 1.5rem; } }
       .entry-content .wp-block-pullquote.alignright blockquote cite {
         padding-left: 0;
-        font-size: 0.75rem; }
-        @media (min-width: 576px) {
-          .entry-content .wp-block-pullquote.alignright blockquote cite {
-            font-size: 0.875rem; } }
+        font-size: 0.875rem; }
   .entry-content .wp-block-pullquote.alignleft blockquote p {
     padding-left: 0; }
   .entry-content .wp-block-pullquote.alignleft blockquote cite {
@@ -9235,6 +9229,15 @@ big {
   color: #9A9A9A; }
   .entry-content p.has-large-font-size a {
     color: #9A9A9A; }
+  @media (min-width: 992px) {
+    .entry-content p.has-large-font-size:nth-child(-n+3) {
+      margin-right: -60px;
+      background: #fff;
+      margin-bottom: 0;
+      padding-bottom: 2rem; } }
+  @media (min-width: 1400px) {
+    .entry-content p.has-large-font-size:nth-child(-n+3) {
+      margin-right: -140px; } }
 
 .entry-content p.has-small-font-size {
   font-size: 0.875rem;
@@ -9925,9 +9928,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .site-branding img {
   max-width: 70vw; }
 
-.entry-header h1 {
+.entry-header h1.entry-title {
   position: relative;
-  z-index: 3; }
+  z-index: 3;
+  margin: 0;
+  padding-bottom: 1rem;
+  margin-right: -16px;
+  background: #fff; }
 
 .entry-content, .entry-content p {
   font-size: 1.125rem;

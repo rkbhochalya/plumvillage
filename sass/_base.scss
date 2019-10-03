@@ -323,10 +323,7 @@ big {
 			padding-right: 30px;
 
 			p{
-				@include font-size(16);
-				@include media-breakpoint-up(sm) {
-					@include font-size(20);
-				}
+				@include font-size(24);
 				@include media-breakpoint-up(lg) {
 					@include font-size(24);
 				}
@@ -334,10 +331,7 @@ big {
 			}
 			cite{
 				padding-left: 0;
-				@include font-size(12);
-				@include media-breakpoint-up(sm) {
-					@include font-size(14);
-				}				
+				@include font-size(14);
 			}
 		}
 	}
@@ -396,6 +390,19 @@ big {
 
 	a{
 		color: $grey;
+	}
+
+	&:nth-child(-n+3){
+		@include media-breakpoint-up(lg) {
+			margin-right: -60px;
+			background: $cloud;
+			margin-bottom: 0;
+			padding-bottom: 2rem;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			margin-right: -140px;
+		}
 	}
 }
 
@@ -1162,9 +1169,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 // Content Header
 
-.entry-header h1{
+.entry-header h1.entry-title{
 	position: relative;
 	z-index: 3;
+	margin: 0;
+	padding-bottom: 1rem;
+	margin-right: -16px;
+	background: $cloud;
 }
 
 
