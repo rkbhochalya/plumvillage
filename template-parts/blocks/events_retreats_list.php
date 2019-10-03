@@ -48,7 +48,7 @@
 		'taxonomy' => 'practise-centres',
 		'hide_empty' => false,
 		'parent' => 0,
-		'exclude' => get_field('show_first')->term_id
+		'exclude' => (get_field('show_first') ? get_field('show_first')->term_id : false)
 	) );
 
 	if  ($practise_centres) {
@@ -118,7 +118,7 @@
 				<div class="row location-<?php echo $event_locations[$i]['slug']; if($i != 0) : echo ' hide'; endif; ?>">
 						<?php while ( $posts->have_posts() ) { ?>
 							<?php $posts->the_post(); ?>
-							<div class="<?php if(get_field('style') == 'list') : ?>col-md-12<?php else : ?>col-md-4<?php endif; ?>">
+							<div class="<?php if(get_field('style') == 'columns') : ?>col-md-4<?php else : ?>col-md-12<?php endif; ?>">
 								<?php get_template_part( 'template-parts/index', get_post_type() ); ?>
 							</div>
 						<?php } ?>
