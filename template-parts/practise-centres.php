@@ -2,7 +2,20 @@
 	$practise_centres = get_terms( array( 
 		'taxonomy' => 'practise-centres',
 		'hide_empty' => false,
-		'parent' => 0
+		'parent' => 0,
+		'meta_query'=>array(
+			'compare' => 'AND',
+			 array(
+			    'key' => 'hide_in_overview',
+			    'compare' => 'EXISTS',
+			 ),
+			 array(
+			    'key' => 'hide_in_overview',
+			    'value' => true,
+			    'compare' => '!='
+			 )
+			)				
+
 	) );
 	if  ($practise_centres) {
 		foreach ($practise_centres  as $practise_centre ) { ?>

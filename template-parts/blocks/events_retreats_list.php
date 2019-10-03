@@ -2,6 +2,7 @@
 	<?php 
 
 	$max_items = get_field('max_posts') ? get_field('max_posts') : -1;
+	$has_first = false;
 
 	// get the first list
 	if(get_field('show_first')){
@@ -37,7 +38,8 @@
 		if ( $posts->have_posts() ) { 
 			$events[] = $posts;
 			$event_locations[] = object_to_array(get_field('show_first'));
-		} 		
+			$has_first = true;
+		}
 	}
 
 
@@ -90,48 +92,13 @@
 		}
 	}
 
-	// add events 'On Tour'
-	$args = array (
-		'post_type'              => array( 'pv_event' ),
-		'post_status'            => array( 'publish' ),
-		'meta_key'							 => 'start_date',
-		'orderby'								 => 'meta_value',
-		'order'									 => 'ASC',
-		'posts_per_page'				 => $max_items,
-		'meta_query'=>array(
-			 array(
-			    'key' => 'end_date',
-			    'value' => date('Ymd'),
-			    'compare' => '>=',
-			    'type' => 'NUMERIC'
-			 ),
-			 array(
-			 		'key' => 'location',
-			 		'value' => 'on_tour',
-			 )
-			)				
-	);
-
-	$posts = new WP_Query( $args );
-
-	// The Loop
-	if ( $posts->have_posts() ) { 
-		$events[] = $posts;
-		$event_locations[] = array(
-			'name' => 'On Tour',
-			'slug' => 'on_tour'
-		);
-	} 
-
-	// Restore original Post Data
-	wp_reset_postdata();
-
-
 	?>
-
 	<?php if(!isset($events)) : ?>
 		<p><?php _e('No upcoming events', 'plumvillage'); ?></p>
 	<?php else : ?>
+		<?php if (get_field('show_first') && !$has_first) : ?>
+			<p><i><?php echo sprintf( __('No upcoming retreats in %s, there are upcoming retreats elsewhere.'), get_field('show_first')->name); ?></i></p>
+		<?php endif; ?>
 		<?php if(count($event_locations) > 1) : ?>
 			<div class="text-with-select center-with-border"><p class="has-grey-color"><?php _e('Upcoming retreats in', 'plumvillage'); ?></p>
 				<div class="select-inline">

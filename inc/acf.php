@@ -327,10 +327,10 @@ function register_acf_block_types() {
 
     // register events list
     acf_register_block_type(array(
-        'name'              => 'event_list',
-        'title'             => __('Event List'),
-        'description'       => __('A list of events'),
-        'render_template'   => 'template-parts/blocks/event_list.php',
+        'name'              => 'event_retreat_list',
+        'title'             => __('Retreats List'),
+        'description'       => __('A list of all the retreats'),
+        'render_template'   => 'template-parts/blocks/events_retreats_list.php',
         'category'          => 'plumvillage',
         'icon'              => 'calendar-alt',
         'keywords'          => array( 'post', 'list' ),
@@ -338,6 +338,21 @@ function register_acf_block_types() {
             'align'     => false
         )
     ));    
+
+    // register events list
+    acf_register_block_type(array(
+        'name'              => 'event_days_list',
+        'title'             => __('Days of Mindfulness List'),
+        'description'       => __('A list of the Days of Mindfulness'),
+        'render_template'   => 'template-parts/blocks/events_days_list.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'calendar-alt',
+        'keywords'          => array( 'post', 'list' ),
+        'supports'          => array(
+            'align'     => false
+        )
+    ));    
+
 
     // Photo Slider
     acf_register_block_type(array(
