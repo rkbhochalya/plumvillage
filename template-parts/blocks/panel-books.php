@@ -1,8 +1,7 @@
 <?php
 
 if( have_rows('books') ): ?>
-    <div class="panel panel-books 
-        <?php if($block['align'] == 'wide') : echo 'panel-goes-wide'; endif;?> 
+    <div class="panel panel-books align<?php echo $block['align']; ?>
         <?php if(get_field('collapsable')) : echo 'panel-collapsable'; else : echo 'panel-open'; endif; ?> 
         <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?> 
         <?php if(!get_field('title')) : echo 'no-title'; endif; ?> 
@@ -10,7 +9,7 @@ if( have_rows('books') ): ?>
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
         <?php endif; ?>
-        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('books')) > 1)) : echo 'back-to-baseline'; endif;?>">
+        <div class="row row-collapsable">
             <div class="col-md-12">
                 <div class="row <?php if(($block['align'] == 'wide') && (count(get_field('books')) > 1)) : ?>justify-content-center<?php endif; ?>">
                     <?php while ( have_rows('books') ) : the_row(); ?>

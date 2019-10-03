@@ -1,16 +1,14 @@
 <?php
 
 if( have_rows('pages') ): ?>
-    <div class="panel panel-pages 
-        <?php if($block['align'] == 'wide') : echo 'panel-goes-wide'; endif;?> 
+    <div class="panel panel-pages align<?php echo $block['align']; ?>
         <?php if(get_field('collapsable')) : echo 'panel-collapsable'; else : echo 'panel-open'; endif; ?> 
         <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?> 
-        <?php if(!get_field('title')) : echo 'no-title'; endif; ?> 
-        <?php if(get_field('collapsable') || ($block['align'] != 'wide')) : echo 'center-with-border'; endif; ?>">
+        <?php if(!get_field('title')) : echo 'no-title'; endif; ?> ">
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
         <?php endif; ?>
-        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('pages')) > 3)) : echo 'back-to-baseline'; endif;?>">
+        <div class="row row-collapsable">
             <?php while ( have_rows('pages') ) : the_row(); ?>
                 <?php $pageId = get_sub_field('page'); ?>
                 <div class="index-item index-page <?php if(count(get_field('pages')) == 2) : ?>col-md-6<?php elseif(count(get_field('pages')) >= 3) : ?>col-md-4<?php else : ?>col-md-12<?php endif; ?> ">

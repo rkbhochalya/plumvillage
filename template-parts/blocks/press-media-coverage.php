@@ -1,5 +1,5 @@
 
-<div class="row media-coverage">
+<div class="row media-coverage to-right-edge">
 	<?php if( have_rows('highlights') ): ?>
 		<div class="col-md-4">
 			<h4><?php _e('Recent Highlights', 'plumvillage'); ?></h4>

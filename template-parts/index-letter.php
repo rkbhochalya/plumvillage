@@ -14,7 +14,7 @@
 		<div class="entry-meta">
 			<?php plumvillage_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php the_title( '<h5 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
+		<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

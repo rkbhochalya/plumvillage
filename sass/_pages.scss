@@ -29,8 +29,11 @@
 	padding-bottom: 20px;
 	padding-right: 15px;
 
-	h5 a{
-		@include underline($sun, $sun);
+	h4{
+		margin-bottom: 10px;
+		a {
+			@include underline($sun, $sun);
+		}
 	}
 	p{
 		@include font-size(16);
@@ -97,7 +100,6 @@
 		@include underline($sun, $sun);
 	}
 	p{
-		@include reset-styling();
 		@include font-size(16);
 	}
 }
@@ -112,9 +114,12 @@
 }
 .entry-source {
 	position: relative;
+	font-style: italic;
+	color: $grey;
 
 	a{
 		font-style: italic;
+		text-decoration: underline;
 
 		&:hover{
 			color: $ink;
@@ -210,9 +215,9 @@
 		left: 0;
 	}	
 
-	h5{
+	h4{
 		font-weight: 300;
-		padding-bottom: 0;
+		margin: 0;
 
 		a{
 			box-shadow: inset 0 -0.15em #fff;
@@ -252,9 +257,6 @@
 		color: $grey;
 		font-weight: 300;
 		line-height: 180%;
-	}
-	p, .entry-header{
-		@include reset-styling();
 	}
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -367,9 +369,6 @@
 		margin-top: 0;
 		margin-bottom: 0.2rem;
 	}
-	p{
-		@include reset-styling();
-	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -446,7 +445,6 @@
 		margin: 20vh auto;
 	}
 	.video-embed.center-with-border{
-		@include reset-styling;
 		max-width: 655px;
 		margin: 0 auto;
 

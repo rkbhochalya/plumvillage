@@ -31,7 +31,7 @@ get_header();
 					);
 				?>				
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 							<?php get_template_part( 'template-parts/content', 'page' ); ?>

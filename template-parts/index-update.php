@@ -15,7 +15,7 @@
 			<div class="the-date"><?php the_time('jS M'); ?></div>
 			<div class="the-time"><?php the_time('G:i'); ?></div>
 		</div><!-- .entry-meta -->
-		<?php the_title( '<h5 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' ); ?>
+		<?php the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

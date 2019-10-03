@@ -22,7 +22,7 @@ $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'to
 		<a class="image-wrapper pdf-wrapper" href="<?php the_permalink(); ?>#filter=.<?php echo $filterType; ?>.<?php echo $filterTopic; ?>"><span class="pdf-label">PDF</span><?php the_post_thumbnail('thumbnail'); ?></a>
 	<?php endif; ?>
 	<header class="entry-header">
-		<h5><a href="<?php the_permalink(); ?>#filter=.<?php echo $filterType; ?>.<?php echo $filterTopic; ?>"><?php the_title(); ?></a></h5>
+		<h4><a href="<?php the_permalink(); ?>#filter=.<?php echo $filterType; ?>.<?php echo $filterTopic; ?>"><?php the_title(); ?></a></h4>
 		<div class="entry-meta">
 			<?php if(get_field('source')) : ?>
 				<span class="entry-source">

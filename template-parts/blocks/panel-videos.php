@@ -11,7 +11,7 @@ if( have_rows('videos') ): ?>
                     <div class="alignwide remove-margin-top-bottom"><span class="icon icon-close"></span></div>                    
                     <div class="alignwide remove-margin-top-bottom"><div class="iframe-container embed-responsive embed-responsive-16by9 dropzone"></div></div>
                 </div>            
-                <div class="row <?php if(($block['align'] == 'wide') && (count(get_field('videos')) > 3)) : echo 'back-to-baseline'; endif;?>">
+                <div class="row">
                     <?php $i = 0; ?>
                     <?php while ( have_rows('videos') ) : the_row(); ?>
                         <div class="col">                        

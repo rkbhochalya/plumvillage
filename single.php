@@ -26,7 +26,7 @@ get_header();
 					);
 				?>									
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 						<?php 
 							get_template_part( 'template-parts/content', get_post_type() );
 							the_post_navigation();

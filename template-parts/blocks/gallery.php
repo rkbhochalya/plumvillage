@@ -7,7 +7,7 @@ if( $images ) :
 
 ?>
 
-    <div class="<?php if($block['align'] == 'wide') : ?>back-to-baseline<?php endif; ?>">
+    <div class="<?php if($block['align'] == 'wide') : ?>to-container-width<?php endif; ?>">
         <div class="gallery block">
             <div class="gallery-inside">
                 <div class="row gallery-images">

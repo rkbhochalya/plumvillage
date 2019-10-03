@@ -31,7 +31,7 @@ get_header();
 					);
 				?>				
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 							<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
@@ -73,7 +73,7 @@ get_header();
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 offset-md-3 post-overview" data-isotope-layoutmode='vertical'>
+				<div class="col-md-9 col-lg-7 col-xxl-6 offset-md-3 post-overview centered-content" data-isotope-layoutmode='vertical'>
 					<?php $year = 0; ?>
 					<?php $i = 0; ?>
 					<?php while ( $posts->have_posts() ) { ?>

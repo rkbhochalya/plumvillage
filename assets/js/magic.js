@@ -134,7 +134,7 @@
 		var realratio = ratio(videoWidth, videoHeight); 
 		$('.iframe-target-'+el.data('target')).find('.iframe-container').removeClass('embed-responsive-21by9 embed-responsive-16by9 embed-responsive-4by3 embed-responsive-1by1').addClass('embed-responsive-'+realratio[0]+'by'+realratio[1]);
 
-		if(el.parents('.video-embed').length){
+		if(el.parents('.video-embed.alignright').length){
 			var parents = el.parents('.video-embed')
 			parents.addClass('open opening');
 			parents.on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",

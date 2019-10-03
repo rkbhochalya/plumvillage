@@ -31,7 +31,7 @@ get_header();
 					);
 				?>				
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 							<?php get_template_part( 'template-parts/content', 'page' ); ?>
@@ -67,7 +67,7 @@ get_header();
 
 
 			<div class="row">
-				<div class="col-md-9 offset-md-3">
+				<div class="offset-md-3 col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<?php $year = 0; ?>
 					<?php while ( $posts->have_posts() ) { ?>
 						<?php $posts->the_post(); ?>

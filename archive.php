@@ -24,7 +24,7 @@ get_header();
 			);
 		?>				
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 	
 		<?php if ( have_posts() ) : ?>
 
