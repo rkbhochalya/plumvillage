@@ -534,3 +534,47 @@
 		}
 	}	
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Posts
+
+.posts-navigation, .post-navigation{
+ 	.nav-links a{
+		max-width: 240px;
+	  text-overflow: ellipsis;
+	  overflow: hidden;
+	  white-space: nowrap;
+	  font-weight: 300;
+	  color: $grey;
+	  display: inline-block;
+
+		@include underline($cloud, $sun);
+	}
+
+	.nav-previous:before, .nav-next:after{
+	    display: inline-block;
+		  content: $icon-caret-down;
+	    font-size: 8px;
+	    color: #000;
+	    position: relative;
+	    top: -9px;
+	  	transition: all .3s ease;
+	}
+
+	.nav-previous:before{
+	    margin-right: 7px;
+	    transform: rotate(90deg);
+	    left: 0;
+	}
+	.nav-next:after{
+	    margin-left: 7px;
+	    transform: rotate(-90deg);
+	    right: 0;
+	}
+	.nav-next:hover:after{
+		right: -5px;
+	}
+	.nav-previous:hover:before{
+		left: -5px;
+	}
+}

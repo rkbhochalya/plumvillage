@@ -208,6 +208,14 @@ pre {
 	padding: 1.6em;
 }
 
+pre.wp-block-verse, .wp-block-verse pre{
+	white-space: normal;
+
+	a{
+		text-decoration: underline;
+	}	
+}
+
 code, kbd, tt, var {
 	font-family: $font__code;
 	@include font-size(0.9375);

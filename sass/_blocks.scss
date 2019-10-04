@@ -432,6 +432,14 @@
 		@include font-size(14);
 		padding-bottom: .6em;
 	}
+
+	.single-book{
+		a.link-zoom{
+			float: left;
+			max-width: 45%;
+			margin-right: 5%;
+		}
+	}
 }
 
 .link-zoom{
