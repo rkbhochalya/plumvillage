@@ -349,7 +349,7 @@ function register_acf_block_types() {
         'icon'              => 'calendar-alt',
         'keywords'          => array( 'post', 'list' ),
         'supports'          => array(
-            'align'     => false
+            'align'     => array('right')
         )
     ));    
 

@@ -1384,24 +1384,24 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-left: -15px;
   margin-right: -15px; }
 
-.block, .page-template-default .block {
+.block {
   z-index: 2;
   background: #fff;
   padding-top: 1.5em;
   padding-bottom: 1.5em; }
   @media (min-width: 768px) {
-    .block.alignright, .page-template-default .block.alignright {
+    .block.alignright {
       margin-top: -25px;
       padding-top: 30px;
       padding-bottom: 30px; } }
-  .block.block-narrow, .page-template-default .block.block-narrow {
+  .block.block-narrow {
     margin-left: 0; }
-  .block p, .block ul, .block ol, .page-template-default .block p, .page-template-default .block ul, .page-template-default .block ol {
+  .block p, .block ul, .block ol {
     font-size: 0.875rem;
     line-height: 180%; }
-  .block li, .page-template-default .block li {
+  .block li {
     margin-bottom: 5px; }
-  .block .block-inside, .page-template-default .block .block-inside {
+  .block .block-inside {
     padding: 20px; }
 
 .jump-to {

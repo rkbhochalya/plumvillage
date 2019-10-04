@@ -1814,51 +1814,32 @@ body #youmax, body .youmax{
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Events Calendar
+// Events 
 
-.events-table{
-	margin-bottom: 3em;
+.event-list{
 
-	thead{
-		display: none;
-	}
-	a{
-		@include font-size(18);
-		@include underline($sun, $sun);
-		font-weight: bold;
-	}
+	.index-item{
+		padding-right: 0;
 
-	hr{
-		margin: 10px 0;
-	}
-
-	img{
-		width: auto;
-	}
-
-	td{
-		vertical-align: top;
-		padding-bottom: 50px;
-		padding-top: 10px;
-	}
-
-	> tbody > tr > td:first-child{
-		width: 25%;
-		padding-right: 30px;
-		color: $grey;
-		@include font-size(14);
-		line-height: 180%;
-
-		b{
-			color: $ink;
-			@include font-size(18);
-			line-height: 180%;
+		.load-more-container{
+			padding-top: 0;
 		}
+		h2.entry-title{
+			margin-bottom: 0;
+		}
+		h4{
+			margin-bottom: 5px;
+			padding-bottom: 0;
+		}		
+	}
 
+	@include margin-side-block;	
+
+	&.alignright .block-inside{
+		background: $freshearth;
+		padding: 5px 30px;
 	}
 }
-
-
 
 .index-event.index-item{
 	h2{
@@ -1884,6 +1865,31 @@ body #youmax, body .youmax{
 	    top: 14px;
 	    left: 0;
 	  }
+	}
+}
+
+.index-event.index-item.index-event-repeat{
+	.entry-meta{
+		line-height: 160%;
+		font-style: italic;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		margin-bottom: 0;
+
+		b{
+			display: block;
+			font-style: normal;
+		}
+		a{
+			text-decoration: underline;
+
+			&:hover{
+				color: $ink;
+			}
+		}
+		&:before{
+			top: 16px;
+		}
 	}
 }
 
