@@ -6,7 +6,7 @@
 function wpdocs_register_my_custom_menu_page() {
   add_menu_page(
 		__( 'Practise Centres', 'plumvillage' ),
-		'Practise Centres',
+		'Practice Centers',
 		'manage_options',
 		'edit-tags.php?taxonomy=practise-centres',
 		'',

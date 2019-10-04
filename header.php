@@ -56,7 +56,7 @@
 		<h6>— <?php _e( 'Follow Plum Village', 'plumvillage' ); ?></h6>
 		<?php include( locate_template( 'template-parts/social-links.php', false, false ) ); ?>
 			
-		<h6>— <?php _e( 'Plum Village Practise Centres', 'plumvillage' ); ?></h6>
+		<h6>— <?php _e( 'Plum Village Practice Centers', 'plumvillage' ); ?></h6>
 		<div class="row">
 			<?php $col = 'col-6 col-xl-4'; ?>
 			<?php include( locate_template( 'template-parts/practise-centres.php', false, false ) ); ?>

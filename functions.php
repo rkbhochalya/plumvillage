@@ -167,22 +167,22 @@ function create_post_types() {
 
   // Add new taxonomy, NOT hierarchical (like tags)
   $labels = array(
-    'name'                       => _x( 'Practise Centres', 'taxonomy general name', 'plumvillage' ),
-    'singular_name'              => _x( 'Practise Centre', 'taxonomy singular name', 'plumvillage' ),
-    'search_items'               => __( 'Search Practise Centres', 'plumvillage' ),
-    'popular_items'              => __( 'Popular Practise Centres', 'plumvillage' ),
-    'all_items'                  => __( 'All Practise Centres', 'plumvillage' ),
+    'name'                       => _x( 'Practice Centers', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Practice Center', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Practice Centers', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Practice Centers', 'plumvillage' ),
+    'all_items'                  => __( 'All Practice Centers', 'plumvillage' ),
     'parent_item'                => null,
     'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Edit Practise Centre', 'plumvillage' ),
-    'update_item'                => __( 'Edit Practise Centre', 'plumvillage' ),
-    'add_new_item'               => __( 'Add new Practise Centre', 'plumvillage' ),
-    'new_item_name'              => __( 'New Practise Centre name', 'plumvillage' ),
-    'separate_items_with_commas' => __( 'Use commas when adding multiple Practise Centres.', 'plumvillage' ),
-    'add_or_remove_items'        => __( 'Add or remove Practise Centres', 'plumvillage' ),
-    'choose_from_most_used'      => __( 'Choose from most used Practise Centres', 'plumvillage' ),
-    'not_found'                  => __( 'No Practise Centres found.', 'plumvillage' ),
-    'menu_name'                  => __( 'Practise Centres', 'plumvillage' ),
+    'edit_item'                  => __( 'Edit Practice Center', 'plumvillage' ),
+    'update_item'                => __( 'Edit Practice Center', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Practice Center', 'plumvillage' ),
+    'new_item_name'              => __( 'New Practice Center name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Practice Centers.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Practice Centers', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Practice Centers', 'plumvillage' ),
+    'not_found'                  => __( 'No Practice Centers found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Practice Centers', 'plumvillage' ),
   );
 
   $args = array(

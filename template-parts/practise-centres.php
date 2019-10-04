@@ -34,12 +34,12 @@
 	    		<span itemprop="streetAddress"><?php the_field('address_street_2', $practise_centre);?></span>
 		    	<br />
 	    	<?php endif; ?>
+	    	<br />
 	    	<?php if(get_field('address_postcode', $practise_centre)) : ?>
 		    	<span itemprop="postalCode"><?php the_field('address_postcode', $practise_centre);?></span>
 		    <?php endif;
 	    	if(get_field('address_city', $practise_centre)) : ?>
 		    	<span itemprop="addressLocality"><?php the_field('address_city', $practise_centre);?></span>
-			    <br />
 		    <?php endif; ?>
 	    	<?php if(get_field('address_state', $practise_centre)) : ?>
 		    	<span itemprop="addressRegion"><?php the_field('address_state', $practise_centre);?></span>
