@@ -14,7 +14,7 @@ if( have_rows('books') ): ?>
                 <div class="row <?php if(($block['align'] == 'wide') && (count(get_field('books')) > 1)) : ?>justify-content-center<?php endif; ?>">
                     <?php while ( have_rows('books') ) : the_row(); ?>
                         <?php $bookId = get_sub_field('book'); ?>
-                        <div class="<?php if(count(get_field('books')) == 1) : ?>col-12 single-book<?php else : ?>col-6 col-md-3<?php endif; ?> mb-4">
+                        <div class="<?php if($block['align'] != 'wide') : ?>col <?php if(count(get_field('books')) == 1) : ?>single-book<?php endif; ?><?php else : ?>col-6 col-md-3 <?php endif; ?> mb-4">
                             <a class="link-zoom" data-fancybox="<?php echo $block['id']; ?>" data-type="ajax" href="<?php echo get_permalink($bookId); ?>"><span class="icon icon-bg icon-zoom"></span><?php echo get_the_post_thumbnail($bookId); ?></a>
                             <?php if(get_field('show_excerpt')) : ?>
                                 <h5><a href="<?php echo get_permalink($bookId); ?>"><?php echo get_the_title($bookId); ?></a></h5>
