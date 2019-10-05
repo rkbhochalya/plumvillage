@@ -137,6 +137,13 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
 	margin: 0;
 	font-style: italic;
 }
+div.wpcf7 .ajax-loader{
+	margin-left: 30px;
+	background: url('assets/images/ajax-loader.gif') no-repeat;
+	width: 30px;
+	height: 30px;
+}
+
 
 
 .select2-container--default .select2-selection--single{
@@ -149,7 +156,7 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
 }
 .select2-container .select2-selection--single .select2-selection__rendered{
 	color: $color__text-input;
-	padding: 0;
+	padding: 0 20px 0 0;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow{
 	height: 100%;
