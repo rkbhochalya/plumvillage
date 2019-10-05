@@ -8701,7 +8701,10 @@ textarea {
   color: #666;
   border: none;
   border-radius: 0px;
-  background-color: #F5F5EF; }
+  background-color: #F5F5EF;
+  font-size: 0.875rem;
+  padding: 1rem 1rem;
+  max-width: 100%; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -8721,6 +8724,86 @@ textarea {
     color: #111;
     -webkit-box-shadow: 0 0 0 0.2rem #F5F5EF;
     box-shadow: 0 0 0 0.2rem #F5F5EF; }
+  input[type="text"].form-control-lg,
+  input[type="email"].form-control-lg,
+  input[type="url"].form-control-lg,
+  input[type="password"].form-control-lg,
+  input[type="search"].form-control-lg,
+  input[type="number"].form-control-lg,
+  input[type="tel"].form-control-lg,
+  input[type="range"].form-control-lg,
+  input[type="date"].form-control-lg,
+  input[type="month"].form-control-lg,
+  input[type="week"].form-control-lg,
+  input[type="time"].form-control-lg,
+  input[type="datetime"].form-control-lg,
+  input[type="datetime-local"].form-control-lg,
+  input[type="color"].form-control-lg,
+  textarea.form-control-lg {
+    padding: 1.7rem 1rem; }
+  input[type="text"].wpcf7-not-valid,
+  input[type="email"].wpcf7-not-valid,
+  input[type="url"].wpcf7-not-valid,
+  input[type="password"].wpcf7-not-valid,
+  input[type="search"].wpcf7-not-valid,
+  input[type="number"].wpcf7-not-valid,
+  input[type="tel"].wpcf7-not-valid,
+  input[type="range"].wpcf7-not-valid,
+  input[type="date"].wpcf7-not-valid,
+  input[type="month"].wpcf7-not-valid,
+  input[type="week"].wpcf7-not-valid,
+  input[type="time"].wpcf7-not-valid,
+  input[type="datetime"].wpcf7-not-valid,
+  input[type="datetime-local"].wpcf7-not-valid,
+  input[type="color"].wpcf7-not-valid,
+  textarea.wpcf7-not-valid {
+    background: #FAF1EB; }
+
+input[type="submit"] {
+  font-size: 0.875rem;
+  padding: 1.14rem 3rem .85rem;
+  background: #FFD22A;
+  color: #000;
+  border: 0;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+  input[type="submit"]:hover {
+    background: #f6c200; }
+
+form label {
+  font-size: 0.8125rem;
+  margin-bottom: 0;
+  font-weight: 400; }
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="url"],
+.wpcf7 input[type="password"],
+.wpcf7 input[type="search"],
+.wpcf7 input[type="number"],
+.wpcf7 input[type="tel"],
+.wpcf7 input[type="range"],
+.wpcf7 input[type="date"],
+.wpcf7 input[type="month"],
+.wpcf7 input[type="week"],
+.wpcf7 input[type="time"],
+.wpcf7 input[type="datetime"],
+.wpcf7 input[type="datetime-local"],
+.wpcf7 input[type="color"],
+.wpcf7 textarea {
+  width: 100%; }
+
+.required-star {
+  color: #8B572A; }
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-style: italic; }
 
 .select2-container--default .select2-selection--single {
   border-radius: 0px;
@@ -10496,10 +10579,10 @@ body #youmax, body .youmax {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-.page #content {
+#content {
   margin-top: 40px; }
   @media (min-width: 768px) {
-    .page #content {
+    #content {
       margin-top: 90px; } }
 
 .in-betweener {
@@ -10967,6 +11050,13 @@ body #youmax, body .youmax {
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
+.max-width-700 {
+  max-width: 700px; }
+
+.center-me {
+  margin-left: auto;
+  margin-right: auto; }
+
 .wp-block-spacer {
   clear: both; }
 

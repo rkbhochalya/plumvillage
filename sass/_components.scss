@@ -67,11 +67,75 @@ textarea {
 	border: none;
 	border-radius: 0px;
 	background-color: $freshtree;
+	font-size: 0.875rem;
+	padding: 1rem 1rem;
+	max-width: 100%;
 
 	&:focus {
 		color: $color__text-input-focus;
 		box-shadow: 0 0 0 0.2rem $freshtree;
 	}
+
+	&.form-control-lg{
+		padding: 1.7rem 1rem;
+	}
+
+	&.wpcf7-not-valid{
+		background: $freshearth;
+	}
+}
+
+input[type="submit"]{
+	font-size: 0.875rem;
+  padding: 1.14rem 3rem .85rem;
+  background: $sun;
+  color: $ink;
+  border: 0;
+  font-weight: bold;
+  border-radius: 0.3rem;
+	transition: all .4s cubic-bezier(.15,.53,.35,1);
+
+  &:hover{
+  	background: darken($sun, 10);
+  }
+}
+
+form label{
+	@include font-size(13);
+	margin-bottom: 0;
+	font-weight: 400;
+}
+
+
+.wpcf7{
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	textarea {
+		width: 100%;
+	}
+}
+.required-star{
+	color: $earth;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+	border: none;
+	padding: 0;
+	margin: 0;
+	font-style: italic;
 }
 
 

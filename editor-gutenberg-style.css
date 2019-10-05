@@ -1377,6 +1377,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
+.max-width-700 {
+  max-width: 700px; }
+
+.center-me {
+  margin-left: auto;
+  margin-right: auto; }
+
 .wp-block-spacer {
   clear: both; }
 
