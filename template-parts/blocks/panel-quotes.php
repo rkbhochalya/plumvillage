@@ -1,7 +1,7 @@
 <?php
 
 if( have_rows('quotes') ): ?>
-    <div class="panel panel-quotes align<?php echo $block['align']; ?>
+    <div class="panel panel-quotes align<?php echo $block['align'] . ' ' . $block['className']; ?>
         <?php if(get_field('collapsable')) : echo 'panel-collapsable'; else : echo 'panel-open'; endif; ?> 
         <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?> 
         <?php if(!get_field('title')) : echo 'no-title'; endif; ?> 

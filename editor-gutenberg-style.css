@@ -1399,8 +1399,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   @media (min-width: 768px) {
     .block.alignright {
       margin-top: -25px;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-top: 25px;
+      padding-bottom: 25px; } }
   .block.block-narrow {
     margin-left: 0; }
   .block p, .block ul, .block ol {
@@ -1561,8 +1561,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   @media (min-width: 768px) {
     .video-embed.alignright {
       margin-top: -25px;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-top: 25px;
+      padding-bottom: 25px; } }
   .video-embed.open {
     width: 100%;
     max-width: 100%;

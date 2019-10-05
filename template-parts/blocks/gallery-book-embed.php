@@ -1,4 +1,4 @@
-<div data-fancybox-trigger="<?php echo sanitize_title(get_field('title')); ?>" class="gallery-embed block <?php if(get_field('narrow')) : ?>block-narrow<?php endif; ?> align<?php echo $block['align']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>">
+<div data-fancybox-trigger="<?php echo sanitize_title(get_field('title')); ?>" class="gallery-embed block <?php if(get_field('narrow')) : ?>block-narrow<?php endif; ?> align<?php echo $block['align'] . ' ' . $block['className']; ?>" data-is-press="<?php if(get_field('is_press') == true){echo 'true'; } else {echo 'false';} ?>">
     <div class="gallery-embed-inside">
         <div class="row">
             <div class="col">

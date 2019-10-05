@@ -8799,7 +8799,7 @@ form label {
 .required-star {
   color: #8B572A; }
 
-div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ok {
   border: none;
   padding: 0;
   margin: 0;
@@ -10489,8 +10489,8 @@ body #youmax, body .youmax {
   @media (min-width: 768px) {
     .event-list.alignright {
       margin-top: -25px;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-top: 25px;
+      padding-bottom: 25px; } }
   .event-list.alignright .block-inside {
     background: #FAF1EB;
     padding: 5px 30px; }
@@ -11078,8 +11078,8 @@ body #youmax, body .youmax {
   @media (min-width: 768px) {
     .block.alignright {
       margin-top: -25px;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-top: 25px;
+      padding-bottom: 25px; } }
   .block.block-narrow {
     margin-left: 0; }
   .block p, .block ul, .block ol {
@@ -11240,8 +11240,8 @@ body #youmax, body .youmax {
   @media (min-width: 768px) {
     .video-embed.alignright {
       margin-top: -25px;
-      padding-top: 30px;
-      padding-bottom: 30px; } }
+      padding-top: 25px;
+      padding-bottom: 25px; } }
   .video-embed.open {
     width: 100%;
     max-width: 100%;

@@ -1,6 +1,6 @@
 <?php if( have_rows('audio') ): ?>
     <div class="block-outside">
-        <figure class="block block-audio align<?php echo $block['align']; ?>"">
+        <figure class="block block-audio align<?php echo $block['align'] . ' ' . $block['className']; ?>"">
             <div class="block-inside">
             <?php while ( have_rows('audio') ) : the_row(); ?>
                 
