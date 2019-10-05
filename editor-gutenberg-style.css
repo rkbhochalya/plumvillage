@@ -2179,6 +2179,18 @@ pre.wp-block-verse, .wp-block-verse pre {
   font-size: 1rem;
   line-height: 190%; }
 
+.wp-block-file a:first-child {
+  font-style: italic;
+  color: #9A9A9A;
+  text-decoration: underline; }
+
+.wp-block-file a.wp-block-file__button {
+  background: #8B572A;
+  border-radius: 0.3rem;
+  position: relative;
+  top: -3px;
+  font-weight: 400; }
+
 /*--------------------------------------------------------------
 # Gutenberg
 --------------------------------------------------------------*/

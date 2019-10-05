@@ -9257,59 +9257,63 @@ big {
   .entry-content blockquote.has-ink-color p, .page-template-default .entry-content blockquote.has-ink-color p, .single .entry-content blockquote.has-ink-color p {
     color: #000; }
 
-.entry-content .wp-block-pullquote {
+.wp-block-pullquote {
   text-align: left;
   border: none;
   padding: 0;
   margin: 0; }
-  .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
+  .wp-block-pullquote.is-style-solid-color blockquote {
     padding: 15px 20px;
     max-width: 600px; }
     @media (min-width: 992px) {
-      .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
+      .wp-block-pullquote.is-style-solid-color blockquote {
         padding: 25px 30px; } }
-    .entry-content .wp-block-pullquote.is-style-solid-color blockquote p {
+    .wp-block-pullquote.is-style-solid-color blockquote p {
       font-size: 2.5rem;
       line-height: 130%;
       padding-bottom: 1.5em;
       max-width: 100%; }
-  .entry-content .wp-block-pullquote.has-fresh-earth-background-color blockquote {
+  .wp-block-pullquote.has-fresh-earth-background-color blockquote {
     background: #FAF1EB; }
-  .entry-content .wp-block-pullquote.alignright {
+  .wp-block-pullquote.alignright {
     background: #fff;
     padding: 30px 0;
     margin-top: -30px;
     position: relative;
     z-index: 2;
-    margin-left: 1.5em; }
-    .entry-content .wp-block-pullquote.alignright blockquote {
+    margin-left: 1.5em;
+    max-width: 100%; }
+    @media (min-width: 576px) {
+      .wp-block-pullquote.alignright {
+        max-width: 305px; } }
+    .wp-block-pullquote.alignright blockquote {
       padding-right: 30px; }
-      .entry-content .wp-block-pullquote.alignright blockquote p {
+      .wp-block-pullquote.alignright blockquote p {
         font-size: 1.5rem;
         padding-left: 0; }
         @media (min-width: 992px) {
-          .entry-content .wp-block-pullquote.alignright blockquote p {
+          .wp-block-pullquote.alignright blockquote p {
             font-size: 1.5rem; } }
-      .entry-content .wp-block-pullquote.alignright blockquote cite {
+      .wp-block-pullquote.alignright blockquote cite {
         padding-left: 0;
         font-size: 0.875rem; }
-  .entry-content .wp-block-pullquote.alignleft blockquote p {
+  .wp-block-pullquote.alignleft blockquote p {
     padding-left: 0; }
-  .entry-content .wp-block-pullquote.alignleft blockquote cite {
+  .wp-block-pullquote.alignleft blockquote cite {
     padding-left: 0; }
-  .entry-content .wp-block-pullquote.alignfull blockquote {
+  .wp-block-pullquote.alignfull blockquote {
     text-align: center; }
-    .entry-content .wp-block-pullquote.alignfull blockquote p {
+    .wp-block-pullquote.alignfull blockquote p {
       padding-left: 0; }
-  .entry-content .wp-block-pullquote.alignwide blockquote {
+  .wp-block-pullquote.alignwide blockquote {
     max-width: 100%; }
-  .entry-content .wp-block-pullquote.is-tnh-quote blockquote::after {
+  .wp-block-pullquote.is-tnh-quote blockquote::after {
     display: block;
     clear: both;
     content: ""; }
-  .entry-content .wp-block-pullquote.is-tnh-quote blockquote p {
+  .wp-block-pullquote.is-tnh-quote blockquote p {
     padding-bottom: 0; }
-  .entry-content .wp-block-pullquote.is-tnh-quote blockquote cite {
+  .wp-block-pullquote.is-tnh-quote blockquote cite {
     background: url("assets/images/sign.png") no-repeat;
     background-size: 208px 56px;
     font-size: 0;
@@ -9569,6 +9573,9 @@ h5 a {
 .entry-content p a.side-link:hover span.real-side, .entry-content p a.side-link:hover span.real-side .icon {
   color: #000; }
 
+figure.wp-block-image a[href*="uploads"] {
+  cursor: url(assets/images/zoom.svg) 14 14, auto; }
+
 .alignleft {
   display: inline;
   float: left;
@@ -9577,8 +9584,15 @@ h5 a {
 .alignright {
   display: inline;
   float: right;
-  clear: right;
-  margin-left: 1.5em; }
+  clear: right; }
+  @media (min-width: 470px) {
+    .alignright {
+      margin-left: 1.5em;
+      max-width: 50%; } }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .alignright {
+      margin-right: calc((100% - 100vw) / 2 + 20px);
+      max-width: 55%; } }
 
 .aligncenter {
   clear: both; }
@@ -10722,7 +10736,7 @@ body #youmax, body .youmax {
       color: #000; }
 
 .index-interview p {
-  padding-bottom: 0; }
+  margin-bottom: 0; }
 
 .index-interview .video-wrapper {
   max-width: 40%;
@@ -11859,6 +11873,18 @@ pre.wp-block-verse, .wp-block-verse pre {
   font-family: 'Merriweather';
   font-size: 1rem;
   line-height: 190%; }
+
+.wp-block-file a:first-child {
+  font-style: italic;
+  color: #9A9A9A;
+  text-decoration: underline; }
+
+.wp-block-file a.wp-block-file__button {
+  background: #8B572A;
+  border-radius: 0.3rem;
+  position: relative;
+  top: -3px;
+  font-weight: 400; }
 
 /*--------------------------------------------------------------
 # Print

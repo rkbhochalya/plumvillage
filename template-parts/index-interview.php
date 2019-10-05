@@ -19,10 +19,10 @@ $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'to
 		<?php beautifulVideoEmbed(get_field('featured_video'), get_the_id(), false, true); ?>
 	<?php endif; ?>
 	<?php if(has_term('pdf', 'types') && has_post_thumbnail()) : ?>
-		<a class="image-wrapper pdf-wrapper" href="<?php the_permalink(); ?>#filter=.<?php echo $filterType; ?>.<?php echo $filterTopic; ?>"><span class="pdf-label">PDF</span><?php the_post_thumbnail('thumbnail'); ?></a>
+		<a class="image-wrapper pdf-wrapper" href="<?php the_permalink(); ?>#filter=<?php if($filterType) { echo '.'.$filterType;} if($filterTopic){echo '.'.$filterTopic;} ?>"><span class="pdf-label">PDF</span><?php the_post_thumbnail('thumbnail'); ?></a>
 	<?php endif; ?>
 	<header class="entry-header">
-		<h4><a href="<?php the_permalink(); ?>#filter=.<?php echo $filterType; ?>.<?php echo $filterTopic; ?>"><?php the_title(); ?></a></h4>
+		<h4><a href="<?php the_permalink(); ?>#filter=<?php if($filterType) { echo '.'.$filterType;} if($filterTopic){echo '.'.$filterTopic;} ?>"><?php the_title(); ?></a></h4>
 		<div class="entry-meta">
 			<?php if(get_field('source')) : ?>
 				<span class="entry-source">
@@ -33,7 +33,7 @@ $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'to
 					<?php endif; ?>					
 				</span>
 				<?php else : ?>
-					<?php the_time('jS F, Y'); ?>
+					<span class="entry-source"><?php the_time('jS F, Y'); ?></span>
 				<?php endif; ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

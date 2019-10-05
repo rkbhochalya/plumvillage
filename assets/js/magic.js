@@ -184,57 +184,6 @@
 	////////////////////////////////////////////////////////////////////////////////
 	// Filter function for letters, updates, books
 
-	// $('a .trigger').on('click', function(e){
-	// 	var trigger = $(this).data('trigger');
-	// 	$('.'+trigger).trigger('click');
-	// 	e.stopPropagation();
-	// 	e.preventDefault();
-	// })
-
-
-	// $('.filter-products').on('click', function(e){
- //  	var el = $(this);
- //  	var parent = el.parent();
- //  	if(el.is('.selected')){
-	//   	el.removeClass('selected');
- //  	} else {
- //  		parent.find('.selected').removeClass('selected');
- //  		el.addClass('selected');			
- //  	}
-
- //  	filterValue = '';
-	// 	$('.filter-list .filter-products.selected').each(function(){
-	// 		filterValue += $(this).attr('data-filter');
-	// 	})
-
- //  	$grid.isotope({ filter: filterValue });	
- //  	if($('.filter-products.selected').length){
- //  		$('body').addClass('filters-active');
- //  		parent.find('.reset-filter').removeClass('selected');
- //  	} else {
- //  		$('body').removeClass('filters-active');
- //  		parent.find('.reset-filter').addClass('selected');
- //  	}
- //  	e.preventDefault();
- //  })
-
-	// $('.reset-filter').on('click', function(e){
- //  	var el = $(this);
- //  	var parent = el.parent();
-	// 	parent.find('.filter-products.selected').trigger('click');
-	// 	el.addClass('selected')
-	// 	e.preventDefault();
-	// })
-
-	// var $layoutmode = ((typeof $('.post-overview').data('isotopeLayoutmode') !== 'undefined') ?  $('.post-overview').data('isotopeLayoutmode') : 'fitRows');
- //  var $grid = $('.post-overview').isotope({
- //  	layoutMode: $layoutmode,
- //  	itemSelector: 'article, .in-betweener'
-	// });
-
-
-
-
   var $grid = $('.post-overview');
 	var $layoutmode = ((typeof $('.post-overview').data('isotopeLayoutmode') !== 'undefined') ?  $('.post-overview').data('isotopeLayoutmode') : 'fitRows');
 
@@ -279,7 +228,7 @@
 
   function onHashchange() {
     var hashFilter = getHashFilter();
-    if ( !hashFilter ) {
+    if ( !hashFilter  ) {
       hashFilter = '*';
     }
 
@@ -314,9 +263,6 @@
 
   // // trigger event handler to init Isotope
   onHashchange();
-
-
-
 
 
 	$('.gallery-images').each(function(){

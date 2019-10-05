@@ -973,3 +973,21 @@ pre.wp-block-verse, .wp-block-verse pre{
 	@include font-size(16);
 	line-height: 190%;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Download Block
+
+.wp-block-file{
+	a:first-child{
+		font-style: italic;
+		color: $grey;
+		text-decoration: underline;
+	}
+	a.wp-block-file__button{
+		background: $earth;
+		border-radius: 0.3rem;
+		position: relative;
+		top: -3px;
+		font-weight: 400;
+	}
+}
