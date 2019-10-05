@@ -1204,6 +1204,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	background: $cloud;
 }
 
+.single, .page {
+	.entry-header > .entry-meta{
+		margin-right: -16px;
+		background: #fff;
+	}
+} 
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Content Section

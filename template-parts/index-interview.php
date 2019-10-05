@@ -26,6 +26,7 @@ $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'to
 		<div class="entry-meta">
 			<?php if(get_field('source')) : ?>
 				<span class="entry-source">
+					<?php _e('Source:', 'plumvillage'); ?>
 					<?php if(get_field('source_url')) : ?>
 						<a target="_blank" href="<?php the_field('source_url'); ?>"><?php the_field('source'); ?>, <?php the_time('jS F, Y'); ?><span class="icon icon-external-link"></span></a>
 					<?php else : ?>

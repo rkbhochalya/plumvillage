@@ -10044,6 +10044,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   margin-right: -16px;
   background: #fff; }
 
+.single .entry-header > .entry-meta, .page .entry-header > .entry-meta {
+  margin-right: -16px;
+  background: #fff; }
+
 .entry-content, .entry-content p {
   font-size: 1.125rem;
   font-weight: 300;

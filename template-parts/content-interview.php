@@ -15,7 +15,8 @@
 		<div class="entry-meta">
 			<?php if(get_field('source')) : ?>
 				<span class="entry-source">
-					<?php if(get_field('source_url')) : ?>
+					<?php _e('Source:', 'plumvillage'); ?>
+					<?php if(get_field('source_url')) : ?>						
 						<a target="_blank" href="<?php the_field('source_url'); ?>">
 							<?php the_field('source'); ?>, <?php the_time('jS F, Y'); ?>, <?php if(get_field('journalist')) : ?>by <?php the_field('journalist'); endif; ?><span class="icon icon-external-link"></span>
 						</a>
