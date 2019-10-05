@@ -30,7 +30,7 @@
 
 	?>
 
-	<div class="block event-list align<?php echo $block['align'] . ' ' . $block['className']; ?>">
+	<div class="block event-list align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?>">
 		<div class="block-inside">
 		<?php if(!isset($events)) : ?>
 			<p><?php _e('No upcoming events', 'plumvillage'); ?></p>

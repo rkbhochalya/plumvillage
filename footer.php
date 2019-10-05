@@ -310,7 +310,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-8">
-					<h6>— <?php _e( 'Plum Village Practise Centres', 'plumvillage' ); ?></h6>
+					<h6>— <?php _e( 'Plum Village Practice Centers', 'plumvillage' ); ?></h6>
 					<div class="row">
 						<?php $col = 'col-6 col-lg-4 col-xl-3'; ?>
 						<?php include( locate_template( 'template-parts/practise-centres.php', false, false ) ); ?>

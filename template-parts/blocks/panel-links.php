@@ -1,7 +1,7 @@
 <?php
 
 if( have_rows('links') ): ?>
-    <div class="panel panel-links align<?php echo $block['align'] . ' ' . $block['className']; ?> <?php if(get_field('collapsable')) : echo 'panel-collapsable'; endif; ?> <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?>">
+    <div class="panel panel-links align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?> <?php if(get_field('collapsable')) : echo 'panel-collapsable'; endif; ?> <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?>">
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
         <?php endif; ?>

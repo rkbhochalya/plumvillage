@@ -37,7 +37,7 @@ $title = get_option('latest_youtube_title');
 $video = wp_oembed_get('https://www.youtube.com/watch?v='.$id); ?>
 
 
-<div class="latest-youtube align<?php echo $block['align'] . ' ' . $block['className']; ?>">
+<div class="latest-youtube align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?>">
 	<?php beautifulVideoEmbed($video, false, false, true); ?>
 
 	<figcaption><?php echo $title; ?></figcaption>
