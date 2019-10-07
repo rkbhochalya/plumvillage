@@ -44,6 +44,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
 
 <div class="mega-menu-container hidden">
@@ -92,7 +93,7 @@
 		<div class="container">		
 			<div class="site-branding">
 				<?php
-				$image = get_field('logo_black', 'options');
+				$image = (get_field('header_white', $post->ID) ? get_field('logo_white', 'options') : get_field('logo_black', 'options'));
 				if ( is_front_page()  ) :
 					?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

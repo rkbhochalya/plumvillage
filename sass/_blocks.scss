@@ -1,3 +1,10 @@
+.block.alignfull{
+	> .block-inside{
+		@include make-container();
+    @include make-container-max-widths();		
+	}
+}
+
 .max-width-700{
 	max-width: 700px;
 }
@@ -654,37 +661,65 @@
 	}
 }
 
+
+
 .wp-block-cover{
-	padding-bottom: 0;
 
 	.wp-block-cover__inner-container{
-		background: $freshsun;
-		color: $ink;
-		padding: 30px;
-		max-width: 550px;
-		margin: 700px 15px 15px 15px;
-		width: 100%;
-
-		@include media-breakpoint-up(lg) {
-			margin: 140px -40% 140px 0;
-		}
-
-		@include media-breakpoint-up(xl) {
-			margin-right: -50vw;
-		}
-
-		h2{
-			text-align: left;	
-			padding: 0;
-		}
+		@include make-container();
+    @include make-container-max-widths();		
 	}
-}
 
-@include media-breakpoint-down(xs) {
-	.entry-content .wp-block-cover.alignfull{
+	&.is-style-with-background{
 		padding-bottom: 0;
+
+		.wp-block-cover__inner-container{
+			background: $freshsun;
+			color: $ink;
+			padding: 30px;
+			max-width: 550px;
+			margin: 700px 15px 15px 15px;
+			width: 100%;
+
+			@include media-breakpoint-up(lg) {
+				margin: 140px -40% 140px 0;
+			}
+
+			@include media-breakpoint-up(xl) {
+				margin-right: -50vw;
+			}
+
+			h2{
+				text-align: left;	
+				padding: 0;
+			}
+		}
 	}
 }
+
+.entry-content .wp-block-cover.alignfull.is-style-default:first-child{
+	margin-top: -163px;
+	margin-bottom: 0;
+	padding-top: 355px;
+	padding-bottom: 50px;
+
+
+	@include media-breakpoint-up(md) {	
+		margin-top: -355px;
+		padding-top: 355px;
+		padding-bottom: 200px;
+	}
+
+	.wp-block-pullquote.is-style-solid-color blockquote{
+		padding-left: 0;
+
+		p{
+			padding-left: 0;
+			@include font-size(48);
+		}
+	}
+}
+
 @media (max-width:600px){
 	.wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right.tnh-landing-books{
 		grid-template-areas: "media-text-media" "media-text-content";
@@ -833,6 +868,7 @@ hr.wp-block-separator{
 		}
 	}
 }
+
 
 .page-template-default, .post {
 	.wp-block-group.alignfull{
@@ -989,5 +1025,24 @@ pre.wp-block-verse, .wp-block-verse pre{
 		position: relative;
 		top: -3px;
 		font-weight: 400;
+	}
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Important Update
+
+.important-update, .entry-content .alignfull.important-update{
+	background: $freshearth;
+	padding: 0;
+
+	p{
+		margin: 0 auto;
+		max-width: 900px;
+		font-weight: 400;
+
+		a{
+			color: $earth;
+			@include underline($freshearth, darken($freshearth, 10));
+		}
 	}
 }

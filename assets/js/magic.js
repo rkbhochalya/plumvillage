@@ -99,31 +99,9 @@
 
 
 	// open images in fancybox
-	$('figure.wp-block-image a[href*="uploads"], .wp-block-image figure a[href*="uploads"]').fancybox({
+	$('figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="uploads"]').fancybox({
 		type: 'image'
 	})
-
- // 	$('.gallery-embed').each(function(){
-	//  		$.featherlightGallery(el.find('a.gallery'), {
-	// 			previousIcon: '<span class="icon icon-gallery-left"></span>',
-	// 			nextIcon: '<span class="icon icon-gallery-right"></span>',
-	//  		});
-	//  	})
- // 	})
-
-	// $('.wp-block-image figure a').featherlight({
-	// 	afterContent: function(){
-	// 		if($maxHeight == 0){
-	// 			$('.featherlight .attachment').imagesLoaded()
-	// 			  .always( function( instance ) {
-	// 					$maxHeight = $('.featherlight .attachment img').height();
-	// 					$('.featherlight .attachment').height($maxHeight);
-	// 			  });
-	// 		} else {
-	// 			$('.featherlight .attachment').height($maxHeight);
-	// 		}			
-	// 	}
-	// })
 
 
 	$('.play').click(function(e){
@@ -338,6 +316,18 @@
   $('.toggle-filter-list').on('click', function(){
   	$('.filter-list').toggleClass('show-all')
   })
+
+  // if white-header, make mega menu button black on scroll
+  if($('.has-white-header').length){
+  	$coverHeight = $('.entry-content .wp-block-cover:first-child').outerHeight()
+  	$(window).scroll(function(){
+	  	if($(window).scrollTop() > $coverHeight){
+	  		$('body').removeClass('has-white-header');
+	  	} else {
+	  		$('body').addClass('has-white-header');
+	  	}
+  	})
+  }
 
 })(jQuery);
 

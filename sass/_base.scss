@@ -300,6 +300,8 @@ big {
 	&.is-style-solid-color{
 		blockquote{
 			padding: 15px 20px;
+			margin-left: 0;
+			margin-right: 0;
 			@include media-breakpoint-up(lg) {
 				padding: 25px 30px;
 			}
@@ -309,6 +311,12 @@ big {
 				line-height: 130%;
 				padding-bottom: 1.5em;
 				max-width: 100%;
+			}
+
+			&.has-cloud-color{
+				p{
+					color: $cloud;
+				}
 			}
 		}
 	}
@@ -349,6 +357,12 @@ big {
 		}
 	}
 
+	&.aligncenter{
+		blockquote{
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
 
 	&.alignleft{
 		blockquote{
@@ -390,6 +404,11 @@ big {
 				height: 56px;
 				float: right;
 				margin-top: 20px;
+			}
+			&.has-cloud-color{
+				cite{
+					background-image: url('assets/images/sign-white.gif');
+				}
 			}
 		}
 	}
@@ -495,6 +514,24 @@ a.has-arrow{
 		}
 	}
 }
+
+a.has-arrow-after{
+	position: relative;
+
+	&:after{
+		content: $icon-arrow-tiny; 
+		@include font-size(12);
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
+		margin-left: 10px;
+	}
+
+	&:hover{
+		&:after{
+			margin-left: 15px;
+		}
+	}
+}
+
 
 .link-with-icon{
 	@include font-size(16);
@@ -647,7 +684,7 @@ h5 a{
 	color: $ink;
 }
 
-figure.wp-block-image a[href*="uploads"]{
+figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="uploads"]{
 	cursor: url(assets/images/zoom.svg) 14 14, auto;
 }
 
@@ -846,9 +883,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			padding-bottom: 2em;	
 		}
 
-		.wp-block-image figure.aligncenter{
-			width: $center-lg-max-width;
-		}
 		.entry-content .slider.alignwide, .wp-block-group{
 			max-width: 884px;
 		}
@@ -861,9 +895,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			max-width: 426px;
 		}		
 
-		.wp-block-image figure.aligncenter{
-			width: $center-xxl-max-width;
-		}	
 	}
 
 	// going back to baseline //todo: fix responsive;
@@ -996,6 +1027,22 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.mega-menu-container button.unbutton.menu-toggle{
 		background:$ink;
 		color: $cloud;
+	}
+}
+
+.has-white-header{
+	#site-navigation{
+		background: none;
+
+		.menu li a{
+			color: $cloud;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		#page button.unbutton{
+			color: #fff;
+		}
 	}
 }
 
@@ -1183,6 +1230,11 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 }
 
 // Logo
+
+.site-header{
+	position: relative;
+	z-index: 2;
+}
 
 .site-branding{
   @include media-breakpoint-up(md) {

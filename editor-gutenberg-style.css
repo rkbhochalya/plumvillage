@@ -1237,7 +1237,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before, .nav-previous:before, .nav-next:after {
+[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before, .has-arrow-after:after, .nav-previous:before, .nav-next:after {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -1377,6 +1377,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
+.block.alignfull > .block-inside {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 576px) {
+    .block.alignfull > .block-inside {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    .block.alignfull > .block-inside {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .block.alignfull > .block-inside {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .block.alignfull > .block-inside {
+      max-width: 1140px; } }
+  @media (min-width: 1400px) {
+    .block.alignfull > .block-inside {
+      max-width: 1370px; } }
+
 .max-width-700 {
   max-width: 700px; }
 
@@ -1933,9 +1955,31 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       .menu-block-container .menu-block.fix-menu-top #block-menu > li a {
         color: #272727; }
 
-.wp-block-cover {
+.wp-block-cover .wp-block-cover__inner-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 576px) {
+    .wp-block-cover .wp-block-cover__inner-container {
+      max-width: 540px; } }
+  @media (min-width: 768px) {
+    .wp-block-cover .wp-block-cover__inner-container {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .wp-block-cover .wp-block-cover__inner-container {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .wp-block-cover .wp-block-cover__inner-container {
+      max-width: 1140px; } }
+  @media (min-width: 1400px) {
+    .wp-block-cover .wp-block-cover__inner-container {
+      max-width: 1370px; } }
+
+.wp-block-cover.is-style-with-background {
   padding-bottom: 0; }
-  .wp-block-cover .wp-block-cover__inner-container {
+  .wp-block-cover.is-style-with-background .wp-block-cover__inner-container {
     background: #FEFBF3;
     color: #000;
     padding: 30px;
@@ -1943,18 +1987,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin: 700px 15px 15px 15px;
     width: 100%; }
     @media (min-width: 992px) {
-      .wp-block-cover .wp-block-cover__inner-container {
+      .wp-block-cover.is-style-with-background .wp-block-cover__inner-container {
         margin: 140px -40% 140px 0; } }
     @media (min-width: 1200px) {
-      .wp-block-cover .wp-block-cover__inner-container {
+      .wp-block-cover.is-style-with-background .wp-block-cover__inner-container {
         margin-right: -50vw; } }
-    .wp-block-cover .wp-block-cover__inner-container h2 {
+    .wp-block-cover.is-style-with-background .wp-block-cover__inner-container h2 {
       text-align: left;
       padding: 0; }
 
-@media (max-width: 575.98px) {
-  .entry-content .wp-block-cover.alignfull {
-    padding-bottom: 0; } }
+.entry-content .wp-block-cover.alignfull.is-style-default:first-child {
+  margin-top: -163px;
+  margin-bottom: 0;
+  padding-top: 355px;
+  padding-bottom: 50px; }
+  @media (min-width: 768px) {
+    .entry-content .wp-block-cover.alignfull.is-style-default:first-child {
+      margin-top: -355px;
+      padding-top: 355px;
+      padding-bottom: 200px; } }
+  .entry-content .wp-block-cover.alignfull.is-style-default:first-child .wp-block-pullquote.is-style-solid-color blockquote {
+    padding-left: 0; }
+    .entry-content .wp-block-cover.alignfull.is-style-default:first-child .wp-block-pullquote.is-style-solid-color blockquote p {
+      padding-left: 0;
+      font-size: 3rem; }
 
 @media (max-width: 600px) {
   .wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right.tnh-landing-books {
@@ -2190,6 +2246,25 @@ pre.wp-block-verse, .wp-block-verse pre {
   position: relative;
   top: -3px;
   font-weight: 400; }
+
+.important-update, .entry-content .alignfull.important-update {
+  background: #FAF1EB;
+  padding: 0; }
+  .important-update p, .entry-content .alignfull.important-update p {
+    margin: 0 auto;
+    max-width: 900px;
+    font-weight: 400; }
+    .important-update p a, .entry-content .alignfull.important-update p a {
+      color: #8B572A;
+      -webkit-box-shadow: inset 0 -0.15em #FAF1EB;
+      box-shadow: inset 0 -0.15em #FAF1EB;
+      -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+      .important-update p a:hover, .entry-content .alignfull.important-update p a:hover {
+        -webkit-box-shadow: inset 0 -0.4em #f0d4c2;
+        box-shadow: inset 0 -0.4em #f0d4c2;
+        text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Gutenberg

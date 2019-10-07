@@ -380,8 +380,21 @@ function register_acf_block_types() {
         'supports'          => array(
             'align'     => false
         )
-    ));    
+    ));
 
+    // Important Update
+    acf_register_block_type(array(
+        'name'              => 'important_update',
+        'title'             => __('Important Update'),
+        'description'       => __('Show an important Update Bar'),
+        'render_template'   => 'template-parts/blocks/important-update.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'megaphone',
+        'keywords'          => array( 'importnat', 'update' ),
+        'supports'          => array(
+            'align'     => array('full')
+        )
+    ));
 
 }
 
