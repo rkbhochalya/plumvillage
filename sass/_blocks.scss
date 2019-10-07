@@ -17,10 +17,6 @@
 	clear: both;
 }
 
-.block-outside{
-  margin-left: -15px;
-  margin-right: -15px;
-}
 .block{
 	z-index: 2;
 	@include margin-side-block;
@@ -54,18 +50,21 @@
 		margin-right: -25.6%;
 	}
 
+	p{
+		@include media-breakpoint-up(lg) {
+			margin-right: 16%;
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: 25.6%;
+		}
+	}
+
 	&.alignwide{
 		@include to-container-width();
 
 		p{
 			@include media-breakpoint-up(md) {
 				margin-left: 25.6%;
-			}
-			@include media-breakpoint-up(lg) {
-				margin-right: 16%;
-			}
-			@include media-breakpoint-up(xxl) {
-				margin-right: 25.6%;
 			}
 		}
 	}	
@@ -287,6 +286,7 @@
 .block-audio{
 	.block-inside{
 		background: $freshsun;
+		padding-bottom: 1px;
 	}
 }
 .audio-player {
@@ -335,9 +335,10 @@
 	    background-color: white;
 	    color: $sun;
 	    height: 10px;
+	    border: none;
 	  }
 	  
-	  progress[value]::-webkit-progress-bar {
+	  progress::-webkit-progress-bar {
 	    background-color: white;
 	    border-radius: 2px;
 	    color: $sun;
@@ -345,6 +346,10 @@
 	  
 	  progress::-webkit-progress-value {
 	    background-color: $sun;
+	  }
+
+	  progress::-moz-progress-bar{
+	  	background-color: $sun;
 	  }
 	  .end-time{
 	  	float: right;
@@ -697,7 +702,7 @@
 	}
 }
 
-.entry-content .wp-block-cover.alignfull.is-style-default:first-child{
+.entry-content .wp-block-cover.alignfull:first-child{
 	margin-top: -163px;
 	margin-bottom: 0;
 	padding-top: 355px;
