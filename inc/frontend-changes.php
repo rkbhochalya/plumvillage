@@ -264,7 +264,7 @@ function beautifulVideoEmbed($iframe, $videoId = 1, $featured_image = false, $in
             $videoImage = '<img src="'.get_youtube_thumb($videoId).'">';
         }
       } elseif (strpos($src, 'vimeo') > 0) {
-          $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/".$uri_segments[2].".php"));
+          $hash = unserialize(file_get_contents("https://vimeo.com/api/v2/video/".$uri_segments[2].".php"));
           $videoImage = '<img src="'.$hash[0]['thumbnail_large'].'">';  
       } else {
           $videoImage = '';

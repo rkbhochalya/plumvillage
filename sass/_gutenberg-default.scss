@@ -12,10 +12,6 @@
 	margin-right: -100px;
 	clear: right;
 
-	.wp-block-pullquote{
-		background: $freshearth;
-		padding: 10px;
-	}
 	.block-outside{
 		margin-left: 0;
 		margin-right: 0;
@@ -49,10 +45,35 @@ a{
 	text-align: left;
 	border: none;
 	padding: 0;
+
+	blockquote{
+		>.block-editor-rich-text p{
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+	}
+
+	&.is-style-solid-color{
+		blockquote{
+			max-width: 100%;
+			padding: 20px;
+
+			>.block-editor-rich-text p{
+				font-size: 20px;
+				margin-bottom: 5px;
+			}
+		}
+	}
 }
-.wp-block-pullquote blockquote>.block-editor-rich-text p{
-	font-size: 20px;
+
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=wide]>.block-editor-block-list__block-edit{
+	blockquote{
+		>.block-editor-rich-text p{
+			font-size: 32px;
+		}
+	}
 }
+
 .wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer{
 	text-transform: none;
 }

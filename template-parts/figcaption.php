@@ -23,14 +23,14 @@
     ?>
         <div class="image-credits">
                 <?php if($credits) : ?>
-                    <p><?php _e('Photo Credits', 'plumvillage'); ?>: 
+                    <p><?php _e('Photo', 'plumvillage'); ?>: 
                         <?php if($credits_url) : ?>
                             <a href="<?php echo $credits_url; ?>"><?php echo $credits; ?></a>.
                         <?php else : ?>
                             <?php echo $credits; ?>.
                         <?php endif; ?>
                         <?php if($available) : ?>
-                            <span class="for-press"><?php _e('Photo is available in', 'plumvillage'); ?>: <?php echo $available; ?></span>
+                            <span class="for-press"><?php _e('Available in', 'plumvillage'); ?>: <?php echo $available; ?></span>
                         <?php endif; ?>
                     </p>
                 <?php endif; ?>

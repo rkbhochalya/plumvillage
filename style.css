@@ -9239,7 +9239,7 @@ big {
   .entry-content blockquote p, .page-template-default .entry-content blockquote p, .single .entry-content blockquote p {
     font-family: "Cormorant Infant", serif;
     padding-left: 30px;
-    line-height: 160%;
+    line-height: 145%;
     font-style: italic;
     color: #9A9A9A;
     font-size: 1.75rem; }
@@ -9272,7 +9272,6 @@ big {
         padding: 25px 30px; } }
     .wp-block-pullquote.is-style-solid-color blockquote p {
       font-size: 2.5rem;
-      line-height: 130%;
       padding-bottom: 1.5em;
       max-width: 100%; }
     .wp-block-pullquote.is-style-solid-color blockquote.has-cloud-color p {
@@ -9314,6 +9313,8 @@ big {
       padding-left: 0; }
   .wp-block-pullquote.alignwide blockquote {
     max-width: 100%; }
+    .wp-block-pullquote.alignwide blockquote p {
+      font-size: 2.3125rem; }
   .wp-block-pullquote.is-tnh-quote blockquote::after {
     display: block;
     clear: both;
@@ -9632,14 +9633,13 @@ figure.wp-block-image {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
-  max-width: 42.9%; }
-
-.wp-block-image .alignright {
+  max-width: 42.9%;
   margin-left: 1.5em; }
 
-.wp-block-image figure.alignleft {
+.wp-block-image .alignleft {
   padding: 0;
-  margin-top: 10px; }
+  margin-top: 10px;
+  max-width: 40%; }
 
 .wp-block-image .aligncenter > figcaption, .wp-block-image .alignleft > figcaption, .wp-block-image .alignright > figcaption, .wp-block-image.is-resized > figcaption, .wp-block-embed figcaption {
   display: block;
@@ -11010,22 +11010,22 @@ body #youmax, body .youmax {
   .home-landing-top .wp-block-column:last-child, .entry-content .tnh-landing-top .wp-block-column:last-child {
     margin-top: -180px; } }
 
-.home-landing-top .wp-block-pullquote.is-style-solid-color blockquote, .entry-content .tnh-landing-top .wp-block-pullquote.is-style-solid-color blockquote {
+.home-landing-top .wp-block-pullquote blockquote, .entry-content .tnh-landing-top .wp-block-pullquote blockquote {
   padding-left: 0; }
-  .home-landing-top .wp-block-pullquote.is-style-solid-color blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote.is-style-solid-color blockquote p {
+  .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
     padding-left: 0;
     padding-bottom: 0;
     font-size: 1.75rem;
     line-height: 130%;
     color: #000; }
     @media (min-width: 768px) {
-      .home-landing-top .wp-block-pullquote.is-style-solid-color blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote.is-style-solid-color blockquote p {
+      .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
         font-size: 2.0625rem; } }
     @media (min-width: 992px) {
-      .home-landing-top .wp-block-pullquote.is-style-solid-color blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote.is-style-solid-color blockquote p {
+      .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
         padding-right: 20px; } }
     @media (min-width: 1400px) {
-      .home-landing-top .wp-block-pullquote.is-style-solid-color blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote.is-style-solid-color blockquote p {
+      .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
         padding-right: 40px;
         font-size: 2.6875rem; } }
 
@@ -11158,49 +11158,7 @@ body #youmax, body .youmax {
 
 .jump-to {
   padding: 30px 1px 80px 0;
-  clear: both;
-  background: #fff; }
-  @media (min-width: 992px) {
-    .jump-to {
-      margin-right: -30.3%; } }
-  @media (min-width: 1200px) {
-    .jump-to {
-      margin-right: -30.1%; } }
-  @media (min-width: 1400px) {
-    .jump-to {
-      margin-right: -52.3%; } }
-  @media (min-width: 992px) {
-    .jump-to {
-      margin-right: -16%; } }
-  @media (min-width: 1400px) {
-    .jump-to {
-      margin-right: -25.6%; } }
-  @media (min-width: 992px) {
-    .jump-to p {
-      margin-right: 16%; } }
-  @media (min-width: 1400px) {
-    .jump-to p {
-      margin-right: 25.6%; } }
-  .jump-to.alignwide {
-    max-width: inherit; }
-    @media (min-width: 768px) {
-      .jump-to.alignwide {
-        margin-left: -35.2%; } }
-    @media (min-width: 992px) {
-      .jump-to.alignwide {
-        margin-left: -45.4%;
-        margin-right: -30.3%; } }
-    @media (min-width: 1200px) {
-      .jump-to.alignwide {
-        margin-left: -44.96%;
-        margin-right: -30.1%; } }
-    @media (min-width: 1400px) {
-      .jump-to.alignwide {
-        margin-left: -52.3%;
-        margin-right: -52.3%; } }
-    @media (min-width: 768px) {
-      .jump-to.alignwide p {
-        margin-left: 25.6%; } }
+  clear: both; }
   .jump-to p {
     font-size: 0.875rem;
     color: #9A9A9A;
@@ -11222,6 +11180,50 @@ body #youmax, body .youmax {
     .jump-to p a.active {
       color: #000;
       font-weight: 400; }
+
+.entry-content .jump-to {
+  background: #fff; }
+  @media (min-width: 992px) {
+    .entry-content .jump-to {
+      margin-right: -30.3%; } }
+  @media (min-width: 1200px) {
+    .entry-content .jump-to {
+      margin-right: -30.1%; } }
+  @media (min-width: 1400px) {
+    .entry-content .jump-to {
+      margin-right: -52.3%; } }
+  @media (min-width: 992px) {
+    .entry-content .jump-to {
+      margin-right: -16%; } }
+  @media (min-width: 1400px) {
+    .entry-content .jump-to {
+      margin-right: -25.6%; } }
+  @media (min-width: 992px) {
+    .entry-content .jump-to p {
+      margin-right: 16%; } }
+  @media (min-width: 1400px) {
+    .entry-content .jump-to p {
+      margin-right: 25.6%; } }
+  .entry-content .jump-to.alignwide {
+    max-width: inherit; }
+    @media (min-width: 768px) {
+      .entry-content .jump-to.alignwide {
+        margin-left: -35.2%; } }
+    @media (min-width: 992px) {
+      .entry-content .jump-to.alignwide {
+        margin-left: -45.4%;
+        margin-right: -30.3%; } }
+    @media (min-width: 1200px) {
+      .entry-content .jump-to.alignwide {
+        margin-left: -44.96%;
+        margin-right: -30.1%; } }
+    @media (min-width: 1400px) {
+      .entry-content .jump-to.alignwide {
+        margin-left: -52.3%;
+        margin-right: -52.3%; } }
+    @media (min-width: 768px) {
+      .entry-content .jump-to.alignwide p {
+        margin-left: 25.6%; } }
 
 .text-inset .block-inside.text-inset-inside {
   background: #FAF1EB;

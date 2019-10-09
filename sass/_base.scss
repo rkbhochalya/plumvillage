@@ -262,7 +262,7 @@ big {
 	p{
 		font-family: $font-headers;
 		padding-left: 30px;
-		line-height: 160%;
+		line-height: 145%;
 		font-style: italic;
 		color: $grey;
 		@include font-size(28);
@@ -308,7 +308,6 @@ big {
 			max-width: 600px;
 			p{
 				@include font-size(40);
-				line-height: 130%;
 				padding-bottom: 1.5em;
 				max-width: 100%;
 			}
@@ -387,6 +386,10 @@ big {
 	&.alignwide{
 		blockquote{
 			max-width: 100%;	
+
+			p{
+				@include font-size(37);
+			}
 		}
 	}
 	&.is-tnh-quote{
@@ -735,16 +738,15 @@ figure.wp-block-image{
 		position: relative;
 		z-index: 2;
 	 	max-width: 42.9%;
-	}
-	.alignright{
 		margin-left: 1.5em;
+	}
+	.alignleft{
+		padding: 0;
+		margin-top: 10px;
+		max-width: 40%;
 	}
 }
 
-.wp-block-image figure.alignleft{
-	padding: 0;
-	margin-top: 10px;
-}
 
 
 .wp-block-image .aligncenter>figcaption, .wp-block-image .alignleft>figcaption, .wp-block-image .alignright>figcaption, .wp-block-image.is-resized>figcaption, .wp-block-embed figcaption{

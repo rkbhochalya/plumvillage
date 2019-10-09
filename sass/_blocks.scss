@@ -41,34 +41,6 @@
 .jump-to{
 	padding: 30px 1px 80px 0;
 	clear: both;
-	@include to-right-edge();
-
-	@include media-breakpoint-up(lg) {
-		margin-right: -16%;
-	}
-	@include media-breakpoint-up(xxl) {
-		margin-right: -25.6%;
-	}
-
-	p{
-		@include media-breakpoint-up(lg) {
-			margin-right: 16%;
-		}
-		@include media-breakpoint-up(xxl) {
-			margin-right: 25.6%;
-		}
-	}
-
-	&.alignwide{
-		@include to-container-width();
-
-		p{
-			@include media-breakpoint-up(md) {
-				margin-left: 25.6%;
-			}
-		}
-	}	
-
 
 	p	{
 		@include font-size(14);
@@ -103,6 +75,36 @@
 
 	}
 
+}
+
+.entry-content .jump-to{
+	@include to-right-edge();
+
+	@include media-breakpoint-up(lg) {
+		margin-right: -16%;
+	}
+	@include media-breakpoint-up(xxl) {
+		margin-right: -25.6%;
+	}
+
+	p{
+		@include media-breakpoint-up(lg) {
+			margin-right: 16%;
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-right: 25.6%;
+		}
+	}
+
+	&.alignwide{
+		@include to-container-width();
+
+		p{
+			@include media-breakpoint-up(md) {
+				margin-left: 25.6%;
+			}
+		}
+	}	
 }
 
 .text-inset{
