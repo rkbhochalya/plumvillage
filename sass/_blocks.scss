@@ -13,6 +13,10 @@
 	margin-right: auto;
 }
 
+.has-background{
+	padding: 30px;
+}
+
 .wp-block-spacer{
 	clear: both;
 }
@@ -402,9 +406,7 @@
 
 .panel-collapsable{
 	> h5{
-		@include underline($sun, $sun);
 		display: inline-block;
-		line-height: 100%;
 		cursor: pointer;
 		position: relative;
 		margin-left: 21px;
@@ -413,12 +415,16 @@
 			margin-left: 0;
 		}
 
+		.underline-me{
+			@include underline($sun, $sun);
+		}		
+
 		.icon{
 			position: absolute;
 			display: block;
 			left: -33px;
 			padding: 10px;
-			top: -8px;
+			top: -4px;
 			@include font-size(14);
 		}
 
@@ -845,8 +851,9 @@ hr.wp-block-separator{
 	}
 }
 
+
 .page-template-page_full-width .wp-block-group{
-	&.has-background{
+	&.has-background.alignfull{
 		padding: 50px 0 40px;
 		@include media-breakpoint-up(md) {
 			padding: 70px 0 60px;

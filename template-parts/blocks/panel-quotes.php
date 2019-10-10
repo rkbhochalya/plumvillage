@@ -7,7 +7,7 @@ if( have_rows('quotes') ): ?>
         <?php if(!get_field('title')) : echo 'no-title'; endif; ?> 
         <?php if(get_field('collapsable') || ($block['align'] != 'wide')) : echo 'center-with-border'; endif; ?>">
         <?php if(get_field('title')) : ?>
-            <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
+            <h5><span class="icon icon-caret-right"></span><span class="underline-me"><?= get_field('title'); ?></span></h5>
         <?php endif; ?>
         <div class="row row-collapsable">
             <?php while ( have_rows('quotes') ) : the_row(); ?>

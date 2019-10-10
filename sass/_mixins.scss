@@ -58,11 +58,11 @@
 }
 
 @mixin margin-side-block{
-	background: #fff;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 
 	&.alignright{
+		background: #fff;
 		@include media-breakpoint-up(md) {
   		margin-top: -25px;
 		  padding-top: 25px;

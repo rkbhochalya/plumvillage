@@ -95,6 +95,8 @@
 				<?php
 				if($post){
 					$image = (get_field('header_white', $post->ID) ? get_field('logo_white', 'options') : get_field('logo_black', 'options'));
+				} else {
+					$image = get_field('logo_black', 'options');
 				}
 				if ( is_front_page()  ) :
 					?>

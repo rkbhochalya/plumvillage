@@ -3,7 +3,7 @@
 if( have_rows('videos') ): ?>
     <div class="panel panel-videos <?php if(($block['align'] == 'wide') || (count(get_field('videos')) > 3)) : echo 'panel-goes-wide'; endif;?> <?php if(get_field('collapsable')) : echo 'panel-collapsable'; endif; ?> <?php if(get_field('default_state') == 'open') : echo 'panel-open'; else : echo 'center-with-border'; endif; ?>  <?php echo $block['className']; ?>">
         <?php if(get_field('title')) : ?>
-            <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
+            <h5><span class="icon icon-caret-right"></span><span class="underline-me"><?= get_field('title'); ?></span></h5>
         <?php endif; ?>
         <div class="row row-collapsable">
             <div class="col-md-12">

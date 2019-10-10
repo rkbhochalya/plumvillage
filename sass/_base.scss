@@ -327,9 +327,6 @@ big {
 	}
 
 	&.alignright{
-		background: #fff;
-		padding: 30px 0;
-		margin-top: -30px;
 		position: relative;
 		z-index: 2;
 		margin-left: 1.5em;
@@ -337,6 +334,11 @@ big {
 
 		@include media-breakpoint-up(sm) {
 			max-width: 305px;
+		}
+		@include media-breakpoint-up(lg) {
+			background: #fff;
+			padding: 30px 0;
+			margin-top: -30px;
 		}
 
 		blockquote{

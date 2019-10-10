@@ -299,7 +299,7 @@ function beautifulVideoEmbed($iframe, $videoId = 1, $featured_image = false, $in
         <div class="play" data-embed-link="$<?php echo $cleanVideoId; ?>" data-target="<?= $target; ?>">
         <?php 
             if($featured_image){
-                echo wp_get_attachment_image( $featured_image, 'medium' );
+                echo wp_get_attachment_image( $featured_image, 'large' );
             } elseif($videoImage) {
                 echo $videoImage;
             } else{

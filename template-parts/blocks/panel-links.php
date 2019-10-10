@@ -3,7 +3,7 @@
 if( have_rows('links') ): ?>
     <div class="panel panel-links align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?> <?php if(get_field('collapsable')) : echo 'panel-collapsable'; endif; ?> <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?>">
         <?php if(get_field('title')) : ?>
-            <h5><span class="icon icon-caret-right"></span><?= get_field('title'); ?></h5>
+            <h5><span class="icon icon-caret-right"></span><span class="underline-me"><?= get_field('title'); ?></span></h5>
         <?php endif; ?>
         <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('links')) > 3)) : echo 'back-to-baseline'; endif;?>">
             <div class="col-12">
