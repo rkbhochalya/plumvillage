@@ -9262,6 +9262,11 @@ big {
   border: none;
   padding: 0;
   margin: 0; }
+  .wp-block-pullquote.has-background {
+    padding: 0; }
+  @media (max-width: 575.98px) {
+    .wp-block-pullquote.is-style-solid-color {
+      margin: 30px 0; } }
   .wp-block-pullquote.is-style-solid-color blockquote {
     padding: 15px 20px;
     margin-left: 0;
@@ -10063,10 +10068,26 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 @media (min-width: 768px) {
   .site-branding {
+    padding-top: 80px; } }
+
+@media (min-width: 1400px) {
+  .site-branding {
     padding-top: 110px; } }
 
 .site-branding img {
   max-width: 70vw; }
+
+.site-branding .site-title {
+  margin: 0; }
+
+#content {
+  margin-top: 40px; }
+  @media (min-width: 768px) {
+    #content {
+      margin-top: 70px; } }
+  @media (min-width: 1400px) {
+    #content {
+      margin-top: 90px; } }
 
 .entry-header h1.entry-title {
   position: relative;
@@ -10633,15 +10654,25 @@ body #youmax, body .youmax {
   transform: translateY(0);
   bottom: 20px; }
 
+.jfbalbum .Caption_Content {
+  font-size: 0.8125rem;
+  line-height: 140% !important; }
+
+.centered-content .entry-content ul.srizon-pagination {
+  margin: 30px 0 0; }
+  .centered-content .entry-content ul.srizon-pagination li {
+    margin: 0 5px; }
+    .centered-content .entry-content ul.srizon-pagination li:before {
+      display: none; }
+    .centered-content .entry-content ul.srizon-pagination li a:hover {
+      background: none; }
+  .centered-content .entry-content ul.srizon-pagination span.current {
+    background: #FFD22A;
+    color: #FEFBF3; }
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-#content {
-  margin-top: 40px; }
-  @media (min-width: 768px) {
-    #content {
-      margin-top: 90px; } }
-
 .in-betweener {
   margin-top: 1.5em;
   right: 15px; }
@@ -11048,6 +11079,10 @@ body #youmax, body .youmax {
     order: 1; } }
 
 @media (min-width: 992px) {
+  .entry-content .tnh-landing-top .wp-block-column:last-child {
+    margin-top: -150px; } }
+
+@media (min-width: 1400px) {
   .entry-content .tnh-landing-top .wp-block-column:last-child {
     margin-top: -180px; } }
 

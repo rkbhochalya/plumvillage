@@ -297,7 +297,15 @@ big {
 	padding: 0;
 	margin: 0;
 
+	&.has-background{
+		padding: 0;
+	}
+
+
 	&.is-style-solid-color{
+		@include media-breakpoint-down(xs) {
+			margin: 30px 0;
+		}
 		blockquote{
 			padding: 15px 20px;
 			margin-left: 0;
@@ -1242,12 +1250,29 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 .site-branding{
   @include media-breakpoint-up(md) {
+		padding-top: 80px;
+	}
+  @include media-breakpoint-up(xxl) {
 		padding-top: 110px;
 	}
 	img{
 		max-width: 70vw;
 	}
+	.site-title{
+		margin: 0;
+	}
 }
+
+#content{
+	margin-top: 40px;
+	@include media-breakpoint-up(md) {
+		margin-top: 70px;
+	}
+	@include media-breakpoint-up(xxl) {
+		margin-top: 90px;
+	}
+}
+
 
 // Content Header
 
@@ -2054,4 +2079,34 @@ body #youmax, body .youmax{
 #cookie-notice.show-cookie{
 	transform: translateY(0);
 	bottom: 20px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Srizon Facebook Albums
+
+.jfbalbum{
+	.Caption_Content{
+		@include font-size(13);
+		line-height: 140%!important;
+	}
+}
+.centered-content .entry-content ul.srizon-pagination{
+	margin: 30px 0 0;
+
+	li{
+		margin: 0 5px;
+		&:before{
+			display: none;
+		}		
+
+		a:hover{
+			background: none;
+		}
+	}
+
+	span.current{
+		background: $sun;
+		color: $freshsun;
+	}
 }
