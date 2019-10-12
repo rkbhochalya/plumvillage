@@ -355,7 +355,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-megaphone',      
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/thich-nhat-hanhs-health'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'comments')
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail')
     )
   );  
 

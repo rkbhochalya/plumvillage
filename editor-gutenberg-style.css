@@ -1407,7 +1407,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-right: auto; }
 
 .has-background {
-  padding: 30px; }
+  padding: 15px; }
+  @media (min-width: 576px) {
+    .has-background {
+      padding: 30px; } }
 
 .wp-block-spacer {
   clear: both; }
@@ -2062,20 +2065,13 @@ hr.wp-block-separator {
   min-height: unset;
   height: auto; }
 
-.wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
+.wp-block-media-text.has-background, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-background {
   margin-left: -15px;
   margin-right: -15px;
-  padding: 15px;
   max-width: none; }
   @media (min-width: 576px) {
-    .wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
+    .wp-block-media-text.has-background, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-background {
       margin: 70px auto; } }
-  @media (min-width: 768px) {
-    .wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
-      padding: 30px; } }
-  @media (min-width: 1400px) {
-    .wp-block-media-text.has-fresh-tree-background-color, .wp-block-media-text.has-fresh-sun-background-color, .wp-block-media-text.has-fresh-earth-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-tree-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-sun-background-color, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.has-fresh-earth-background-color {
-      padding: 50px; } }
 
 @media (min-width: 576px) {
   .page-template-page_full-width .wp-block-media-text.has-fresh-tree-background-color {

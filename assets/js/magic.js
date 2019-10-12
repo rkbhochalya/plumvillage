@@ -75,10 +75,6 @@
  		el.append(link);
  	})
 
- 	$()
-
-
-
  	// set fancybox default settings
 	$.extend($.fancybox.defaults, {
 		beforeLoad: function(e){

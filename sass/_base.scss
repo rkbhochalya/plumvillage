@@ -800,15 +800,27 @@ figure.wp-block-image{
 		padding-top: 1em;
 		padding-bottom: 2em;
 	  max-width: 64.70588235294117%;
+
+	  figcaption{
+	  	min-width: 500px;
+	  }
 	}	
 	@include media-breakpoint-up(lg) {
-	  max-width: 65.21739130434783%;
+	  max-width: 85%;
+
+	  figcaption{
+	  	min-width: 520px;
+	  }
 	}	
 	@include media-breakpoint-up(xl) {
-	  max-width: 65.45454545454545%;
+	  max-width: 85.05%;
+
+	  figcaption{
+	  	min-width: 600px;
+	  }
 	}
 	@include media-breakpoint-up(xxl) {
-	  max-width: 65.6641604010025%;
+	  max-width: 100%;
 	}
 	> img{
 		left: 50%;
@@ -1497,7 +1509,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	margin-top: 30px;
 }
 
-#thrive-comments{
+#comments #thrive-comments{
 	font-family: $font-body;
 	margin-top: 30px;
 	margin-bottom: 30px;
@@ -1517,6 +1529,27 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 			color: $grey;
 		}
 	}
+
+	.tcm-comment-additional-fields{
+		margin-top: 15px;
+
+		.tcm-guest > p:first-child{
+			display: none;
+		}
+		#tcm-author-url{
+			display: none;
+		}
+		.tcm-comment-as-label p{
+			margin-bottom: 0!important;
+		}
+		.tcm-logout-label a{
+			@include underline($freshink, $sun);
+			font-style: italic;
+			color: $grey;
+			@include font-size(15);
+			text-decoration: none;
+		}
+	}
 	.tcm-comments-list{
 		.tcm-comment-item.tcm-main-parent{
 			margin-bottom: 0;
@@ -1527,7 +1560,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 				border-bottom: 1px solid $freshink;
 
 				&.level-0{
-					padding-bottom: 30px;
+					padding:  0 0 30px 0;
 				}
 				&:not(.level-0){
 					padding: 0 0 30px 0;
@@ -1536,6 +1569,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 			 	&.tcm-featured{
 			 		margin-top: -30px;
 			 		margin-bottom: 30px;
+			 		padding: 15px;
 			 	}
 			}
 
@@ -1556,11 +1590,6 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 		}
 	}
 
-	.tcm-comments-list .tcm-comment-item.tcm-main-parent .tcm-comment-content.level-0{
-		padding-left: 0;
-		padding-right: 0;
-		padding-top: 0;
-	}
 	.tcm-comments-list .tcm-comment-item.tcm-main-parent{
 		border: none;
 	}
@@ -1605,12 +1634,17 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 		top: 0;
 		right: 0;
 	}
-	textarea{
+	textarea, input{
 		@include font-size(14);
 		background: $freshtree;
 		box-shadow: none;
 		border-radius: 0;
 		border: none;
+
+		&:focus{
+			box-shadow: 0 0 0 0.2rem $freshtree;
+			background: $cloud;
+		}
 	}
 	.tcm-comments-create>div{
 		padding-bottom: 30px;
@@ -1652,6 +1686,11 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 		font-weight: 300;
 		color: $ink;
 		margin-bottom: 10px;
+	}
+
+	p.tcm-moderation{
+		font-style: italic;
+		margin: 0;
 	}
 
 	.tcm-left{

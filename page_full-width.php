@@ -31,7 +31,7 @@ get_header();
 			<?php if ( comments_open() || get_comments_number() ) : ?>
 				<div class="row">
 					<div class="col-md-6 offset-md-3">
-						<h2><?php _e('Join the converstation', 'plumvillage'); ?></h2>
+						<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
 						<?php comments_template(); ?>
 					</div>
 				</div>

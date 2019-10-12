@@ -39,7 +39,7 @@ get_header();
 					</div><!-- #primary -->
 					<?php if ( comments_open() || get_comments_number() ) : ?>
 						<div id="comments" class="comments-section">
-							<h2><?php _e('Join the converstation', 'plumvillage'); ?></h2>
+							<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
 							<?php comments_template(); ?>
 						</div>
 					<?php endif; ?>

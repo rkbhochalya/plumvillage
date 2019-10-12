@@ -14,7 +14,10 @@
 }
 
 .has-background{
-	padding: 30px;
+	padding: 15px;
+	@include media-breakpoint-up(sm) {
+		padding: 30px;
+	}
 }
 
 .wp-block-spacer{
@@ -796,20 +799,13 @@ hr.wp-block-separator{
 		min-height: unset;
 		height: auto;
 	}
-	&.has-fresh-tree-background-color, &.has-fresh-sun-background-color, &.has-fresh-earth-background-color{
+	&.has-background{
 		margin-left: -15px;
 		margin-right: -15px;
-		padding: 15px;
 		max-width: none;
 
 		@include media-breakpoint-up(sm) {
 			margin: 70px auto;
-		}
-		@include media-breakpoint-up(md) {
-			padding: 30px;
-		}
-		@include media-breakpoint-up(xxl) {
-			padding: 50px;
 		}
 	}
 }
