@@ -10461,11 +10461,23 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
     border-color: #FFD22A;
     border-radius: 0.3rem;
     font-size: 0.875rem;
+    font-weight: bold;
     padding: 1.14rem 2rem .85rem;
     line-height: 100%;
     height: auto; }
   #comments #thrive-comments .tcm-background-color-ac, #comments #thrive-comments .tcm-background-color-ac-h:hover span, #comments #thrive-comments .tcm-background-color-ac-active:active {
-    background-color: #8B572A !important; }
+    background-color: #FFD22A !important;
+    max-width: 250px;
+    margin: 0 auto; }
+    #comments #thrive-comments .tcm-background-color-ac p, #comments #thrive-comments .tcm-background-color-ac-h:hover span p, #comments #thrive-comments .tcm-background-color-ac-active:active p {
+      font-weight: bold;
+      margin: 5px 0 4px;
+      padding: 0;
+      font-size: 0.875rem; }
+      #comments #thrive-comments .tcm-background-color-ac p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-h:hover span p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-active:active p .add-comment-icon {
+        display: none; }
+  #comments #thrive-comments .tcm-comment-content .tcm-comment-additional-fields .tcm-guest {
+    width: 100%; }
 
 body #youmax, body .youmax {
   border: none; }

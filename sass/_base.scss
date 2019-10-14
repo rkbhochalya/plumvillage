@@ -1783,13 +1783,30 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  		color: $ink;
  		border-color: $sun;
  		border-radius: 0.3rem;
-		font-size: 0.875rem;
+ 		@include font-size(14);
+ 		font-weight: bold;
     padding: 1.14rem 2rem .85rem;
     line-height: 100%;
     height: auto;
  	}
  	.tcm-background-color-ac, .tcm-background-color-ac-h:hover span, .tcm-background-color-ac-active:active{
- 		background-color: $earth!important;
+ 		background-color: $sun!important;
+ 		max-width: 250px;
+ 		margin: 0 auto;
+
+ 		p{
+ 			font-weight: bold;
+ 			margin: 5px 0 4px;
+ 			padding: 0;
+ 			@include font-size(14);
+
+ 			.add-comment-icon{
+ 				display: none;
+ 			}
+ 		}
+ 	}
+ 	.tcm-comment-content .tcm-comment-additional-fields .tcm-guest{
+ 		width: 100%;
  	}
 }
 
