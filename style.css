@@ -10479,7 +10479,10 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
   #comments #thrive-comments .tcm-comment-content .tcm-comment-additional-fields .tcm-guest {
     width: 100%; }
   #comments #thrive-comments .tcm_receive_notif_container {
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
+    #comments #thrive-comments .tcm_receive_notif_container .checkmark {
+      background: #F5F5EF;
+      top: 0; }
     #comments #thrive-comments .tcm_receive_notif_container input:checked ~ .checkmark {
       background: #8B572A; }
       #comments #thrive-comments .tcm_receive_notif_container input:checked ~ .checkmark:after {

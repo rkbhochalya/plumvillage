@@ -1809,7 +1809,12 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  		width: 100%;
  	}
  	.tcm_receive_notif_container{
- 		margin-bottom: 10px;
+ 		margin-bottom: 20px;
+
+		.checkmark{
+			background: $freshtree;
+			top: 0;
+		}
 
  		input:checked ~ .checkmark{
  			background: $earth;
