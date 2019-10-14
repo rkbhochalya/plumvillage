@@ -1808,6 +1808,18 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  	.tcm-comment-content .tcm-comment-additional-fields .tcm-guest{
  		width: 100%;
  	}
+ 	.tcm_receive_notif_container{
+ 		margin-bottom: 10px;
+
+ 		input:checked ~ .checkmark{
+ 			background: $earth;
+
+ 			&:after{
+ 				left: 7px;
+ 				top: 4px;
+ 			}
+ 		}
+ 	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
