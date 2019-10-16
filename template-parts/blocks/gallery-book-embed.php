@@ -19,16 +19,16 @@
             ?>
             </div>
         </div>
-        <?php
-        if( $items ): ?>
-            <ul class="gallery-items">
-                <?php foreach( $items as $item ): ?>
-                    <li>
-                    	<a data-fancybox="<?php echo sanitize_title(get_field('title')); ?>" data-type="ajax" class="gallery" href="<?php echo get_permalink($item->ID); ?>">
-                    	</a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        <?php endif; ?>
     </div>
 </div>
+<?php
+if( $items ): ?>
+    <ul class="gallery-items">
+        <?php foreach( $items as $item ): ?>
+            <li>
+                <a data-fancybox="<?php echo sanitize_title(get_field('title')); ?>" data-type="ajax" class="gallery" href="<?php echo get_permalink($item->ID); ?>">
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>

@@ -245,7 +245,7 @@ function get_video_thumb_from_iframe($iframe){
             return '<img src="'.get_youtube_thumb($videoId).'">';
         }
       } elseif (strpos($src, 'vimeo') > 0) {
-          $hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/".$uri_segments[2].".php"));
+          $hash = unserialize(file_get_contents("https://vimeo.com/api/v2/video/".$uri_segments[2].".php"));
           return '<img src="'.$hash[0]['thumbnail_large'].'">';  
       } else {
           return false;

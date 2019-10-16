@@ -1560,8 +1560,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         -o-transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1), -webkit-transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
-  .gallery-embed .gallery-items {
-    display: none; }
   .gallery-embed:hover .gallery-embed-inside .gallery-embed-content p .icon {
     color: #f6c200; }
   .gallery-embed:hover a {
@@ -1573,6 +1571,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     transform: scale(1.04); }
   .gallery-embed.alignleft.block-narrow {
     margin-right: 0; }
+
+.gallery-items {
+  display: none; }
 
 .video-embed {
   position: relative;

@@ -175,10 +175,6 @@
 		}
 	}
 
-	.gallery-items{
-		display: none;
-	}
-
 	&:hover{
 		.gallery-embed-inside .gallery-embed-content p .icon{
 			color: darken($sun, 10%);
@@ -195,6 +191,11 @@
 		margin-right: 0;
 	}
 }
+
+.gallery-items{
+	display: none;
+}
+
 
 .video-embed{
 	position: relative;
