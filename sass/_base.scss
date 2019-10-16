@@ -1521,12 +1521,14 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	}
 
 	.tcm-closed-comments{
-		margin: 0;
+		margin: 10px 0 0;
 		padding: 15px;
 
 		p{
 			@include font-size(14);
 			color: $grey;
+			margin-bottom: 0;
+			font-style: italic;
 		}
 	}
 
@@ -1778,14 +1780,23 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  	.tcm-reply-container{
  		padding: 0;
  	}
+ 	.tcm-lazy-comments .tcm-loader{
+ 		margin-bottom: 50px;
+ 		margin-top: -32px;
+ 		display: block;
+
+ 		p{
+ 			margin-bottom: 0;
+ 			font-weight: 400;
+ 		}
+ 	}
  	button#tcm-submit-comment{
  		background: $sun;
  		color: $ink;
  		border-color: $sun;
  		border-radius: 0.3rem;
  		@include font-size(14);
- 		font-weight: bold;
-    padding: 1.14rem 2rem .85rem;
+    padding: 1rem 2rem .85rem;
     line-height: 100%;
     height: auto;
  	}
@@ -1793,9 +1804,9 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  		background-color: $sun!important;
  		max-width: 250px;
  		margin: 0 auto;
+ 		font-weight: 400;
 
  		p{
- 			font-weight: bold;
  			margin: 5px 0 4px;
  			padding: 0;
  			@include font-size(14);
@@ -1825,6 +1836,19 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  			}
  		}
  	}
+
+	.tcm-moderate-front{
+		display: none;
+	}
+
+ 	// Hide subscribe to all comments for now
+ 	.tcm-link-unsubscribe, .tcm-link-subscribe, .tcm-subscribe-form{
+ 		display: none;
+ 	}
+}
+
+.logged-in #comments #thrive-comments .tcm-moderate-front{
+	display: block;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////

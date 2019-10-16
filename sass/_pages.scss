@@ -370,12 +370,13 @@
 
 .page-template-page_full-width{
 	.entry-content{
-		h2.has-text-align-center{
+		h2.has-text-align-center, h1.has-text-align-center{
 			max-width: 760px;
 			margin-left: auto;
 			margin-right: auto;
 			@include font-size(34);
 			line-height: 140%;
+			font-style: normal;
 		}
 
 		p{
@@ -520,7 +521,7 @@
 	}
 	.wp-block-column:last-child{
 		@include media-breakpoint-up(lg) {
-			margin-top: -150px;
+			margin-top: -15	0px;
 		}
 		@include media-breakpoint-up(xxl) {
 			margin-top: -180px;
