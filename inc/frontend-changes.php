@@ -18,7 +18,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     $uri_segments = explode('/', $menu_item->url);
 
     $i = 2;
-    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = false;
+    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = $press =false;
     foreach ($uri_segments as $slug) {
       if($slug == 'about') : 
         $about = true;
@@ -59,6 +59,9 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       endif;
       if($slug == 'articles-and-news') : 
         $articles = true;
+      endif;
+      if($slug == 'press') : 
+        $press = true;
       endif;
       $i++;
     }
@@ -132,6 +135,15 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       $menu_item->classes[] = 'current-menu-item';
       $menu_item->current = true;
     }
+
+    if( is_singular( 'tnh_press_release' ) && $press){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+    if( is_singular( 'tnh_press_release' ) && $last_tnh){
+      $menu_item->classes[] = 'current-menu-item';
+    }
+    
 
   }
 
