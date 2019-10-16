@@ -67,7 +67,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     }
 
     // remove 'about' active class when on tnh page or subpage
-    if($about && !$tnh){
+    if($about && $tnh){
       $menu_item->classes[4] = '';
       $menu_item->classes[5] = '';
     }
@@ -143,7 +143,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     if( is_singular( 'tnh_press_release' ) && $last_tnh){
       $menu_item->classes[] = 'current-menu-item';
     }
-    
+
 
   }
 

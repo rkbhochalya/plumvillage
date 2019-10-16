@@ -9951,6 +9951,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
           font-size: 1rem; }
           .mega-menu-container #menu-mega-menu ul li a:hover {
             color: #000; }
+        .mega-menu-container #menu-mega-menu ul li.current-menu-item a {
+          color: #000; }
     .mega-menu-container #menu-mega-menu > li {
       margin-bottom: 25px; }
       @media (min-width: 768px) {

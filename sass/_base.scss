@@ -1124,6 +1124,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	  				color: $ink;
 	  			}
 	  		}
+
+	  		&.current-menu-item a{
+	  			color: $ink;
+	  		}
 	  	}
 	  }
 
