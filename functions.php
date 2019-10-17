@@ -168,18 +168,10 @@ function wps_deregister_styles() {
     wp_deregister_style( 'jquery-ui-style' );
 
     wp_dequeue_script( 'jquery-ui-core' );
+    wp_deregister_script( 'jquery-ui-core' );
+
+    wp_dequeue_script( 's2-ajax' );
 }
-
-function wpdocs_dequeue_script() {
-
-  // dequeue subscribe2 stuff
-  wp_dequeue_script( 'jquery-ui-core' );
-  wp_deregister_script( 'jquery-ui-core' );
-
-  wp_dequeue_script( 's2-ajax' );
-  wp_deregister_script( 's2-ajax' );
-}
-add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
 /**
  * Enqueue gutenberg script
