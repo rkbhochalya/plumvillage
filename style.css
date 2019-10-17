@@ -11982,9 +11982,6 @@ hr.wp-block-separator {
   right: calc(50% + 15px);
   width: 100vw;
   border-right: 0; }
-  @media (min-width: 768px) {
-    .page-template-default .wp-block-group.alignfull, .post .wp-block-group.alignfull {
-      left: 32.6%; } }
 
 .home-what-who-block, .page-template-page_full-width .entry-content .wp-block-group.home-what-who-block {
   padding-bottom: 20px;
@@ -12046,7 +12043,10 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   margin-left: -8px;
   border: none; }
   ul.slick-dots li, .page-template-default .entry-content ul.slick-dots li {
-    margin: 0 2px; }
+    margin: 0; }
+    @media (min-width: 576px) {
+      ul.slick-dots li, .page-template-default .entry-content ul.slick-dots li {
+        margin: 0 2px; } }
     ul.slick-dots li:before, .page-template-default .entry-content ul.slick-dots li:before {
       display: none; }
     ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-dots li button:before {

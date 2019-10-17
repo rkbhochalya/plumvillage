@@ -144,9 +144,42 @@ function plumvillage_scripts() {
 	// load magic
 	wp_enqueue_script( 'plumvillage-js-scripts', get_template_directory_uri() . '/assets/js/scripts-dist.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/scripts-dist.js' ), true );
 
+
 }
 add_action( 'wp_enqueue_scripts', 'plumvillage_scripts', 100 );
 
+
+/**
+ * Dequeue scripts and styles.
+ */
+
+add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
+function wps_deregister_styles() {
+    wp_dequeue_style( 'wp-editor-font' );
+    wp_deregister_style( 'wp-editor-font' );
+
+    wp_dequeue_style( 'give_recurring_css' );
+    wp_deregister_style( 'give_recurring_css' );
+
+    wp_dequeue_style( 'give-styles' );
+    wp_deregister_style( 'give-styles' );
+
+    wp_dequeue_style( 'jquery-ui-style' );
+    wp_deregister_style( 'jquery-ui-style' );
+
+    wp_dequeue_script( 'jquery-ui-core' );
+}
+
+function wpdocs_dequeue_script() {
+
+  // dequeue subscribe2 stuff
+  wp_dequeue_script( 'jquery-ui-core' );
+  wp_deregister_script( 'jquery-ui-core' );
+
+  wp_dequeue_script( 's2-ajax' );
+  wp_deregister_script( 's2-ajax' );
+}
+add_action( 'wp_print_scripts', 'wpdocs_dequeue_script', 100 );
 
 /**
  * Enqueue gutenberg script
