@@ -22,13 +22,14 @@
 	</div><!-- .entry-content -->			
 	<h4><?php _e('Upcoming dates', 'plumvillage'); ?></h4>
 	<?php $di = 1; ?>
+	<?php $removed_days = 0; ?>
 	<?php $maxItems = 3; ?>
 	<?php while( have_rows('dates', get_the_ID()) ): the_row(); ?>
 		<?php if(get_sub_field('date')) : ?>
 			<?php
 				$date = new DateTime(get_sub_field('date', false));
 				$now = new DateTime();
-				if($date > $now) : 
+				if($date->format('Ymd') >= $now->format('Ymd')) : 
 					if($maxItems == ($di - 1)) : ?>
 						<div class="load-more-container">
 						 		<div class="load-more"><a href="#"><?php _e('Load More', 'plumvillage'); ?></a></div>
@@ -49,11 +50,14 @@
 								$pi++;
 							} ?>
 					</div>
-					<?php if((count(get_field('dates', get_the_ID())) == $di) && ($maxItems < $di)) : ?>
+					<?php if(((count(get_field('dates', get_the_ID())) - $removed_days) == $di) && ($maxItems < $di)) : ?>
 							 		</div> <!-- load-hide -->
 							 	</div>
 					<?php endif; ?>
 					<?php $di++; ?>
+				<?php else: ?>
+					<?php // Temporary fix, until we rebuild this section ?>
+					<?php $removed_days++; ?>
 				<?php endif; ?>								
 			<?php endif; ?>
 	<?php endwhile; ?>
