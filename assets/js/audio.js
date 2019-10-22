@@ -66,8 +66,9 @@ function calculateCurrentValue(currentTime) {
 
       // Controls Listeners
       // ----------------------------------------------------------
-      playBtn.on('click', function() {
+      playBtn.on('click', function(e) {
         togglePlay()
+        e.preventDefault();
       });
 
 		  var length = player[0].duration

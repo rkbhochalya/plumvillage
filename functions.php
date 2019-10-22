@@ -138,7 +138,7 @@ function plumvillage_scripts() {
 	// load styles
 	wp_enqueue_style( 'plumvillage-style', get_stylesheet_uri(), array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
-	// load fonts
+	//load fonts
 	wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Infant:300i,500,500i,600|Merriweather+Sans:300,300i,400,700|Merriweather:300,300i&display=swap');
 
 	// load magic
@@ -147,7 +147,6 @@ function plumvillage_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'plumvillage_scripts', 100 );
-
 
 /**
  * Dequeue scripts and styles.

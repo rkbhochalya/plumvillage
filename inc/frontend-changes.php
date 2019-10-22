@@ -308,7 +308,7 @@ function beautifulVideoEmbed($iframe, $videoId = 1, $featured_image = false, $in
 
   <div class="video-wrapper">
       <?php if(isset($cleanVideoId)) : ?>
-        <div class="play" data-embed-link="$<?php echo $cleanVideoId; ?>" data-target="<?= $target; ?>">
+        <a class="play" aria-label="<?php _e('Play Video', 'plumvillage'); ?>" href="#" data-embed-link="$<?php echo $cleanVideoId; ?>" data-target="<?= $target; ?>">
         <?php 
             if($featured_image){
                 echo wp_get_attachment_image( $featured_image, 'large' );
@@ -318,7 +318,7 @@ function beautifulVideoEmbed($iframe, $videoId = 1, $featured_image = false, $in
               echo $iframe;
             }
         ?>
-        <span class="icon icon-bg icon-play"></span></div>
+        <span class="icon icon-bg icon-play"></span></a>
       <?php endif; ?>
       <?php if($inline) : ?>
         <div class="iframe-target iframe-target-<?= $target; ?>"><span class="icon icon-close"></span><div class="iframe-container embed-responsive embed-responsive-16by9 dropzone"></div></div>

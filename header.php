@@ -32,10 +32,10 @@
 
 <body <?php body_class(); ?>>
 
-<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
 
 <div class="mega-menu-container hidden">
-		<button class="menu-toggle unbutton" aria-controls="primary-menu" aria-expanded="false"><span class="icon-close"></span></button>
+		<button class="menu-toggle unbutton" aria-label="<?php _e('Close Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-close"></span></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'mega-menu',
@@ -59,7 +59,8 @@
 		?>
 </div>
 
-<div id="page" class="site">			<button class="menu-toggle unbutton float-left" aria-controls="primary-menu" aria-expanded="false"><span class="icon-hamburger"></span></button>
+<div id="page" class="site">			
+	<button class="menu-toggle unbutton float-left" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-hamburger"></span></button>
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">

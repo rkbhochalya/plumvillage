@@ -1617,7 +1617,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .video-wrapper .play {
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
   .video-wrapper .play .icon {
     position: absolute;
     bottom: 20px;

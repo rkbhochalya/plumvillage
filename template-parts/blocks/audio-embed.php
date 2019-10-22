@@ -16,11 +16,11 @@
                         <h5><?php the_sub_field('title'); ?> <small class="end-time"></small></h5>
                         <p><?php the_sub_field('content'); ?></p>
                         <div class="buttons">
-                            <div class="play-btn link-with-icon sunny-link">
+                            <a class="play-btn link-with-icon sunny-link" href="#" aria-label="<?php _e('Play Audio', 'plumvillage'); ?> - <?php the_sub_field('title'); ?>">
                                 <span class="icon icon-play-small icon-sun"></span>
                                 <span class="icon icon-pauze"></span>
                                 <span class="text"><?php _e('Play', 'plumvillage'); ?></span>
-                            </div>
+                            </a>
                             <a class="link-with-icon earthy-link" href="<?php echo $file['url']; ?>" download="<?php echo $file['url']; ?>">
                                 <span class="icon icon-download"></span>
                                 <span class="text"><?php _e('Download', 'plumvillage'); ?></span>

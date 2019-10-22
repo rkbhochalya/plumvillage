@@ -4,6 +4,7 @@
   $('.menu-toggle').click(function(e){
     $('body').toggleClass('menu-open');
     $('.mega-menu-container').removeClass('hidden');
+    $('#menu-mega-menu > li:first-child > a').focus()
     e.preventDefault();
     e.stopPropagation();
   })

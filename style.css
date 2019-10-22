@@ -10877,6 +10877,9 @@ body #youmax, body .youmax {
 .index-interview p {
   margin-bottom: 0; }
 
+.index-interview .entry-footer {
+  margin-top: 4px; }
+
 .index-interview .video-wrapper {
   max-width: 40%;
   float: right;
@@ -11451,7 +11454,8 @@ body #youmax, body .youmax {
 
 .video-wrapper .play {
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  display: inline-block; }
   .video-wrapper .play .icon {
     position: absolute;
     bottom: 20px;
