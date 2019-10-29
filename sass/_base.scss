@@ -1013,12 +1013,16 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	ul li:first-child a{
 		color: $ink;
-  	padding-bottom:0;
-  	padding-right: 0;
-  	padding-left: 0;
+		margin-top: -3px;
   	margin-right: 14px;
   	margin-left: 14px;
-		@include underline($sun, $sun);
+		background: lighten($sun, 15);
+		border-radius: 0.25rem;
+		padding: 7px 12px;
+
+		&:hover{
+			background: $sun;
+		}
 	}
 }
 
