@@ -9868,8 +9868,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   top: 11px;
   left: 15px;
   position: fixed;
-  position: -webkit-sticky;
-  position: sticky;
   z-index: 999;
   -webkit-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   -o-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);

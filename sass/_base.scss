@@ -998,6 +998,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		color: $earth;
 	}
 }
+
 #top-navigation{
 	.menu-mega-menu-container{
 		margin-left: 50px;
@@ -1030,7 +1031,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	top: 11px;
 	left: 15px;
 	position: fixed;
-	position: sticky;
 	z-index: 999;
 	transition: color .4s cubic-bezier(.15,.53,.35,1);
 
