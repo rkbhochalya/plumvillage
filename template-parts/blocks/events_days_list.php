@@ -35,7 +35,7 @@
 		<?php if(!isset($events)) : ?>
 			<p><?php _e('No upcoming events', 'plumvillage'); ?></p>
 		<?php else : ?>
-				<?php 
+			<?php 
 				$i = 0;
 				foreach ($events as $posts){ ?>
 					<div class="row">

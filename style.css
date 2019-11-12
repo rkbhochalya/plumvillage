@@ -8664,10 +8664,6 @@ button.unbutton {
   background-color: #fcf2d7;
   border-color: #fcf2d7; }
 
-.btn-light:hover {
-  background-color: #fcf2d7;
-  border-color: #fcf2d7; }
-
 .btn-light:focus, .btn-light.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(241, 190, 2, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(241, 190, 2, 0.5); }
