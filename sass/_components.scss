@@ -211,6 +211,7 @@ div.wpcf7 .ajax-loader{
 			padding-left: 20px;
 
 		  b:before {
+		  	@include is-icon();
 		    content: $icon-caret-down; 
 		  }
 		}

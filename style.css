@@ -8503,7 +8503,7 @@ body.compensate-for-scrollbar {
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before, .has-arrow-after:after, .nav-previous:before, .nav-next:after {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -8604,6 +8604,17 @@ body.compensate-for-scrollbar {
   content: ""; }
 
 .dropdown-arrow-comments:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
   font-size: 8px;
   color: #000;
@@ -8611,6 +8622,17 @@ body.compensate-for-scrollbar {
   top: -3px; }
 
 .reply-icon-container:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
   font-size: 12px;
   position: absolute;
@@ -8871,6 +8893,17 @@ div.wpcf7 .ajax-loader {
       top: 2px;
       padding-left: 20px; }
       .select-inline .select2-container .select2-selection--single .select2-selection__arrow b:before {
+        /* use !important to prevent issues with browser extensions that change fonts */
+        font-family: "icomoon" !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
         content: ""; }
   .select-inline .select2-container--focus .select2-selection--single {
     -webkit-box-shadow: none;
@@ -9403,6 +9436,17 @@ a.has-arrow {
   position: relative;
   margin-left: 25px; }
   a.has-arrow:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     content: "";
     position: absolute;
     left: -25px;
@@ -9418,6 +9462,17 @@ a.has-arrow {
 a.has-arrow-after {
   position: relative; }
   a.has-arrow-after:after {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     content: "";
     font-size: 0.75rem;
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
@@ -9849,7 +9904,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 .menu-secondary-menu-container {
   float: right; }
-  .menu-secondary-menu-container ul li:first-child a {
+  .menu-secondary-menu-container > ul > li:first-child a {
     color: #000;
     margin-top: -3px;
     margin-right: 14px;
@@ -9857,7 +9912,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     background: #ffe277;
     border-radius: 0.25rem;
     padding: 7px 12px; }
-    .menu-secondary-menu-container ul li:first-child a:hover {
+    .menu-secondary-menu-container > ul > li:first-child a:hover {
       background: #FFD22A; }
 
 .menu-toggle {
@@ -9870,6 +9925,39 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
   .menu-toggle:hover {
     color: #8B572A; }
+
+.wpml-ls-item.menu-item-has-children {
+  position: relative; }
+  .wpml-ls-item.menu-item-has-children > a {
+    padding-right: 20px; }
+    .wpml-ls-item.menu-item-has-children > a:after {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 0.5rem;
+      content: "";
+      margin: 4px 0 0 6px;
+      float: right; }
+  .wpml-ls-item.menu-item-has-children a {
+    color: #9A9A9A; }
+    .wpml-ls-item.menu-item-has-children a:hover {
+      color: #000; }
+  .wpml-ls-item.menu-item-has-children .sub-menu {
+    position: absolute;
+    left: 0;
+    display: none;
+    padding: 5px 0; }
+  .wpml-ls-item.menu-item-has-children.sub-menu-open .sub-menu {
+    display: block;
+    overflow: visible; }
 
 @media (max-width: 767.98px) {
   button.unbutton.menu-toggle {
@@ -10041,23 +10129,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   #side-menu ul li.current-menu-item ul, #side-menu ul li.current-page-item ul, #side-menu ul li.current_page_item ul, #side-menu ul li.current-menu-ancestor ul, #side-menu ul li.current-menu-parent ul, #side-menu ul li.current_page_parent ul, #side-menu ul li.current_page_ancestor ul {
     display: block; }
 
-.posts-navigation, .post-navigation {
-  padding-top: 30px; }
-  .posts-navigation .nav-previous, .post-navigation .nav-previous {
-    float: left; }
-  .posts-navigation .nav-next, .post-navigation .nav-next {
-    float: right; }
-  .posts-navigation a, .post-navigation a {
-    -webkit-box-shadow: inset 0 -0.15em #FFD22A;
-    box-shadow: inset 0 -0.15em #FFD22A;
-    -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-    -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-    transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
-    .posts-navigation a:hover, .post-navigation a:hover {
-      -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-      box-shadow: inset 0 -0.4em #FFD22A;
-      text-decoration: none; }
-
 .site-header {
   position: relative;
   z-index: 2; }
@@ -10072,6 +10143,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 .site-branding img {
   max-width: 70vw; }
+  @media (min-width: 768px) {
+    .site-branding img {
+      max-width: 400px; } }
 
 .site-branding .site-title {
   margin: 0; }
@@ -11149,6 +11223,12 @@ body #youmax, body .youmax {
   .entry-content .tnh-landing-top .wp-block-column:last-child {
     margin-top: -180px; } }
 
+.posts-navigation .nav-previous, .post-navigation .nav-previous {
+  float: left; }
+
+.posts-navigation .nav-next, .post-navigation .nav-next {
+  float: right; }
+
 .posts-navigation .nav-links a, .post-navigation .nav-links a {
   max-width: 240px;
   -o-text-overflow: ellipsis;
@@ -11169,6 +11249,17 @@ body #youmax, body .youmax {
     text-decoration: none; }
 
 .posts-navigation .nav-previous:before, .posts-navigation .nav-next:after, .post-navigation .nav-previous:before, .post-navigation .nav-next:after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: inline-block;
   content: "";
   font-size: 8px;
@@ -12143,3 +12234,5 @@ pre.wp-block-verse, .wp-block-verse pre {
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0; }
+
+/*# sourceMappingURL=style.css.map */

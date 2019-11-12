@@ -512,6 +512,7 @@ a.has-arrow{
 	margin-left: 25px;
 
 	&:before{
+		@include is-icon();
 		content: $icon-arrow-tiny; 
 		position: absolute;
 		left: -25px;
@@ -532,6 +533,7 @@ a.has-arrow-after{
 	position: relative;
 
 	&:after{
+		@include is-icon();
 		content: $icon-arrow-tiny; 
 		@include font-size(12);
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
@@ -1012,7 +1014,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 .menu-secondary-menu-container{
 	float: right;
 
-	ul li:first-child a{
+	> ul > li:first-child a{
 		color: $ink;
 		margin-top: -3px;
   	margin-right: 14px;
@@ -1036,6 +1038,43 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	&:hover{
 		color: $earth;
+	}
+}
+
+
+.wpml-ls-item.menu-item-has-children{
+	position: relative;
+
+	> a {
+		padding-right: 20px;
+
+		&:after{
+			@include is-icon();
+			@include font-size(8);
+			content: $icon-caret-down;
+			margin: 4px 0 0 6px;
+			float: right;
+		}
+	}
+
+	a{
+		color: $grey;
+
+		&:hover{
+			color: $ink;
+		}
+	}
+
+	.sub-menu{
+		position: absolute;
+		left: 0;
+		display: none;
+		padding: 5px 0;
+	}
+
+	&.sub-menu-open .sub-menu{
+		display: block;
+		overflow: visible;
 	}
 }
 
@@ -1243,23 +1282,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
-// post navigation
-
-.posts-navigation, .post-navigation{
-	padding-top: 30px;
-
-	.nav-previous{
-		float: left;
-	}
-	.nav-next{
-		float: right;
-	}
-
-	a{
-		@include underline($sun, $sun);
-	}
-
-}
 
 // Logo
 
@@ -1277,6 +1299,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 	img{
 		max-width: 70vw;
+	  @include media-breakpoint-up(md) {
+	  	max-width: 400px;
+	  }
 	}
 	.site-title{
 		margin: 0;

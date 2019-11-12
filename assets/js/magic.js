@@ -326,6 +326,17 @@
   	})
   }
 
+  $('.wpml-ls-item.menu-item-has-children > a').on('click', function(e){
+  	$(this).parent().toggleClass('sub-menu-open')
+  	e.preventDefault();
+  })
+
+  $('html').on('click', function(e){
+  	if($('.wpml-ls-item.sub-menu-open').length && !$(e.target).parents('.wpml-ls-item').length){
+  		$('.wpml-ls-item.sub-menu-open').removeClass('sub-menu-open')
+  	}
+  })
+
 })(jQuery);
 
 /* the binary Great Common Divisor calculator */

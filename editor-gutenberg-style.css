@@ -1237,7 +1237,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: normal;
   font-style: normal; }
 
-[class^="icon-"], [class*=" icon-"], .dropdown-arrow-comments, .reply-icon-container, .select-inline .select2-container .select2-selection--single .select2-selection__arrow b, .has-arrow:before, .has-arrow-after:after, .nav-previous:before, .nav-next:after {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   speak: none;
@@ -1338,6 +1338,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   content: ""; }
 
 .dropdown-arrow-comments:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
   font-size: 8px;
   color: #000;
@@ -1345,6 +1356,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   top: -3px; }
 
 .reply-icon-container:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   content: "";
   font-size: 12px;
   position: absolute;
@@ -2429,3 +2451,5 @@ figcaption {
 
 .block-outside .col-lg-4 {
   max-width: 100%; }
+
+/*# sourceMappingURL=editor-gutenberg-style.css.map */
