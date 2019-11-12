@@ -37,7 +37,7 @@
 		// The Loop
 		if ( $posts->have_posts() ) { 
 			$events[] = $posts;
-			$event_locations[] = object_to_array(get_field('show_first'));
+			$event_locations[] = pv_object_to_array(get_field('show_first'));
 			$has_first = true;
 		}
 	}
@@ -83,7 +83,7 @@
 			// The Loop
 			if ( $posts->have_posts() ) { 
 				$events[] = $posts;
-				$event_locations[] = object_to_array($practise_centre);
+				$event_locations[] = pv_object_to_array($practise_centre);
 			} 
 
 			// Restore original Post Data

@@ -472,12 +472,12 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 // Object to array
-function object_to_array($obj) {
+function pv_object_to_array($obj) {
 if(is_object($obj)) $obj = (array) $obj;
     if(is_array($obj)) {
         $new = array();
         foreach($obj as $key => $val) {
-            $new[$key] = object_to_array($val);
+            $new[$key] = pv_object_to_array($val);
         }
     }
     else $new = $obj;
