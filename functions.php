@@ -154,14 +154,10 @@ add_action( 'wp_enqueue_scripts', 'plumvillage_scripts', 100 );
 
 add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 function wps_deregister_styles() {
+  
     wp_dequeue_style( 'wp-editor-font' );
     wp_deregister_style( 'wp-editor-font' );
 
-    wp_dequeue_style( 'give_recurring_css' );
-    wp_deregister_style( 'give_recurring_css' );
-
-    wp_dequeue_style( 'give-styles' );
-    wp_deregister_style( 'give-styles' );
 
     wp_dequeue_style( 'jquery-ui-style' );
     wp_deregister_style( 'jquery-ui-style' );
@@ -170,7 +166,25 @@ function wps_deregister_styles() {
     wp_deregister_script( 'jquery-ui-core' );
 
     wp_dequeue_script( 's2-ajax' );
+
+    // remove give styles
+    wp_dequeue_style( 'give_recurring_css' );
+    wp_deregister_style( 'give_recurring_css' );
+
+    wp_dequeue_style( 'give-styles' );
+    wp_deregister_style( 'give-styles' );
+
+    // remove give scripts
+    wp_dequeue_script('give-stripe-js');
+    wp_dequeue_script('give-stripe-checkout-js');
+    wp_dequeue_script('give-stripe-popup-js');
+    wp_dequeue_script('give-stripe-onpage-js');
+    wp_dequeue_script('give');
+    wp_dequeue_script('give-stripe-payment-request-js');
+    wp_dequeue_script('give_recurring_script');
+
 }
+
 
 /**
  * Enqueue gutenberg script
