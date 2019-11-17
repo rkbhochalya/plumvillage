@@ -23,14 +23,14 @@
 						<form class="subscribe-footer-form pfah-form validate" id="pardot-subscribe" action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" method="post">
 							<div class="form-row">
 						    <div class="col">
-						      <input type="text" class="form-control form-control-lg" name="firstname" placeholder="First Name" required />
+						      <input type="text" class="form-control form-control-lg" name="firstname" placeholder="<?php _e('First Name', 'plumvillage'); ?>" required />
 						    </div>
 						    <div class="col">
-							    <input type="text" class="form-control form-control-lg" name="lastname" placeholder="Last Name" required />
+							    <input type="text" class="form-control form-control-lg" name="lastname" placeholder="<?php _e('Last Name', 'plumvillage'); ?>" required />
 						    </div>
 						    <div class="col-12 col-md">
 						    	<select name="country" class="form-control form-control-lg" required>
-						    		<option value="" disabled selected>Country</option>
+						    		<option value="" disabled selected><?php _e('Country', 'plumvillage'); ?></option>
 										<option value="Afghanistan"><?php _e("Afghanistan"); ?></option>
 		                <option value="Åland Islands"><?php _e("Åland Islands"); ?></option>
 		                <option value="Albania"><?php _e("Albania"); ?></option>
@@ -281,7 +281,7 @@
 							<div class="form-row">
 								<div class="col-12 col-md">
 									<select name="language" class="form-control form-control-lg" required>
-										<option value="" disabled selected>Language</option>
+										<option value="" disabled selected><?php _e('Language', 'plumvillage'); ?></option>
 										<option value="English"><?php _e("English"); ?></option>
 										<option value="French"><?php _e("French"); ?></option>
 										<option value="Spanish"><?php _e("Spanish"); ?></option>
@@ -292,11 +292,11 @@
 									</select>
 								</div>
 								<div class="col-12 col-sm-8 col-md-6">
-									<input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required />	
+									<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required />	
 								</div>
 								<div class="col">
 						   		<input type="hidden" name="newsletter" value="true">
-									<input type="submit" value="Subscribe" required="required" class="btn btn-lg btn-primary" />
+									<input type="submit" value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />
 								</div>
 							</div>    
 						</form>
