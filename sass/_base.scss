@@ -1041,12 +1041,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
-.logged-in .wpml-ls-item.menu-item-has-children{
-	display: inline-block;
+.secondary-menu-top > .wpml-ls-item{
+	display: none;
 }
 .wpml-ls-item.menu-item-has-children{
 	position: relative;
-	display: none;
+	display: inline-block;
 
 	> a {
 		padding-right: 20px;

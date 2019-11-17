@@ -9926,12 +9926,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .menu-toggle:hover {
     color: #8B572A; }
 
-.logged-in .wpml-ls-item.menu-item-has-children {
-  display: inline-block; }
+.secondary-menu-top > .wpml-ls-item {
+  display: none; }
 
 .wpml-ls-item.menu-item-has-children {
   position: relative;
-  display: none; }
+  display: inline-block; }
   .wpml-ls-item.menu-item-has-children > a {
     padding-right: 20px; }
     .wpml-ls-item.menu-item-has-children > a:after {
