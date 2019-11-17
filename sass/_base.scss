@@ -1041,9 +1041,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
-
+.logged-in .wpml-ls-item.menu-item-has-children{
+	display: inline-block;
+}
 .wpml-ls-item.menu-item-has-children{
 	position: relative;
+	display: none;
 
 	> a {
 		padding-right: 20px;
