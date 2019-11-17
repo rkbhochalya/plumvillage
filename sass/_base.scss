@@ -1002,19 +1002,19 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 }
 
 #top-navigation{
-	.menu-mega-menu-container{
+	.mega-menu-top{
 		margin-left: 50px;
 
-		.menu > li:last-child{
+		li:last-child{
 			display: none;
 		}
 	}
 }
 
-.menu-secondary-menu-container{
+.secondary-menu-top{
 	float: right;
 
-	> ul > li:first-child a{
+	> li:first-child a{
 		color: $ink;
 		margin-top: -3px;
   	margin-right: 14px;
@@ -1138,7 +1138,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		position: fixed;
 	}
 
-	#menu-mega-menu{
+	.mega-menu-side{
 		margin: 0;
 		padding: 20px 0 0;
 	  @include media-breakpoint-up(md) {

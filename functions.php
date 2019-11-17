@@ -46,7 +46,8 @@ if ( ! function_exists( 'plumvillage_setup' ) ) :
 		register_nav_menus( array(
 			'primary-menu' => esc_html__( 'Primary Menu', 'plumvillage' ),
 			'secondary-menu' => esc_html__( 'Secondary Menu', 'plumvillage' ),
-			'mega-menu' => esc_html__( 'Mega Menu', 'plumvillage' ),
+      'publishing-menu' => esc_html__( 'Publishing', 'plumvillage' ),
+      'initiatives-menu' => esc_html__( 'Initiatives', 'plumvillage' ),
 			'footer-menu' => esc_html__( 'Footer Menu', 'plumvillage' ),
 		) );
 

@@ -38,7 +38,8 @@
 		<button class="menu-toggle unbutton" aria-label="<?php _e('Close Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-close"></span></button>
 			<?php
 			wp_nav_menu( array(
-				'theme_location' => 'mega-menu',
+				'theme_location' => 'primary-menu',
+				'menu_class'		 => 'mega-menu-side menu'
 			) );
 			?>
 		<h6>— <?php _e( 'Follow Plum Village', 'plumvillage' ); ?></h6>
@@ -67,13 +68,15 @@
 			<div id="top-navigation">
 				<?php
 				wp_nav_menu( array(
-					'theme_location' => 'mega-menu',
+					'theme_location' => 'primary-menu',
 					'depth'					 => 1,
+					'menu_class'		 => 'mega-menu-top menu'
 				) );
 				?>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'secondary-menu',
+					'menu_class'		 => 'secondary-menu-top menu'
 				) );
 				?>
 			</div>

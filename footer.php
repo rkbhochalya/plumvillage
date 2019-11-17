@@ -322,12 +322,14 @@
 					<h6>— <?php _e( 'Initiatives', 'plumvillage' ); ?></h6>
 					<?php
 						wp_nav_menu( array(
+								'theme_location' => 'initiatives-menu',
 						    'menu' => 'Initiatives'
 						) );
 					?>
 					<h6>— <?php _e( 'Publishing', 'plumvillage' ); ?></h6>
 					<?php
 						wp_nav_menu( array(
+								'theme_location' => 'publishing-menu',
 						    'menu' => 'Publishing'
 						) );
 					?>
