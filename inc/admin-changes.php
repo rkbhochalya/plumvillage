@@ -172,3 +172,14 @@ function custom_menu_order($menu_ord) {
 }
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order'); // Activate custom_menu_order
+
+
+/**
+ * Remove "Multilingual Content Setup" meta box
+ */
+
+add_action( 'admin_head', 'pv_remove_wpml_meta_box' );
+function pv_remove_wpml_meta_box() {
+	$screen = get_current_screen();
+	remove_meta_box( 'icl_div_config', $screen->post_type, 'normal' );
+}
