@@ -10321,6 +10321,12 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
   font-family: "Merriweather Sans", sans-serif;
   margin-top: 30px;
   margin-bottom: 30px; }
+  #comments #thrive-comments .tcm-thank-you-submited {
+    font-style: italic;
+    font-weight: 400;
+    border: none;
+    border-radius: 0;
+    background: #F3F3F3; }
   #comments #thrive-comments .tcm-comment-text-content a {
     color: #000 !important;
     -webkit-box-shadow: inset 0 -0.15em #F3F3F3;

@@ -1550,6 +1550,14 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	margin-top: 30px;
 	margin-bottom: 30px;
 
+	.tcm-thank-you-submited{
+		font-style: italic;
+		font-weight: 400;
+		border: none;
+		border-radius: 0;
+		background: $freshink;
+	}
+
 	.tcm-comment-text-content a{
 		color: $ink!important;
 		@include underline($freshink, $sun);
