@@ -541,13 +541,13 @@ function plumvillage_add_gutenberg_assets() {
 /**
  * All the Admin Code
  */
-require get_template_directory() . '/inc/admin-changes.php';
+require get_template_directory() . '/inc/backend-functions.php';
 
 
 /**
  * All the Frontend Code
  */
-require get_template_directory() . '/inc/frontend-changes.php';
+require get_template_directory() . '/inc/frontend-functions.php';
 
 
 /**
