@@ -1,6 +1,12 @@
 <?php
 
-$videoTimestamp = get_option('latest_youtube_timestamp');
+if ( function_exists('icl_object_id') ) {
+  $lan = apply_filters( 'wpml_current_language', NULL ) . '_';
+} else {
+	$lan = '';	
+}
+
+$videoTimestamp = get_option($lan.'latest_youtube_timestamp');
 
 if($videoTimestamp === false || (time() - $videoTimestamp) > 7200) {
 	$channel_id = get_field('youtube_channel_id', 'options');
@@ -21,18 +27,19 @@ if($videoTimestamp === false || (time() - $videoTimestamp) > 7200) {
 
 	$videoJson=json_decode($json);
 
-	update_option('latest_youtube_timestamp', time());
-	if(!empty($videoJson)){
-		update_option('latest_youtube_id', $videoJson->items[0]->snippet->resourceId->videoId);
-		update_option('latest_youtube_title', $videoJson->items[0]->snippet->title);
+	update_option($lan.'latest_youtube_timestamp', time());
+
+	if(isset($videoJson)){
+		update_option($lan.'latest_youtube_id', $videoJson->items[0]->snippet->resourceId->videoId);
+		update_option($lan.'latest_youtube_title', $videoJson->items[0]->snippet->title);
 	}
 }
 
 
 
-$id = get_option('latest_youtube_id');	
+$id = get_option($lan.'latest_youtube_id');	
 
-$title = get_option('latest_youtube_title');
+$title = get_option($lan.'latest_youtube_title');
 
 $video = wp_oembed_get('https://www.youtube.com/watch?v='.$id); ?>
 
