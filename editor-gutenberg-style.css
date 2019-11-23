@@ -1527,6 +1527,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       .entry-content .jump-to.alignwide p {
         margin-left: 25.6%; } }
 
+.entry-header + .entry-content > .jump-to:first-child {
+  padding-top: 0; }
+  .entry-header + .entry-content > .jump-to:first-child hr {
+    margin-top: 0; }
+
 .text-inset .block-inside.text-inset-inside {
   background: #FAF1EB;
   padding: 30px 30px 10px; }

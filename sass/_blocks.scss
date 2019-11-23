@@ -114,6 +114,14 @@
 	}	
 }
 
+.entry-header + .entry-content > .jump-to:first-child{
+	padding-top: 0;
+
+	hr{
+		margin-top: 0;
+	}
+}
+
 .text-inset{
 	.block-inside.text-inset-inside{
 		background: $freshearth;
