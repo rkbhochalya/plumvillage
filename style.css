@@ -9411,6 +9411,8 @@ big {
   margin: 10px 0;
   color: #000;
   font-size: 1rem; }
+  .footnote * {
+    display: contents; }
 
 .footnote.show {
   display: -webkit-box;
@@ -9827,7 +9829,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 @media (min-width: 992px) {
   .centered-content .entry-content h2, .centered-content .entry-content h3, .centered-content .entry-content h4, .centered-content .entry-content h5 {
-    padding-bottom: .3em; }
+    padding-top: .3em; }
   .centered-content .alignright {
     margin-right: -190px;
     max-width: 326px; }
