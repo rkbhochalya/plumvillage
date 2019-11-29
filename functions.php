@@ -166,8 +166,6 @@ function wps_deregister_styles() {
     wp_dequeue_script( 'jquery-ui-core' );
     wp_deregister_script( 'jquery-ui-core' );
 
-    wp_dequeue_script( 's2-ajax' );
-
     // remove give styles
     wp_dequeue_style( 'give_recurring_css' );
     wp_deregister_style( 'give_recurring_css' );

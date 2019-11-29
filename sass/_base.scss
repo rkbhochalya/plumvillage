@@ -479,6 +479,10 @@ big {
 	margin: 10px 0;
 	color: $ink;
 	@include font-size(16);
+
+	*{
+		display: contents;
+	}
 }
 .footnote.show{
 	display: flex;
@@ -892,7 +896,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	@include media-breakpoint-up(lg) {
 
 		.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5{
-		  padding-bottom: .3em;	
+		  padding-top: .3em;	
 		}
 
 		.alignright{

@@ -58,7 +58,7 @@
 
  	$('.footnote').each(function(){
  		var el = $(this);
- 		if(el.prev('br')){
+ 		if(el.prev('br').length){
  			el.prev().remove();
  		}
  		var star = $('<span class="icon-star"></span>').on('click', function(){
