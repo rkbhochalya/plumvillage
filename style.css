@@ -11108,10 +11108,11 @@ body #youmax, body .youmax {
     .load-more-container.show-load .load-more {
       display: none; }
 
-.index-post h2 {
+.index-post h2, .centered-content .entry-content .index-post h2 {
   font-size: 1.75rem;
   margin-top: 0;
-  margin-bottom: 0.2rem; }
+  margin-bottom: 0.5rem;
+  padding-top: 0; }
 
 .page-template-page_full-width .entry-content h2.has-text-align-center, .page-template-page_full-width .entry-content h1.has-text-align-center {
   max-width: 760px;

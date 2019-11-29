@@ -360,11 +360,12 @@
 // Press
 
 
-.index-post{
+.index-post, .centered-content .entry-content .index-post{
 	h2{
 		@include font-size(28);
 		margin-top: 0;
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.5rem;
+		padding-top: 0;
 	}
 }
 
