@@ -18,6 +18,7 @@
 				'meta_key'							 => 'sticky',
 				'meta_value'						 => 1,
 				'category__in'					 => $category,
+				'suppress_filters' 			 => 0,
 			));
 
 			$sticky_tnh_ids = get_posts(array(
@@ -27,7 +28,8 @@
 				'order'                  => 'DESC',
 				'orderby'                => 'date',
 				'meta_key'							 => 'sticky',
-				'meta_value'						 => 1
+				'meta_value'						 => 1,
+				'suppress_filters' 			 => 0,
 			));
 
 
@@ -40,7 +42,8 @@
 				'orderby'                => 'date',
 				'category__in'					 => $category,
 				'posts_per_page' 				 => $maxPosts,
-				'exclude'								 => $sticky_post_ids
+				'exclude'								 => $sticky_post_ids,
+				'suppress_filters' 			 => 0,
 			));
 
 
@@ -53,7 +56,8 @@
 					'order'                  => 'DESC',
 					'orderby'                => 'date',
 					'posts_per_page' 				 => $maxPosts,
-					'exclude'								 => $sticky_tnh_ids
+					'exclude'								 => $sticky_tnh_ids,
+					'suppress_filters' 			 => 0,
 				));
 
 				$post_ids = array_merge( $sticky_tnh_ids, $sticky_post_ids, $post_ids, $tnh_ids);
