@@ -314,8 +314,8 @@ function register_acf_block_types() {
     // register post list
     acf_register_block_type(array(
         'name'              => 'post_list',
-        'title'             => __('Post List'),
-        'description'       => __('A list of posts'),
+        'title'             => __('Latest Posts'),
+        'description'       => __('A list of latest posts'),
         'render_template'   => 'template-parts/blocks/post_list.php',
         'category'          => 'plumvillage',
         'icon'              => 'list-view',
