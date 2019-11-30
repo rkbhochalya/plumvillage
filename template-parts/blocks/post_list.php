@@ -1,16 +1,6 @@
 
 		<?php 
 
-	$all_ids = get_posts(array( 'fields'          => 'ids', 
-	               'posts_per_page'  => -1, 
-	               'post_type'       => array('post', 'tnh_update')
-	               ));
-
-	foreach( $all_ids as $ai ) {
-	   update_post_meta( $ai, 'sticky', 0 );
-	}
-	wp_reset_postdata();
-
 		$style = get_field('style') ? get_field('style') : 'list';
 
 		$maxPosts = get_field('max_posts') ? get_field('max_posts') : 3;
