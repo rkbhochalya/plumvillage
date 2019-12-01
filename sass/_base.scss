@@ -1683,6 +1683,10 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	#tcm-moderate-front{
 		top: 0;
 		right: 0;
+		display: none;
+	}
+	.tcm-comment-content #tcm-moderate-front{
+		display: block;
 	}
 	textarea, input{
 		@include font-size(14);

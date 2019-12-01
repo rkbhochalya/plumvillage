@@ -10423,7 +10423,10 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
     margin-top: 0; }
   #comments #thrive-comments #tcm-moderate-front {
     top: 0;
-    right: 0; }
+    right: 0;
+    display: none; }
+  #comments #thrive-comments .tcm-comment-content #tcm-moderate-front {
+    display: block; }
   #comments #thrive-comments textarea, #comments #thrive-comments input {
     font-size: 0.875rem;
     background: #F5F5EF;

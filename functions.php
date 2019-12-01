@@ -332,7 +332,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-media-text',      
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/letters'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'comments')
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'author')
     )
   );
 
@@ -362,7 +362,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-format-chat',      
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/interviews-with-thich-nhat-hanh'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
     )
   );	
 
@@ -392,7 +392,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-megaphone',      
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/thich-nhat-hanhs-health'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
     )
   );  
 
@@ -421,7 +421,7 @@ function create_post_types() {
       'show_in_menu' => 'post.php?post=7703&action=edit',
       'show_in_rest' => true,
       'rewrite' => array('slug' => 'about/thich-nhat-hanh/press'),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'author')
     )
   );
 
