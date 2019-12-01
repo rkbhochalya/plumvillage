@@ -21,13 +21,14 @@ if ( has_blocks( $post->post_content ) ) {
    		$i++;
    	}
 }
+
 ?>
 
 <div class="jump-to align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?>" id="<?php echo $jump_to_url; ?>">
 	<hr>
 	<p><span class="label">Jump To <span class="icon icon-arrow-tiny"></span></span>
 	<?php 
-		if(!empty($sections)){
+		if(!empty($sections) && !is_bool($is_preview)){
 			$i = 0;
 			foreach ($sections as $section) {
 				echo '<a '.($section == $jump_to_name ? 'class="active"' : '').' href="#'. sanitize_title($section) .'">' . $section . '</a>';

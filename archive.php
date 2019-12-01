@@ -28,19 +28,12 @@ get_header();
 	
 		<?php if ( have_posts() ) : ?>
 
-				<?php 
-					$term = get_queried_object();
-										
-					$title = single_term_title( '', false );
-					$content = get_the_archive_description();
-				?>
-
 			<header class="entry-header">
-				<h1 class="entry-title"><?php echo $title; ?></h1>
+				<h1 class="entry-title"><?php echo single_term_title( '', false ); ?></h1>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php echo $content; ?>
+				<div class="introduction"><?php the_archive_description(); ?></div>
 			</div><!-- .entry-content -->
 
 			<?php

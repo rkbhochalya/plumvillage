@@ -45,7 +45,7 @@
 	}
 }
 
-.jump-to{
+.jump-to, .centered-content .jump-to{
 	padding: 30px 1px 80px 0;
 	clear: both;
 
@@ -307,6 +307,10 @@
 		background: $freshsun;
 		padding-bottom: 1px;
 	}
+}
+.block-audio + .block-audio{
+	padding-top: 0;
+	margin-top: -30px;
 }
 .audio-player {
 	margin-bottom: 15px;

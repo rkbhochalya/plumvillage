@@ -429,7 +429,7 @@ big {
 
 // Custom elements
 
-.entry-content p.has-large-font-size{
+.entry-content p.has-large-font-size, .entry-content .introduction p{
 	@include font-size(22);
 	color: $grey;
 

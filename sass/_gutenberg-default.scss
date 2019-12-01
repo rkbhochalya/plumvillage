@@ -11,19 +11,6 @@
 	max-width: 40%;
 	margin-right: -100px;
 	clear: right;
-
-	.block-outside{
-		margin-left: 0;
-		margin-right: 0;
-		.col-lg-5, .col-lg-4{
-			max-width: 100%;
-			flex: 0 0 100%;
-		}
-		.alignright{
-			margin: 0;
-			padding: 0;
-		}
-	}
 }
 
 a{
@@ -84,7 +71,7 @@ p.has-large-font-size{
 
 .editor-styles-wrapper .jump-to{
 	p{
-		margin: 0 auto 60px;
+		margin: 0 auto;
 	}
 
 	&.align-wide{
@@ -211,6 +198,7 @@ figcaption{
 	}
 }
 
-.block-outside .col-lg-4{
-	max-width: 100%;
+.block.align{
+	margin-left: 0;
+	margin-right: 0;
 }

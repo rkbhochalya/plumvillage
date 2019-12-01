@@ -1458,28 +1458,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .block .block-inside {
     padding: 20px; }
 
-.jump-to {
+.jump-to, .centered-content .jump-to {
   padding: 30px 1px 80px 0;
   clear: both; }
-  .jump-to p {
+  .jump-to p, .centered-content .jump-to p {
     font-size: 0.875rem;
     color: #9A9A9A;
     border: none;
     margin-bottom: 0; }
-    .jump-to p .label {
+    .jump-to p .label, .centered-content .jump-to p .label {
       font-size: 0.75rem;
       text-transform: uppercase;
       font-weight: 700;
       margin-right: 10px; }
-      .jump-to p .label .icon {
+      .jump-to p .label .icon, .centered-content .jump-to p .label .icon {
         font-size: 0.625rem; }
-    .jump-to p a {
+    .jump-to p a, .centered-content .jump-to p a {
       color: #9A9A9A;
       -webkit-box-shadow: none;
       box-shadow: none; }
-      .jump-to p a:hover {
+      .jump-to p a:hover, .centered-content .jump-to p a:hover {
         color: #000; }
-    .jump-to p a.active {
+    .jump-to p a.active, .centered-content .jump-to p a.active {
       color: #000;
       font-weight: 400; }
 
@@ -1689,6 +1689,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .block-audio .block-inside {
   background: #FEFBF3;
   padding-bottom: 1px; }
+
+.block-audio + .block-audio {
+  padding-top: 0;
+  margin-top: -30px; }
 
 .audio-player {
   margin-bottom: 15px; }
@@ -2313,17 +2317,6 @@ pre.wp-block-verse, .wp-block-verse pre {
   max-width: 40%;
   margin-right: -100px;
   clear: right; }
-  .block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit .block-outside {
-    margin-left: 0;
-    margin-right: 0; }
-    .block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit .block-outside .col-lg-5, .block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit .block-outside .col-lg-4 {
-      max-width: 100%;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%; }
-    .block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit .block-outside .alignright {
-      margin: 0;
-      padding: 0; }
 
 a {
   text-decoration: none; }
@@ -2359,7 +2352,7 @@ p.has-large-font-size {
   color: #9A9A9A; }
 
 .editor-styles-wrapper .jump-to p {
-  margin: 0 auto 60px; }
+  margin: 0 auto; }
 
 .editor-styles-wrapper .jump-to.align-wide hr {
   margin-left: 0; }
@@ -2456,7 +2449,8 @@ figcaption {
 .gallery-image figcaption {
   display: none; }
 
-.block-outside .col-lg-4 {
-  max-width: 100%; }
+.block.align {
+  margin-left: 0;
+  margin-right: 0; }
 
 /*# sourceMappingURL=editor-gutenberg-style.css.map */
