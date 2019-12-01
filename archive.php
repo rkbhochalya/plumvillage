@@ -30,10 +30,9 @@ get_header();
 
 				<?php 
 					$term = get_queried_object();
-					$page = get_page_by_path( $term->slug );
 										
-					$title = ($page ? get_the_title($page) : single_term_title( '', false ));
-					$content = ($page ? $page->post_content : get_the_archive_description());
+					$title = single_term_title( '', false );
+					$content = get_the_archive_description();
 				?>
 
 			<header class="entry-header">
