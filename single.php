@@ -31,16 +31,14 @@ get_header();
 							get_template_part( 'template-parts/content', get_post_type() );
 							the_post_navigation();
 						?>
+						<?php if ( comments_open() || get_comments_number() ) : ?>
+							<div id="comments" class="comments-section">
+								<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
+								<?php comments_template(); ?>
+							</div>
+						<?php endif; ?>		
 				</div>
 			</div>
-			<?php if ( comments_open() || get_comments_number() ) : ?>
-				<div class="row">
-					<div class="col-md-6 offset-md-3">
-						<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
-						<?php comments_template(); ?>									
-					</div>
-				</div>
-			<?php endif; ?>
 		<?php endwhile; ?>
 	</div><!-- #primary -->
 

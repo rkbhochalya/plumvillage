@@ -537,6 +537,9 @@
 // Posts
 
 .posts-navigation, .post-navigation{
+	@include clearfix();
+	margin-top: 15px;
+
 	.nav-previous{
 		float: left;
 	}

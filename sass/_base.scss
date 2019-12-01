@@ -1547,6 +1547,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 
 .comments-section{
 	margin-top: 30px;
+	clear: both;
 }
 
 #comments #thrive-comments{
@@ -1582,12 +1583,21 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 
 	.tcm-comment-additional-fields{
 		margin-top: 15px;
+		text-align: left;
 
 		.tcm-guest > p:first-child{
 			display: none;
 		}
 		#tcm-author-url{
 			display: none;
+		}
+		@include media-breakpoint-down(md) {
+			.tcm-comment-as{
+				text-align: left;
+			}
+			.tcm-comment-as-label, .tcm-comment-as-label p, .tcm-logout-label{
+				display: inline;
+			}
 		}
 		.tcm-comment-as-label p{
 			margin-bottom: 0!important;
@@ -1673,9 +1683,12 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 				font-weight: 300;
 				font-style: italic;
 			}
+			.tcm-dropdown-content{
+				left: unset;
+				right: 0;
+			}
 		}
 	}
-
 
 	.tcm-comments-create .tcm-create-post-container, .tcm-create-comment-fields .tcm-create-post-container, .tcm-lazy-comments .tcm-create-post-container{
 		margin-top: 0;
