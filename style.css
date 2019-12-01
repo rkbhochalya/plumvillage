@@ -11941,6 +11941,8 @@ body #youmax, body .youmax {
     .wp-block-cover.is-style-with-background .wp-block-cover__inner-container h2 {
       text-align: left;
       padding: 0; }
+    .wp-block-cover.is-style-with-background .wp-block-cover__inner-container h2, .wp-block-cover.is-style-with-background .wp-block-cover__inner-container h4, .wp-block-cover.is-style-with-background .wp-block-cover__inner-container p {
+      color: #000; }
 
 .entry-content .wp-block-cover.alignfull:first-child {
   margin-top: -163px;
