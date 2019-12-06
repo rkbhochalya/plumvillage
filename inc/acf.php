@@ -325,6 +325,20 @@ function register_acf_block_types() {
         )
     ));    
 
+    // register custom post list
+    acf_register_block_type(array(
+        'name'              => 'post_list_tnh',
+        'title'             => __('Latest TNH Posts'),
+        'description'       => __('A list of latest TNH posts'),
+        'render_template'   => 'template-parts/blocks/post_list_tnh.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'list-view',
+        'keywords'          => array( 'post', 'list' ),
+        'supports'          => array(
+            'align'     => false
+        )
+    ));    
+
     // register events list
     acf_register_block_type(array(
         'name'              => 'event_retreat_list',

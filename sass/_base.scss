@@ -1698,7 +1698,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 		right: 0;
 		display: none;
 	}
-	.tcm-comment-content:hover #tcm-moderate-front{
+	.tcm-comment-content:hover #tcm-moderate-front, .tcm-comment-content.tcm-comment-awaiting-moderation #tcm-moderate-front{
 		display: block;
 	}
 	textarea, input{
