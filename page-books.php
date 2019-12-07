@@ -79,12 +79,12 @@ get_header();
 								echo get_filter_menu($posts, 'topics'); 
 							?>
 						</div>
-			<div class="row post-overview">
-				<?php while ( $posts->have_posts() ) { ?>
-					<?php $posts->the_post(); ?>
-					<?php get_template_part( 'template-parts/index', 'book' ); ?>
-				<?php } ?>
-			</div>
+						<div class="row post-overview">
+							<?php while ( $posts->have_posts() ) { ?>
+								<?php $posts->the_post(); ?>
+								<?php get_template_part( 'template-parts/index', 'book' ); ?>
+							<?php } ?>
+						</div>
 		<?php } 
 
 		// Restore original Post Data

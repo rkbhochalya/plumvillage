@@ -42,7 +42,7 @@ get_header();
 							<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
 							<?php comments_template(); ?>
 						</div>
-						<?php endif; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		<?php endwhile; ?>
