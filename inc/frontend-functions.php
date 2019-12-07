@@ -18,7 +18,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     $uri_segments = explode('/', $menu_item->url);
 
     $i = 2;
-    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = $press =false;
+    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = $press = $books = false;
     foreach ($uri_segments as $slug) {
       if($slug == 'about') : 
         $about = true;
@@ -38,6 +38,9 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       endif;
       if($slug == 'news') : 
         $news = true;
+      endif;
+      if($slug == 'books') : 
+        $books = true;
       endif;
       if($slug == 'key-practice-texts') : 
         $practice = true;
@@ -112,6 +115,11 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     }
 
     if( in_category( 'chanting' ) && $chanting && (get_post_type() == 'post')){
+      $menu_item->classes[] = 'current-menu-item';
+      $menu_item->current = true;
+    }
+
+    if(is_post_type_archive('pv_book') && $books){
       $menu_item->classes[] = 'current-menu-item';
       $menu_item->current = true;
     }
