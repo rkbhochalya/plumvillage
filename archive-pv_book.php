@@ -31,6 +31,15 @@ get_header();
 				<div class="col-md-9">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
+							<?php if ( have_posts() ) : ?>
+								<header class="entry-header">
+									<h1 class="entry-title"><?php echo post_type_archive_title( '', false ); ?></h1>
+								</header><!-- .entry-header -->
+
+								<div class="entry-content">
+									<div class="introduction"><?php the_archive_description(); ?></div>
+								</div><!-- .entry-content -->
+							<?php endif; ?>
 						</main><!-- #main -->
 					</div><!-- #primary -->
 					<?php if ( comments_open() || get_comments_number() ) : ?>
