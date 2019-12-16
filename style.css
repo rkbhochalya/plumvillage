@@ -8885,7 +8885,9 @@ div.wpcf7 .ajax-loader {
       color: #000;
       text-decoration: underline;
       font-style: italic;
-      font-size: 1rem; }
+      font-size: 1rem;
+      padding-left: 10px;
+      padding-right: 0; }
     .select-inline .select2-container .select2-selection--single .select2-selection__arrow {
       font-size: 8px;
       position: absolute;
