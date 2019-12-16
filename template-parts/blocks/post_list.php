@@ -38,7 +38,7 @@
 				));			
 			}
 
-
+			$sticky_post_ids = [];
 			if(get_field('include_tnh_news')) :
 
 				$tnh_ids = get_posts( array(
@@ -51,6 +51,7 @@
 					'exclude'								 => $sticky,
 					'suppress_filters' 			 => 0,
 				));
+				$post_ids = array_merge( $tnh_ids, $post_ids);
 
 				if($sticky){
 					$sticky_tnh_ids = get_posts( array(
@@ -62,10 +63,8 @@
 						'post__in'							 => $sticky,
 						'suppress_filters' 			 => 0,
 					));
-				}
-				
-				$post_ids = array_merge( $tnh_ids, $post_ids);
-				$sticky_post_ids = $sticky ? array_merge( $sticky_tnh_ids, $sticky_post_ids) : [];
+					$sticky_post_ids = array_merge( $sticky_tnh_ids, $sticky_post_ids);
+				}				
 
 			endif;
 
