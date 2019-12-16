@@ -24,16 +24,20 @@
 				'suppress_filters' 			 => 0,
 			));
 
-			$sticky_post_ids = get_posts( array(
-				'fields'								 => 'ids',
-				'post_type'              => 'post',
-				'post_status'            => array( 'publish' ),
-				'order'                  => 'DESC',
-				'orderby'                => 'date',
-				'category__in'					 => $category,
-				'post__in'							 => $sticky,
-				'suppress_filters' 			 => 0,
-			));
+
+			if($sticky){
+				$sticky_post_ids = get_posts( array(
+					'fields'								 => 'ids',
+					'post_type'              => 'post',
+					'post_status'            => array( 'publish' ),
+					'order'                  => 'DESC',
+					'orderby'                => 'date',
+					'category__in'					 => $category,
+					'post__in'							 => $sticky,
+					'suppress_filters' 			 => 0,
+				));			
+			}
+
 
 			if(get_field('include_tnh_news')) :
 
@@ -48,18 +52,20 @@
 					'suppress_filters' 			 => 0,
 				));
 
-				$sticky_tnh_ids = get_posts( array(
-					'fields'								 => 'ids',
-					'post_type'              => 'tnh_update',
-					'post_status'            => array( 'publish' ),
-					'order'                  => 'DESC',
-					'orderby'                => 'date',
-					'post__in'							 => $sticky,
-					'suppress_filters' 			 => 0,
-				));
+				if($sticky){
+					$sticky_tnh_ids = get_posts( array(
+						'fields'								 => 'ids',
+						'post_type'              => 'tnh_update',
+						'post_status'            => array( 'publish' ),
+						'order'                  => 'DESC',
+						'orderby'                => 'date',
+						'post__in'							 => $sticky,
+						'suppress_filters' 			 => 0,
+					));
+				}
 				
 				$post_ids = array_merge( $tnh_ids, $post_ids);
-				$sticky_post_ids = array_merge( $sticky_tnh_ids, $sticky_post_ids);
+				$sticky_post_ids = $sticky ? array_merge( $sticky_tnh_ids, $sticky_post_ids) : [];
 
 			endif;
 
@@ -110,6 +116,7 @@
 			<?php if($style == 'list') : ?><ul class="small post-list"><?php else : ?><div class="post-list"><?php endif; ?>
 				<?php while ( $sticky_posts->have_posts() ) { ?>
 					<?php $sticky_posts->the_post(); ?>
+					<p>sticky</p>
 					<?php get_template_part( 'template-parts/'.$style, get_post_type() ); ?>
 				<?php } ?>
 				<?php while ( $posts->have_posts() ) { ?>
