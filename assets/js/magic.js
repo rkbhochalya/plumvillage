@@ -1,5 +1,10 @@
 (function($){
 
+	// center the logo if within single.php there is no menu, temp hack. Should be done without js
+	if($('.center-logo').length){
+		$('body').addClass('center-logo');
+	}
+
 	// mega menu toggle
   $('.menu-toggle').click(function(e){
     $('body').toggleClass('menu-open');

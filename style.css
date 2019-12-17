@@ -10158,6 +10158,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .site-branding .site-title {
   margin: 0; }
 
+.center-logo .site-branding {
+  text-align: center; }
+
 #content {
   margin-top: 40px; }
   @media (min-width: 768px) {
