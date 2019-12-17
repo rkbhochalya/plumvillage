@@ -2288,6 +2288,19 @@ pre.wp-block-verse, .wp-block-verse pre {
   top: -3px;
   font-weight: 400; }
 
+.wp-block-button .wp-block-button__link {
+  background: #8B572A;
+  border-radius: .3rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  padding: 0.5rem 1.1rem 0.4em;
+  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+  .wp-block-button .wp-block-button__link:hover {
+    text-decoration: none;
+    background: #774b24; }
+
 .important-update, .entry-content .alignfull.important-update {
   background: #FAF1EB;
   padding: 0; }
@@ -2372,6 +2385,9 @@ figcaption {
   color: #555d66;
   text-align: left;
   font-size: 13px; }
+
+.wp-block-gallery figcaption {
+  margin-bottom: 0; }
 
 .editor-styles-wrapper .audio-content p {
   font-size: 0.85em; }

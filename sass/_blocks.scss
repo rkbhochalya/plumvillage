@@ -145,6 +145,8 @@
 	}
 }
 
+
+
 .gallery-embed{
   cursor: pointer;
 
@@ -1062,6 +1064,26 @@ pre.wp-block-verse, .wp-block-verse pre{
 		font-weight: 400;
 	}
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Button Block
+
+.wp-block-button{
+	.wp-block-button__link{
+		background: $earth;
+		border-radius: .3rem;
+		font-weight: 700;
+		@include font-size(14);
+		padding: 0.5rem 1.1rem 0.4em;
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
+
+		&:hover{
+			text-decoration: none;
+			background: darken($earth, 5);
+		}
+	}
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Important Update
