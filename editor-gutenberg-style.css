@@ -1548,6 +1548,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       box-shadow: inset 0 -0.4em #8B572A;
       text-decoration: none; }
 
+.wp-block-gallery li:before {
+  display: none; }
+
 .gallery-embed {
   cursor: pointer; }
   .gallery-embed .gallery-embed-inside {

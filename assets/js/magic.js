@@ -100,6 +100,30 @@
 		type: 'image'
 	})
 
+	if ($('.wp-block-gallery')) {
+
+    $('.blocks-gallery-item').click(function() {
+
+      var galleryImages = $(this).parent().find('a[href*="uploads"]');
+      var gallery = [];
+
+      galleryImages.each(function( index, galleryItem ) {
+
+        var caption = $(this).parent().find('figcaption').length ? $(this).parent().find('figcaption').text() : $(this).find('img').attr('alt');
+
+        gallery.push({
+          src : galleryItem.href,
+          opts : {
+            caption: caption
+          }
+        })
+      });
+
+      $.fancybox.open( gallery, { loop: false }, $(this).index() );
+
+      return false;
+    });
+  }
 
 	$('.play').click(function(e){
 		var el = $(this);

@@ -137,6 +137,14 @@
 	}
 }
 
+.wp-block-gallery{
+	li{
+		&:before{
+			display: none;
+		}
+	}
+}
+
 .gallery-embed{
   cursor: pointer;
 
