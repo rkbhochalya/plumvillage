@@ -491,3 +491,80 @@ if(is_object($obj)) $obj = (array) $obj;
     else $new = $obj;
     return $new;       
 }
+
+
+// Add schema data to event pages
+
+function add_schema_data_to_events(){
+  global $post;
+  if(get_post_type($post) == 'pv_event') {
+    $schema = array(
+      // Tell search engines that this is structured data
+      '@context'  => "http://schema.org",
+      // Tell search engines the content type it is looking at 
+      '@type'     => 'Event',
+      // Provide search engines with the site name and address 
+      'name'      => get_the_title($post),
+      'url'       => get_the_permalink($post),
+      // Provide the company address
+    );
+
+    if (has_post_thumbnail($post)) {
+      $schema['image'] = get_the_post_thumbnail_url($post);
+    }
+
+    $startDate = get_field('start_date', get_the_ID($post), false);
+    if ($startDate){
+      $startDate = new DateTime($startDate);
+      $schema['startDate'] = $startDate->format('Y-m-d');
+    }
+
+    $endDate = get_field('end_date', get_the_ID($post), false);
+    if ($endDate){
+      $endDate = new DateTime($endDate);
+      $schema['endDate'] = $endDate->format('Y-m-d');
+    }
+
+    $terms = wp_get_post_terms(get_the_ID($post), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC'));
+    if(!empty($terms)){
+      foreach($terms as $term) {
+        if($term->parent == 0){ 
+
+          $schema['location'] = array();
+
+          $place = array(
+            '@type'   => "Place",
+            'name'    => $term->name,
+            'address' => array()
+          );
+
+          $address = array(
+            "@type"   => "PostalAddress"
+          );
+
+          if(get_field('address_street', $term)){
+            $address["streetAddress"] = get_field('address_street', $term) . get_field('address_street_2', $term);
+          }
+          if(get_field('address_postcode', $term)){
+            $address["postalCode"] = get_field('address_postcode', $term);
+          }
+          if(get_field('address_city', $term)){
+            $address["addressLocality"] = get_field('address_city', $term);
+          }
+          if(get_field('address_state', $term)){
+            $address["addressRegion"] = get_field('address_state', $term);
+          }
+          if(get_field('address_country', $term)){
+            $address["addressCountry"] = get_field('address_country', $term);
+          }
+
+          array_push($place['address'], $address);
+          array_push($schema['location'], $place);
+        }
+      }
+    }
+
+    echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+  }
+}
+add_action('wp_head', 'add_schema_data_to_events');
