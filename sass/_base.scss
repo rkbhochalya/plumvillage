@@ -244,6 +244,8 @@ big {
 	font-size: 125%;
 }
 
+
+
 .has-sun-background-color{
 	background: $sun!important;
 }
@@ -305,6 +307,10 @@ big {
 }
 .has-cloud-color{
 	color: $cloud!important;
+}
+
+.has-normal-weight{
+	font-weight: 300;
 }
 
 .entry-content blockquote, .page-template-default .entry-content blockquote, .single .entry-content blockquote{
@@ -2312,15 +2318,6 @@ body #youmax, body .youmax{
 		}
 	}
 }
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Colors
-
-.has-fresh-tree-background-color{
-	background: $freshtree;
-}
-
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -25,7 +25,7 @@
 						<span class="entry-date">
 							<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
 							<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
-							<?php echo $startDate->format('M j') . ' <span class="normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
+							<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
 						</span>
 					</div><!-- .entry-meta -->
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>

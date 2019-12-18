@@ -9320,6 +9320,9 @@ big {
 .has-cloud-color {
   color: #fff !important; }
 
+.has-normal-weight {
+  font-weight: 300; }
+
 .entry-content blockquote, .page-template-default .entry-content blockquote, .single .entry-content blockquote {
   margin: 0;
   padding: 0 0 20px;
@@ -10885,9 +10888,6 @@ body #youmax, body .youmax {
     border: none; }
     .single-pv_event form.left ul li:before {
       display: none; }
-
-.has-fresh-tree-background-color {
-  background: #F5F5EF; }
 
 #cookie-notice {
   background: #FFD22A;
