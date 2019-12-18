@@ -10772,15 +10772,13 @@ body #youmax, body .youmax {
 
 .event-list {
   margin-bottom: 1.5rem; }
-  .event-list .index-item {
-    padding-right: 0; }
-    .event-list .index-item .load-more-container {
-      padding-top: 0; }
-    .event-list .index-item h2.entry-title {
-      margin-bottom: 0; }
-    .event-list .index-item h4 {
-      margin-bottom: 5px;
-      padding-bottom: 0; }
+  .event-list .index-item .load-more-container {
+    padding-top: 0; }
+  .event-list .index-item h2.entry-title {
+    margin-bottom: 0; }
+  .event-list .index-item h4 {
+    margin-bottom: 5px;
+    padding-bottom: 0; }
   .event-list.alignright .block-inside {
     background: #FAF1EB;
     padding: 5px 30px; }
@@ -10790,9 +10788,6 @@ body #youmax, body .youmax {
   z-index: 1;
   position: relative;
   border-radius: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 110px; }
   .index-event.index-item .index-thumbnail img {
     -o-object-fit: cover;
@@ -10942,6 +10937,12 @@ body #youmax, body .youmax {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
+.post-overview .col-md-6 {
+  max-width: 49.9%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 49.9%;
+  flex: 0 0 49.9%; }
+
 .in-betweener {
   margin-top: 1.5em;
   right: 15px; }

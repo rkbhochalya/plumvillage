@@ -246,7 +246,7 @@
       	if(hashFilter != '*'){
       		return $(this).is(hashFilter) && $(this).index(hashFilter) < $maxItems;	
       	} else {
-      		return $(this).index();
+      		return $(this);
       	}
     	}
     });
