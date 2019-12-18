@@ -10937,11 +10937,12 @@ body #youmax, body .youmax {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
-.post-overview .col-md-6 {
-  max-width: 49.9%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 49.9%;
-  flex: 0 0 49.9%; }
+@media (min-width: 768px) {
+  .post-overview .col-md-6 {
+    max-width: 49.9%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 49%;
+    flex: 0 0 49%; } }
 
 .in-betweener {
   margin-top: 1.5em;

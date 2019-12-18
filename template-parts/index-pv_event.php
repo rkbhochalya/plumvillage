@@ -47,7 +47,7 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<p><?php echo get_the_limited_excerpt(get_the_ID(), 50); ?></p>
+				<p><?php echo get_the_limited_excerpt(get_the_ID(), 35); ?></p>
 			</div><!-- .entry-content -->			
 
 		</div>

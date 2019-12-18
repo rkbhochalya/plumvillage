@@ -238,7 +238,7 @@
 
     // filter isotope
     $maxItems = $('.filter-list').data('filterMax') ? $('.filter-list').data('filterMax') : 99999;
-    console.log($('.filter-list').data('filterMax'));
+
     $grid.isotope({
 	  	layoutMode: $layoutmode,
 	  	itemSelector: 'article, .in-betweener',

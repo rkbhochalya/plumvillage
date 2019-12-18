@@ -2,9 +2,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Letters
 
-.post-overview .col-md-6{
-	max-width: 49.9%;
-	flex: 0 0 49.9%;
+@include media-breakpoint-up(md) {
+	.post-overview .col-md-6{
+		max-width: 49.9%;
+		flex: 0 0 49%;
+	}
 }
 
 .in-betweener{
