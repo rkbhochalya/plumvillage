@@ -88,7 +88,7 @@
 		<?php endif; ?>
 
 		<div class="event-list <?php if(isset($block['className'])){ echo ' ' . $block['className']; } ?>">
-			<div class="row post-overview">
+			<div class="row post-overview" data-isotope-layoutmode="masonry">
 				<?php while ( $posts->have_posts() ) { ?>
 					<?php $posts->the_post(); ?>
 						<article id="post-<?php the_ID(); ?>" <?php post_class('index-event index-item col-md-'.(12 / get_field('columns'))); ?>>					

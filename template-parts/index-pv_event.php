@@ -8,10 +8,10 @@
  */
 
 ?>
-	<?php if(get_the_limited_excerpt(get_the_ID(), 50)) : ?>
-		<a href="<?php the_permalink(); ?>">
-	<?php elseif(get_field('external_event_link', get_the_ID(), false)) : ?>
+	<?php if(get_field('external_event_link', get_the_ID(), false)) : ?>
 		<a class="external-link" href="<?php the_field('external_event_link', get_the_ID(), false); ?>" target="_blank">
+	<?php elseif(get_the_limited_excerpt(get_the_ID(), 50)) : ?>
+		<a href="<?php the_permalink(); ?>">
 	<?php endif; ?>
 		<?php if(has_post_thumbnail()) : ?>
 		<div class="index-thumbnail"><?php the_post_thumbnail('landscape'); ?></div>

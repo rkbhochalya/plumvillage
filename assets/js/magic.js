@@ -264,8 +264,13 @@
 
 			for (var i = 0; i < $selectedFilters.length; i++) {
 				if($selectedFilters[i] != ''){
-		      $filters.find('[data-filter=".' + $selectedFilters[i] + '"]').parents('.filter-list').find('.selected').removeClass('selected');
-		      $filters.find('[data-filter=".' + $selectedFilters[i] + '"]').addClass('selected');
+		      if($selectedFilters[i] == '*'){
+		      	$filters.find('.selected').removeClass('selected');
+		      	$filters.find('.reset-filter').addClass('selected');
+		      } else {
+			      $filters.find('[data-filter=".' + $selectedFilters[i] + '"]').parents('.filter-list').find('.selected').removeClass('selected');
+			      $filters.find('[data-filter=".' + $selectedFilters[i] + '"]').addClass('selected');
+		      }
 				}
 			}   
     }
