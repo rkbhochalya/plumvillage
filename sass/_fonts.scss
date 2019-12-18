@@ -1,6 +1,9 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "assets/fonts" !default;
 
+$icon-location: "\e91d";
+$icon-arrow-left: "\e91b";
+$icon-arrow-right: "\e91c";
 $icon-circle-caret-down: "\e91a";
 $icon-external-link: "\e915";
 $icon-download: "\e911";
@@ -22,8 +25,6 @@ $icon-instagram: "\e905";
 $icon-facebook: "\e902";
 $icon-twitter: "\e903";
 $icon-youtube: "\e904";
-$icon-arrow-left: "\e91b";
-$icon-arrow-right: "\e91c";
 $icon-reply: "\e917";
 $icon-caret-down: "\e916";
 $icon-search: "\e918";
@@ -193,6 +194,11 @@ $icon-hamburger: "\e900";
 .icon-hamburger {
   &:before {
     content: $icon-hamburger; 
+  }
+}
+.icon-location {
+  &:before {
+    content: $icon-location; 
   }
 }
 

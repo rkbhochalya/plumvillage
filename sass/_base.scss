@@ -244,12 +244,75 @@ big {
 	font-size: 125%;
 }
 
+.has-sun-background-color{
+	background: $sun!important;
+}
+.has-earth-background-color{
+	background: $earth!important;
+}
+.has-ink-background-color{
+	background: $ink!important;
+}
+.has-grey-background-color{
+	background: $grey!important;
+}
+.has-medium-grey-background-color{
+	background: $mediumink!important;
+}
+.has-fresh-grey-background-color{
+	background: $freshink!important;
+}
+.has-fresh-sun-background-color{
+	background: $freshsun!important;
+}
+.has-fresh-earth-background-color{
+	background: $freshearth!important;
+}
+.has-fresh-tree-background-color{
+	background: $freshtree!important;
+}
+.has-cloud-background-color{
+	background: $cloud!important;
+}
+
+
+.has-sun-color{
+	color: $sun!important;
+}
+.has-earth-color{
+	color: $earth!important;
+}
+.has-ink-color{
+	color: $ink!important;
+}
+.has-grey-color{
+	color: $grey!important;
+}
+.has-medium-grey-color{
+	color: $mediumink!important;
+}
+.has-fresh-grey-color{
+	color: $freshink!important;
+}
+.has-fresh-sun-color{
+	color: $freshsun!important;
+}
+.has-fresh-earth-color{
+	color: $freshearth!important;
+}
+.has-fresh-tree-color{
+	color: $freshtree!important;
+}
+.has-cloud-color{
+	color: $cloud!important;
+}
+
 .entry-content blockquote, .page-template-default .entry-content blockquote, .single .entry-content blockquote{
 	margin: 0;
 	padding:0 0 20px;
 	quotes: "“" "”";
 	
-	:first-child:before {
+	p:first-child:before {
 	    content: open-quote;
 	}
 	p:last-child:after {
@@ -2097,6 +2160,7 @@ body #youmax, body .youmax{
 // Events 
 
 .event-list{
+	margin-bottom: 1.5rem;
 
 	.index-item{
 		padding-right: 0;
@@ -2113,8 +2177,6 @@ body #youmax, body .youmax{
 		}		
 	}
 
-	@include margin-side-block;	
-
 	&.alignright .block-inside{
 		background: $freshearth;
 		padding: 5px 30px;
@@ -2122,15 +2184,49 @@ body #youmax, body .youmax{
 }
 
 .index-event.index-item{
+	.index-thumbnail{
+		overflow: hidden;
+		z-index: 1;
+		position: relative;
+		border-radius: 4px;
+		display: flex;
+		height: 110px;
+
+		img{
+			object-fit: cover;
+			object-position: center 50%;
+			height: 110px;
+			width: 100%;
+			transition: all .4s cubic-bezier(.15,.53,.35,1);
+		}
+	}
+	.index-content{
+		padding: 20px 20px 5px;
+		position: relative;
+		background: $freshearth;
+		border-radius: 4px;
+		margin-top: -4px;
+		z-index: 2;
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
+
+		.icon-external-link{
+			float: right;
+			color: #fff;
+			transition: all .4s cubic-bezier(.15,.53,.35,1);
+		}
+	}
 	h2{
 		@include font-size(28);
+		margin: 0;
+		padding: 0;
+		color: $earth;
 	}
 
 	.entry-meta{
-		padding: 12px 0 10px 33px;
-		margin-bottom: 10px;
+		margin: 0;
+		padding: 0;
 		position: relative;
-		border-bottom: 1px $freshink solid;
+		background: none;
 
 		.entry-date{
 			font-weight: bold;
@@ -2138,13 +2234,26 @@ body #youmax, body .youmax{
 			display: inline-block;
 			margin-right: 3px;
 		}
+	}
+	p.location{
+		margin: 3px 0 7px;
+		@include font-size(12);
+		color: rgba($earth, 0.7);
+	}
+	a{
+		text-decoration: none;
 
-		&:before{
-	    content: url(assets/images/calendar.svg);
-	    position: absolute;
-	    top: 14px;
-	    left: 0;
-	  }
+		&:hover{
+			.index-thumbnail img{
+				transform: scale(1.02);
+			}
+			.index-content{
+				background: lighten($freshearth, 3);
+			}
+			.icon-external-link{
+				color: rgba($earth, 0.4);
+			}			
+		}
 	}
 }
 

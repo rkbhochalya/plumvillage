@@ -9,36 +9,6 @@
 
 ?>
 
-<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
-<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
-<?php $terms = wp_get_post_terms(get_the_ID(), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC')); ?>
-
-
-<!-- JSON-LD markup for search engines -->
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Event",
-  "name" : "<?php the_title(); ?>",
-  "startDate" : "<?php echo $startDate->format('Y-m-d'); ?>",
-  "endDate" : "<?php echo $endDate->format('Y-m-d'); ?>",
-	<?php if(has_post_thumbnail()) : ?>
-		"image" : <?php echo get_the_post_thumbnail_url(); ?>,
-	<?php endif; ?>
-	<?php if(!empty($terms)) : ?>
-	  "location" : {
-	    "@type" : "Place",
-
-			<?php 
-				foreach($terms as $term) {
-					if($term->parent == 0){ ?>
-						"name" : "<?php echo $term->name; ?>"
-					<?php }
-				} 
-		endif; ?>
-  }
-}
-</script>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header"> 
 		<?php
@@ -52,10 +22,13 @@
 			<div class="wp-block-image"><figure class="alignright"><?php the_post_thumbnail('landscape'); ?></figure></div>
 		<?php endif; ?>
 
+		<?php $terms = wp_get_post_terms(get_the_ID(), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC')); ?>
 		<?php if(!empty($terms) || get_field('start_date', get_the_ID())) : ?>
 			<div class="entry-meta">
 					<?php if(get_field('start_date', get_the_ID())) : ?>
 						<b class="entry-date">
+							<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
+							<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
 							<?php echo $startDate->format('M j') . ' - ' . $endDate->format('M j, Y'); ?> 
 						</b>
 					<?php endif; ?>
@@ -64,7 +37,7 @@
 								echo __('at', 'plumvillage') . ' ';
 								foreach($terms as $term) {
 									if($term->parent == 0){
-										echo $term->name; 
+										echo $term->name; //do something here
 									}
 								} 
 							} 

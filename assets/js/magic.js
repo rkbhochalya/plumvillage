@@ -186,7 +186,7 @@
 	})
 
 	////////////////////////////////////////////////////////////////////////////////
-	// Filter function for letters, updates, books
+	// Filter function for letters, updates, books, events
 
   var $grid = $('.post-overview');
 	var $layoutmode = ((typeof $('.post-overview').data('isotopeLayoutmode') !== 'undefined') ?  $('.post-overview').data('isotopeLayoutmode') : 'fitRows');
@@ -233,14 +233,22 @@
   function onHashchange() {
     var hashFilter = getHashFilter();
     if ( !hashFilter  ) {
-      hashFilter = '*';
+      hashFilter = $('.filter-list .selected').data('filter');
     }
 
     // filter isotope
+    $maxItems = $('.filter-list').data('filterMax') ? $('.filter-list').data('filterMax') : 99999;
+    console.log($('.filter-list').data('filterMax'));
     $grid.isotope({
 	  	layoutMode: $layoutmode,
 	  	itemSelector: 'article, .in-betweener',
-      filter: hashFilter
+      filter: function() {
+      	if(hashFilter != '*'){
+      		return $(this).is(hashFilter) && $(this).index(hashFilter) < $maxItems;	
+      	} else {
+      		return $(this).index();
+      	}
+    	}
     });
 
     if(!isIsotopeInit){
@@ -265,7 +273,7 @@
 
   $(window).on( 'hashchange', onHashchange );
 
-  // // trigger event handler to init Isotope
+  // trigger event handler to init Isotope
   onHashchange();
 
 
