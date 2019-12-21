@@ -525,6 +525,8 @@ function add_schema_data_to_events(){
       $schema['endDate'] = $endDate->format('Y-m-d');
     }
 
+    $schema['description'] = get_the_limited_excerpt(get_the_ID(), 35);
+
     $terms = wp_get_post_terms(get_the_ID($post), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC'));
     if(!empty($terms)){
       foreach($terms as $term) {
