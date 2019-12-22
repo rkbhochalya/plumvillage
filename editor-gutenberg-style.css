@@ -1462,7 +1462,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     padding: 20px; }
 
 .jump-to, .centered-content .jump-to {
-  padding: 30px 1px 60px 0;
+  padding: 0 1px 60px 0;
+  margin-top: 30px;
   clear: both; }
   .jump-to p, .centered-content .jump-to p {
     font-size: 1rem;
