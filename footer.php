@@ -319,20 +319,26 @@
 				<div class="col-md-4">
 					<h6>— <?php _e( 'Follow Plum Village', 'plumvillage' ); ?></h6>
 					<?php include( locate_template( 'template-parts/social-links.php', false, false ) ); ?>
-					<h6>— <?php _e( 'Initiatives', 'plumvillage' ); ?></h6>
-					<?php
-						wp_nav_menu( array(
-								'theme_location' => 'initiatives-menu',
-						    'menu' => 'Initiatives'
-						) );
-					?>
-					<h6>— <?php _e( 'Publishing', 'plumvillage' ); ?></h6>
-					<?php
-						wp_nav_menu( array(
-								'theme_location' => 'publishing-menu',
-						    'menu' => 'Publishing'
-						) );
-					?>
+					<div class="row">
+						<div class="col-6 col-md-12">
+							<h6>— <?php _e( 'Initiatives', 'plumvillage' ); ?></h6>
+							<?php
+								wp_nav_menu( array(
+										'theme_location' => 'initiatives-menu',
+								    'menu' => 'Initiatives'
+								) );
+							?>							
+						</div>
+						<div class="col-6 col-md-12">
+							<h6>— <?php _e( 'Publishing', 'plumvillage' ); ?></h6>
+							<?php
+								wp_nav_menu( array(
+										'theme_location' => 'publishing-menu',
+								    'menu' => 'Publishing'
+								) );
+							?>							
+						</div>
+					</div>
 				</div>
 			</div>						
 			<?php

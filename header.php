@@ -59,7 +59,10 @@
 			) );
 		?>
 </div>
-
+<div class="search-overlay">
+	<a class="toggle-search icon-close" href="#"></a>
+	<div class="search-container"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
+</div>
 <div id="page" class="site">			
 	<button class="menu-toggle unbutton float-left" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-hamburger"></span></button>
 
@@ -73,6 +76,7 @@
 					'menu_class'		 => 'mega-menu-top menu'
 				) );
 				?>
+				<a class="icon-search toggle-search" href="#"></a>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'secondary-menu',

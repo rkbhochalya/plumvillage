@@ -176,7 +176,10 @@ h4, h5{
 }
 h6{
 	color: $mediumink;
-	@include font-size(14);
+	@include font-size(16);
+	@include media-breakpoint-up(md) {
+		@include font-size(14);	
+	}
 	margin-bottom: 20px;
 }
 
@@ -919,7 +922,10 @@ figure.wp-block-image{
 figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	text-align: left;
 	color: $grey;
-	@include font-size(13);
+	@include font-size(15);
+	@include media-breakpoint-up(md) {
+		@include font-size(13);
+	}
 	line-height: 160%;
 	margin-top: 10px;
 	margin-bottom: 0;
@@ -1013,13 +1019,17 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	padding: 0;
 
 	li{
-
+		margin-bottom: 3px;
+		margin-left: 0;
 		&:before{
 			display: none;
 		}
 		a{
-			@include font-size(14);
 			color: $ink;
+			@include font-size(16);
+			@include media-breakpoint-up(md) {
+				@include font-size(14);
+			}
 		}
 	}
 }
@@ -1032,6 +1042,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	display: none;
 	@include media-breakpoint-up(md) {
 		display: block;
+	}
+
+	.toggle-search{
+		float: right;
+		@include font-size(16);
+		margin-left: 0;
 	}
 }
 
@@ -1122,7 +1138,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	display: inline-block;
 
 	> a {
-		padding-right: 20px;
+		padding-right: 15px;
 
 		&:after{
 			@include is-icon();
@@ -1457,6 +1473,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		display: inline-block;
 		margin-right: 30px;
 		margin-left: 0;
+		margin-bottom: 5px;
 
 		&:before{
 			display: none;
@@ -1464,7 +1481,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 		a{
 			color: $mediumink;
-			@include font-size(14);
+			@include font-size(16);
+		  @include media-breakpoint-up(md) {
+				@include font-size(14);
+		  }
 
 			&:hover{
 				color: $ink;
@@ -1476,15 +1496,20 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	margin-bottom: 20px;
 }
 .address-name{
-	margin-bottom: 6px;
-	@include font-size(14);
+	margin-bottom: 0;
+	@include font-size(16);
+  @include media-breakpoint-up(md) {
+		margin-bottom: 6px;
+		@include font-size(14);
+	}
 }
 .address-address{
 	color: $grey;
 	line-height: 180%;
-	@include font-size(12);
-  @include media-breakpoint-up(sm) {
+	@include font-size(15);	
+  @include media-breakpoint-up(md) {
 		margin-left: 20px;
+		@include font-size(13);
 	}
 }
 .social{
@@ -2207,7 +2232,7 @@ body #youmax, body .youmax{
 		padding: 20px 20px 5px;
 		position: relative;
 		background: $freshearth;
-		border-radius: 4px;
+		border-radius: 0 0 4px 4px;
 		margin-top: -4px;
 		z-index: 2;
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
@@ -2378,4 +2403,45 @@ body #youmax, body .youmax{
 		background: $sun;
 		color: $freshsun;
 	}
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Search
+
+.search-overlay{
+	z-index: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $freshsun;
+	display: none;
+
+	.toggle-search{
+		position: absolute;
+		top: 25px;
+		right: 30px;
+		text-decoration: none;
+	}
+	.search-container{
+		max-width: 600px;
+		margin: 140px auto;
+	}
+}
+
+.search-open {
+	overflow: hidden;
+
+	.site{
+		transform: translateY(100vh);
+	}
+	.search-overlay{
+		display: block;
+	}
+}
+
+#ajaxsearchlite1 .probox, div.asl_w .probox, div.asl_w{
+	background: transparent;
 }
