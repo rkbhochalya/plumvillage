@@ -183,3 +183,19 @@ function pv_remove_wpml_meta_box() {
 	$screen = get_current_screen();
 	remove_meta_box( 'icl_div_config', $screen->post_type, 'normal' );
 }
+
+/**
+ * Filter Search
+ */
+
+add_filter( 'ep_search_fields', 'pv_ep_search_fields', 10, 2 );
+
+function pv_ep_search_fields( $search_fields, $args ) {
+
+	// var_export($search_fields);
+	// var_export($args);
+
+	// $search_fields[] = 'terms.post_tag.name';
+
+	return $search_fields;
+}

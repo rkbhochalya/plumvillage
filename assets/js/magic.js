@@ -382,7 +382,7 @@
   $('.toggle-search').on('click', function(e){
   	$('body').toggleClass('search-open');
   	if($('body').is('.search-open')){
-  		$('.search-overlay .proinput input[type=search]').focus();
+  		$('.search-overlay .search-field').focus();
   	}
   	e.preventDefault();
   })
