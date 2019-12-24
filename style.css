@@ -10986,39 +10986,46 @@ body #youmax, body .youmax {
     margin: 140px auto;
     padding: 0 15px; }
     .search-overlay .search-container .search-form {
-      position: relative; }
-      .search-overlay .search-container .search-form label {
-        display: block; }
-        .search-overlay .search-container .search-form label .search-field {
-          width: 100%;
-          background: none;
-          font-size: 1.875rem;
-          border-bottom: 1px solid #000; }
-          .search-overlay .search-container .search-form label .search-field:active, .search-overlay .search-container .search-form label .search-field:focus {
-            -webkit-box-shadow: none;
-            box-shadow: none; }
-      .search-overlay .search-container .search-form .search-submit {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: transparent;
+      max-width: 100%; }
+      .search-overlay .search-container .search-form label .search-field {
+        max-width: 100%;
+        font-size: 1.875rem; }
+
+.search-form {
+  position: relative;
+  max-width: 500px; }
+  .search-form label {
+    display: block; }
+    .search-form label .search-field {
+      width: 100%;
+      background: none;
+      font-size: 1.25rem;
+      border-bottom: 1px solid #000; }
+      .search-form label .search-field:active, .search-form label .search-field:focus {
         -webkit-box-shadow: none;
-        box-shadow: none;
-        border: none;
-        padding: 30px 10px 30px 30px; }
-        .search-overlay .search-container .search-form .search-submit:before {
-          /* use !important to prevent issues with browser extensions that change fonts */
-          font-family: "icomoon" !important;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          /* Better Font Rendering =========== */
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-          content: ""; }
+        box-shadow: none; }
+  .search-form .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    padding: 30px 10px 30px 30px; }
+    .search-form .search-submit:before {
+      /* use !important to prevent issues with browser extensions that change fonts */
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      content: ""; }
 
 .search-open {
   overflow: hidden; }

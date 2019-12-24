@@ -2445,35 +2445,47 @@ body #youmax, body .youmax{
 		padding: 0 15px;
 		
 		.search-form{
-			position: relative;
+			max-width: 100%;
 			label{
-				display: block;	
-
 				.search-field{
-					width: 100%;
-					background: none;
+					max-width: 100%;
 					@include font-size(30);
-					border-bottom: 1px solid $ink;
-
-					&:active, &:focus{
-						box-shadow: none;
-					}
 				}
 			}
-			.search-submit{
-				position: absolute;
-				top: 0;
-				right: 0;
-				background: transparent;
+		}
+	}
+}
+
+.search-form{
+	position: relative;
+	max-width: 500px;
+
+	label{
+		display: block;	
+
+		.search-field{
+			width: 100%;
+			background: none;
+			@include font-size(20);
+			border-bottom: 1px solid $ink;
+
+			&:active, &:focus{
 				box-shadow: none;
-				border: none;
-				padding: 30px 10px 30px 30px;
-
-				&:before{
-					@include is-icon();
-					content: $icon-search;
-				}
 			}
+		}
+	}
+	.search-submit{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: transparent;
+		box-shadow: none;
+		border: none;
+		padding: 30px 10px 30px 30px;
+
+		&:before{
+			@include is-icon();
+			content: $icon-search;
 		}
 	}
 }
