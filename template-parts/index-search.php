@@ -19,6 +19,15 @@
 		<?php endif; ?>
 			<header class="entry-header"> 
 					<div class="entry-meta">
+						<?php $postType = get_post_type_object(get_post_type());
+							if ($postType) { ?>
+    						<b><?php echo esc_html($postType->labels->singular_name); ?></b>
+						<?php } ?>
+						<?php $showDate = array('post', 'tnh_update', 'interview', 'letter'); ?>
+						<?php if(in_array($postType->name, $showDate)) :  ?>
+							<span class="light">-</span>
+							<?php plumvillage_posted_on(); ?>
+						<?php endif; ?>
 					</div><!-- .entry-meta -->
 				<?php
 					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );

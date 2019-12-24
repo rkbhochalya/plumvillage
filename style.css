@@ -9263,6 +9263,9 @@ mark, ins {
 big {
   font-size: 125%; }
 
+.light {
+  color: #9A9A9A; }
+
 .has-sun-background-color {
   background: #FFD22A !important; }
 
