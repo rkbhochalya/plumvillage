@@ -10794,6 +10794,9 @@ body #youmax, body .youmax {
 .admin-bar .menu-block-container .menu-block.fix-menu-top {
   top: 32px; }
 
+.admin-bar .search-overlay .toggle-search {
+  top: 55px; }
+
 .entry-content .gallery-images figcaption {
   display: none; }
 

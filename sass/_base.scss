@@ -2167,11 +2167,17 @@ body #youmax, body .youmax{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Admin Bar on Top
 
-.admin-bar .menu-toggle{
-	top: 45px;
-}
-.admin-bar .menu-block-container .menu-block.fix-menu-top{
-	top: 32px;
+
+.admin-bar{
+	.menu-toggle{
+		top: 45px;
+	}
+	.menu-block-container .menu-block.fix-menu-top{
+		top: 32px;
+	}
+	.search-overlay .toggle-search{
+		top: 55px;
+	}
 }
 
 

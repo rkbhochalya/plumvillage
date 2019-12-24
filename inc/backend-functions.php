@@ -194,7 +194,7 @@ function my_search_filter($query) {
 	    $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release') );
         $query->set('search_fields', array(
 	        'post_title',
-			'post_content',
+					'post_content',
 	        'post_excerpt',        
 	        'meta' => array( 'isbn'),
 	        'taxonomies' => array( 'category', 'topics', 'practise-centres' ),
