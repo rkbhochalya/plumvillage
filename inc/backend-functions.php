@@ -191,10 +191,11 @@ function pv_remove_wpml_meta_box() {
 function my_search_filter($query) {
   if ( !is_admin() && $query->is_main_query() ) {
     if ($query->is_search() ) {
-        $query->set('search_fields', array(
-        'post_title',
-        'meta' => array( 'isbn')
-      ));
+    	var_export($query);
+      //   $query->set('search_fields', array(
+      //   'post_title',
+      //   'meta' => array( 'isbn')
+      // ));
     }
   }
 }
@@ -206,8 +207,6 @@ add_filter( 'ep_search_fields', 'pv_ep_search_fields', 10, 2 );
 function pv_ep_search_fields( $search_fields, $args ) {
 
 	$search_fields[] = 'meta.isbn.value';
-
-	var_export($search_fields);
 
 	return $search_fields;
 }
