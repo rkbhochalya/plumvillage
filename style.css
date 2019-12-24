@@ -9948,15 +9948,16 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   padding: 20px 15px;
   background: #fff; }
 
-#top-navigation {
+#top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
   display: none; }
   @media (min-width: 768px) {
-    #top-navigation {
+    #top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
       display: block; } }
-  #top-navigation .toggle-search {
-    float: right;
-    font-size: 1rem;
-    margin-left: 0; }
+
+#top-navigation .toggle-search {
+  float: right;
+  font-size: 1rem;
+  margin-left: 0; }
 
 .main-navigation ul {
   margin: 0;

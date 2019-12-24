@@ -1043,9 +1043,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	background: $cloud;
 }
 #top-navigation{
-	display: none;
-	@include media-breakpoint-up(md) {
-		display: block;
+	.menu-secondary-menu-container, .menu-mega-menu-container{
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
 	}
 
 	.toggle-search{
