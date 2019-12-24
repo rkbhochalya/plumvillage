@@ -191,22 +191,15 @@ function pv_remove_wpml_meta_box() {
 function my_search_filter($query) {
   if ( !is_admin() && $query->is_main_query() ) {
     if ($query->is_search() ) {
-    	var_export($query);
-      //   $query->set('search_fields', array(
-      //   'post_title',
-      //   'meta' => array( 'isbn')
-      // ));
+	    $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release') );
+        $query->set('search_fields', array(
+	        'post_title',
+			'post_content',
+	        'post_excerpt',        
+	        'meta' => array( 'isbn'),
+	        'taxonomies' => array( 'category', 'topics', 'practise-centres' ),
+      ));
     }
   }
 }
 add_action('pre_get_posts','my_search_filter',1);
-
-
-add_filter( 'ep_search_fields', 'pv_ep_search_fields', 10, 2 );
-
-function pv_ep_search_fields( $search_fields, $args ) {
-
-	$search_fields[] = 'meta.isbn.value';
-
-	return $search_fields;
-}
