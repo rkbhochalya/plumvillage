@@ -2418,6 +2418,7 @@ body #youmax, body .youmax{
 	height: 100%;
 	background: $freshsun;
 	display: none;
+	overflow: scroll;
 
 	.toggle-search{
 		position: absolute;
@@ -2426,8 +2427,41 @@ body #youmax, body .youmax{
 		text-decoration: none;
 	}
 	.search-container{
-		max-width: 600px;
+		max-width: 800px;
 		margin: 140px auto;
+		padding: 0 15px;
+		
+		.search-form{
+			position: relative;
+			label{
+				display: block;	
+
+				.search-field{
+					width: 100%;
+					background: none;
+					@include font-size(30);
+					border-bottom: 1px solid $ink;
+
+					&:active, &:focus{
+						box-shadow: none;
+					}
+				}
+			}
+			.search-submit{
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: transparent;
+				box-shadow: none;
+				border: none;
+				padding: 30px 10px 30px 30px;
+
+				&:before{
+					@include is-icon();
+					content: $icon-search;
+				}
+			}
+		}
 	}
 }
 
@@ -2440,8 +2474,4 @@ body #youmax, body .youmax{
 	.search-overlay{
 		display: block;
 	}
-}
-
-#ajaxsearchlite1 .probox, div.asl_w .probox, div.asl_w{
-	background: transparent;
 }

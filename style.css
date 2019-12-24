@@ -10967,15 +10967,51 @@ body #youmax, body .youmax {
   width: 100%;
   height: 100%;
   background: #FEFBF3;
-  display: none; }
+  display: none;
+  overflow: scroll; }
   .search-overlay .toggle-search {
     position: absolute;
     top: 25px;
     right: 30px;
     text-decoration: none; }
   .search-overlay .search-container {
-    max-width: 600px;
-    margin: 140px auto; }
+    max-width: 800px;
+    margin: 140px auto;
+    padding: 0 15px; }
+    .search-overlay .search-container .search-form {
+      position: relative; }
+      .search-overlay .search-container .search-form label {
+        display: block; }
+        .search-overlay .search-container .search-form label .search-field {
+          width: 100%;
+          background: none;
+          font-size: 1.875rem;
+          border-bottom: 1px solid #000; }
+          .search-overlay .search-container .search-form label .search-field:active, .search-overlay .search-container .search-form label .search-field:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none; }
+      .search-overlay .search-container .search-form .search-submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 30px 10px 30px 30px; }
+        .search-overlay .search-container .search-form .search-submit:before {
+          /* use !important to prevent issues with browser extensions that change fonts */
+          font-family: "icomoon" !important;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          /* Better Font Rendering =========== */
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: ""; }
 
 .search-open {
   overflow: hidden; }
@@ -10985,9 +11021,6 @@ body #youmax, body .youmax {
     transform: translateY(100vh); }
   .search-open .search-overlay {
     display: block; }
-
-#ajaxsearchlite1 .probox, div.asl_w .probox, div.asl_w {
-  background: transparent; }
 
 /*--------------------------------------------------------------
 # Pages
