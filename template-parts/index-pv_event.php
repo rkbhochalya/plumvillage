@@ -10,7 +10,7 @@
 ?>
 	<?php if(get_field('external_event_link', get_the_ID(), false)) : ?>
 		<a class="external-link" href="<?php the_field('external_event_link', get_the_ID(), false); ?>" target="_blank">
-	<?php elseif(get_the_limited_excerpt(get_the_ID(), 50)) : ?>
+	<?php else : ?>
 		<a href="<?php the_permalink(); ?>">
 	<?php endif; ?>
 		<?php if(has_post_thumbnail()) : ?>
@@ -51,6 +51,4 @@
 			</div><!-- .entry-content -->			
 
 		</div>
-	<?php if(get_the_limited_excerpt(get_the_ID(), 50) || get_field('external_event_link', get_the_ID(), false)) : ?>
 		</a>
-	<?php endif; ?>
