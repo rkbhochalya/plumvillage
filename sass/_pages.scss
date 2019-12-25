@@ -491,6 +491,18 @@
 			margin-top: -180px;
 		}
 	}
+
+	.wp-block-column:nth-child(2n){
+		margin-left: 0;
+	}
+	
+	@media (min-width:768px) {
+		.wp-block-column:nth-child(2n){
+			margin-left: 0;
+			padding-left: 32px;
+		}
+	}
+
 	.wp-block-pullquote blockquote{
 		padding-left: 0;
 		p{

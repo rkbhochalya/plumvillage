@@ -11419,6 +11419,14 @@ body #youmax, body .youmax {
   .home-landing-top .wp-block-column:last-child, .entry-content .tnh-landing-top .wp-block-column:last-child {
     margin-top: -180px; } }
 
+.home-landing-top .wp-block-column:nth-child(2n), .entry-content .tnh-landing-top .wp-block-column:nth-child(2n) {
+  margin-left: 0; }
+
+@media (min-width: 768px) {
+  .home-landing-top .wp-block-column:nth-child(2n), .entry-content .tnh-landing-top .wp-block-column:nth-child(2n) {
+    margin-left: 0;
+    padding-left: 32px; } }
+
 .home-landing-top .wp-block-pullquote blockquote, .entry-content .tnh-landing-top .wp-block-pullquote blockquote {
   padding-left: 0; }
   .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
