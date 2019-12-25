@@ -74,7 +74,7 @@
 			<?php $i = 0; ?>
 	      <div class="filter-block">
 	        <h5 class="filter-title"><?php echo __("Filter by location", "plumvillage"); ?></h5>
-	        <div class="filter-list" <?php if($max_items) : ?>data-filter-max="<?php echo $max_items; ?>" <?php endif; ?>><a href="#filter=*" class="reset-filter <?php if(!get_field('show_first')) : ?>selected<?php endif; ?>" data-filter="*"> <?php _e("Show Everything", "plumvillage"); ?></a>,
+	        <div class="filter-list show-all" <?php if($max_items) : ?>data-filter-max="<?php echo $max_items; ?>" <?php endif; ?>><a href="#filter=*" class="reset-filter <?php if(!get_field('show_first')) : ?>selected<?php endif; ?>" data-filter="*"> <?php _e("Show Everything", "plumvillage"); ?></a>,
 						<?php foreach ($event_locations as $location){
 	            echo '<a href="#filter=practise-centres-'.$location['slug'].'" class="'.((get_field('show_first')->slug == $location['slug']) ? 'selected' : '').' filter-products trigger-'.$location['slug'].'" data-filter=".practise-centres-'.$location['slug'].'">'.$location['name'].'</a>';      
 	            $i++;

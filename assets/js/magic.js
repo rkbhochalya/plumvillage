@@ -347,7 +347,7 @@
 
   // if the filter list is too long, make it togglable
   $('.filter-list').each(function(){
-  	if($(this).height() > 40){
+  	if($(this).height() > 40 && !$(this).is('.show-all')){
   		$(this).addClass('too-high')
   	}
   })
