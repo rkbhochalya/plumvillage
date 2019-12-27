@@ -10811,6 +10811,10 @@ body #youmax, body .youmax {
 .admin-bar .sticky-form .search-form-container {
   top: 31px; }
 
+@media (max-width: 880px) {
+  .admin-bar .search-overlay .search-container {
+    margin-top: 31px; } }
+
 .entry-content .gallery-images figcaption {
   display: none; }
 

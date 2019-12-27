@@ -2197,6 +2197,11 @@ body #youmax, body .youmax{
 	.sticky-form .search-form-container{
 		top: 31px;
 	}
+	@media (max-width: 880px){
+		.search-overlay .search-container{
+			margin-top: 31px;
+		}
+	}
 }
 
 

@@ -385,7 +385,8 @@
 	  	$('.search-overlay').velocity({opacity: 1, display: 'block'}, {
 	  		duration: 200,
 	  		complete: function(){
-	  			$('.search-overlay .search-field').select();		
+	  			var $searchField = $('.search-overlay .search-field');
+	  			$searchField.select();	  			
 	  		}
 	  	})  		
   	} else {
