@@ -618,6 +618,7 @@ function get_search_results() {
 
 
     $args = array(
+        'ep_integrate' => true,
         's' => $s,
         'offset' => $offset
     );
