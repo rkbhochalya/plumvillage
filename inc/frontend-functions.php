@@ -570,3 +570,78 @@ function add_schema_data_to_events(){
   }
 }
 add_action('wp_head', 'add_schema_data_to_events');
+
+
+
+/**
+ * Search
+ */
+
+function my_search_filter($query) {
+  if ( (!is_admin() && $query->is_main_query()) || wp_doing_ajax() ) {
+    if ($query->is_search() ) {      
+      $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release') );
+      $query->set('search_fields', array(
+        'post_title',
+        'post_content',
+        'post_excerpt',        
+        'meta' => array( 'isbn'),
+        'taxonomies' => array( 'category', 'topics', 'practise-centres' ),
+      ));
+      $query->set('post_status', array('publish'));
+      $query->set('meta_query', array(
+        'relation' => 'OR',
+        array(
+          'key' => 'end_date',
+          'compare' => 'NOT EXISTS',
+          'value' => ''
+        ),
+        array(
+              'key' => 'end_date',
+              'value' => date('Ymd'),
+              'compare' => '>=',
+              'type' => 'NUMERIC'
+           )
+      ));      
+    }
+  }
+}
+add_action('pre_get_posts','my_search_filter',1);
+
+// Ajax search
+add_action( 'wp_ajax_get_search_results', 'get_search_results' );
+add_action( 'wp_ajax_nopriv_get_search_results', 'get_search_results' );
+
+function get_search_results() {
+    $s = $_POST['s'];
+    
+    $args = array(
+        's' => $s
+    );
+    $search = new WP_Query( $args );
+    
+    ob_start();
+    
+    if ( $search->have_posts() ) : 
+    
+    ?>
+
+      <p class="result-amount"><?php echo $search->found_posts; printf( __( ' Results for: %s', 'twentyfourteen' ), '<span>' . $s . '</span>' ); ?></p>
+
+    <?php
+      while ( $search->have_posts() ) : $search->the_post();
+
+        get_template_part( 'template-parts/index-search', get_post_type() );
+
+      endwhile;
+
+  else : ?>
+    <p class="result-amount"><?php _e('Hhmm... is nothing something?', 'plumvillage'); ?></p>
+  <?php endif;
+  
+  $content = ob_get_clean();
+  
+  echo $content;
+  die();
+      
+}

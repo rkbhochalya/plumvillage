@@ -19,10 +19,12 @@ get_header();
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
+					global $wp_query;
 					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'plumvillage' ), '<span>' . get_search_query() . '</span>' );
+					printf( esc_html__( 'Search results for %s', 'plumvillage' ), '“<span>' . get_search_query() . '</span>”' );
 					?>
 				</h1>
+				<h3><?php printf( '%s Results', $wp_query->found_posts); ?></h3>
 			</header><!-- .page-header -->
 
 			<?php

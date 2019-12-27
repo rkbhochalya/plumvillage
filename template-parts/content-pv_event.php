@@ -18,7 +18,6 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		?>
-		
 		<?php $terms = wp_get_post_terms(get_the_ID(), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC')); ?>
 		<?php if(!empty($terms) || get_field('start_date', get_the_ID())) : ?>
 			<div class="entry-meta">

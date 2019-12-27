@@ -387,6 +387,66 @@
   	e.preventDefault();
   })
 
+
+  // Ajax Search
+
+	var $searchAjax;
+	var $s;
+
+  $('.search-overlay .search-form .search-field').keyup(function(e){
+		var $form = $(this).closest('.search-form');
+    var $input = $(this);
+
+    if($s != $input.val()){
+    	$s = $input.val();
+	    var $content = $('.search-overlay .search-results');
+
+	    if($searchAjax){
+	    	$searchAjax.abort();	
+	    }
+	   
+	   	if($s.length > 2){
+				$searchAjax = $.ajax({
+				  type : 'post',
+				  url : pvAjax.ajaxurl,
+				  data : {
+				      action : 'get_search_results',
+				      s : $s
+				  },
+				  beforeSend: function() {
+				      $content.addClass('loading');
+				  },
+				  success : function( response ) {
+				      $content.removeClass('loading');
+				      $content.html( response );
+				      $('.search-overlay').addClass('has-results')
+
+				      // send search to google analytics
+							if (typeof ga === 'function') {
+					      ga('send', 'pageview', '?s='+ $s);
+						  }				      
+				  }
+				});
+	    } else {
+	    	$content.empty();
+	    }    	
+    }
+  })
+
+  $('.search-overlay .search-form').on('submit', function(e){
+  	$(this).find('.search-field').trigger('keyup');
+  	e.preventDefault();
+  })
+
+  $('.search-overlay').scroll(function(e){
+  	if($('.search-form-container').position().top < 0){
+  		$('.search-overlay').addClass('sticky-form')
+      $('.search-overlay .search-results').css({
+      	'margin-top' : $('.search-form-container').outerHeight()
+      })  		
+  	}
+  })
+
 })(jQuery);
 
 /* the binary Great Common Divisor calculator */

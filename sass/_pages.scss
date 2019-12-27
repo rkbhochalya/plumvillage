@@ -560,6 +560,7 @@
 .posts-navigation, .post-navigation{
 	@include clearfix();
 	margin-top: 40px;
+	clear: both;
 
 	.nav-previous{
 		float: left;

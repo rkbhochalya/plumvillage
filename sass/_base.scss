@@ -1055,6 +1055,13 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		float: right;
 		@include font-size(16);
 		margin-left: 0;
+		margin-top: -4px;
+		padding: 8px;
+		color: $ink;
+
+		&:hover{
+			color: $earth;
+		}
 	}
 }
 
@@ -1436,7 +1443,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 .single, .page {
 	.entry-header > .entry-meta{
 		margin-right: -16px;
-		background: #fff;
 	}
 } 
 
@@ -2422,6 +2428,15 @@ body #youmax, body .youmax{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Search
 
+.search .page-title{
+	color: $grey;
+	margin-bottom: 0;
+
+	span{
+		color: $ink;
+	}
+}
+
 .search-overlay{
 	z-index: 0;
 	position: fixed;
@@ -2434,15 +2449,21 @@ body #youmax, body .youmax{
 	overflow: scroll;
 
 	.toggle-search{
-		position: absolute;
+		position: fixed;
 		top: 25px;
 		right: 30px;
 		text-decoration: none;
+		z-index: 2;
+
+		&:hover{
+			color: $earth;
+		}
 	}
 	.search-container{
 		max-width: 800px;
 		margin: 140px auto;
 		padding: 0 15px;
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
 		
 		.search-form{
 			max-width: 100%;
@@ -2450,8 +2471,42 @@ body #youmax, body .youmax{
 				.search-field{
 					max-width: 100%;
 					@include font-size(30);
+					padding: 1rem 0.6rem 8px;					
 				}
 			}
+		}
+		.result-amount{
+			color: $grey;
+			padding-top: 10px;
+
+			span{
+				color: $ink;
+			}
+		}
+		.search-results{
+			&.loading{
+				&:before{
+					content: '';
+				  display: block;
+				  position: absolute;
+				  top: 50%;
+				  left: 50%;
+				  height: 50px;
+				  width: 50px;
+				  margin: -25px 0 0 -25px;
+				  border: 4px $freshsun solid;
+				  border-right: 4px $earth solid;
+				  border-bottom: 4px $earth solid;
+				  border-radius: 50%;
+				  animation: spin3 1.2s infinite linear;
+				}
+			}
+		}
+	}
+
+	&.has-results{
+		.search-container{
+			margin-top: 0;
 		}
 	}
 }
@@ -2467,7 +2522,7 @@ body #youmax, body .youmax{
 			width: 100%;
 			background: none;
 			@include font-size(20);
-			border-bottom: 1px solid $ink;
+			border-bottom: 2px solid $ink;
 
 			&:active, &:focus{
 				box-shadow: none;
@@ -2482,10 +2537,36 @@ body #youmax, body .youmax{
 		box-shadow: none;
 		border: none;
 		padding: 30px 10px 30px 30px;
+		@include font-size(20);
+
+		&:hover{
+			color: $earth;
+		}
 
 		&:before{
 			@include is-icon();
 			content: $icon-search;
+		}
+	}
+}
+
+.sticky-form{
+	.search-form-container{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background: $freshsun;
+		z-index: 1;
+
+		.search-form{
+			max-width: 800px;
+			padding: 0 15px;
+			margin: 0 auto;		
+
+			.search-submit{
+				right: 15px;
+			}
 		}
 	}
 }
@@ -2499,4 +2580,16 @@ body #youmax, body .youmax{
 	.search-overlay{
 		display: block;
 	}
+}
+
+
+@keyframes spin3 {
+  from {
+            transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+            transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
