@@ -382,7 +382,14 @@
   $('.toggle-search').on('click', function(e){
   	$('body').toggleClass('search-open');
   	if($('body').is('.search-open')){
-  		$('.search-overlay .search-field').select();
+	  	$('.search-overlay').velocity({opacity: 1, display: 'block'}, {
+	  		duration: 200,
+	  		complete: function(){
+	  			$('.search-overlay .search-field').select();		
+	  		}
+	  	})  		
+  	} else {
+  		$('.search-overlay').velocity({opacity: 0, display: 'none'}, {duration: 200})
   	}
   	e.preventDefault();
   })
@@ -434,7 +441,7 @@
   })
 
   $('.search-overlay .search-form').on('submit', function(e){
-  	$(this).find('.search-field').trigger('change');
+  	$(this).find('.search-field').trigger('input');
   	e.preventDefault();
   })
 
@@ -442,9 +449,41 @@
   	if($('.search-form-container').position().top < 0){
   		$('.search-overlay').addClass('sticky-form')
       $('.search-overlay .search-results').css({
-      	'margin-top' : $('.search-form-container').outerHeight()
+      	'padding-top' : $('.search-form-container').outerHeight()
       })  		
   	}
+
+  	if($('.load-more-search:not(.loading)').length){
+  		if($('.load-more-search').position().top < ($(window).height() + 200)){
+  			$('.load-more-search').trigger('click');
+  		}
+  	}
+  })
+
+  $('body').on('click', '.load-more-search', function(e){
+  	var $el = $(this);
+    var $content = $('.search-overlay .search-results');
+
+    if(!$el.is('.loading')){
+			$.ajax({
+			  type : 'post',
+			  url : pvAjax.ajaxurl,
+			  data : {
+			      action : 'get_search_results',
+			      s : $s,
+			      offset: $el.data('offset')
+			  },
+			  beforeSend: function() {
+			      $el.addClass('loading');
+			  },
+			  success : function( response ) {
+			      $el.remove();
+			      $content.append( response );
+			  }
+			});
+		}
+
+  	e.preventDefault();
   })
 
 })(jQuery);

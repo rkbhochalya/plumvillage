@@ -2187,6 +2187,12 @@ body #youmax, body .youmax{
 	.search-overlay .toggle-search{
 		top: 55px;
 	}
+	.search-overlay.has-results .search-container{
+		margin-top: 31px;
+	}
+	.sticky-form .search-form-container{
+		top: 31px;
+	}
 }
 
 
@@ -2438,8 +2444,9 @@ body #youmax, body .youmax{
 }
 
 .search-overlay{
-	z-index: 0;
+	z-index: 2;
 	position: fixed;
+	opacity: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -2487,9 +2494,13 @@ body #youmax, body .youmax{
 		.search-results{
 			article{
 				transition: all .4s cubic-bezier(.15,.53,.35,1);
+
+				p{
+					max-width: 100%;
+				}
 			}
 
-			&.loading{
+			&.loading, .load-more-search.loading{
 
 				article{
 					opacity: 0.4;
@@ -2509,6 +2520,15 @@ body #youmax, body .youmax{
 				  border-bottom: 4px $earth solid;
 				  border-radius: 50%;
 				  animation: spin3 1.2s infinite linear;
+				}
+			}
+			.load-more-search{
+				text-align: center;
+				display: block;
+				position: relative;
+
+				&.loading .load-more-text{
+					visibility: hidden;
 				}
 			}
 		}
@@ -2583,23 +2603,16 @@ body #youmax, body .youmax{
 
 .search-open {
 	overflow: hidden;
-
-	.site{
-		transform: translateY(100vh);
-	}
-	.search-overlay{
-		display: block;
-	}
 }
 
 
 @keyframes spin3 {
   from {
-            transform: rotate(0deg);
-            transform: rotate(0deg);
+		transform: rotate(0deg);
+		transform: rotate(0deg);
   }
   to {
-            transform: rotate(359deg);
-            transform: rotate(359deg);
+		transform: rotate(359deg);
+		transform: rotate(359deg);
   }
 }

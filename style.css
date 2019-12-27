@@ -10802,6 +10802,12 @@ body #youmax, body .youmax {
 .admin-bar .search-overlay .toggle-search {
   top: 55px; }
 
+.admin-bar .search-overlay.has-results .search-container {
+  margin-top: 31px; }
+
+.admin-bar .sticky-form .search-form-container {
+  top: 31px; }
+
 .entry-content .gallery-images figcaption {
   display: none; }
 
@@ -10977,8 +10983,9 @@ body #youmax, body .youmax {
     color: #000; }
 
 .search-overlay {
-  z-index: 0;
+  z-index: 2;
   position: fixed;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -11017,9 +11024,11 @@ body #youmax, body .youmax {
       -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
       -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
       transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
-    .search-overlay .search-container .search-results.loading article {
+      .search-overlay .search-container .search-results article p {
+        max-width: 100%; }
+    .search-overlay .search-container .search-results.loading article, .search-overlay .search-container .search-results .load-more-search.loading article {
       opacity: 0.4; }
-    .search-overlay .search-container .search-results.loading:before {
+    .search-overlay .search-container .search-results.loading:before, .search-overlay .search-container .search-results .load-more-search.loading:before {
       content: '';
       display: block;
       position: absolute;
@@ -11034,6 +11043,12 @@ body #youmax, body .youmax {
       border-radius: 50%;
       -webkit-animation: spin3 1.2s infinite linear;
       animation: spin3 1.2s infinite linear; }
+    .search-overlay .search-container .search-results .load-more-search {
+      text-align: center;
+      display: block;
+      position: relative; }
+      .search-overlay .search-container .search-results .load-more-search.loading .load-more-text {
+        visibility: hidden; }
   .search-overlay.has-results .search-container {
     margin-top: 0; }
 
@@ -11092,12 +11107,6 @@ body #youmax, body .youmax {
 
 .search-open {
   overflow: hidden; }
-  .search-open .site {
-    -webkit-transform: translateY(100vh);
-    -ms-transform: translateY(100vh);
-    transform: translateY(100vh); }
-  .search-open .search-overlay {
-    display: block; }
 
 @-webkit-keyframes spin3 {
   from {

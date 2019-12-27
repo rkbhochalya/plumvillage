@@ -81,7 +81,7 @@
 					'menu_class'		 => 'mega-menu-top menu'
 				) );
 				?>
-				<a class="icon-search toggle-search" href="#"></a>
+				<a class="icon-search toggle-search" href="?s=" aria-label="<?php _e('Search', 'plumvillage'); ?>"></a>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'secondary-menu',

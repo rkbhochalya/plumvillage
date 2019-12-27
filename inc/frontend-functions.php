@@ -614,29 +614,36 @@ add_action( 'wp_ajax_nopriv_get_search_results', 'get_search_results' );
 
 function get_search_results() {
     $s = $_POST['s'];
-    
+    $offset = ($_POST['offset']) ? $_POST['offset'] : 0;
+
+
     $args = array(
-        's' => $s
+        's' => $s,
+        'offset' => $offset
     );
     $search = new WP_Query( $args );
     
     ob_start();
     
-    if ( $search->have_posts() ) : 
-    
-    ?>
+    if ( $search->have_posts() ) : ?>
+      
+    <?php if($offset == 0) : ?>
+      <p class="result-amount"><?php echo $search->found_posts; printf( __( ' Results for: %s', 'plumvillage' ), '<span>' . $s . '</span>' ); ?></p>
+    <?php endif; ?>
 
-      <p class="result-amount"><?php echo $search->found_posts; printf( __( ' Results for: %s', 'twentyfourteen' ), '<span>' . $s . '</span>' ); ?></p>
-
-    <?php
+    <?php 
       while ( $search->have_posts() ) : $search->the_post();
 
         get_template_part( 'template-parts/index-search', get_post_type() );
 
       endwhile;
 
+      if($search->found_posts > ($search->post_count + $offset)){
+        echo '<a class="load-more-search" href="#" data-offset="'.($search->post_count + $offset).'"><span class="load-more-text">Load More</span>';
+      };
+
   else : ?>
-    <p class="result-amount"><?php _e('Hhmm... is nothing something?', 'plumvillage'); ?></p>
+    <p class="result-amount"><?php printf( __('Hhmm... we can\'t find %s. Is nothing something?', 'plumvillage'), '<span>' . $s . '</span>'); ?></p>
   <?php endif;
   
   $content = ob_get_clean();
