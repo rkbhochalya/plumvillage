@@ -1053,11 +1053,15 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	.toggle-search{
 		float: right;
-		@include font-size(16);
+		@include font-size(22);
 		margin-left: 0;
 		margin-top: -4px;
 		padding: 8px;
 		color: $ink;
+
+		@include media-breakpoint-up(md) {
+			@include font-size(16);
+		}
 
 		&:hover{
 			color: $earth;
@@ -2185,7 +2189,7 @@ body #youmax, body .youmax{
 		top: 32px;
 	}
 	.search-overlay .toggle-search{
-		top: 55px;
+		top: 45px;
 	}
 	.search-overlay.has-results .search-container{
 		margin-top: 31px;
@@ -2457,10 +2461,14 @@ body #youmax, body .youmax{
 
 	.toggle-search{
 		position: fixed;
-		top: 25px;
-		right: 30px;
+		top: 15px;
+		right: 10px;
 		text-decoration: none;
 		z-index: 2;
+		padding: 10px;
+		@media (min-width: 880px){
+			right: 20px;	
+		}
 
 		&:hover{
 			color: $earth;
@@ -2468,9 +2476,12 @@ body #youmax, body .youmax{
 	}
 	.search-container{
 		max-width: 800px;
-		margin: 140px auto;
+		margin: 0 auto;
 		padding: 0 15px;
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
+		@media (min-width: 880px){
+			margin: 140px auto;	
+		}
 		
 		.search-form{
 			max-width: 100%;
@@ -2576,6 +2587,11 @@ body #youmax, body .youmax{
 		&:before{
 			@include is-icon();
 			content: $icon-search;
+		}
+
+		@media (max-width: 880px){
+			padding-top: 22px;
+			margin-right: 30px;
 		}
 	}
 }

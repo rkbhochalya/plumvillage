@@ -436,12 +436,13 @@
 				});
 	    } else {
 	    	$content.empty();
+	    	$content.removeClass('loading')
 	    }    	
     }
   })
 
   $('.search-overlay .search-form').on('submit', function(e){
-  	$(this).find('.search-field').trigger('input');
+  	$(this).find('.search-field').trigger('input').blur();
   	e.preventDefault();
   })
 
