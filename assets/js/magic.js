@@ -431,7 +431,7 @@
 
 				      // send search to google analytics
 							if (typeof ga === 'function') {
-					      ga('send', 'pageview', '?s='+ $s);
+					      ga('send', 'pageview', '/?s='+ $s);
 						  }				      
 				  }
 				});
