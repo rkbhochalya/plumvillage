@@ -393,7 +393,7 @@
 	var $searchAjax;
 	var $s;
 
-  $('.search-overlay .search-form .search-field').keyup(function(e){
+  $('.search-overlay .search-form .search-field').on('input', function(e){
 		var $form = $(this).closest('.search-form');
     var $input = $(this);
 
@@ -434,7 +434,7 @@
   })
 
   $('.search-overlay .search-form').on('submit', function(e){
-  	$(this).find('.search-field').trigger('keyup');
+  	$(this).find('.search-field').trigger('change');
   	e.preventDefault();
   })
 

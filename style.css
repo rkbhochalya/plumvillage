@@ -11006,12 +11006,19 @@ body #youmax, body .youmax {
       .search-overlay .search-container .search-form label .search-field {
         max-width: 100%;
         font-size: 1.875rem;
-        padding: 1rem 0.6rem 8px; }
+        padding: 1rem 40px 8px 0.6rem;
+        outline: none; }
     .search-overlay .search-container .result-amount {
       color: #9A9A9A;
       padding-top: 10px; }
       .search-overlay .search-container .result-amount span {
         color: #000; }
+    .search-overlay .search-container .search-results article {
+      -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+      transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+    .search-overlay .search-container .search-results.loading article {
+      opacity: 0.4; }
     .search-overlay .search-container .search-results.loading:before {
       content: '';
       display: block;
@@ -11051,7 +11058,7 @@ body #youmax, body .youmax {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: none;
-    padding: 30px 10px 30px 30px;
+    padding: 28px 10px 30px 5px;
     font-size: 1.25rem; }
     .search-form .search-submit:hover {
       color: #8B572A; }

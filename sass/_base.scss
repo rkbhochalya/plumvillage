@@ -2471,7 +2471,8 @@ body #youmax, body .youmax{
 				.search-field{
 					max-width: 100%;
 					@include font-size(30);
-					padding: 1rem 0.6rem 8px;					
+					padding: 1rem 40px 8px 0.6rem;
+					outline: none;
 				}
 			}
 		}
@@ -2484,7 +2485,16 @@ body #youmax, body .youmax{
 			}
 		}
 		.search-results{
+			article{
+				transition: all .4s cubic-bezier(.15,.53,.35,1);
+			}
+
 			&.loading{
+
+				article{
+					opacity: 0.4;
+				}
+
 				&:before{
 					content: '';
 				  display: block;
@@ -2536,7 +2546,7 @@ body #youmax, body .youmax{
 		background: transparent;
 		box-shadow: none;
 		border: none;
-		padding: 30px 10px 30px 30px;
+		padding: 28px 10px 30px 5px;
 		@include font-size(20);
 
 		&:hover{
