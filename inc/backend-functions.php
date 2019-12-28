@@ -183,3 +183,22 @@ function pv_remove_wpml_meta_box() {
 	$screen = get_current_screen();
 	remove_meta_box( 'icl_div_config', $screen->post_type, 'normal' );
 }
+
+
+/**
+ * Rewrite urls for Village des Pruniers
+ */
+
+add_filter( 'post_link', 'changePermalinks', 10, 3);
+add_filter( 'page_link', 'changePermalinks', 10, 3);
+add_filter( 'post_type_link', 'changePermalinks', 10, 3);
+add_filter( 'category_link', 'changePermalinks', 11, 3);
+add_filter( 'tag_link', 'changePermalinks', 10, 3);
+add_filter( 'author_link', 'changePermalinks', 11, 3);
+add_filter( 'day_link', 'changePermalinks', 11, 3);
+add_filter( 'month_link', 'changePermalinks', 11, 3);
+add_filter( 'year_link', 'changePermalinks', 11, 3);
+
+function changePermalinks($permalink, $post) {
+  return str_replace('https://plumvstaging.wpengine.com/fr', 'https://maartenhunink.com/villagedespruniers', $permalink);
+}
