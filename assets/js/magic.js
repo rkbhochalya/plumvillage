@@ -431,7 +431,11 @@
 
 				      // send search to google analytics
 							if (typeof ga === 'function') {
-					      ga('send', 'pageview', '/?s='+ $s);
+								gtag('event', 'search', { 'search_term': $s });
+								gtag('config', pvAjax.gacode, {
+								  'page_title' : 'Search',
+								  'page_path': '/?s='+$s
+								});
 						  }				      
 				  }
 				});
