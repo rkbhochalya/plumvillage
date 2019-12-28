@@ -1,5 +1,55 @@
 <?php
 
+/**
+ * Check if this is a request at the backend.
+ *
+ * @return bool true if is admin request, otherwise false.
+ */
+ 
+function is_admin_request() {
+  /**
+   * Get current URL.
+   *
+   * @link https://wordpress.stackexchange.com/a/126534
+   */
+  $current_url = home_url( add_query_arg( null, null ) );
+
+  /**
+   * Get admin URL and referrer.
+   *
+   * @link https://core.trac.wordpress.org/browser/tags/4.8/src/wp-includes/pluggable.php#L1076
+   */
+  $admin_url = strtolower( admin_url() );
+  $referrer  = strtolower( wp_get_referer() );
+
+  /**
+   * Check if this is a admin request. If true, it
+   * could also be a AJAX request from the frontend.
+   */
+  if ( 0 === strpos( $current_url, $admin_url ) ) {
+    /**
+     * Check if the user comes from a admin page.
+     */
+    if ( 0 === strpos( $referrer, $admin_url ) ) {
+      return true;
+    } else {
+      /**
+       * Check for AJAX requests.
+       *
+       * @link https://gist.github.com/zitrusblau/58124d4b2c56d06b070573a99f33b9ed#file-lazy-load-responsive-images-php-L193
+       */
+      if ( function_exists( 'wp_doing_ajax' ) ) {
+        return ! wp_doing_ajax();
+      } else {
+        return ! ( defined( 'DOING_AJAX' ) && DOING_AJAX );
+      }
+    }
+  } else {
+    return false;
+  }
+}
+
+
 // Show submenu on default pages
 add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
 
@@ -193,10 +243,10 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       unset( $sorted_menu_items[$key] );
     }
   }
-	return $sorted_menu_items;
-	} else {
-		return $sorted_menu_items;
-	}
+  return $sorted_menu_items;
+  } else {
+    return $sorted_menu_items;
+  }
 }
 
 
@@ -577,8 +627,9 @@ add_action('wp_head', 'add_schema_data_to_events');
  * Search
  */
 
+
 function my_search_filter($query) {
-  if ( (!is_admin() && $query->is_main_query()) || wp_doing_ajax() ) {
+  if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
     if ($query->is_search() ) {      
       $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release') );
       $query->set('search_fields', array(
@@ -586,7 +637,7 @@ function my_search_filter($query) {
         'post_content',
         'post_excerpt',        
         'meta' => array( 'isbn'),
-        'taxonomies' => array( 'category', 'topics', 'practise-centres' ),
+        'taxonomies' => array( 'category', 'topics', 'practise-centres', 'ep_custom_result' ),
       ));
       $query->set('post_status', array('publish'));
       $query->set('meta_query', array(
@@ -615,7 +666,6 @@ add_action( 'wp_ajax_nopriv_get_search_results', 'get_search_results' );
 function get_search_results() {
     $s = $_POST['s'];
     $offset = ($_POST['offset']) ? $_POST['offset'] : 0;
-
 
     $args = array(
         'ep_integrate' => true,
