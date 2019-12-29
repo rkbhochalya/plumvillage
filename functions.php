@@ -229,7 +229,7 @@ function create_post_types() {
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
     'query_var'             => true,
-    'rewrite'               => array( 'slug' => 'practise-centres' ),
+    'rewrite'               => array('slug' => _x( 'practise-centres', 'URL Practise Centres slug', 'plumvillage' )),
   );
 
   register_taxonomy( 'practise-centres', array('post', 'pv_event'), $args );
@@ -304,6 +304,40 @@ function create_post_types() {
   register_taxonomy( 'types', array('interviews'), $args );
 
 
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Path', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Path', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Paths', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Paths', 'plumvillage' ),
+    'all_items'                  => __( 'All Paths', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Path', 'plumvillage' ),
+    'update_item'                => __( 'Edit Path', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Path', 'plumvillage' ),
+    'new_item_name'              => __( 'New Path name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Paths.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Paths', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Paths', 'plumvillage' ),
+    'not_found'                  => __( 'No Paths found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Path', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'show_in_rest'          => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+  );
+
+  register_taxonomy( 'monastic_path', array('monastics'), $args );
+
+
   // Add new post type
 	register_post_type( 'letter',
     array(
@@ -330,7 +364,7 @@ function create_post_types() {
       'show_in_menu' => 'post.php?post=7703&action=edit',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-media-text',      
-      'rewrite' => array('slug' => 'about/thich-nhat-hanh/letters'),
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/letters', 'TNH letters slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'author')
     )
   );
@@ -360,7 +394,7 @@ function create_post_types() {
       'show_in_menu' => 'post.php?post=7703&action=edit',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-format-chat',      
-      'rewrite' => array('slug' => 'about/thich-nhat-hanh/interviews-with-thich-nhat-hanh'),
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/interviews-with-thich-nhat-hanh', 'TNH interviews slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
     )
   );	
@@ -390,7 +424,7 @@ function create_post_types() {
       'show_in_menu' => 'post.php?post=7703&action=edit',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-megaphone',      
-      'rewrite' => array('slug' => 'about/thich-nhat-hanh/thich-nhat-hanhs-health'),
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/thich-nhat-hanhs-health', 'TNH health slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
     )
   );  
@@ -419,7 +453,7 @@ function create_post_types() {
       'taxonomies' => array('topics'), 
       'show_in_menu' => 'post.php?post=7703&action=edit',
       'show_in_rest' => true,
-      'rewrite' => array('slug' => 'about/thich-nhat-hanh/press'),
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/press', 'TNH Press slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'author')
     )
   );
@@ -446,7 +480,8 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,      
       'show_in_rest' => true,
-      'menu_icon' => 'dashicons-groups',      
+      'menu_icon' => 'dashicons-groups',
+      'rewrite' => array('slug' => _x( 'monastics', 'Monastic slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
@@ -476,7 +511,7 @@ function create_post_types() {
       'show_in_menu' => true,
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-calendar-alt',      
-      'rewrite' => array('slug' => 'retreats/info'),
+      'rewrite' => array('slug' => _x( 'retreats/info', 'URL Retreats slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
