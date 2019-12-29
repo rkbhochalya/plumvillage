@@ -543,7 +543,7 @@ if(is_object($obj)) $obj = (array) $obj;
 }
 
 
-// Add schema data to event pages
+// Add google schema data to event pages
 
 function add_schema_data_to_events(){
   global $post;

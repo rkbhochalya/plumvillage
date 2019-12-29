@@ -404,10 +404,21 @@ function register_acf_block_types() {
         'render_template'   => 'template-parts/blocks/important-update.php',
         'category'          => 'plumvillage',
         'icon'              => 'megaphone',
-        'keywords'          => array( 'importnat', 'update' ),
+        'keywords'          => array( 'important', 'update' ),
         'supports'          => array(
             'align'     => array('full')
         )
+    ));
+
+    // Important Update
+    acf_register_block_type(array(
+        'name'              => 'overview_monastics',
+        'title'             => __('Monastics'),
+        'description'       => __('Show an overview of monastics'),
+        'render_template'   => 'template-parts/blocks/overview-monastics.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'groups',
+        'keywords'          => array( 'monastics' )
     ));
 
 }

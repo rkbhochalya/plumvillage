@@ -155,9 +155,10 @@ function custom_menu_order($menu_ord) {
         'edit.php?post_type=pv_book',
         'edit.php?post_type=event',
         'edit.php?post_type=pv_event',
-        'edit.php', // Pages
-        'edit-comments.php',
+        'edit.php', // Posts
         'edit-tags.php?taxonomy=practise-centres',
+        'edit.php?post_type=monastics',
+        'edit-comments.php',
         'edit-tags.php?taxonomy=topics',
         'upload.php', // Media
         'acf-options',

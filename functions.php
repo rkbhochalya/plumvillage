@@ -424,6 +424,32 @@ function create_post_types() {
     )
   );
 
+  register_post_type( 'monastics',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Monastics', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Monastic', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Monastics', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Monastics', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Monastics', 'plumvillage' ),
+        'view_item'          => __( 'View Page', 'plumvillage' ),
+        'all_items'          => __( 'All Monastics', 'plumvillage' ),
+        'search_items'       => __( 'Search Monastics', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Monastics found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,      
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-groups',      
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
 
   register_post_type( 'pv_event',
     array(
