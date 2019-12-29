@@ -325,7 +325,7 @@ function create_post_types() {
   );
 
   $args = array(
-    'hierarchical'          => false,
+    'hierarchical'          => true,
     'labels'                => $labels,
     'show_ui'               => true,
     'show_in_menu'          => true,

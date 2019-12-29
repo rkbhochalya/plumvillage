@@ -184,3 +184,26 @@ function pv_remove_wpml_meta_box() {
 	$screen = get_current_screen();
 	remove_meta_box( 'icl_div_config', $screen->post_type, 'normal' );
 }
+
+
+/**
+* Define default terms for custom taxonomies in WordPress 3.0.1
+*
+*/
+
+function pv_set_default_object_terms( $post_id, $post ) {
+	if ( 'publish' === $post->post_status && $post->post_type === 'monastics' ) {
+		$defaults = array(
+			'monastic_path' => array( 'novices' )
+		);
+		$taxonomies = get_object_taxonomies( $post->post_type );
+
+		foreach ( (array) $taxonomies as $taxonomy ) {
+			$terms = wp_get_post_terms( $post_id, $taxonomy );
+			if ( empty( $terms ) && array_key_exists( $taxonomy, $defaults ) ) {
+				wp_set_object_terms( $post_id, $defaults[$taxonomy], $taxonomy );
+			}
+		}
+	}
+}
+add_action( 'save_post', 'pv_set_default_object_terms', 100, 2 );
