@@ -415,7 +415,7 @@ function register_acf_block_types() {
         'name'              => 'overview_monastics',
         'title'             => __('Monastics'),
         'description'       => __('Show an overview of monastics'),
-        'render_template'   => 'template-parts/blocks/overview-monastics.php',
+        'render_template'   => 'template-parts/blocks/monastics-overview.php',
         'category'          => 'plumvillage',
         'icon'              => 'groups',
         'keywords'          => array( 'monastics' )
