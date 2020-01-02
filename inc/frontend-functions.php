@@ -616,7 +616,9 @@ function add_schema_data_to_events(){
       }
     }
 
-    echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+    if(isset($schema['location']) && isset($schema['startDate'])){
+      echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';
+    }
   }
 }
 add_action('wp_head', 'add_schema_data_to_events');
