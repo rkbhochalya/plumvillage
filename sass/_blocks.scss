@@ -486,9 +486,14 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
+	margin-bottom: 17px;
 }
 
 .panel-books, .page-template-default .entry-content .panel-books{
+	.index-item{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 	.link-zoom{
 		margin-bottom: 15px;
 
@@ -503,7 +508,11 @@
 
 	}
 	p{
-		@include font-size(14);
+		@include font-size(15);
+	}
+
+	h5{
+		padding-top: 0;
 	}
 
 	.single-book{
