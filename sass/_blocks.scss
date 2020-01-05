@@ -456,7 +456,7 @@
 			display: block;
 			left: -33px;
 			padding: 10px;
-			top: -4px;
+			top: 0px;
 			@include font-size(14);
 		}
 
@@ -496,7 +496,6 @@
 	}
 	p{
 		@include font-size(14);
-		padding-bottom: .6em;
 	}
 
 	.single-book{

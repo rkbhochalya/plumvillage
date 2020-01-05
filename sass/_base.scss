@@ -1629,6 +1629,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		@include font-size(40);
 	}
 
+	p.has-large-font-size{
+		margin-right: 0;
+	}
+
 	p{
 		@include font-size(15);
 	}
@@ -2389,8 +2393,8 @@ body #youmax, body .youmax{
 	border-radius: 7px;
 	position: fixed;
 	bottom: 0;
-	right: 20px;
-	left: 20px;
+	right: 15px;
+	left: 15px;
 	z-index:99;
 	transform: translateY(100%);
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
@@ -2399,14 +2403,23 @@ body #youmax, body .youmax{
 		@include font-size(15);
 	}
 
-	@include media-breakpoint-up(sm) {
-		left: auto;
-		max-width: 230px;
-	}
 }
 #cookie-notice.show-cookie{
 	transform: translateY(0);
-	bottom: 20px;
+	bottom: 85px;
+
+	@include media-breakpoint-up(xs) {
+		bottom: 15px;
+		right: 85px;
+	}
+	@include media-breakpoint-up(sm) {
+		right: auto;
+		max-width: 230px;
+	}
+	@include media-breakpoint-up(md) {
+		right: 15px;
+		left: auto;
+	}
 }
 
 

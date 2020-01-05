@@ -24,7 +24,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 				</div>
 				<div class="col-md-7">
 					<header class="entry-header">
-						<h1 class="entry-title post-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title post-title pb-0"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->
 					<div class="entry-content">
 					<p class="has-large-font-size"><?php the_field('subtitle'); ?></p>

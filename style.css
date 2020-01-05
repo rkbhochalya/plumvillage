@@ -10403,6 +10403,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   margin-bottom: 50px; }
   .fancybox-content.book-content h1 {
     font-size: 2.5rem; }
+  .fancybox-content.book-content p.has-large-font-size {
+    margin-right: 0; }
   .fancybox-content.book-content p {
     font-size: 0.9375rem; }
 
@@ -10945,8 +10947,8 @@ body #youmax, body .youmax {
   border-radius: 7px;
   position: fixed;
   bottom: 0;
-  right: 20px;
-  left: 20px;
+  right: 15px;
+  left: 15px;
   z-index: 99;
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -10956,16 +10958,24 @@ body #youmax, body .youmax {
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
   #cookie-notice p {
     font-size: 0.9375rem; }
-  @media (min-width: 576px) {
-    #cookie-notice {
-      left: auto;
-      max-width: 230px; } }
 
 #cookie-notice.show-cookie {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  bottom: 20px; }
+  bottom: 85px; }
+  @media (min-width: 370px) {
+    #cookie-notice.show-cookie {
+      bottom: 15px;
+      right: 85px; } }
+  @media (min-width: 576px) {
+    #cookie-notice.show-cookie {
+      right: auto;
+      max-width: 230px; } }
+  @media (min-width: 768px) {
+    #cookie-notice.show-cookie {
+      right: 15px;
+      left: auto; } }
 
 .jfbalbum .Caption_Content {
   font-size: 0.8125rem;
@@ -12065,7 +12075,7 @@ body #youmax, body .youmax {
     display: block;
     left: -33px;
     padding: 10px;
-    top: -4px;
+    top: 0px;
     font-size: 0.875rem; }
   .panel-collapsable > h5:hover .icon {
     left: -30px; }
@@ -12090,8 +12100,7 @@ body #youmax, body .youmax {
     background: #000; }
 
 .panel-books p, .page-template-default .entry-content .panel-books p {
-  font-size: 0.875rem;
-  padding-bottom: .6em; }
+  font-size: 0.875rem; }
 
 .panel-books .single-book a.link-zoom, .page-template-default .entry-content .panel-books .single-book a.link-zoom {
   float: left;

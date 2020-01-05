@@ -1815,7 +1815,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: block;
     left: -33px;
     padding: 10px;
-    top: -4px;
+    top: 0px;
     font-size: 0.875rem; }
   .panel-collapsable > h5:hover .icon {
     left: -30px; }
@@ -1840,8 +1840,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     background: #000; }
 
 .panel-books p, .page-template-default .entry-content .panel-books p {
-  font-size: 0.875rem;
-  padding-bottom: .6em; }
+  font-size: 0.875rem; }
 
 .panel-books .single-book a.link-zoom, .page-template-default .entry-content .panel-books .single-book a.link-zoom {
   float: left;
