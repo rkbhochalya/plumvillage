@@ -493,6 +493,10 @@
 				background: $ink;
 			}
 		}
+
+		img{
+			max-width: 250px;
+		}
 	}
 	p{
 		@include font-size(14);

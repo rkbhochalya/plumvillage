@@ -1838,6 +1838,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     background: #fff; }
   .panel-books .link-zoom:hover .icon-bg:after, .page-template-default .entry-content .panel-books .link-zoom:hover .icon-bg:after {
     background: #000; }
+  .panel-books .link-zoom img, .page-template-default .entry-content .panel-books .link-zoom img {
+    max-width: 250px; }
 
 .panel-books p, .page-template-default .entry-content .panel-books p {
   font-size: 0.875rem; }
