@@ -28,7 +28,7 @@ get_header();
 						);
 					?>				
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-9 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 							<?php if ( have_posts() ) : ?>
@@ -42,13 +42,6 @@ get_header();
 							<?php endif; ?>
 						</main><!-- #main -->
 					</div><!-- #primary -->
-					<?php if ( comments_open() || get_comments_number() ) : ?>
-						<div id="comments" class="comments-section">
-							<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
-							<?php comments_template(); ?>
-						</div>
-					<?php endif; ?>
-
 					<?php 
 					// WP_Query arguments
 						$args = array (
@@ -83,7 +76,7 @@ get_header();
 								echo get_filter_menu($posts, 'topics'); 
 							?>
 						</div>
-						<div class="row post-overview">
+						<div class="row post-overview back-to-baseline">
 							<?php while ( $posts->have_posts() ) { ?>
 								<?php $posts->the_post(); ?>
 								<?php get_template_part( 'template-parts/index', 'book' ); ?>
