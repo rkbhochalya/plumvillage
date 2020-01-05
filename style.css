@@ -10958,6 +10958,17 @@ body #youmax, body .youmax {
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
   #cookie-notice p {
     font-size: 0.9375rem; }
+  @media (min-width: 370px) {
+    #cookie-notice {
+      right: 85px; } }
+  @media (min-width: 576px) {
+    #cookie-notice {
+      right: auto;
+      max-width: 230px; } }
+  @media (min-width: 768px) {
+    #cookie-notice {
+      right: 15px;
+      left: auto; } }
 
 #cookie-notice.show-cookie {
   -webkit-transform: translateY(0);
@@ -10966,16 +10977,7 @@ body #youmax, body .youmax {
   bottom: 85px; }
   @media (min-width: 370px) {
     #cookie-notice.show-cookie {
-      bottom: 15px;
-      right: 85px; } }
-  @media (min-width: 576px) {
-    #cookie-notice.show-cookie {
-      right: auto;
-      max-width: 230px; } }
-  @media (min-width: 768px) {
-    #cookie-notice.show-cookie {
-      right: 15px;
-      left: auto; } }
+      bottom: 15px; } }
 
 .jfbalbum .Caption_Content {
   font-size: 0.8125rem;

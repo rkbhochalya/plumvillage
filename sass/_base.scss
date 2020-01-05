@@ -2403,13 +2403,7 @@ body #youmax, body .youmax{
 		@include font-size(15);
 	}
 
-}
-#cookie-notice.show-cookie{
-	transform: translateY(0);
-	bottom: 85px;
-
 	@include media-breakpoint-up(xs) {
-		bottom: 15px;
 		right: 85px;
 	}
 	@include media-breakpoint-up(sm) {
@@ -2419,6 +2413,15 @@ body #youmax, body .youmax{
 	@include media-breakpoint-up(md) {
 		right: 15px;
 		left: auto;
+	}
+
+}
+#cookie-notice.show-cookie{
+	transform: translateY(0);
+	bottom: 85px;
+
+	@include media-breakpoint-up(xs) {
+		bottom: 15px;
 	}
 }
 
