@@ -3,6 +3,7 @@ $version: 1;
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "assets/fonts" !default;
 
+$icon-sheet-music: "\e91e";
 $icon-location: "\e91d";
 $icon-arrow-left: "\e91b";
 $icon-arrow-right: "\e91c";
@@ -56,6 +57,11 @@ $icon-hamburger: "\e900";
 .icon-circle-caret-down {
   &:before {
     content: $icon-circle-caret-down; 
+  }
+}
+.icon-sheet-music {
+  &:before {
+    content: $icon-sheet-music; 
   }
 }
 .icon-external-link {

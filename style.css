@@ -8519,6 +8519,9 @@ body.compensate-for-scrollbar {
 .icon-circle-caret-down:before {
   content: ""; }
 
+.icon-sheet-music:before {
+  content: ""; }
+
 .icon-external-link:before {
   content: ""; }
 
@@ -11974,6 +11977,8 @@ body #youmax, body .youmax {
     z-index: 2; }
   .audio-player .buttons {
     margin-top: -10px; }
+    .audio-player .buttons a {
+      cursor: pointer; }
     .audio-player .buttons .play-btn {
       cursor: pointer;
       display: inline-block;

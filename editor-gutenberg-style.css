@@ -1253,6 +1253,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .icon-circle-caret-down:before {
   content: ""; }
 
+.icon-sheet-music:before {
+  content: ""; }
+
 .icon-external-link:before {
   content: ""; }
 
@@ -1712,6 +1715,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     z-index: 2; }
   .audio-player .buttons {
     margin-top: -10px; }
+    .audio-player .buttons a {
+      cursor: pointer; }
     .audio-player .buttons .play-btn {
       cursor: pointer;
       display: inline-block;

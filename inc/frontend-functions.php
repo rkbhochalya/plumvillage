@@ -629,7 +629,6 @@ add_action('wp_head', 'add_schema_data_to_events');
  * Search
  */
 
-
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
     if ($query->is_search() ) {      
@@ -660,6 +659,7 @@ function my_search_filter($query) {
   }
 }
 add_action('pre_get_posts','my_search_filter',1);
+
 
 // Ajax search
 add_action( 'wp_ajax_get_search_results', 'get_search_results' );
