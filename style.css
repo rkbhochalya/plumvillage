@@ -10820,6 +10820,9 @@ body #youmax, body .youmax {
   .admin-bar .search-overlay .search-container {
     margin-top: 31px; } }
 
+.admin-bar .fancybox-toolbar {
+  top: 32px; }
+
 .entry-content .gallery-images figcaption {
   display: none; }
 
