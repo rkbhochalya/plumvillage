@@ -20,10 +20,12 @@
                             <span class="icon icon-pauze"></span>
                             <span class="text"><?php _e('Play', 'plumvillage'); ?></span>
                         </a>
-                        <a class="link-with-icon earthy-link" href="<?php echo $file['url']; ?>" download="<?php echo $file['url']; ?>">
-                            <span class="icon icon-download"></span>
-                            <span class="text"><?php _e('Download', 'plumvillage'); ?></span>
-                        </a>
+                        <?php if(!get_sub_field('disable_download')) : ?>
+                            <a class="link-with-icon earthy-link" href="<?php echo $file['url']; ?>" download="<?php echo $file['url']; ?>">
+                                <span class="icon icon-download"></span>
+                                <span class="text"><?php _e('Download', 'plumvillage'); ?></span>
+                            </a>
+                        <?php endif; ?>
     <!--                         <a class="link-with-icon earthy-link" href="#">
                             <span class="icon icon-transcript"></span>
                             <span class="text"><?php _e('Transcript', 'plumvillage'); ?></span>
