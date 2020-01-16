@@ -294,6 +294,10 @@
 								<div class="col-12 col-sm-8 col-md-6">
 									<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required />	
 								</div>
+								<div class="form-move-aside">
+    							<label for="pardot_extra_field">Comments</label>
+    							<input type="text" id="pardot_extra_field" name="pardot_extra_field">
+								</div>
 								<div class="col">
 						   		<input type="hidden" name="newsletter" value="true">
 									<input type="submit" value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />

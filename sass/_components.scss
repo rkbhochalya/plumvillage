@@ -102,6 +102,10 @@ form label{
 	font-weight: 400;
 }
 
+.form-move-aside{
+	position: absolute;
+	left: -99999999px;
+}
 
 .wpcf7{
 	input[type="text"],
