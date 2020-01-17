@@ -20,7 +20,7 @@
 						the_field('top_left', 'options');
 					endif; ?>
 					<div class="pfah-wrapper">
-						<form class="subscribe-footer-form pfah-form validate" id="pardot-subscribe" action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" method="post">
+						<form class="subscribe-footer-form pfah-form validate" id="pardot-subscribe" data-pv-form-action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" action="/" method="post">
 							<div class="form-row">
 						    <div class="col">
 						      <input type="text" class="form-control form-control-lg" name="firstname" placeholder="<?php _e('First Name', 'plumvillage'); ?>" required />
@@ -300,9 +300,10 @@
 								</div>
 								<div class="col">
 						   		<input type="hidden" name="newsletter" value="true">
-									<input type="submit" value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />
+									<input type="submit" disabled value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />
 								</div>
-							</div>    
+							</div>
+							<p class="invalid-feedback js-off"><? _e('Please enable javascript to subscribe to the newsletter.', 'plumvillage'); ?></p>
 						</form>
 					</div>
 				</div>

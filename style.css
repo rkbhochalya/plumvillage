@@ -8958,6 +8958,12 @@ textarea {
 .form-control, .select2 {
   margin-bottom: 10px; }
 
+.invalid-feedback {
+  font-weight: 500; }
+
+.invalid-feedback.js-off {
+  display: block; }
+
 .invalid-feedback.filled {
   margin: 0 0 20px; }
 

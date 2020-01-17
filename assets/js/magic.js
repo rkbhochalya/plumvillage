@@ -48,6 +48,19 @@
 		});
   })
 
+  ////////////////
+  // pardot spam protection
+
+  // hide honeypot field for screen readers
+  $('.form-move-aside').attr({'aria-hidden' : true})
+
+  // only post form if javascript is active
+  $('#pardot-subscribe').attr({'action' : $('#pardot-subscribe').data('pvFormAction')})
+
+  $('#pardot-subscribe input[type=submit]').prop("disabled", false);
+
+  $('.js-off').removeClass('js-off');
+
   $('.select-inline select').each(function(){
   	var el = $(this);
 		el.select2({
