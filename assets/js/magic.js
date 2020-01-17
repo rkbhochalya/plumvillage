@@ -57,9 +57,20 @@
   // only post form if javascript is active
   $('#pardot-subscribe').attr({'action' : $('#pardot-subscribe').data('pvFormAction')})
 
-  $('#pardot-subscribe input[type=submit]').prop("disabled", false);
+  $('#pardot-subscribe .btn').prop("disabled", false);
 
   $('.js-off').removeClass('js-off');
+
+  $('.validate-section-1').on('click', function(e){
+    $('#pardot-subscribe').parsley().whenValidate({
+      group: 'section-1'
+    }).done(function() {
+      $('.section-1').addClass('hide');
+      $('.section-2').removeClass('hide');
+    });
+    e.preventDefault();
+  })
+
 
   $('.select-inline select').each(function(){
   	var el = $(this);

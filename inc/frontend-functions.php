@@ -705,3 +705,16 @@ function get_search_results() {
   die();
       
 }
+
+
+
+// Are you human? Captcha for the newsletter form
+
+// Ajax search
+add_action( 'wp_ajax_are_you_human', 'are_you_human' );
+add_action( 'wp_ajax_nopriv_are_you_human', 'are_you_human' );
+
+function are_you_human() {
+    status_header(404);
+    die();
+}
