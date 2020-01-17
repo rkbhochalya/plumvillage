@@ -10304,6 +10304,18 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
       padding-top: 4vw;
       margin-top: 5vw; } }
 
+.are-you-human {
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #FAF1EB; }
+  .are-you-human label {
+    font-weight: 800;
+    margin-bottom: 10px; }
+  .are-you-human p {
+    margin-bottom: 0; }
+    .are-you-human p strong {
+      font-weight: 800; }
+
 .footer-menu {
   margin: 40px 0 0;
   padding: 0 0 20px; }

@@ -715,6 +715,11 @@ add_action( 'wp_ajax_are_you_human', 'are_you_human' );
 add_action( 'wp_ajax_nopriv_are_you_human', 'are_you_human' );
 
 function are_you_human() {
+  $answer = preg_replace('/[^a-z0-9]+/i', '', strtolower($_GET['answer']));
+  $needs_to_be = preg_replace('/[^a-z0-9]+/i', '', strtolower(get_field('newsletter_form_answer', 'options')));
+
+  if($answer != $needs_to_be){
     status_header(404);
     die();
+  } 
 }

@@ -72,6 +72,15 @@
   })
 
 
+ 	// check if you are human
+	Parsley.addValidator('human', {
+	  validateString: function(value) {
+	    return value.toLowerCase().trim() == pvAjax.human;
+	  },
+	  messages: {en: pvAjax.maybetry + " '"+pvAjax.human+"'?"}
+	});
+
+
   $('.select-inline select').each(function(){
   	var el = $(this);
 		el.select2({

@@ -307,11 +307,13 @@
 							<div class="section-2 hide">
 								<div class="form-row">
 									<div class="col-12">
-										<label for="question">Are you human? Please complete the following sentence:</label>
-										<p>Breathing in I know I am breathing in. <br /> Breathing out I know I am breathing '...'</p>
+										<div class="are-you-human">
+											<label for="answer"><?php _e('Are you human? Please complete the following sentence:', 'plumvillage'); ?></label>
+											<?php the_field('newsletter_form_question', 'options'); ?>
+										</div>
 									</div>
 									<div class="col-4">
-										<input class="form-control form-control-lg" type="text" id="question" name="question" data-parsley-remote="<?php echo admin_url( 'admin-ajax.php' ); ?>" data-parsley-remote-options='{"data": { "action": "are_you_human" } }' placeholder="Answer..." required data-parsley-group="section-2"/>									
+										<input class="form-control form-control-lg" type="text" id="answer" name="answer" data-parsley-human="you" placeholder="Answer..." required data-parsley-group="section-2"/>
 									</div>
 									<div class="col">
 							   		<input type="hidden" name="newsletter" value="true">

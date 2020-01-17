@@ -1482,6 +1482,27 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
+// pardot form
+
+.are-you-human{
+	padding: 15px;
+	margin-bottom: 15px;
+	background: $freshearth;
+
+	label{
+		font-weight: 800;
+		margin-bottom: 10px;
+	}
+
+	p{
+		margin-bottom: 0;
+
+		strong{
+			font-weight: 800;
+		}
+	}
+}
+
 .footer-menu{
 	margin: 40px 0 0;
 	padding: 0 0 20px;
