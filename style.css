@@ -10503,8 +10503,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 @media (max-width: 767.98px) {
   .fancybox-slide--html {
     padding: 0; }
-    .fancybox-slide--html .fancybox-close-small {
-      position: fixed; }
     .fancybox-slide--html .wp-post-image {
       margin: 0 auto;
       display: block; }
@@ -10512,6 +10510,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     padding-left: 0; }
   .fancybox-navigation .fancybox-button--arrow_right {
     padding-right: 0; } }
+
+@media (min-width: 992px) {
+  .lg-hide-close-button .fancybox-button--close {
+    display: none; } }
 
 .fancybox-content.book-content {
   max-width: 900px;
