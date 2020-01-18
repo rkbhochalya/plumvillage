@@ -207,3 +207,11 @@ function pv_set_default_object_terms( $post_id, $post ) {
 	}
 }
 add_action( 'save_post', 'pv_set_default_object_terms', 100, 2 );
+
+// hide Seo Framework Column in overviews
+
+add_action( 'current_screen', 'so_hide_seo_backend_output_cpt', 9 );
+
+function so_hide_seo_backend_output_cpt( $current_screen ) {
+	add_filter( 'the_seo_framework_show_seo_column', '__return_false' );
+}

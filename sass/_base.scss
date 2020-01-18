@@ -542,7 +542,7 @@ big {
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
 	margin-right: 10px;
 }
-.icon-star:hover, .icon-star.active{
+.icon-star:hover, .icon-star.active, .icon-star:focus{
 	color: $ink;
 }
 
@@ -572,12 +572,12 @@ a {
 	color: $color__link;
 	outline: none;
 
-	&:hover,
+	&:hover, &:focus,
 	&:focus,
 	&:active {
 		color: $color__link;
 	}
-	&:hover,
+	&:hover, &:focus,
 	&:active {
 		outline: 0;
 	}
@@ -602,7 +602,7 @@ a.has-arrow{
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
 	}
 
-	&:hover{
+	&:hover, &:focus{
 		&:before{
 			left: -20px;
 		}
@@ -620,7 +620,7 @@ a.has-arrow-after{
 		margin-left: 10px;
 	}
 
-	&:hover{
+	&:hover, &:focus{
 		&:after{
 			margin-left: 15px;
 		}
@@ -657,7 +657,7 @@ a.has-arrow-after{
 			color: $mediumink;
 		}
 	}
-	&:hover{
+	&:hover, &:focus{
 		text-decoration: none;
 
 		.text{
@@ -673,7 +673,7 @@ h5 a{
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
 	color: $ink;
 
-	&:hover{
+	&:hover, &:focus{
 		box-shadow: inset 0 -0.40em $sun;
 		text-decoration: none;
 	}
@@ -1063,7 +1063,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			@include font-size(16);
 		}
 
-		&:hover{
+		&:hover, &:focus{
 			color: $earth;
 		}
 	}
@@ -1081,10 +1081,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		position: relative;
 		line-height: 100%;
 		margin-left: 0;
-
-		&:hover > a,
-		&.focus > a {
-		}
 	}
 	li:before{
 		display: none;
@@ -1103,7 +1099,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.current-menu-item > a,
 	.current-menu-parent > a,
 	.current-menu-ancestor > a,
-	a:hover {
+	a:hover, a:focus {
 		color: $earth;
 	}
 }
@@ -1130,7 +1126,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		border-radius: 0.25rem;
 		padding: 7px 12px;
 
-		&:hover{
+		&:hover, &:focus{
 			background: $sun;
 		}
 	}
@@ -1143,7 +1139,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	z-index: 999;
 	transition: color .4s cubic-bezier(.15,.53,.35,1);
 
-	&:hover{
+	&:hover, &:focus{
 		color: $earth;
 	}
 }
@@ -1170,7 +1166,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	a{
 		color: $grey;
 
-		&:hover{
+		&:hover, &:focus{
 			color: $ink;
 		}
 	}
@@ -1273,7 +1269,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	  			transition: color .3s ease;
 	  			@include font-size(16);
 
-	  			&:hover{
+	  			&:hover, &:focus{
 	  				color: $ink;
 	  			}
 	  		}
@@ -1349,7 +1345,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		font-weight: 700;
 		color: $ink;
 
-		&:hover{
+		&:hover, &:focus{
 			color: $earth;
 		}
 	}
@@ -1366,7 +1362,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		}
 		.current_page_item > a,
 		.current-menu-item > a,
-		a:hover {
+		a:hover, a:focus {
 			color: $earth;
 		}
 		.current_page_ancestor > a,
@@ -1524,7 +1520,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 				@include font-size(14);
 		  }
 
-			&:hover{
+			&:hover, &:focus{
 				color: $ink;
 			}
 		}
@@ -1567,20 +1563,20 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		a{
 			color: $ink;
 
-			&:hover{
+			&:hover, &:focus{
 				text-decoration: none;
 			}	
 		}
-		a.link-facebook:hover{
+		a.link-facebook:hover, a.link-facebook:focus{
 			color: #1877f2;
 		}
-		a.link-instagram:hover{
+		a.link-instagram:hover, a.link-instagram:focus{
 			color: #833ab4;
 		}
-		a.link-twitter:hover{
+		a.link-twitter:hover, a.link-twitter:focus{
 			color: #1da1f2;
 		}
-		a.link-youtube:hover{
+		a.link-youtube:hover, a.link-youtube:focus{
 			color: #ff0000;
 		}
 	}
@@ -1947,7 +1943,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 		line-height: 160%;
 		@include underline($freshink, $sun);
 
-		&:hover{
+		&:hover, &:focus{
 			color: $ink;
 			background: none;
 		}
@@ -2145,7 +2141,7 @@ body #youmax, body .youmax{
 			}		
 		}
 
-		&:hover{
+		&:hover, &:focus{
 			background: $earth!important;
 			opacity: 0.8;
 		}
@@ -2333,7 +2329,7 @@ body #youmax, body .youmax{
 	a{
 		text-decoration: none;
 
-		&:hover{
+		&:hover, &:focus{
 			.index-thumbnail img{
 				transform: scale(1.02);
 			}
@@ -2362,7 +2358,7 @@ body #youmax, body .youmax{
 		a{
 			text-decoration: underline;
 
-			&:hover{
+			&:hover, &:focus{
 				color: $ink;
 			}
 		}
@@ -2468,7 +2464,7 @@ body #youmax, body .youmax{
 			display: none;
 		}		
 
-		a:hover{
+		a:hover, a:focus{
 			background: none;
 		}
 	}
@@ -2515,7 +2511,7 @@ body #youmax, body .youmax{
 			right: 20px;	
 		}
 
-		&:hover{
+		&:hover, &:focus{
 			color: $earth;
 		}
 	}
@@ -2625,7 +2621,7 @@ body #youmax, body .youmax{
 		padding: 28px 10px 30px 5px;
 		@include font-size(20);
 
-		&:hover{
+		&:hover, &:focus{
 			color: $earth;
 		}
 

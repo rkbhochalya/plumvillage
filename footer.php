@@ -30,7 +30,7 @@
 								    <input type="text" class="form-control form-control-lg" name="lastname" placeholder="<?php _e('Last Name', 'plumvillage'); ?>" required data-parsley-group="section-1"/>
 							    </div>
 							    <div class="col-12 col-md">
-							    	<select name="country" class="form-control form-control-lg" required data-parsley-group="section-1">
+							    	<select name="country" class="form-control select2 form-control-lg" required data-parsley-group="section-1">
 							    		<option value="" disabled selected><?php _e('Country', 'plumvillage'); ?></option>
 											<option value="Afghanistan"><?php _e("Afghanistan"); ?></option>
 			                <option value="Åland Islands"><?php _e("Åland Islands"); ?></option>
@@ -281,7 +281,7 @@
 							  </div>
 								<div class="form-row">
 									<div class="col-12 col-md">
-										<select name="language" class="form-control form-control-lg" required data-parsley-group="section-1">
+										<select class="form-control" name="language" required data-parsley-group="section-1">
 											<option value="" disabled selected><?php _e('Language', 'plumvillage'); ?></option>
 											<option value="English"><?php _e("English"); ?></option>
 											<option value="French"><?php _e("French"); ?></option>
@@ -295,12 +295,12 @@
 									<div class="col-12 col-sm-8 col-md-6">
 										<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required data-parsley-group="section-1" />	
 									</div>
+									<div class="col">
+							   		<button disabled class="btn btn-lg btn-primary validate-section-1">Next</button>
+									</div>
 									<div class="form-move-aside">
 	    							<label for="pardot_extra_field">Comments</label>
 	    							<input type="text" id="pardot_extra_field" name="pardot_extra_field">
-									</div>
-									<div class="col">
-							   		<button disabled class="btn btn-lg btn-primary validate-section-1">Next</button>
 									</div>
 								</div>
 							</div>

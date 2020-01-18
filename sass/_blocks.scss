@@ -75,7 +75,7 @@
 			box-shadow: none;
 			padding: 1px 1px;
 
-			&:hover{
+			&:hover, &:focus{
 				color:$ink;
 			}
 		}
@@ -198,7 +198,7 @@
 		}
 	}
 
-	&:hover{
+	&:hover, &:focus{
 		.gallery-embed-inside .gallery-embed-content p .icon{
 			color: darken($sun, 10%);
 		}
@@ -272,7 +272,7 @@
 		 	border-radius: 30px;
 		}
 		
-		&:hover{
+		&:hover, &:focus{
 			.icon{
 				color: $ink;
 				@include font-size(45);
@@ -352,7 +352,7 @@
 	  	.icon-pauze{
 	  		display: none;
 	  	}
-	    &:hover{
+	    &:hover, &:focus{
 	    	color: $ink;
 	    }
 	  }
@@ -464,7 +464,7 @@
 			@include font-size(14);
 		}
 
-		&:hover{
+		&:hover, &:focus{
 			.icon{
 				left: -30px;
 			}
@@ -504,7 +504,7 @@
 		.icon-bg:after{
 			background: $cloud;
 		}
-		&:hover{
+		&:hover, &:focus{
 			.icon-bg:after{
 				background: $ink;
 			}
@@ -552,7 +552,7 @@
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
 	}
 
-	&:hover{
+	&:hover, &:focus{
 		text-decoration: none;
 		img{
 			transform: scale(1.04);			
@@ -1115,7 +1115,7 @@ pre.wp-block-verse, .wp-block-verse pre{
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
 		line-height: 160%;
 
-		&:hover{
+		&:hover, &:focus{
 			text-decoration: none;
 			background: darken($sun, 10);
 		}

@@ -40,7 +40,7 @@
 		trigger: 'change'
 	})
 
-  $('form select').each(function(){
+  $('form select.select2').each(function(){
   	var el = $(this);
 		el.select2({
 			width: '100%',
