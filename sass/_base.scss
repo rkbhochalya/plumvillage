@@ -542,7 +542,7 @@ big {
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
 	margin-right: 10px;
 }
-.icon-star:hover, .icon-star.active, .icon-star:focus{
+.icon-star:hover, .icon-star.active, .icon-s{
 	color: $ink;
 }
 
@@ -1634,16 +1634,36 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	background: $earth;
 }
 
+@include media-breakpoint-down(sm) {
+	.fancybox-slide--html{
+		padding: 0;
+
+		.fancybox-close-small{
+			position: fixed;
+		}
+		.wp-post-image{
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	.fancybox-navigation .fancybox-button--arrow_left{
+		padding-left:0;
+	}
+	.fancybox-navigation .fancybox-button--arrow_right{
+		padding-right: 0;
+	}
+}
 
 /// books in fancybox
 
 .fancybox-content.book-content{
-	max-width: 1000px;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	max-width: 900px;
+	padding: 20px;
 
-	h1{
-		@include font-size(40);
+	@media (min-width: 900px) {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		padding: 30px;
 	}
 
 	p.has-large-font-size{
@@ -1653,6 +1673,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	p{
 		@include font-size(15);
 	}
+}
+
+.fancybox-slide--html .fancybox-close-small{
+
 }
 
 

@@ -428,6 +428,7 @@
 
 	> h5{
 		margin-bottom: 20px;
+		padding-top: 0;
 
 		.icon{
 			display: none;
@@ -514,9 +515,10 @@
 	p{
 		@include font-size(15);
 	}
-
-	h5{
-		padding-top: 0;
+	.index-book{
+		h5{
+			padding-top: 0;
+		}
 	}
 
 	.single-book{

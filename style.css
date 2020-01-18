@@ -9564,7 +9564,7 @@ big {
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   margin-right: 10px; }
 
-.icon-star:hover, .icon-star.active, .icon-star:focus {
+.icon-star:hover, .icon-star.active, .icon-s {
   color: #000; }
 
 .footnote {
@@ -10500,12 +10500,27 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .fancybox-progress {
   background: #8B572A; }
 
+@media (max-width: 767.98px) {
+  .fancybox-slide--html {
+    padding: 0; }
+    .fancybox-slide--html .fancybox-close-small {
+      position: fixed; }
+    .fancybox-slide--html .wp-post-image {
+      margin: 0 auto;
+      display: block; }
+  .fancybox-navigation .fancybox-button--arrow_left {
+    padding-left: 0; }
+  .fancybox-navigation .fancybox-button--arrow_right {
+    padding-right: 0; } }
+
 .fancybox-content.book-content {
-  max-width: 1000px;
-  margin-top: 50px;
-  margin-bottom: 50px; }
-  .fancybox-content.book-content h1 {
-    font-size: 2.5rem; }
+  max-width: 900px;
+  padding: 20px; }
+  @media (min-width: 900px) {
+    .fancybox-content.book-content {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 30px; } }
   .fancybox-content.book-content p.has-large-font-size {
     margin-right: 0; }
   .fancybox-content.book-content p {
@@ -12139,7 +12154,8 @@ body #youmax, body .youmax {
   .panel.panel-open.no-title {
     padding-top: 40px; }
   .panel > h5 {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    padding-top: 0; }
     .panel > h5 .icon {
       display: none; }
 
@@ -12223,7 +12239,7 @@ body #youmax, body .youmax {
 .panel-books p, .page-template-default .entry-content .panel-books p {
   font-size: 0.9375rem; }
 
-.panel-books h5, .page-template-default .entry-content .panel-books h5 {
+.panel-books .index-book h5, .page-template-default .entry-content .panel-books .index-book h5 {
   padding-top: 0; }
 
 .panel-books .single-book a.link-zoom, .page-template-default .entry-content .panel-books .single-book a.link-zoom {

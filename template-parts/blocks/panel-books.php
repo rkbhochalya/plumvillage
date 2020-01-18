@@ -4,8 +4,7 @@ if( have_rows('books') ): ?>
     <div class="panel panel-books align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?>
         <?php if(get_field('collapsable')) : echo 'panel-collapsable'; else : echo 'panel-open'; endif; ?> 
         <?php if(get_field('default_state') == 'open') : echo 'panel-open'; endif; ?> 
-        <?php if(!get_field('title')) : echo 'no-title'; endif; ?> 
-        <?php if(get_field('collapsable') || ($block['align'] != 'wide')) : echo 'center-with-border'; endif; ?>">
+        <?php if(!get_field('title')) : echo 'no-title'; endif; ?>">
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><span class="underline-me"><?= get_field('title'); ?></span></h5>
         <?php endif; ?>
