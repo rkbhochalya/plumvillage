@@ -1643,11 +1643,20 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			display: block;
 		}
 	}
-	.fancybox-navigation .fancybox-button--arrow_left{
-		padding-left:0;
-	}
-	.fancybox-navigation .fancybox-button--arrow_right{
-		padding-right: 0;
+	.fancybox-navigation{
+		.fancybox-button--arrow_left, .fancybox-button--arrow_right{
+			padding-bottom: 0;
+			height: 75px;
+			width: 70px;
+			top: initial;
+			bottom: 0;			
+		}
+		.fancybox-button--arrow_left{
+			padding-left:0;
+		}
+		.fancybox-button--arrow_right{
+			padding-right: 0;
+		}
 	}
 }
 

@@ -10506,6 +10506,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
     .fancybox-slide--html .wp-post-image {
       margin: 0 auto;
       display: block; }
+  .fancybox-navigation .fancybox-button--arrow_left, .fancybox-navigation .fancybox-button--arrow_right {
+    padding-bottom: 0;
+    height: 75px;
+    width: 70px;
+    top: initial;
+    bottom: 0; }
   .fancybox-navigation .fancybox-button--arrow_left {
     padding-left: 0; }
   .fancybox-navigation .fancybox-button--arrow_right {
