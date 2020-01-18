@@ -632,7 +632,7 @@ add_action('wp_head', 'add_schema_data_to_events');
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
     if ($query->is_search() ) {      
-      $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release') );
+      $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release', 'monastics') );
       $query->set('search_fields', array(
         'post_title',
         'post_content',
@@ -659,7 +659,6 @@ function my_search_filter($query) {
   }
 }
 add_action('pre_get_posts','my_search_filter',1);
-
 
 // Ajax search
 add_action( 'wp_ajax_get_search_results', 'get_search_results' );
