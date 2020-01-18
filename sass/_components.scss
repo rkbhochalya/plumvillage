@@ -153,7 +153,7 @@ div.wpcf7 .ajax-loader{
 /// Default select styling
 
 /* class applies to select element itself, not a wrapper element */
-body select {
+body select, body select.form-control {
 	display: block;
 	font-size: 0.875rem;
 	font-weight: 400;
@@ -191,17 +191,17 @@ body select:hover {
 /* Focus style */
 body select:focus {
 	border-color: #aaa;
-	/* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
-	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-	box-shadow: 0 0 0 3px -moz-mac-focusring;
+	box-shadow: 0 0 0 0.2rem #F5F5EF;
 	color: #222; 
 	outline: none;
+	background-color: $cloud;
 }
 
 /* Set options to normal weight */
 body select option {
 	font-weight:normal;
 	background: initial;
+	outline: none;
 }
 
 /* Support for rtl text, explicit support for Arabic and Hebrew */
