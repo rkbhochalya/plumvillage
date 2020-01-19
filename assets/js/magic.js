@@ -449,8 +449,13 @@
   $('.toggle-search').on('click', function(e){
   	$('body').toggleClass('search-open');
   	if($('body').is('.search-open')){
+  		$('.search-overlay').addClass('d-block');
 	  	$('.search-overlay .search-field').select();	  			
-  	} 
+  	} else {
+	  	$('.search-overlay').on("transitionend.fm webkitTransitionEnd.fm oTransitionEnd.fm MSTransitionEnd.fm", function(e) {
+	  		$('.search-overlay').removeClass('d-block');
+	  	})  		
+  	}
   	e.preventDefault();
   })
 
