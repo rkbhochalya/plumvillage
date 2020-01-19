@@ -630,21 +630,6 @@ add_action('wp_head', 'add_schema_data_to_events');
  */
 
 
-// Support for vietnamese characters
-function elasticpress_config_mapping( $mapping ) {
-  
-  $mapping['settings']['analysis']['analyzer']['vietnamese']['tokenizer'] = 'icu_tokenizer';
-  $mapping['settings']['analysis']['analyzer']['vietnamese']['filter'] = array( 'icu_folding' );
-
-  $mapping['mappings']['post']['properties']['post_title']['analyzer'] = 'vietnamese';
-  $mapping['mappings']['post']['properties']['post_content']['analyzer'] = 'vietnamese';
-
-  return $mapping;
-}
-
-add_filter( 'ep_config_mapping', 'elasticpress_config_mapping', 10, 1 );
-
-
 // default search results
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
