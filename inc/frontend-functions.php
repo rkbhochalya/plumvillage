@@ -626,9 +626,26 @@ add_action('wp_head', 'add_schema_data_to_events');
 
 
 /**
- * Search
+ * Elastic Search
  */
 
+
+// Support for vietnamese characters
+function elasticpress_config_mapping( $mapping ) {
+  
+  $mapping['settings']['analysis']['analyzer']['vietnamese']['tokenizer'] = 'icu_tokenizer';
+  $mapping['settings']['analysis']['analyzer']['vietnamese']['filter'] = array( 'icu_folding' );
+
+  $mapping['mappings']['post']['properties']['post_title']['analyzer'] = 'vietnamese';
+  $mapping['mappings']['post']['properties']['post_content']['analyzer'] = 'vietnamese';
+
+  return $mapping;
+}
+
+add_filter( 'ep_config_mapping', 'elasticpress_config_mapping', 10, 1 );
+
+
+// default search results
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
     if ($query->is_search() ) {      
@@ -691,7 +708,7 @@ function get_search_results() {
       endwhile;
 
       if($search->found_posts > ($search->post_count + $offset)){
-        echo '<a class="load-more-search" href="#" data-offset="'.($search->post_count + $offset).'"><span class="load-more-text">Load More</span>';
+        echo '<a class="load-more-search" href="#" data-offset="'.($search->post_count + $offset).'"><span class="load-more-text">'. __('Load More', 'plumvillage') . '</span>';
       };
 
   else : ?>
