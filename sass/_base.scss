@@ -2524,18 +2524,22 @@ body #youmax, body .youmax{
 		color: $ink;
 	}
 }
-
+.search-open .search-overlay{
+	clip-path: circle(100% at 50% top);
+	display: block;
+}
 .search-overlay{
 	z-index: 2;
 	position: fixed;
-	opacity: 0;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	background: $freshsun;
-	display: none;
+	display: block;
 	overflow: scroll;
+	clip-path: circle(0% at 100% top);
+	transition: all .35s linear;
 
 	.toggle-search{
 		position: fixed;

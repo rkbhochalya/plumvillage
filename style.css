@@ -11130,17 +11130,26 @@ body #youmax, body .youmax {
   .search .page-title span {
     color: #000; }
 
+.search-open .search-overlay {
+  -webkit-clip-path: circle(100% at 50% top);
+  clip-path: circle(100% at 50% top);
+  display: block; }
+
 .search-overlay {
   z-index: 2;
   position: fixed;
-  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: #FEFBF3;
-  display: none;
-  overflow: scroll; }
+  display: block;
+  overflow: scroll;
+  -webkit-clip-path: circle(0% at 100% top);
+  clip-path: circle(0% at 100% top);
+  -webkit-transition: all .35s linear;
+  -o-transition: all .35s linear;
+  transition: all .35s linear; }
   .search-overlay .toggle-search {
     position: fixed;
     top: 15px;

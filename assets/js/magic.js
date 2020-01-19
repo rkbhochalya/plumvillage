@@ -449,16 +449,8 @@
   $('.toggle-search').on('click', function(e){
   	$('body').toggleClass('search-open');
   	if($('body').is('.search-open')){
-	  	$('.search-overlay').velocity({opacity: 1, display: 'block'}, {
-	  		duration: 200,
-	  		complete: function(){
-	  			var $searchField = $('.search-overlay .search-field');
-	  			$searchField.select();	  			
-	  		}
-	  	})  		
-  	} else {
-  		$('.search-overlay').velocity({opacity: 0, display: 'none'}, {duration: 200})
-  	}
+	  	$('.search-overlay .search-field').select();	  			
+  	} 
   	e.preventDefault();
   })
 
