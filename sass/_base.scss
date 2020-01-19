@@ -2527,7 +2527,8 @@ body #youmax, body .youmax{
 }
 .search-open .search-overlay{
 	clip-path: circle(100% at 50% 50%);
-	display: block;
+	height: 100%;
+	width: 100%;
 }
 .search-overlay{
 	z-index: 2;
@@ -2537,10 +2538,16 @@ body #youmax, body .youmax{
 	width: 100%;
 	height: 100%;
 	background: $freshsun;
-	display: block;
+	height: 0;
+	width: 0;
 	overflow: scroll;
 	clip-path: circle(0% at 100% 0%);
-	transition: all .35s linear;
+	transition: clip-path .32s linear;
+
+	&.animating{
+		height: 100%;
+		width: 100%;
+	}
 
 	.toggle-search{
 		position: fixed;
