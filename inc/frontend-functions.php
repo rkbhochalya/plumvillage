@@ -629,21 +629,45 @@ add_action('wp_head', 'add_schema_data_to_events');
  * Elastic Search
  */
 
+/**
+ * Make sure all languages are indexed
+ * https://github.com/10up/ElasticPress/issues/477
+ */
+ 
+// add_filter('ep_index_posts_args', function($args) {
+//     return array_merge($args, [
+//         'suppress_filters' => true
+//     ]);
+// });
+
 
 // normalise vietnamese characters with icu_folding
 function elasticpress_config_mapping( $mapping ) {
-
   $mapping['settings']['analysis']['analyzer']['default']['filter'] = array( 'lowercase', 'stop', 'ewp_snowball', 'icu_folding' );
+  
+  $mapping['settings']['analysis']['filter']['pv_synonym_filter'] = array(
+      'type' => 'synonym',
+      'synonyms' => array(
+          '4, four, quatre',
+          '5, five, cinq',
+          '8, eight, huit',
+          '10, ten, dix',
+          '14, fourteen, quatorze',
+          '16, sixteen, seize',
+      ),
+  );
+
+  $mapping['settings']['analysis']['analyzer']['default']['filter'][] = 'pv_synonym_filter';
 
   return $mapping;
 }
 
 add_filter( 'ep_config_mapping', 'elasticpress_config_mapping', 10, 1 );
 
-// default search results
+// filter search results
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
-    if ($query->is_search() ) {      
+    if ($query->is_search() ) {
       $query->set( 'post_type', array('post', 'page', 'pv_event', 'pv_book', 'letter', 'interview', 'tnh_update', 'tnh_press_release', 'monastics') );
       $query->set('search_fields', array(
         'post_title',
