@@ -630,6 +630,16 @@ add_action('wp_head', 'add_schema_data_to_events');
  */
 
 
+// normalise vietnamese characters with icu_folding
+function elasticpress_config_mapping( $mapping ) {
+
+  $mapping['settings']['analysis']['analyzer']['default']['filter'] = array( 'lowercase', 'stop', 'ewp_snowball', 'icu_folding' );
+
+  return $mapping;
+}
+
+add_filter( 'ep_config_mapping', 'elasticpress_config_mapping', 10, 1 );
+
 // default search results
 function my_search_filter($query) {
   if ( (!is_admin() && $query->is_main_query()) || !is_admin_request() ) {
