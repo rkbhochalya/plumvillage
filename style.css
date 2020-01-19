@@ -10048,13 +10048,14 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 #top-navigation .toggle-search {
   float: right;
   font-size: 1.375rem;
-  margin-left: 0;
-  margin-top: -4px;
-  padding: 8px;
+  margin: -11px -7px -7px;
+  padding: 15px;
   color: #000; }
   @media (min-width: 768px) {
     #top-navigation .toggle-search {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      padding: 8px;
+      margin: -4px 0 0; } }
   #top-navigation .toggle-search:hover, #top-navigation .toggle-search:focus {
     color: #8B572A; }
 
@@ -11131,8 +11132,8 @@ body #youmax, body .youmax {
     color: #000; }
 
 .search-open .search-overlay {
-  -webkit-clip-path: circle(100% at 50% top);
-  clip-path: circle(100% at 50% top);
+  -webkit-clip-path: circle(100% at 50% 50%);
+  clip-path: circle(100% at 50% 50%);
   display: block; }
 
 .search-overlay {
@@ -11145,8 +11146,8 @@ body #youmax, body .youmax {
   background: #FEFBF3;
   display: block;
   overflow: scroll;
-  -webkit-clip-path: circle(0% at 100% top);
-  clip-path: circle(0% at 100% top);
+  -webkit-clip-path: circle(0% at 100% 0%);
+  clip-path: circle(0% at 100% 0%);
   -webkit-transition: all .35s linear;
   -o-transition: all .35s linear;
   transition: all .35s linear; }
