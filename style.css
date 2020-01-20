@@ -9263,7 +9263,7 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3 {
-  font-family: "Cormorant Infant", serif;
+  font-family: "Cormorant Garamond", serif;
   line-height: 130%; }
 
 h1, h2, h3, h4, h5, h6,
@@ -9431,7 +9431,7 @@ big {
   .entry-content blockquote :nth-last-child(2):after, .page-template-default .entry-content blockquote :nth-last-child(2):after, .single .entry-content blockquote :nth-last-child(2):after {
     content: close-quote; }
   .entry-content blockquote p, .page-template-default .entry-content blockquote p, .single .entry-content blockquote p {
-    font-family: "Cormorant Infant", serif;
+    font-family: "Cormorant Garamond", serif;
     padding-left: 30px;
     line-height: 145%;
     font-style: italic;
@@ -10229,7 +10229,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
         .mega-menu-container .mega-menu-side > li {
           margin-bottom: 3vw; } }
       .mega-menu-container .mega-menu-side > li > a {
-        font-family: "Cormorant Infant", serif;
+        font-family: "Cormorant Garamond", serif;
         font-weight: 600;
         color: #000;
         font-size: 1.75rem;
