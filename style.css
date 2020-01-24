@@ -9535,7 +9535,10 @@ big {
 
 .entry-content p.has-large-font-size, .entry-content .introduction p {
   font-size: 1.375rem;
-  color: #9A9A9A; }
+  color: #676767;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  line-height: 150%; }
   .entry-content p.has-large-font-size a, .entry-content .introduction p a {
     color: #9A9A9A; }
   @media (min-width: 992px) {
@@ -11050,10 +11053,10 @@ body #youmax, body .youmax {
   .index-event.index-item.index-event-repeat .entry-meta:before {
     top: 16px; }
 
-.single-pv_event .entry-meta {
+.single-pv_event .centered-content .entry-meta {
   position: relative;
   padding: 20px 0 20px 33px; }
-  .single-pv_event .entry-meta:before {
+  .single-pv_event .centered-content .entry-meta:before {
     content: url(assets/images/calendar.svg);
     position: absolute;
     top: 22px;

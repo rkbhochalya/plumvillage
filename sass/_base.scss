@@ -507,7 +507,10 @@ big {
 
 .entry-content p.has-large-font-size, .entry-content .introduction p{
 	@include font-size(22);
-	color: $grey;
+	color: darken($grey, 20);
+	font-family: $font-headers;
+	font-size: 1.8rem;
+	line-height: 150%;
 
 	a{
 		color: $grey;
@@ -2407,7 +2410,8 @@ body #youmax, body .youmax{
 }
 
 .single-pv_event{
-	.entry-meta{
+
+	.centered-content .entry-meta{
 		position: relative;
 		padding: 20px 0 20px 33px;
 
