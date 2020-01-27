@@ -10039,8 +10039,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
           font-size: 0.875rem; } }
 
 #site-navigation {
-  padding: 20px 15px;
-  background: #fff; }
+  padding: 20px 15px; }
 
 #top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
   display: none; }
@@ -11151,6 +11150,9 @@ body #youmax, body .youmax {
   padding: 10px; }
   .search-open .toggle-search:hover, .search-open .toggle-search:focus {
     color: #8B572A; }
+
+.search-open .menu-toggle {
+  z-index: 1; }
 
 .search-overlay {
   z-index: 2;

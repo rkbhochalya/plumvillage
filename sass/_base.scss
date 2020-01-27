@@ -1043,7 +1043,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 #site-navigation{
 	padding: 20px 15px;
-	background: $cloud;
 }
 #top-navigation{
 	.menu-secondary-menu-container, .menu-mega-menu-container{
@@ -2553,6 +2552,9 @@ body #youmax, body .youmax{
 		&:hover, &:focus{
 			color: $earth;
 		}
+	}
+	.menu-toggle{
+		z-index: 1;
 	}
 }
 .search-overlay{
