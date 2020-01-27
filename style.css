@@ -10081,7 +10081,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   text-decoration: none;
   padding: 4px;
   margin: 0 10px;
-  color: #9A9A9A;
+  color: #000;
   font-size: 0.875rem; }
 
 .main-navigation .current_page_item > a,

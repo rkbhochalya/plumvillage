@@ -1086,10 +1086,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		position: relative;
 		line-height: 100%;
 		margin-left: 0;
-
-		> a{
-
-		}
 	}
 	li:before{
 		display: none;
@@ -1100,7 +1096,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		text-decoration: none;
 		padding: 4px;
 		margin: 0 10px;
-		color: $grey;
+		color: $ink;
 		@include font-size(14);
 	}
 
