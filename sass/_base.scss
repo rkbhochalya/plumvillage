@@ -507,7 +507,7 @@ big {
 
 .entry-content p.has-large-font-size, .entry-content .introduction p{
 	@include font-size(22);
-	color: darken($grey, 20);
+	color: $grey;
 	font-family: $font-headers;
 	font-size: 1.8rem;
 	line-height: 150%;
@@ -1056,15 +1056,17 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	.toggle-search{
 		float: right;
+		z-index: 9;
+		position: relative;
 		@include font-size(22);
-		margin: -11px -7px -7px;
+		margin: -17px -7px -7px;
 		padding: 15px;
 		color: $ink;
 
 		@include media-breakpoint-up(md) {
 			@include font-size(16);
 			padding: 8px;
-			margin: -4px 0 0;
+			margin: -9px 0 0;
 		}
 
 		&:hover, &:focus{
@@ -1085,12 +1087,16 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		position: relative;
 		line-height: 100%;
 		margin-left: 0;
+
+		> a{
+
+		}
 	}
 	li:before{
 		display: none;
 	}
 
-	a {
+	li > a {
 		display: block;
 		text-decoration: none;
 		padding: 4px;
@@ -1103,7 +1109,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.current-menu-item > a,
 	.current-menu-parent > a,
 	.current-menu-ancestor > a,
-	a:hover, a:focus {
+	li > a:hover, li > a:focus {
 		color: $earth;
 	}
 }
@@ -1424,6 +1430,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 #content{
 	margin-top: 40px;
+	position: relative;
+	z-index: 1;
+
 	@include media-breakpoint-up(md) {
 		margin-top: 70px;
 	}
@@ -2529,10 +2538,22 @@ body #youmax, body .youmax{
 		color: $ink;
 	}
 }
-.search-open .search-overlay{
-	clip-path: circle(100% at 50% 50%);
-	height: 100%;
-	width: 100%;
+.search-open{
+	.search-overlay{
+		clip-path: circle(100% at 50% 50%);
+		height: 100%;
+		width: 100%;
+	}
+	.toggle-search{
+		position: fixed;
+		text-decoration: none;
+		z-index: 2;
+		padding: 10px;
+
+		&:hover, &:focus{
+			color: $earth;
+		}
+	}
 }
 .search-overlay{
 	z-index: 2;
@@ -2553,21 +2574,6 @@ body #youmax, body .youmax{
 		width: 100%;
 	}
 
-	.toggle-search{
-		position: fixed;
-		top: 15px;
-		right: 10px;
-		text-decoration: none;
-		z-index: 2;
-		padding: 10px;
-		@media (min-width: 880px){
-			right: 20px;	
-		}
-
-		&:hover, &:focus{
-			color: $earth;
-		}
-	}
 	.search-container{
 		max-width: 800px;
 		margin: 0 auto;

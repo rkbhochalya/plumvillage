@@ -59,15 +59,6 @@
 			) );
 		?>
 </div>
-<div class="search-overlay">
-	<a class="toggle-search icon-close" href="#"></a>
-	<div class="search-container">
-		<div class="search-form-container"><?php get_search_form(); ?></div>
-		<div class="search-results">
-			<div id="circle3"></div>
-		</div>	
-	</div>
-</div>
 <div id="page" class="site">			
 	<button class="menu-toggle unbutton float-left" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-hamburger"></span></button>
 
@@ -81,7 +72,15 @@
 					'menu_class'		 => 'mega-menu-top menu'
 				) );
 				?>
-				<a class="icon-search toggle-search" href="?s=" aria-label="<?php _e('Search', 'plumvillage'); ?>"></a>
+				<a class="toggle-search" href="?s=" aria-label="<?php _e('Search', 'plumvillage'); ?>"><?php echo file_get_contents(get_stylesheet_directory().'/assets/images/search.svg'); ?></a>
+				<div class="search-overlay">
+					<div class="search-container">
+						<div class="search-form-container"><?php get_search_form(); ?></div>
+						<div class="search-results">
+							<div id="circle3"></div>
+						</div>	
+					</div>
+				</div>
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'secondary-menu',
