@@ -1,0 +1,9 @@
+@media print {
+  .menu-mega-menu-container,
+  .menu-toggle,
+  #site-navigation,
+  #comments,
+  footer {
+    display: none;
+  }
+}
