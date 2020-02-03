@@ -84,7 +84,7 @@ ul li{
 }
 ul li::before {
 	content: "•"; color: $sun;
-  display: inline-block; 
+  display: inline-block;
   font-size: 1.8em;
   left: -22px;
   position: absolute;
@@ -106,7 +106,7 @@ ul.list-unstyled{
 
 dt {
 	font-weight: normal;
-	@include font-size(14);	
+	@include font-size(14);
 }
 
 dd {
@@ -114,7 +114,7 @@ dd {
 	line-height: 180%;
 	margin: 0 1.5em 1.5em;
 	font-weight: 300;
-	@include font-size(14);	
+	@include font-size(14);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -178,7 +178,7 @@ h6{
 	color: $mediumink;
 	@include font-size(16);
 	@include media-breakpoint-up(md) {
-		@include font-size(14);	
+		@include font-size(14);
 	}
 	margin-bottom: 20px;
 }
@@ -216,7 +216,7 @@ pre.wp-block-verse, .wp-block-verse pre{
 
 	a{
 		text-decoration: underline;
-	}	
+	}
 }
 
 code, kbd, tt, var {
@@ -324,7 +324,7 @@ big {
 	margin: 0;
 	padding:0 0 20px;
 	quotes: "“" "”";
-	
+
 	p:first-child:before {
 	    content: open-quote;
 	}
@@ -351,7 +351,7 @@ big {
 		color: $grey;
 		font-style: italic;
 		margin-top: -2em;
-		
+
 		&::before{
 			content:'—';
 		}
@@ -471,7 +471,7 @@ big {
 
 	&.alignwide{
 		blockquote{
-			max-width: 100%;	
+			max-width: 100%;
 
 			p{
 				@include font-size(37);
@@ -545,7 +545,7 @@ big {
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
 	margin-right: 10px;
 }
-.icon-star:hover, .icon-star.active, .icon-s{
+.icon-star:hover, .icon-star:focus, .icon-star.active, .icon-s{
 	color: $ink;
 }
 
@@ -596,7 +596,7 @@ a.has-arrow{
 
 	&:before{
 		@include is-icon();
-		content: $icon-arrow-tiny; 
+		content: $icon-arrow-tiny;
 		position: absolute;
 		left: -25px;
 		top: 5px;
@@ -617,7 +617,7 @@ a.has-arrow-after{
 
 	&:after{
 		@include is-icon();
-		content: $icon-arrow-tiny; 
+		content: $icon-arrow-tiny;
 		@include font-size(12);
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
 		margin-left: 10px;
@@ -637,7 +637,7 @@ a.has-arrow-after{
 	margin-right: 20px;
 	transition: all .4s cubic-bezier(.15,.53,.35,1);
 
-	
+
 	.icon{
 		@include font-size(25);
 		position: relative;
@@ -645,7 +645,7 @@ a.has-arrow-after{
 		color: $sun;
 		margin-right: 3px;
 	}
-	
+
 	.text{
 			@include underline($sun, $sun);
 			color: $ink;
@@ -654,7 +654,7 @@ a.has-arrow-after{
 
 	&.earthy-link{
 		.text{
-			@include underline($mediumink, $sun);			
+			@include underline($mediumink, $sun);
 		}
 		.icon{
 			color: $mediumink;
@@ -775,11 +775,19 @@ h5 a{
 	}
 }
 
-.entry-content p a.side-link:hover{
-	background: $sun;
+.entry-content p a.side-link {
+  &:hover, &:focus {
+	  background: $sun;
+  }
 }
-.entry-content p a.side-link:hover span.real-side, .entry-content p a.side-link:hover span.real-side .icon{
-	color: $ink;
+
+.entry-content p a.side-link {
+  &:hover, &:focus {
+      span.real-side,
+      span.real-side .icon{
+        color: $ink;
+    }
+  }
 }
 
 figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="uploads"]{
@@ -801,7 +809,7 @@ figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="up
 
 	@media (min-width: 470px){
 		margin-left: 1.5em;
-		max-width: 50%;		
+		max-width: 50%;
 	}
 
 	@include media-breakpoint-between(sm, sm) {
@@ -860,7 +868,7 @@ figure.wp-block-image{
 		  margin-right: -155px;
 		  max-width: 884px;
 			padding-top: 1em;
-			padding-bottom: 2em; 
+			padding-bottom: 2em;
 			background: $cloud;
 
 			&.iframe-container{
@@ -873,7 +881,7 @@ figure.wp-block-image{
 				@include media-breakpoint-up(xl) {
 					width: 904px;
 				}
-			}   
+			}
 		}
 }
 
@@ -889,14 +897,14 @@ figure.wp-block-image{
 	  figcaption{
 	  	min-width: 500px;
 	  }
-	}	
+	}
 	@include media-breakpoint-up(lg) {
 	  max-width: 85%;
 
 	  figcaption{
 	  	min-width: 520px;
 	  }
-	}	
+	}
 	@include media-breakpoint-up(xl) {
 	  max-width: 85.05%;
 
@@ -916,7 +924,7 @@ figure.wp-block-image{
 		right: calc(50% + 15px);
 		width: 100vw;
 	}
-} 
+}
 
 .wp-block-image{
 	margin: 0;
@@ -978,7 +986,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	@include media-breakpoint-up(lg) {
 
 		.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5{
-		  padding-top: .3em;	
+		  padding-top: .3em;
 		}
 
 		.alignright{
@@ -990,9 +998,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		  margin-top: 0;
 		  margin-right: 0;
 		  margin-bottom: 0;
-			padding-top: 0;	
-			padding-right: 25px;	
-			padding-bottom: 2em;	
+			padding-top: 0;
+			padding-right: 25px;
+			padding-bottom: 2em;
 		}
 
 		.entry-content .slider.alignwide, .wp-block-group{
@@ -1005,7 +1013,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		.alignright{
 			margin-right: -312px;
 			max-width: 426px;
-		}		
+		}
 
 	}
 
@@ -1373,7 +1381,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a{
 			color: $ink;
-		}		
+		}
 
 	}
 	li {
@@ -1452,7 +1460,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.entry-header > .entry-meta{
 		margin-right: -16px;
 	}
-} 
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1548,7 +1556,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 .address-address{
 	color: $grey;
 	line-height: 180%;
-	@include font-size(15);	
+	@include font-size(15);
   @include media-breakpoint-up(md) {
 		margin-left: 20px;
 		@include font-size(13);
@@ -1573,7 +1581,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 			&:hover, &:focus{
 				text-decoration: none;
-			}	
+			}
 		}
 		a.link-facebook:hover, a.link-facebook:focus{
 			color: #1877f2;
@@ -1635,7 +1643,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	margin: 0 auto;
 }
 
-.fancybox-button:hover{
+.fancybox-button:hover,
+.fancybox-button:focus{
 	color: $sun;
 }
 .fancybox-progress{
@@ -1657,7 +1666,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 			height: 75px;
 			width: 70px;
 			top: initial;
-			bottom: 0;			
+			bottom: 0;
 		}
 		.fancybox-button--arrow_left{
 			padding-left:0;
@@ -1827,7 +1836,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 			}
 			&:before{
 				display: none;
-			}			
+			}
 		}
 	}
 
@@ -1850,7 +1859,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	}
 	.tcm-comments-filters .left{
 		text-align: left;
-		float: left;		
+		float: left;
 	}
 	.tcm-comments-filters .right{
 		float: right;
@@ -1905,7 +1914,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 			.tcm-comment-author-name{
 				@include font-size(16);
 				display: inline-block;
-				
+
 				strong{
 					margin-right: 10px;
 				}
@@ -2006,13 +2015,13 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 
 	.tcm-voting-container .tcm-voting-input:after{
 		content: 'Thank you';
-	}	
+	}
 	.tcm-comments-list .tcm-comment-item:not(.tcm-main-parent){
 		border-left: none;
 	}
  	.tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader).active, .tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader):hover, .tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader):active{
  		background: none!important;
- 	} 
+ 	}
  	.tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader).active, .tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader):hover, .tcm-voting-container .tcm-voting-input.tcm-upvote:not(.tcm-voting-loader):active{
  		color: #000!important;
  	}
@@ -2105,7 +2114,7 @@ body #youmax, body .youmax{
 
 	.youmax-select-box-wrapper{
 		margin: 0 0 50px 0;
-		
+
 		#youmax-select-box{
 			border-radius: 0;
 			border: 0;
@@ -2163,9 +2172,9 @@ body #youmax, body .youmax{
 					@include font-size(13);
 					line-height: 180%;
 					height: 80px!important;
-				}		
+				}
 			}
-		} 		
+		}
 	}
 	#youmax-load-more-div.youmax-small{
 		background: $earth;
@@ -2176,14 +2185,14 @@ body #youmax, body .youmax{
 		padding: 10px 0;
 
 		i{
-			@include font-size(18);	
+			@include font-size(18);
 
 			&::before{
 				content: 'Load More';
 				font-family: $font-body;
 				font-weight: 300;
 				text-shadow: none;
-			}		
+			}
 		}
 
 		&:hover, &:focus{
@@ -2291,7 +2300,7 @@ body #youmax, body .youmax{
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Events 
+// Events
 
 .event-list{
 	margin-bottom: 1.5rem;
@@ -2306,7 +2315,7 @@ body #youmax, body .youmax{
 		h4{
 			margin-bottom: 5px;
 			padding-bottom: 0;
-		}		
+		}
 	}
 
 	&.alignright .block-inside{
@@ -2383,7 +2392,7 @@ body #youmax, body .youmax{
 			}
 			.icon-external-link{
 				color: rgba($earth, 0.4);
-			}			
+			}
 		}
 	}
 }
@@ -2439,7 +2448,7 @@ body #youmax, body .youmax{
 			border: none;
 
 
-			li{				
+			li{
 				&:before{
 					display: none;
 				}
@@ -2508,7 +2517,7 @@ body #youmax, body .youmax{
 		margin: 0 5px;
 		&:before{
 			display: none;
-		}		
+		}
 
 		a:hover, a:focus{
 			background: none;
@@ -2578,9 +2587,9 @@ body #youmax, body .youmax{
 		padding: 0 15px;
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
 		@media (min-width: 880px){
-			margin: 140px auto;	
+			margin: 140px auto;
 		}
-		
+
 		.search-form{
 			max-width: 100%;
 			label{
@@ -2655,7 +2664,7 @@ body #youmax, body .youmax{
 	max-width: 500px;
 
 	label{
-		display: block;	
+		display: block;
 
 		.search-field{
 			width: 100%;
@@ -2706,7 +2715,7 @@ body #youmax, body .youmax{
 		.search-form{
 			max-width: 800px;
 			padding: 0 15px;
-			margin: 0 auto;		
+			margin: 0 auto;
 
 			.search-submit{
 				right: 15px;
