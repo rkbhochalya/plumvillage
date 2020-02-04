@@ -281,7 +281,7 @@
 							  </div>
 								<div class="form-row">
 									<div class="col-12 col-md">
-										<select class="" name="language" required data-parsley-group="section-1">
+										<select class="form-control form-control-lg" name="language" required data-parsley-group="section-1">
 											<option value="" disabled selected><?php _e('Language', 'plumvillage'); ?></option>
 											<option value="English"><?php _e("English"); ?></option>
 											<option value="French"><?php _e("French"); ?></option>
