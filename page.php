@@ -14,23 +14,27 @@
 
 get_header();
 ?>
+
 	<div class="container">
-		<?php
-			while ( have_posts() ) :
-				the_post(); ?>
-			<div class="row">
-				<div class="col-md-3 d-none d-md-block">
-					<?php 
-					wp_nav_menu(
-						array(
-							'theme_location' => 'mega-menu',
-							'menu_id' => 'side-menu',
-							'sub_menu' => true,
-							'show_parent' => true
-						)
-					);
-				?>				
-				</div>
+		<?php while ( have_posts() ) :
+			the_post(); ?>
+			<?php if (wp_nav_menu( array( 'theme_location' => 'mega-menu', 'sub_menu' => true, 'show_parent' => true, 'echo' => false )) !== false) : ?>
+				<div class="row mb-5">
+					<div class="col-md-3 d-none d-md-block">
+					  <?php 
+							wp_nav_menu(
+								array(
+									'theme_location' => 'mega-menu',
+									'menu_id' => 'side-menu',
+									'sub_menu' => true,
+									'show_parent' => true
+								)
+							);
+						?>
+					</div>
+				<?php else : ?>
+				<div class="row justify-content-center mb-5 center-logo">
+				<?php endif; ?>
 				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
