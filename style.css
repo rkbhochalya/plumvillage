@@ -11273,6 +11273,7 @@ body #youmax, body .youmax {
       content: ""; }
     @media (max-width: 880px) {
       .search-form .search-submit {
+        display: none;
         padding-top: 22px;
         margin-right: 30px; } }
 
