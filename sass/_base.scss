@@ -324,6 +324,7 @@ big {
 	margin: 0;
 	padding:0 0 20px;
 	quotes: "“" "”";
+	color: $grey;
 
 	p:first-child:before {
 	    content: open-quote;
@@ -340,7 +341,6 @@ big {
 		padding-left: 30px;
 		line-height: 145%;
 		font-style: italic;
-		color: $grey;
 		@include font-size(28);
 
 	}
@@ -394,12 +394,6 @@ big {
 				@include font-size(40);
 				padding-bottom: 1.5em;
 				max-width: 100%;
-			}
-
-			&.has-cloud-color{
-				p{
-					color: $cloud;
-				}
 			}
 		}
 	}
@@ -1222,6 +1216,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 		.menu li a{
 			color: $cloud;
+		}
+		.secondary-menu-top > li:first-child a{
+			color: $ink;
 		}
 	}
 

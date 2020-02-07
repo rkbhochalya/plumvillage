@@ -42,54 +42,6 @@ function plumvillage_block_category( $categories, $post ) {
 }
 add_filter( 'block_categories', 'plumvillage_block_category', 10, 2);
 
-/**
- * remove unneeded blocks
- */
-
-// add_filter( 'allowed_block_types', 'plumvillage_allowed_block_types' );
- 
-// function plumvillage_allowed_block_types( $allowed_blocks ) {
- 
-//     // get widget blocks and registered by plugins blocks
-//     $registered_blocks = WP_Block_Type_Registry::get_instance()->get_all_registered();
- 
-//     // in case we do not need widgets
-//     unset( $registered_blocks[ 'core/latest-comments' ] );
-//     unset( $registered_blocks[ 'core/archives' ] );
-//     unset( $registered_blocks[ 'core/shortcode' ] );
-//     unset( $registered_blocks[ 'core/categories' ] );
-//     unset( $registered_blocks[ 'core/latest-posts' ] );
-//     unset( $registered_blocks[ 'core/calendar' ] );
-//     unset( $registered_blocks[ 'core/rss' ] );
-//     unset( $registered_blocks[ 'core/search' ] );
-//     unset( $registered_blocks[ 'core/tag-cloud' ] );
- 
-//     // now $registered_blocks contains only blocks registered by plugins, but we need keys only
-//     $registered_blocks = array_keys( $registered_blocks );
- 
-//     // merge the whitelist with plugins blocks
-//     return array_merge( array(
-//         'core/image',
-//         'core/paragraph',
-//         'core/heading',
-//         'core/list',
-//         'core/pullquote',
-//         'core/freeform',
-//         'core/table',
-//         'core/verse',
-//         'core/spacer',
-//         'core/separator',
-//         'core/media-text',
-//         'core/text-columns',
-//         'core/button',
-//         'core/table',
-//         'core/code',
-//         'core/html',
-//         'core/preformatted',
-//         'core/file'
-//     ), $registered_blocks );
- 
-// }
 
 
 function register_acf_block_types() {

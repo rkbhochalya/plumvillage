@@ -9424,7 +9424,8 @@ big {
 .entry-content blockquote, .page-template-default .entry-content blockquote, .single .entry-content blockquote {
   margin: 0;
   padding: 0 0 20px;
-  quotes: "“" "”"; }
+  quotes: "“" "”";
+  color: #9A9A9A; }
   .entry-content blockquote p:first-child:before, .page-template-default .entry-content blockquote p:first-child:before, .single .entry-content blockquote p:first-child:before {
     content: open-quote; }
   .entry-content blockquote p:last-child:after, .page-template-default .entry-content blockquote p:last-child:after, .single .entry-content blockquote p:last-child:after {
@@ -9436,7 +9437,6 @@ big {
     padding-left: 30px;
     line-height: 145%;
     font-style: italic;
-    color: #9A9A9A;
     font-size: 1.75rem; }
   .entry-content blockquote cite, .page-template-default .entry-content blockquote cite, .single .entry-content blockquote cite {
     display: block;
@@ -9474,8 +9474,6 @@ big {
       font-size: 2.5rem;
       padding-bottom: 1.5em;
       max-width: 100%; }
-    .wp-block-pullquote.is-style-solid-color blockquote.has-cloud-color p {
-      color: #fff; }
   .wp-block-pullquote.has-fresh-earth-background-color blockquote {
     background: #FAF1EB; }
   .wp-block-pullquote.alignright {
@@ -10180,6 +10178,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   background: none; }
   .has-white-header #site-navigation .menu li a {
     color: #fff; }
+  .has-white-header #site-navigation .secondary-menu-top > li:first-child a {
+    color: #000; }
 
 @media (min-width: 768px) {
   .has-white-header #page button.unbutton {
@@ -11640,7 +11640,6 @@ body #youmax, body .youmax {
   padding-bottom: 1em;
   margin-bottom: 0;
   font-size: 2.6875rem;
-  color: #000;
   line-height: 120%; }
 
 .page-template-page_full-width .entry-content blockquote cite {
