@@ -92,27 +92,28 @@
 		<div class="container">		
 			<div class="site-branding">
 				<?php
-				if($post){
-					$image = (get_field('header_white', $post->ID) ? get_field('logo_white', 'options') : get_field('logo_black', 'options'));
-				} else {
-					$image = get_field('logo_black', 'options');
-				}
+				$logoWhite = get_field('logo_white', 'options');
+				$logoBlack = get_field('logo_black', 'options');
 				if ( is_front_page()  ) :
 					?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php 
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
+						<?php if( !empty($logoWhite) ): ?>
+							<img class="logo-white" src="<?php echo $logoWhite['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
+						<?php endif; ?>
+						<?php if( !empty($logoBlack) ): ?>
+							<img class="logo-black" src="<?php echo $logoBlack['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
 						<?php endif; ?>
 					</a></h1>
 					<?php
 				else :
 					?>
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<?php 
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
-						<?php endif; ?>					
+						<?php if( !empty($logoWhite) ): ?>
+							<img class="logo-white" src="<?php echo $logoWhite['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
+						<?php endif; ?>
+						<?php if( !empty($logoBlack) ): ?>
+							<img class="logo-black" src="<?php echo $logoBlack['url']; ?>" alt="<?php bloginfo( 'name' ); ?>"" width="<?php the_field('logo_width', 'options'); ?>" />
+						<?php endif; ?>
 					</a></p>
 					<?php
 				endif;

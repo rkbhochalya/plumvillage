@@ -1,9 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Basics
 
-
-
-
 html {
 	box-sizing: border-box;
 	font-size: 13px;
@@ -1210,7 +1207,19 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
+.logo-white{
+	display: none;
+}
+
 .has-white-header{
+
+	.logo-black{
+		display: none;
+	}
+	.logo-white{
+		display: block;
+	}
+
 	#site-navigation{
 		background: none;
 

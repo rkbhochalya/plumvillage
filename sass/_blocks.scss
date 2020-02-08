@@ -777,12 +777,194 @@
 	}
 }
 
+
+// temp
+
+.page-homepage{
+	@include media-breakpoint-down(md) {	
+		.site-branding{
+			left: 15px;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {	
+		.logo-white{
+			display: block;
+		}
+		.logo-black{
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(md) {	
+		.site-branding{
+			position: absolute;
+			height: 100vh;
+			min-height: 600px;
+			padding-top: 0;
+			top: 0;
+			display: flex;
+
+			.site-title{
+				margin: auto;
+				padding-bottom: 260px;
+			}
+		}
+	}	
+	.toggle-search path{
+		fill: $cloud;
+		transition: all .4s cubic-bezier(.15,.53,.35,1);		
+	}
+	&.search-open .toggle-search path{
+		fill: $ink;
+	}
+}
+
+.page-template-page_full-width .wp-block-group.alignfull.home-landing-top{
+	padding: 0;
+	position: relative;
+	margin-top: -185px;
+
+	@include media-breakpoint-up(md) {	
+		margin-top: -110px;
+	}
+	@include media-breakpoint-up(xxl) {	
+		margin-top: -130px;
+	}
+
+	@include media-breakpoint-down(md) {
+		.wp-block-group__inner-container{
+			max-width: 100%;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+		.wp-block-group__inner-container{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.wp-block-columns{
+			.wp-block-column:first-child{
+				order: 2;
+				background: $freshsun;
+				padding: 20px;
+				margin: -120px 15px 0;
+				z-index: 2;
+			}
+			.wp-block-column:last-child{
+				order: 1;
+			}
+			.slick-dots, .slick-prev, .slick-next{
+				margin-bottom: 90px;
+			}
+		} 
+	}
+	@include media-breakpoint-up(md) {	
+		min-height: 100vh;
+		overflow: hidden;
+
+		.wp-block-columns{
+			min-height: 100vh;
+			flex-direction: row;
+		}
+
+		.wp-block-column:first-child{
+			padding-right: 50px;
+			padding-top: 130px;
+			margin: auto;
+			> *{
+				max-width: 570px;
+			}
+		}
+	}
+
+	.slider{
+		margin-bottom: 0;
+
+		.slider-image{
+			padding-bottom: 150%;
+		}
+
+		&:before{
+			content: '';
+			width: 100%;
+			height: 150px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(255,255,255,0) 100%);
+			z-index: 2;
+		}
+
+		&:after{
+			content: '';
+			width: 100%;
+			height: 150px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(255,255,255,0) 100%);
+		}
+
+		@include media-breakpoint-up(md) {	
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50vw;
+			height: 100%;
+			margin-bottom: 0;
+		
+			.slick-list, .slick-track, .slick-slide, .slick-slide > div, .slider-image{
+				height: 100%;
+			}
+			.slider-image{
+				padding: 0;
+				min-height: 100vh;
+				display: block;
+			}
+		}
+
+		.slick-prev, .slick-next{
+			bottom: 10px;
+			z-index: 3;
+
+			&:before{
+				color: $cloud;
+				text-shadow: 0 0 4px rgba($ink, 1);
+			}
+		}
+
+		.slick-next{
+			right: 35px;
+		}
+		.slick-prev{
+			right: 70px;
+		}
+		.slick-dots{
+			left: 35px;
+			z-index: 2;
+			@include media-breakpoint-down(md) {	
+				bottom: 25px;
+			}
+
+			li{ 
+				button::before{
+					color: $cloud;
+					opacity: 0.6;
+					text-shadow: 0 0 4px rgba($ink, 1);
+				}
+				&.slick-active button::before{
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
 .entry-content .wp-block-cover.alignfull:first-child{
 	margin-top: -163px;
 	margin-bottom: 0;
 	padding-top: 355px;
 	padding-bottom: 50px;
-
 
 	@include media-breakpoint-up(md) {	
 		margin-top: -355px;
@@ -1009,10 +1191,19 @@ hr.wp-block-separator{
 // Slick Slider
 .slider{
 	.slider-image{
-		background-position: center;
-		background-size: cover;
 		padding-bottom: 60%;
 		display: none;
+		position: relative;
+
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			object-position: center center;
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.slider-image:first-child{
 		display: block;
@@ -1024,7 +1215,7 @@ hr.wp-block-separator{
 	}
 	&.portrait{
 		.slider-image{
-			padding-bottom: 180%;
+			padding-bottom: 140%;
 		}
 	}
 }
@@ -1058,19 +1249,35 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 	bottom: -35px;
 	top: unset;
 	z-index: 2;
+	transition: all .4s cubic-bezier(.15,.53,.35,1);		
+
+	&.slick-disabled{
+		&:before{
+			opacity: 0.6;
+		}
+	}
 
 	&:before{
 		color: $ink;
 		font-size: 15px;
+		opacity: 1;
 	}
 }
 
+.slick-next{
+	right: 0px;
+
+	&:hover{
+		margin-right: -4px;
+	}
+}
 .slick-prev{
 	right: 40px;
 	left: unset;
-}
-.slick-next{
-	right: 0px;
+
+	&:hover{
+		margin-right: 4px;
+	}
 }
 
 
