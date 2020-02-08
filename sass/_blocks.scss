@@ -942,9 +942,7 @@
 		.slick-dots{
 			left: 35px;
 			z-index: 2;
-			@include media-breakpoint-down(md) {	
-				bottom: 25px;
-			}
+			bottom: 25px;
 
 			li{ 
 				button::before{

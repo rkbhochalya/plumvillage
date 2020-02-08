@@ -12636,10 +12636,8 @@ body #youmax, body .youmax {
       right: 70px; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
       left: 35px;
-      z-index: 2; }
-      @media (max-width: 991.98px) {
-        .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
-          bottom: 25px; } }
+      z-index: 2;
+      bottom: 25px; }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots li button::before {
         color: #fff;
         opacity: 0.6;
