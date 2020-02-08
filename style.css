@@ -12625,7 +12625,7 @@ body #youmax, body .youmax {
           min-height: 100vh;
           display: block; } }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next {
-      bottom: 15px;
+      bottom: 3px;
       z-index: 3; }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev:before, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next:before {
         color: #fff;
@@ -12635,9 +12635,9 @@ body #youmax, body .youmax {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev {
       right: 75px; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
-      left: 35px;
+      left: 45px;
       z-index: 2;
-      bottom: 25px; }
+      bottom: 30px; }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots li button::before {
         color: #fff;
         opacity: 0.6;
@@ -12874,7 +12874,10 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   z-index: 2;
   -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  height: auto;
+  width: auto;
+  padding: 10px; }
   .slick-prev.slick-disabled:before,
   .slick-next.slick-disabled:before {
     opacity: 0.6; }
@@ -12882,8 +12885,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   .slick-next:before {
     color: #000;
     font-size: 15px;
-    opacity: 1;
-    padding: 10px; }
+    opacity: 1; }
 
 .slick-next {
   right: 0px; }
