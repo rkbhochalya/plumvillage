@@ -924,7 +924,7 @@
 		}
 
 		.slick-prev, .slick-next{
-			bottom: 10px;
+			bottom: 15px;
 			z-index: 3;
 
 			&:before{
@@ -937,7 +937,7 @@
 			right: 35px;
 		}
 		.slick-prev{
-			right: 70px;
+			right: 75px;
 		}
 		.slick-dots{
 			left: 35px;
@@ -1237,8 +1237,12 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 		&:before{
 			display: none;
 		}
-		button:before{
-			font-size: 20px; 
+		button{
+			padding: 10px;
+
+			&:before{
+				font-size: 20px;
+			}
 		}
 	}
 }
@@ -1259,6 +1263,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 		color: $ink;
 		font-size: 15px;
 		opacity: 1;
+		padding: 10px;
 	}
 }
 

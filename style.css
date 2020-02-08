@@ -12625,7 +12625,7 @@ body #youmax, body .youmax {
           min-height: 100vh;
           display: block; } }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next {
-      bottom: 10px;
+      bottom: 15px;
       z-index: 3; }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev:before, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next:before {
         color: #fff;
@@ -12633,7 +12633,7 @@ body #youmax, body .youmax {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next {
       right: 35px; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev {
-      right: 70px; }
+      right: 75px; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
       left: 35px;
       z-index: 2;
@@ -12862,8 +12862,10 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
         margin: 0 2px; } }
     ul.slick-dots li:before, .page-template-default .entry-content ul.slick-dots li:before {
       display: none; }
-    ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-dots li button:before {
-      font-size: 20px; }
+    ul.slick-dots li button, .page-template-default .entry-content ul.slick-dots li button {
+      padding: 10px; }
+      ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-dots li button:before {
+        font-size: 20px; }
 
 .slick-prev,
 .slick-next {
@@ -12880,7 +12882,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   .slick-next:before {
     color: #000;
     font-size: 15px;
-    opacity: 1; }
+    opacity: 1;
+    padding: 10px; }
 
 .slick-next {
   right: 0px; }
