@@ -2209,13 +2209,22 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         color: #fff;
         text-shadow: 0 0 4px black; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next {
-      right: 35px; }
+      right: 10px; }
+      @media (min-width: 768px) {
+        .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-next {
+          right: 35px; } }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev {
-      right: 75px; }
+      right: 50px; }
+      @media (min-width: 768px) {
+        .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-prev {
+          right: 75px; } }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
-      left: 45px;
       z-index: 2;
-      bottom: 30px; }
+      bottom: 30px;
+      left: 20px; }
+      @media (min-width: 768px) {
+        .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
+          left: 45px; } }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots li button::before {
         color: #fff;
         opacity: 0.6;
