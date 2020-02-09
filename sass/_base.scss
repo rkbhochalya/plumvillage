@@ -346,7 +346,7 @@ big {
 		padding-left: 30px;
 		@include font-size(14);
 		color: $grey;
-		font-style: italic;
+		font-style: normal;
 		margin-top: -2em;
 
 		&::before{
@@ -420,7 +420,7 @@ big {
 			padding-right: 30px;
 
 			p{
-				@include font-size(24);
+				@include font-size(28);
 				@include media-breakpoint-up(lg) {
 					@include font-size(24);
 				}
@@ -428,7 +428,10 @@ big {
 			}
 			cite{
 				padding-left: 0;
-				@include font-size(14);
+				@include font-size(18);
+				@include media-breakpoint-up(lg) {
+					@include font-size(16);
+				}
 			}
 		}
 	}
@@ -822,7 +825,7 @@ figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="up
 }
 
 figure.wp-block-image{
-	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
 }
 
 .wp-block-image{
@@ -917,6 +920,12 @@ figure.wp-block-image{
 	}
 }
 
+.justify-content-center > .centered-content{
+	.entry-content .alignfull, .page-template-default .entry-content .alignfull, .single .entry-content .alignfull{
+		max-width: 100%;
+	}
+}
+
 .wp-block-image{
 	margin: 0;
 
@@ -974,11 +983,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		@include to-right-edge();
 	}
 
+	.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5{
+	  padding-top: .3em;
+	}
+
 	@include media-breakpoint-up(lg) {
 
-		.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5{
-		  padding-top: .3em;
-		}
 
 		.alignright{
 			margin-right: -190px;

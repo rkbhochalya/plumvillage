@@ -1457,8 +1457,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .block.block-narrow {
     margin-left: 0; }
   .block p, .block ul, .block ol {
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 180%; }
+    @media (min-width: 768px) {
+      .block p, .block ul, .block ol {
+        font-size: 0.875rem; } }
   .block li {
     margin-bottom: 5px; }
   .block .block-inside {
@@ -1545,7 +1548,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .text-inset .block-inside.text-inset-inside {
   background: #FAF1EB;
-  padding: 30px 30px 10px; }
+  padding: 20px 20px 5px; }
+  @media (min-width: 768px) {
+    .text-inset .block-inside.text-inset-inside {
+      padding: 30px 30px 10px; } }
+  .text-inset .block-inside.text-inset-inside h5 {
+    margin-top: 0;
+    padding-top: 0; }
   .text-inset .block-inside.text-inset-inside li:before {
     color: #8B572A; }
   .text-inset .block-inside.text-inset-inside a {
@@ -1770,7 +1779,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .panel {
   padding-bottom: 0; }
   .panel.panel-open {
-    padding-bottom: 30px; }
+    padding-bottom: 15px; }
   .panel.panel-open.no-title {
     padding-top: 40px; }
   .panel > h5 {
@@ -2165,7 +2174,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider {
     margin-bottom: 0; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slider-image {
-      padding-bottom: 150%; }
+      padding-bottom: 140%; }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider:before {
       content: '';
       width: 100%;
@@ -2445,7 +2454,9 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   padding: 0;
   text-align: left;
   margin-left: -8px;
-  border: none; }
+  border: none;
+  width: auto;
+  margin-right: 100px; }
   ul.slick-dots li, .page-template-default .entry-content ul.slick-dots li {
     margin: 0; }
     @media (min-width: 576px) {
@@ -2459,7 +2470,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
         font-size: 20px; }
 
 .slick-prev, .slick-next {
-  bottom: -35px;
+  bottom: -40px;
   top: unset;
   z-index: 2;
   -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
@@ -2479,12 +2490,12 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
     opacity: 1; }
 
 .slick-next {
-  right: 0px; }
+  right: -15px; }
   .slick-next:hover {
     margin-right: -4px; }
 
 .slick-prev {
-  right: 40px;
+  right: 25px;
   left: unset; }
   .slick-prev:hover {
     margin-right: 4px; }

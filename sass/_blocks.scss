@@ -32,7 +32,10 @@
 		margin-left: 0;
 	}
 	p, ul, ol{
-		@include font-size(14);
+		@include font-size(16);
+		@include media-breakpoint-up(md) {
+			@include font-size(14);
+		}
 		line-height: 180%;
 	}
 
@@ -130,7 +133,14 @@
 .text-inset{
 	.block-inside.text-inset-inside{
 		background: $freshearth;
-		padding: 30px 30px 10px;
+		padding: 20px 20px 5px;
+		@include media-breakpoint-up(md) {
+			padding: 30px 30px 10px;
+		}
+		h5{
+			margin-top: 0;
+			padding-top: 0;
+		}
 
 		li:before{
 			color: $earth;
@@ -420,7 +430,7 @@
 	padding-bottom: 0;
 
 	&.panel-open{
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 	&.panel-open.no-title{
 		padding-top: 40px;
@@ -882,7 +892,7 @@
 		margin-bottom: 0;
 
 		.slider-image{
-			padding-bottom: 150%;
+			padding-bottom: 140%;
 		}
 
 		&:before{
@@ -1240,6 +1250,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 	text-align: left;
 	margin-left: -8px;
 	border: none;
+	width: auto;
+	margin-right: 100px;
 
 	li{
 		margin: 0;
@@ -1261,7 +1273,7 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 }
 
 .slick-prev, .slick-next{
-	bottom: -35px;
+	bottom: -40px;
 	top: unset;
 	z-index: 2;
 	transition: all .4s cubic-bezier(.15,.53,.35,1);		
@@ -1284,14 +1296,14 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 }
 
 .slick-next{
-	right: 0px;
+	right: -15px;
 
 	&:hover{
 		margin-right: -4px;
 	}
 }
 .slick-prev{
-	right: 40px;
+	right: 25px;
 	left: unset;
 
 	&:hover{
