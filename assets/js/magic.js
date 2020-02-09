@@ -7,6 +7,7 @@
 
 	// mega menu toggle
   $('.menu-toggle').click(function(e){
+  	$(this).toggleClass('is-active');
     $('body').toggleClass('menu-open');
     $('.mega-menu-container').removeClass('hidden');
     $('#menu-mega-menu > li:first-child > a').focus()

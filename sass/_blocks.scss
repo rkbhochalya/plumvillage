@@ -796,9 +796,10 @@
 		}
 	}
 
-	@include media-breakpoint-up(md) {	
-		.site-branding{
-			position: absolute;
+	.site-branding{
+		position: absolute;
+	
+		@include media-breakpoint-up(md) {	
 			height: 100vh;
 			min-height: 600px;
 			padding-top: 0;
@@ -823,7 +824,7 @@
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top{
 	padding: 0;
 	position: relative;
-	margin-top: -185px;
+	margin-top: -80px;
 
 	@include media-breakpoint-up(md) {	
 		margin-top: -110px;
@@ -924,7 +925,7 @@
 		}
 
 		.slick-prev, .slick-next{
-			bottom: 3px;
+			bottom: 15px;
 			z-index: 3;
 
 			&:before{
@@ -934,13 +935,13 @@
 		}
 
 		.slick-next{
-			right: 10px;
+			right: 5px;
 			@include media-breakpoint-up(md) {	
-				right: 35px;
+				right: 30px;
 			}
 		}
 		.slick-prev{
-			right: 50px;
+			right: 55px;
 			@include media-breakpoint-up(md) {	
 				right: 75px;
 			}
@@ -1196,6 +1197,10 @@ hr.wp-block-separator{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Slick Slider
 .slider{
+
+	.slick-slide, .slick-slide > div{
+		line-height: 0;
+	}
 	.slider-image{
 		padding-bottom: 60%;
 		display: none;
@@ -1262,7 +1267,8 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 	transition: all .4s cubic-bezier(.15,.53,.35,1);		
 	height: auto;
 	width: auto;
-	padding: 10px;
+	padding: 15px;
+	transform: none;
 
 	&.slick-disabled{
 		&:before{

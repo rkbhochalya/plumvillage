@@ -35,7 +35,6 @@
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
 
 <div class="mega-menu-container hidden">
-		<button class="menu-toggle unbutton" aria-label="<?php _e('Close Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-close"></span></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary-menu',
@@ -59,9 +58,13 @@
 			) );
 		?>
 </div>
-<div id="page" class="site">			
-	<button class="menu-toggle unbutton float-left" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false"><span class="icon-hamburger"></span></button>
+<button class="hamburger hamburger--squeeze menu-toggle unbutton float-left" type="button" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
 
+<div id="page" class="site">			
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
 			<div id="top-navigation">
