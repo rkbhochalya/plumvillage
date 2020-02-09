@@ -11907,49 +11907,49 @@ body #youmax, body .youmax {
  * Squeeze
  */
 .hamburger--squeeze .hamburger-inner {
-  -webkit-transition-duration: 0.075s;
-  -o-transition-duration: 0.075s;
-  transition-duration: 0.075s;
+  -webkit-transition-duration: 0.175s;
+  -o-transition-duration: 0.175s;
+  transition-duration: 0.175s;
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease, width 0.12s ease;
-    -o-transition: top 0.075s 0.12s ease, opacity 0.075s ease, width 0.12s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease, width 0.12s ease; }
+    -webkit-transition: top 0.175s 0.25s ease, opacity 0.175s ease, width 0.25s ease;
+    -o-transition: top 0.175s 0.25s ease, opacity 0.175s ease, width 0.25s ease;
+    transition: top 0.175s 0.25s ease, opacity 0.175s ease, width 0.25s ease; }
   .hamburger--squeeze .hamburger-inner::after {
-    -webkit-transition: bottom 0.075s 0.12s ease, width 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition: bottom 0.075s 0.12s ease, width 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    -o-transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.12s ease;
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.12s ease;
-    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    -webkit-transition: bottom 0.175s 0.25s ease, width 0.25s ease, -webkit-transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.175s 0.25s ease, width 0.25s ease, -webkit-transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -o-transition: bottom 0.175s 0.25s ease, transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.25s ease;
+    transition: bottom 0.175s 0.25s ease, transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.25s ease;
+    transition: bottom 0.175s 0.25s ease, transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.25s ease, -webkit-transform 0.175s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--squeeze.is-active .hamburger-inner {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  -webkit-transition-delay: 0.12s;
-  -o-transition-delay: 0.12s;
-  transition-delay: 0.12s;
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
   -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease, width 0.12s ease;
-    -o-transition: top 0.075s ease, opacity 0.075s 0.12s ease, width 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease, width 0.12s ease; }
+    -webkit-transition: top 0.175s ease, opacity 0.175s 0.25s ease, width 0.25s ease;
+    -o-transition: top 0.175s ease, opacity 0.175s 0.25s ease, width 0.25s ease;
+    transition: top 0.175s ease, opacity 0.175s 0.25s ease, width 0.25s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    -webkit-transition: bottom 0.075s ease, width 0.12s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: bottom 0.075s ease, width 0.12s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-    -o-transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.12s ease;
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.12s ease;
-    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.12s ease, -webkit-transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    -webkit-transition: bottom 0.175s ease, width 0.25s ease, -webkit-transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.175s ease, width 0.25s ease, -webkit-transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: bottom 0.175s ease, transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.25s ease;
+    transition: bottom 0.175s ease, transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.25s ease;
+    transition: bottom 0.175s ease, transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.25s ease, -webkit-transform 0.175s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 /*--------------------------------------------------------------
 # Blocks

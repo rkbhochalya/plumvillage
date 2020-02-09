@@ -16,7 +16,7 @@
   })
   $('.site').on('click', function(e){
   	if($('body').hasClass('menu-open')){
-  		$('.menu-toggle:first').trigger('click');
+  		$('.menu-toggle').trigger('click');
 	    e.preventDefault();
 	    e.stopPropagation();
   	}
