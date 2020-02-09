@@ -10039,7 +10039,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
           font-size: 0.875rem; } }
 
 #site-navigation {
-  padding: 20px 15px; }
+  padding: 20px 15px;
+  position: relative;
+  z-index: 2; }
 
 #top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
   display: none; }
