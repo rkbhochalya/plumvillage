@@ -2113,6 +2113,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       display: flex; }
       .page-homepage .site-branding .site-title {
         margin: auto;
+        padding-bottom: 300px; } }
+    @media (min-width: 768px) and (min-width: 992px) {
+      .page-homepage .site-branding .site-title {
         padding-bottom: 260px; } }
 
 .page-homepage .toggle-search path {
@@ -2127,13 +2130,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
   padding: 0;
   position: relative;
-  margin-top: -80px; }
+  margin-top: -115px; }
   @media (min-width: 768px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-      margin-top: -110px; } }
+      margin-top: -140px; } }
   @media (min-width: 1400px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-      margin-top: -130px; } }
+      margin-top: -161px; } }
   @media (max-width: 991.98px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-group__inner-container {
       max-width: 100%; } }

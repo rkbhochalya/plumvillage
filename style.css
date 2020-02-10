@@ -10050,6 +10050,16 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   position: relative;
   z-index: 2; }
 
+#top-navigation::after {
+  display: block;
+  clear: both;
+  content: ""; }
+
+#top-navigation .mega-menu-top {
+  margin-left: 50px; }
+  #top-navigation .mega-menu-top li:last-child {
+    display: none; }
+
 #top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
   display: none; }
   @media (min-width: 768px) {
@@ -10088,22 +10098,29 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .main-navigation li > a {
   display: block;
   text-decoration: none;
-  padding: 4px;
-  margin: 0 10px;
+  padding: 4px 8px;
+  margin: 0 6px;
   color: #000;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  border-radius: 3px; }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-parent > a,
 .main-navigation .current-menu-ancestor > a,
 .main-navigation li > a:hover, .main-navigation li > a:focus {
-  color: #8B572A; }
+  color: #8B572A;
+  background: rgba(255, 255, 255, 0.8); }
 
-#top-navigation .mega-menu-top {
-  margin-left: 50px; }
-  #top-navigation .mega-menu-top li:last-child {
-    display: none; }
+.main-navigation .mega-menu-top li > a {
+  background: rgba(255, 255, 255, 0.5); }
+
+.main-navigation .mega-menu-top .current_page_item > a,
+.main-navigation .mega-menu-top .current-menu-item > a,
+.main-navigation .mega-menu-top .current-menu-parent > a,
+.main-navigation .mega-menu-top .current-menu-ancestor > a,
+.main-navigation .mega-menu-top li > a:hover, .main-navigation .mega-menu-top li > a:focus {
+  background: rgba(255, 255, 255, 0.8); }
 
 .secondary-menu-top {
   float: right; }
@@ -10825,12 +10842,12 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
   #comments #thrive-comments .tcm-background-color-ac, #comments #thrive-comments .tcm-background-color-ac-h:hover span, #comments #thrive-comments .tcm-background-color-ac-active:active {
     background-color: #FFD22A !important;
     max-width: 250px;
-    margin: 0 auto;
-    font-weight: 400; }
+    margin: 0 auto; }
     #comments #thrive-comments .tcm-background-color-ac p, #comments #thrive-comments .tcm-background-color-ac-h:hover span p, #comments #thrive-comments .tcm-background-color-ac-active:active p {
       margin: 5px 0 4px;
       padding: 0;
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      font-weight: 400; }
       #comments #thrive-comments .tcm-background-color-ac p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-h:hover span p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-active:active p .add-comment-icon {
         display: none; }
   #comments #thrive-comments .tcm-comment-content .tcm-comment-additional-fields .tcm-guest {
@@ -12671,6 +12688,9 @@ body #youmax, body .youmax {
       display: flex; }
       .page-homepage .site-branding .site-title {
         margin: auto;
+        padding-bottom: 300px; } }
+    @media (min-width: 768px) and (min-width: 992px) {
+      .page-homepage .site-branding .site-title {
         padding-bottom: 260px; } }
 
 .page-homepage .toggle-search path {
@@ -12685,13 +12705,13 @@ body #youmax, body .youmax {
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
   padding: 0;
   position: relative;
-  margin-top: -80px; }
+  margin-top: -115px; }
   @media (min-width: 768px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-      margin-top: -110px; } }
+      margin-top: -140px; } }
   @media (min-width: 1400px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-      margin-top: -130px; } }
+      margin-top: -161px; } }
   @media (max-width: 991.98px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-group__inner-container {
       max-width: 100%; } }

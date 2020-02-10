@@ -1055,7 +1055,17 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	position: relative;
 	z-index: 2;
 }
+
 #top-navigation{
+	@include clearfix();
+	.mega-menu-top{
+		margin-left: 50px;
+
+		li:last-child{
+			display: none;
+		}
+	}
+
 	.menu-secondary-menu-container, .menu-mega-menu-container{
 		display: none;
 
@@ -1105,10 +1115,11 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	li > a {
 		display: block;
 		text-decoration: none;
-		padding: 4px;
-		margin: 0 10px;
+		padding: 4px 8px;
+		margin: 0 6px;
 		color: $ink;
 		@include font-size(14);
+		border-radius: 3px;
 	}
 
 	.current_page_item > a,
@@ -1117,16 +1128,20 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	.current-menu-ancestor > a,
 	li > a:hover, li > a:focus {
 		color: $earth;
+		background: rgba(255,255,255,0.8);
 	}
-}
 
-#top-navigation{
 	.mega-menu-top{
-		margin-left: 50px;
-
-		li:last-child{
-			display: none;
+		li > a{
+			background: rgba(255,255,255,0.5);
 		}
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current-menu-parent > a,
+		.current-menu-ancestor > a,
+		li > a:hover, li > a:focus {
+			background: rgba(255,255,255,0.8);
+		}		
 	}
 }
 
@@ -2073,12 +2088,12 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
  		background-color: $sun!important;
  		max-width: 250px;
  		margin: 0 auto;
- 		font-weight: 400;
 
  		p{
  			margin: 5px 0 4px;
  			padding: 0;
  			@include font-size(14);
+ 			font-weight: 400;
 
  			.add-comment-icon{
  				display: none;

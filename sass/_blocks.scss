@@ -818,7 +818,11 @@
 
 			.site-title{
 				margin: auto;
-				padding-bottom: 260px;
+				padding-bottom: 300px;
+
+				@include media-breakpoint-up(lg) {
+					padding-bottom: 260px;
+				}
 			}
 		}
 	}	
@@ -834,13 +838,13 @@
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top{
 	padding: 0;
 	position: relative;
-	margin-top: -80px;
+	margin-top: -115px;
 
 	@include media-breakpoint-up(md) {	
-		margin-top: -110px;
+		margin-top: -140px;
 	}
 	@include media-breakpoint-up(xxl) {	
-		margin-top: -130px;
+		margin-top: -161px;
 	}
 
 	@include media-breakpoint-down(md) {
