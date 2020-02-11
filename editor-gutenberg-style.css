@@ -2118,6 +2118,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       .page-homepage .site-branding .site-title {
         padding-bottom: 260px; } }
 
+.page-homepage .wpml-ls-item.menu-item-has-children a {
+  color: #fff; }
+  .page-homepage .wpml-ls-item.menu-item-has-children a:hover, .page-homepage .wpml-ls-item.menu-item-has-children a:focus {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8); }
+
+.page-homepage .wpml-ls-item.menu-item-has-children.sub-menu-open > a {
+  color: #000;
+  background: rgba(255, 255, 255, 0.8); }
+
 .page-homepage .toggle-search path {
   fill: #fff;
   -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);

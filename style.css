@@ -10098,8 +10098,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .main-navigation li > a {
   display: block;
   text-decoration: none;
-  padding: 4px 8px;
-  margin: 0 6px;
+  padding: 5px 8px;
+  margin: -1px 6px 0;
   color: #000;
   font-size: 0.875rem;
   border-radius: 3px; }
@@ -10153,7 +10153,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   position: relative;
   display: inline-block; }
   .wpml-ls-item.menu-item-has-children > a {
-    padding-right: 15px; }
+    margin-right: 15px; }
     .wpml-ls-item.menu-item-has-children > a:after {
       /* use !important to prevent issues with browser extensions that change fonts */
       font-family: "icomoon" !important;
@@ -10987,6 +10987,10 @@ body #youmax, body .youmax {
 
 .admin-bar .fancybox-toolbar {
   top: 32px; }
+
+@media (min-width: 768px) {
+  .admin-bar.page-homepage .home-landing-top {
+    top: -32px; } }
 
 .entry-content .gallery-images figcaption {
   display: none; }
@@ -12692,6 +12696,16 @@ body #youmax, body .youmax {
     @media (min-width: 768px) and (min-width: 992px) {
       .page-homepage .site-branding .site-title {
         padding-bottom: 260px; } }
+
+.page-homepage .wpml-ls-item.menu-item-has-children a {
+  color: #fff; }
+  .page-homepage .wpml-ls-item.menu-item-has-children a:hover, .page-homepage .wpml-ls-item.menu-item-has-children a:focus {
+    color: #000;
+    background: rgba(255, 255, 255, 0.8); }
+
+.page-homepage .wpml-ls-item.menu-item-has-children.sub-menu-open > a {
+  color: #000;
+  background: rgba(255, 255, 255, 0.8); }
 
 .page-homepage .toggle-search path {
   fill: #fff;

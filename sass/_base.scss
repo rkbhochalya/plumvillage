@@ -1115,8 +1115,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	li > a {
 		display: block;
 		text-decoration: none;
-		padding: 4px 8px;
-		margin: 0 6px;
+		padding: 5px 8px;
+		margin: -1px 6px 0;
 		color: $ink;
 		@include font-size(14);
 		border-radius: 3px;
@@ -1183,7 +1183,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	display: inline-block;
 
 	> a {
-		padding-right: 15px;
+		margin-right: 15px;
 
 		&:after{
 			@include is-icon();
@@ -2308,6 +2308,13 @@ body #youmax, body .youmax{
 	}
 	.fancybox-toolbar{
 		top: 32px;
+	}
+	@include media-breakpoint-up(md) {
+		&.page-homepage{
+			.home-landing-top{
+				top: -32px;
+			}
+		}
 	}
 }
 

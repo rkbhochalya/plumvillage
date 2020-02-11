@@ -825,7 +825,21 @@
 				}
 			}
 		}
-	}	
+	}
+	.wpml-ls-item.menu-item-has-children{
+		a{
+			color: $cloud;
+
+			&:hover, &:focus{
+				color: $ink;
+				background: rgba(255, 255, 255, 0.8);
+			}
+		}
+		&.sub-menu-open > a{
+			color: $ink;
+			background: rgba(255, 255, 255, 0.8);
+		}
+	}
 	.toggle-search path{
 		fill: $cloud;
 		transition: all .4s cubic-bezier(.15,.53,.35,1);		
