@@ -1066,7 +1066,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		}
 	}
 
-	.menu-secondary-menu-container, .menu-mega-menu-container{
+	.secondary-menu-top, .mega-menu-top{
 		display: none;
 
 		@include media-breakpoint-up(md) {

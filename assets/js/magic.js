@@ -29,6 +29,15 @@
 		}
 	})
 
+	$(window).resize(function(){
+		if($('.mega-menu-top:visible').length){
+			$('.page-homepage .site-title').css({
+				'padding-bottom' : ($('.home-landing-top .wp-block-column:first-child').height() + 30)
+			})
+		}		
+	})
+
+	$(window).trigger('resize');
 
   $("form.validate").parsley({
 		errorClass: 'is-invalid',

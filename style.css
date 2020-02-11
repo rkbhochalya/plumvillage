@@ -10060,10 +10060,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   #top-navigation .mega-menu-top li:last-child {
     display: none; }
 
-#top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
+#top-navigation .secondary-menu-top, #top-navigation .mega-menu-top {
   display: none; }
   @media (min-width: 768px) {
-    #top-navigation .menu-secondary-menu-container, #top-navigation .menu-mega-menu-container {
+    #top-navigation .secondary-menu-top, #top-navigation .mega-menu-top {
       display: block; } }
 
 #top-navigation .toggle-search {
