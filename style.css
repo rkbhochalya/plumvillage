@@ -10572,9 +10572,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
       margin-bottom: 50px;
       padding: 30px; } }
   .fancybox-content.book-content p.has-large-font-size {
-    margin-right: 0; }
-  .fancybox-content.book-content p {
-    font-size: 0.9375rem; }
+    margin-right: 0;
+    padding-bottom: 15px;
+    font-size: 1.5rem; }
 
 .wonderplugingallery-container {
   margin: 0 !important; }

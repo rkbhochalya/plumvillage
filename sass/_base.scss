@@ -1727,10 +1727,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 	p.has-large-font-size{
 		margin-right: 0;
-	}
-
-	p{
-		@include font-size(15);
+		padding-bottom: 15px;
+		@include font-size(24);
 	}
 }
 
