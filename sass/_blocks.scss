@@ -808,13 +808,14 @@
 
 	.site-branding{
 		position: absolute;
-	
+
 		@include media-breakpoint-up(md) {	
 			height: 100vh;
 			min-height: 600px;
 			padding-top: 0;
 			top: 0;
 			display: flex;
+			pointer-events: none;
 
 			.site-title{
 				margin: auto;
@@ -822,6 +823,10 @@
 
 				@include media-breakpoint-up(lg) {
 					padding-bottom: 260px;
+				}
+
+				a{
+					pointer-events: all;
 				}
 			}
 		}

@@ -12689,13 +12689,17 @@ body #youmax, body .youmax {
       top: 0;
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      pointer-events: none; }
       .page-homepage .site-branding .site-title {
         margin: auto;
         padding-bottom: 300px; } }
     @media (min-width: 768px) and (min-width: 992px) {
       .page-homepage .site-branding .site-title {
         padding-bottom: 260px; } }
+  @media (min-width: 768px) {
+        .page-homepage .site-branding .site-title a {
+          pointer-events: all; } }
 
 .page-homepage .wpml-ls-item.menu-item-has-children a {
   color: #fff; }
