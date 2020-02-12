@@ -9258,7 +9258,7 @@ select,
 optgroup,
 textarea {
   color: #000;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: skolar-sans-latin, sans-serif;
   font-size: 1rem;
   line-height: 1.5; }
 
@@ -10502,7 +10502,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 .title-image {
   font-size: 1rem;
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: skolar-sans-latin, sans-serif;
   font-style: normal;
   font-weight: 700;
   line-height: 180%; }
@@ -10598,7 +10598,7 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"] {
   clear: both; }
 
 #comments #thrive-comments {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: skolar-sans-latin, sans-serif;
   margin-top: 30px;
   margin-bottom: 30px; }
   #comments #thrive-comments .tcm-thank-you-submited {
@@ -10893,7 +10893,7 @@ body #youmax, body .youmax {
     bottom: auto !important;
     top: 10px;
     right: 23px;
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: skolar-sans-latin, sans-serif;
     font-weight: 300; }
   body #youmax #tiles, body .youmax #tiles {
     max-width: 120%;
@@ -10910,7 +10910,7 @@ body #youmax, body .youmax {
         border: none;
         padding: 5px 0 0; }
         body #youmax #tiles li p span.youmax-video-list-title, body .youmax #tiles li p span.youmax-video-list-title {
-          font-family: "Merriweather Sans", sans-serif;
+          font-family: skolar-sans-latin, sans-serif;
           color: #9A9A9A;
           font-size: 0.8125rem;
           line-height: 180%;
@@ -10926,7 +10926,7 @@ body #youmax, body .youmax {
       font-size: 1.125rem; }
       body #youmax #youmax-load-more-div.youmax-small i::before, body .youmax #youmax-load-more-div.youmax-small i::before {
         content: 'Load More';
-        font-family: "Merriweather Sans", sans-serif;
+        font-family: skolar-sans-latin, sans-serif;
         font-weight: 300;
         text-shadow: none; }
     body #youmax #youmax-load-more-div.youmax-small:hover, body #youmax #youmax-load-more-div.youmax-small:focus, body .youmax #youmax-load-more-div.youmax-small:hover, body .youmax #youmax-load-more-div.youmax-small:focus {
