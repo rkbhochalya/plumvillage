@@ -395,7 +395,6 @@
 
 		p{
 			max-width: 500px;
-			@include font-size(16);
 		}
 		p.has-text-align-center{
 			margin: 0 auto;
@@ -407,7 +406,6 @@
 				padding-bottom: 1em;
 				margin-bottom: 0;
 				@include font-size(43);
-				line-height: 120%;
 			}
 			cite{
 				padding-left: 0;

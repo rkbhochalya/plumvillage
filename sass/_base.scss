@@ -13,7 +13,7 @@ html {
 		font-size: 15px;
 	}
 	@include media-breakpoint-up(lg) {
-		font-size: 16px;
+		font-size: 18px;
 	}
 	&.loaded{
 		background: $sun;
@@ -143,21 +143,22 @@ textarea {
 
 h1, h2, h3{
 	font-family: $font-headers;
-	line-height: 130%;
+	line-height: $font-headers-lineheight;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	margin-top: 0.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.1rem;
+	color: #222;
 }
 
 h1{
 	clear: both;
 	font-style: italic;
-	@include font-size(45);
+	@include font-size(44);
 }
 h2{
-	@include font-size(38);
+	@include font-size(37);
 }
 h3{
 	@include font-size(32);
@@ -170,6 +171,16 @@ h4, h5{
 	@include media-breakpoint-up(sm) {
 		@include font-size(16);
 	}
+
+	a{
+		transition: all .4s cubic-bezier(.15,.53,.35,1);
+		color: $ink;
+
+		&:hover, &:focus{
+			box-shadow: inset 0 -0.40em $sun;
+			text-decoration: none;
+		}
+	}	
 }
 h6{
 	color: $mediumink;
@@ -336,7 +347,7 @@ big {
 	p{
 		font-family: $font-headers;
 		padding-left: 30px;
-		line-height: 145%;
+		line-height: $font-headers-lineheight;
 		font-style: italic;
 		@include font-size(28);
 
@@ -499,36 +510,6 @@ big {
 
 // Custom elements
 
-.entry-content p.has-large-font-size, .entry-content .introduction p{
-	@include font-size(22);
-	color: $grey;
-	font-family: $font-headers;
-	font-size: 1.8rem;
-	line-height: 150%;
-
-	a{
-		color: $grey;
-	}
-
-	&:nth-child(-n+3){
-		@include media-breakpoint-up(lg) {
-			margin-right: -60px;
-			background: $cloud;
-			margin-bottom: 0;
-			padding-bottom: 2rem;
-		}
-
-		@include media-breakpoint-up(xxl) {
-			margin-right: -140px;
-		}
-	}
-}
-
-.entry-content p.has-small-font-size{
-	@include font-size(14);
-	color: $grey;
-}
-
 .icon-star{
 	color: $earth;
 	@include font-size(14);
@@ -666,123 +647,110 @@ a.has-arrow-after{
 	}
 }
 
-h5 a{
-	transition: all .4s cubic-bezier(.15,.53,.35,1);
-	color: $ink;
-
-	&:hover, &:focus{
-		box-shadow: inset 0 -0.40em $sun;
-		text-decoration: none;
-	}
-}
-
 .special-link a{
 	font-style: italic;
 	@include underline($sun, $sun);
 }
 
-.entry-content p a, .entry-content li a{
-	@include underline($sun, $sun);
-	color: $ink;
-}
 
-.entry-content p span.real-side{
-	display: none;
-}
-
-
-.entry-content p a.side-link{
-	@include underline($mediumink, $sun);
-}
-
-
-@include media-breakpoint-up(lg) {
-	.entry-content p a.side-link{
-		box-shadow: none;
-		transition: all .4s cubic-bezier(.15,.53,.35,1);
+.entry-content{
+	li a{
+		@include underline($sun, $sun);
+		color: $ink;
 	}
 
-	.entry-content p span.real-side{
-		display: block;
-		box-shadow: none;
-		position: absolute;
-		right: -20px;
-		width: 20px;
-		@include font-size(14);
-		line-height: 160%;
-		color: $grey;
-		font-style: italic;
-		transition: all .4s cubic-bezier(.15,.53,.35,1);
-		margin-top: -29px;
+	p, & {
+		@include font-size(18);
+		font-weight: $font-body-weight;
+		line-height: 180%;
 
-		.text{
+		&.has-small-font-size{
+			@include font-size(14);
+			color: $grey;
+		}
+
+		&.has-large-font-size, .introduction &{
+			@include font-size(27);
+			color: $ink;
+			font-family: $font-headers;
+			line-height: $font-headers-lineheight;
+
+			a{
+				color: $grey;
+			}
+
+			&:nth-child(-n+3){
+				@include media-breakpoint-up(lg) {
+					margin-right: -60px;
+					background: $cloud;
+					margin-bottom: 0;
+					padding-bottom: 2rem;
+				}
+
+				@include media-breakpoint-up(xxl) {
+					margin-right: -140px;
+				}
+			}
+		}
+
+		
+		a{
+			@include underline($sun, $sun);
+			color: $ink;
+
+			&.side-link{
+				@include underline($mediumink, $sun);
+		
+				@include media-breakpoint-up(lg) {
+					box-shadow: none;
+					transition: all .4s cubic-bezier(.15,.53,.35,1);
+				}
+			  &:hover, &:focus {
+				  background: $sun;
+
+			    span.real-side,
+			    span.real-side .icon{
+			      color: $ink;
+			    }
+			  }				
+			}
+		}
+
+		span.real-side{
 			display: none;
-		}
 
-		.icon{
-			@include font-size(25);
-			color: $freshink;
-			background: #fff;
-			transition: all .4s cubic-bezier(.15,.53,.35,1);
-		}
-	}
-}
+			@include media-breakpoint-up(lg) {
+				display: block;
+				box-shadow: none;
+				position: absolute;
+				right: -20px;
+				width: 20px;
+				@include font-size(14);
+				line-height: 160%;
+				color: $grey;
+				font-style: italic;
+				transition: all .4s cubic-bezier(.15,.53,.35,1);
+				margin-top: -29px;
 
-@include media-breakpoint-up(lg) {
-	.entry-content p a.side-link{
-		box-shadow: none;
-		transition: all .4s cubic-bezier(.15,.53,.35,1);
-	}
+				.text{
+					display: none;
+				}
 
-	.entry-content p span.real-side{
-		display: block;
-		box-shadow: none;
-		position: absolute;
-		right: -170px;
-		width: 130px;
-		@include font-size(14);
-		line-height: 160%;
-		color: $grey;
-		font-style: italic;
-		transition: all .4s cubic-bezier(.15,.53,.35,1);
-		margin-top: -29px;
-
-		.text{
-			display: block;
-		}
-
-		.icon{
-			@include font-size(30);
-			position: absolute;
-			left: -54px;
-			top: -4px;
-			color: $freshink;
-			background: #fff;
-			transition: all .4s cubic-bezier(.15,.53,.35,1);
+				.icon{
+					@include font-size(25);
+					color: $freshink;
+					background: #fff;
+					transition: all .4s cubic-bezier(.15,.53,.35,1);
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				right: -220px;
+				width: 180px;
+			}			
 		}
 	}
 }
-@include media-breakpoint-up(xl) {
-	.entry-content p span.real-side{
-		right: -220px;
-		width: 180px;
-	}
-}
 
-.entry-content p a.side-link {
-  &:hover, &:focus {
-	  background: $sun;
-  }
-}
-
-.entry-content p a.side-link {
-  &:hover, &:focus {
-      span.real-side,
-      span.real-side .icon{
-        color: $ink;
-    }
-  }
-}
 
 figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="uploads"]{
 	cursor: url(assets/images/zoom.svg) 14 14, auto;
@@ -1491,23 +1459,6 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Content Section
-
-.entry-content, .entry-content p{
-	@include font-size(18);
-	font-weight: 300;
-	line-height: 180%;
-
-	strong, b{
-		font-weight: 600;
-	}
-
-	a{
-
-	}
-}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Footer Section
