@@ -57,12 +57,11 @@
 	}
 	.entry-footer{
 		@include font-size(14);
-		margin-top: -20px;
+		margin-top: -15px;
 
 		a{
 			position: relative;
-			padding-left: 20px;
-			color: $grey;
+			padding-left: 25px;
 			.icon{
 				position: absolute;
 				left: 0;
@@ -374,8 +373,11 @@
 	h2{
 		@include font-size(28);
 		margin-top: 0;
-		margin-bottom: 0.5rem;
 		padding-top: 0;
+
+		a{
+			@include underline($cloud, $sun);
+		}
 	}
 }
 
@@ -394,18 +396,19 @@
 		}
 
 		p{
-			max-width: 500px;
+			max-width: 635px;
 		}
 		p.has-text-align-center{
 			margin: 0 auto;
 		}
 
-		blockquote{
+		blockquote, .wp-block-pullquote.is-style-solid-color blockquote{
+			max-width: 600px;
 			p{
 				padding-left: 0;
 				padding-bottom: 1em;
 				margin-bottom: 0;
-				@include font-size(43);
+				@include font-size(38);
 			}
 			cite{
 				padding-left: 0;

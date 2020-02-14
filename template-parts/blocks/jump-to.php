@@ -28,7 +28,7 @@ if ( has_blocks( $post->post_content ) ) {
 	<hr>
 	<p><span class="label">Jump To <span class="icon icon-arrow-tiny"></span></span>
 	<?php 
-		if(!empty($sections) && !is_bool($is_preview)){
+		if(!empty($sections) && !$is_preview){
 			$i = 0;
 			foreach ($sections as $section) {
 				echo '<a '.($section == $jump_to_name ? 'class="active"' : '').' href="#'. sanitize_title($section) .'">' . $section . '</a>';

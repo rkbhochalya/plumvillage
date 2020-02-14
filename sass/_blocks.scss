@@ -34,7 +34,7 @@
 	p, ul, ol{
 		@include font-size(16);
 		@include media-breakpoint-up(md) {
-			@include font-size(14);
+			@include font-size(15);
 		}
 		line-height: 180%;
 	}
@@ -338,11 +338,19 @@
 	margin-top: -30px;
 }
 .audio-player {
-	margin-bottom: 15px;
+	margin-bottom: 20px;
   
   .audio-content{
   	position: relative;
   	z-index: 2;
+
+  	h5{
+  		margin-top: 0;
+  	}
+
+  	p{
+  		margin-bottom: 1em;
+  	}
   }
 
 	.buttons{
@@ -471,7 +479,7 @@
 			display: block;
 			left: -33px;
 			padding: 10px;
-			top: 0px;
+			top: -3px;
 			@include font-size(14);
 		}
 
@@ -903,7 +911,7 @@
 
 		.wp-block-column:first-child{
 			padding-right: 50px;
-			padding-top: 130px;
+			padding-top: 150px;
 			margin: auto;
 			> *{
 				max-width: 570px;
@@ -1338,11 +1346,21 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots{
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Verse Block
 
-pre.wp-block-verse, .wp-block-verse pre{
+
+pre, pre.wp-block-verse, .wp-block-verse pre{
 	background: $freshsun;
-	font-family: 'Merriweather';
-	@include font-size(16);
-	line-height: 190%;
+	font-family: $font-pre;
+	@include font-size(22);
+	white-space: normal;
+	line-height: $font-pre-lineheight;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+
+	a{
+		text-decoration: underline;
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -6,13 +6,14 @@
 
 $font-body: 'pelago', sans-serif;
 $font-headers: 'Cormorant Garamond', serif;
+$font-pre: 'Cormorant Garamond', serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__line-height-body: 1.5;
-$font__line-height-pre: 1.6;
 
 $font-body-weight: 300;
-$font-headers-lineheight: 160%;
+
+$font-body-lineheight: 1.5;
+$font-headers-lineheight: 155%;
+$font-pre-lineheight:160%;
 
 $slick-font-family: "icomoon";
 $slick-font-path: 'assets/fonts/';

@@ -78,14 +78,17 @@ li > ol {
 ul li{
 	list-style: none;
 	position: relative;
-}
-ul li::before {
-	content: "•"; color: $sun;
-  display: inline-block;
-  font-size: 1.8em;
-  left: -22px;
-  position: absolute;
-  top: 1px;
+
+	&:before{
+		content: "•"; 
+		color: $sun;
+	  display: inline-block;
+	  font-family: Arial, Helvetica, sans-serif;
+	  left: -22px;
+	  position: absolute;
+	  top: 1px;
+	  @include font-size(20);
+	}
 }
 
 ul.list-unstyled{
@@ -135,7 +138,7 @@ textarea {
 	color: $ink;
 	font-family: $font-body;
 	@include font-size(16);
-	line-height: $font__line-height-body;
+	line-height: $font-body-lineheight;
 }
 
 
@@ -161,7 +164,7 @@ h2{
 	@include font-size(37);
 }
 h3{
-	@include font-size(32);
+	@include font-size(30);
 }
 h4, h5{
 	font-weight: 700;
@@ -206,25 +209,6 @@ dfn, cite, em, i {
 
 address {
 	margin: 0 0 1.5em;
-}
-
-pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(14);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-pre.wp-block-verse, .wp-block-verse pre{
-	white-space: normal;
-
-	a{
-		text-decoration: underline;
-	}
 }
 
 code, kbd, tt, var {
@@ -328,185 +312,6 @@ big {
 	font-weight: 300;
 }
 
-.entry-content blockquote, .page-template-default .entry-content blockquote, .single .entry-content blockquote{
-	margin: 0;
-	padding:0 0 20px;
-	quotes: "“" "”";
-	color: $grey;
-
-	p:first-child:before {
-	    content: open-quote;
-	}
-	p:last-child:after {
-	    content: close-quote;
-	}
-	:nth-last-child(2):after {
-	    content: close-quote;
-	}
-
-	p{
-		font-family: $font-headers;
-		padding-left: 30px;
-		line-height: $font-headers-lineheight;
-		font-style: italic;
-		@include font-size(28);
-
-	}
-	cite{
-		display: block;
-		padding-left: 30px;
-		@include font-size(14);
-		color: $grey;
-		font-style: normal;
-		margin-top: -2em;
-
-		&::before{
-			content:'—';
-		}
-	}
-	&.has-earth-color{
-		p, cite{
-			color: $earth;
-		}
-	}
-	&.has-ink-color{
-		p{
-			color: $ink;
-		}
-	}
-}
-.wp-block-pullquote{
-	text-align: left;
-	border: none;
-	padding: 0;
-	margin: 0;
-
-	&.has-background{
-		padding: 0;
-	}
-
-
-	&.is-style-solid-color{
-		@include media-breakpoint-down(xs) {
-			margin: 30px 0;
-		}
-		blockquote{
-			padding: 15px 20px;
-			margin-left: 0;
-			margin-right: 0;
-			@include media-breakpoint-up(lg) {
-				padding: 25px 30px;
-			}
-			max-width: 600px;
-			p{
-				@include font-size(40);
-				padding-bottom: 1.5em;
-				max-width: 100%;
-			}
-		}
-	}
-
-	&.has-fresh-earth-background-color{
-		blockquote{
-			background: $freshearth;
-		}
-	}
-
-	&.alignright{
-		position: relative;
-		z-index: 2;
-		margin-left: 1.5em;
-		max-width: 100%;
-
-		@include media-breakpoint-up(sm) {
-			max-width: 305px;
-		}
-		@include media-breakpoint-up(lg) {
-			background: #fff;
-			padding: 30px 0;
-			margin-top: -30px;
-		}
-
-		blockquote{
-			padding-right: 30px;
-
-			p{
-				@include font-size(28);
-				@include media-breakpoint-up(lg) {
-					@include font-size(24);
-				}
-				padding-left: 0;
-			}
-			cite{
-				padding-left: 0;
-				@include font-size(18);
-				@include media-breakpoint-up(lg) {
-					@include font-size(16);
-				}
-			}
-		}
-	}
-
-	&.aligncenter{
-		blockquote{
-			margin: 0 auto;
-			text-align: center;
-		}
-	}
-
-	&.alignleft{
-		blockquote{
-			p{
-				padding-left: 0;
-			}
-			cite{
-				padding-left: 0;
-			}
-		}
-	}
-
-	&.alignfull{
-		blockquote{
-			text-align: center;
-			p{
-				padding-left: 0;
-			}
-		}
-	}
-
-	&.alignwide{
-		blockquote{
-			max-width: 100%;
-
-			p{
-				@include font-size(37);
-			}
-		}
-	}
-	&.is-tnh-quote{
-		blockquote{
-			@include clearfix();
-
-			p{
-				padding-bottom: 0;
-			}
-			cite{
-				background: url('assets/images/sign.png') no-repeat;
-				background-size: 208px 56px;
-				font-size: 0;
-				width: 208px;
-				height: 56px;
-				float: right;
-				margin-top: 20px;
-			}
-			&.has-cloud-color{
-				cite{
-					background-image: url('assets/images/sign-white.gif');
-				}
-			}
-		}
-	}
-}
 
 // Custom elements
 
@@ -574,7 +379,7 @@ a.has-arrow{
 		content: $icon-arrow-tiny;
 		position: absolute;
 		left: -25px;
-		top: 5px;
+		top: 8px;
 		color: $sun;
 		@include font-size(12);
 		transition: all .4s cubic-bezier(.15,.53,.35,1);
@@ -625,6 +430,7 @@ a.has-arrow-after{
 			@include underline($sun, $sun);
 			color: $ink;
 			font-style: italic;
+			font-weight: $font-body-weight;
 	}
 
 	&.earthy-link{
@@ -659,14 +465,19 @@ a.has-arrow-after{
 		color: $ink;
 	}
 
-	p, & {
+	h1, h2, h3{
+		a{
+			@include underline(rgba($sun, 0.4), $sun);
+		}		
+	}
+
+	p, ol, ul{
 		@include font-size(18);
 		font-weight: $font-body-weight;
 		line-height: 180%;
 
-		&.has-small-font-size{
-			@include font-size(14);
-			color: $grey;
+		&.has-small-font-size, &.small{
+			@include font-size(15);
 		}
 
 		&.has-large-font-size, .introduction &{
@@ -676,7 +487,7 @@ a.has-arrow-after{
 			line-height: $font-headers-lineheight;
 
 			a{
-				color: $grey;
+				@include underline(rgba($sun, 0.4), $sun);
 			}
 
 			&:nth-child(-n+3){
@@ -692,7 +503,6 @@ a.has-arrow-after{
 				}
 			}
 		}
-
 		
 		a{
 			@include underline($sun, $sun);
@@ -723,9 +533,9 @@ a.has-arrow-after{
 				display: block;
 				box-shadow: none;
 				position: absolute;
-				right: -20px;
-				width: 20px;
-				@include font-size(14);
+				right: -170px;
+				width: 130px;
+				@include font-size(15);
 				line-height: 160%;
 				color: $grey;
 				font-style: italic;
@@ -733,11 +543,14 @@ a.has-arrow-after{
 				margin-top: -29px;
 
 				.text{
-					display: none;
+					display: block;
 				}
 
 				.icon{
-					@include font-size(25);
+					@include font-size(30);
+					position: absolute;
+					left: -54px;
+					top: -4px;
 					color: $freshink;
 					background: #fff;
 					transition: all .4s cubic-bezier(.15,.53,.35,1);
@@ -749,8 +562,155 @@ a.has-arrow-after{
 			}			
 		}
 	}
-}
 
+	ol, ul{
+		margin-bottom: 0;
+		li{
+			margin-bottom: 1.5em;
+		}
+		&.small li{
+			margin-bottom: 0.4em;
+
+			a{
+				@include underline($cloud, $sun);
+			}
+		}
+	}
+
+	blockquote{
+
+		&, .page-template-default &, .single &{
+			margin: 50px 0;
+			quotes: "“" "”";
+
+			p:first-child:before {
+			    content: open-quote;
+			}
+			p:last-child:after {
+			    content: close-quote;
+			}
+			:nth-last-child(2):after {
+			    content: close-quote;
+			}
+
+			p{
+				font-family: $font-headers;
+				padding-left: 30px;
+				line-height: $font-headers-lineheight;
+				font-style: italic;
+				@include font-size(27);
+			}
+			cite{
+				display: block;
+				padding-left: 30px;
+				@include font-size(14);
+				font-style: normal;
+				margin-top: -2em;
+				font-weight: $font-body-weight;
+
+				&::before{
+					content:'—';
+				}
+			}
+		}
+	}
+	.wp-block-pullquote{
+		text-align: left;
+		border: none;
+		padding: 0;
+
+		&.has-background{
+			padding: 30px;
+
+			blockquote{
+				margin: 0;
+				padding: 0;
+
+				p, cite{
+					padding: 0;
+				}
+			}
+		}
+
+		&:not(.has-background){
+			background: $cloud;
+		}
+
+		&.is-style-solid-color{
+			blockquote{
+				max-width: 100%;
+				p{
+					padding-bottom: 1.5em;
+					max-width: 100%;
+				}
+			}
+		}
+
+		&.aligncenter{
+			blockquote{
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+
+		&.alignleft{
+			blockquote{
+				p{
+					padding-left: 0;
+				}
+				cite{
+					padding-left: 0;
+				}
+			}
+		}
+
+		&.alignfull{
+			blockquote{
+				text-align: center;
+				p{
+					padding-left: 0;
+				}
+			}
+		}
+
+		&.alignwide{
+			blockquote{
+				max-width: 100%;
+
+				p{
+					@include font-size(40);
+					padding-bottom: 1.2em;
+				}
+				cite{
+					@include font-size(17);
+				}
+			}
+		}
+		&.is-tnh-quote{
+			blockquote{
+				@include clearfix();
+
+				p{
+					padding-bottom: 0;
+				}
+				cite{
+					background: url('assets/images/sign.png') no-repeat;
+					background-size: 208px 56px;
+					font-size: 0;
+					width: 208px;
+					height: 56px;
+					float: right;
+					margin-top: 20px;
+				}
+				&.has-cloud-color{
+					cite{
+						background-image: url('assets/images/sign-white.gif');
+					}
+				}
+			}
+		}
+	}	
+}
 
 figure.wp-block-image > a[href*="uploads"], .wp-block-image figure > a[href*="uploads"]{
 	cursor: url(assets/images/zoom.svg) 14 14, auto;
@@ -905,9 +865,10 @@ figure.wp-block-image{
 figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	text-align: left;
 	color: $grey;
+	font-weight: $font-body-weight;
 	@include font-size(15);
 	@include media-breakpoint-up(md) {
-		@include font-size(13);
+		@include font-size(14);
 	}
 	line-height: 160%;
 	margin-top: 10px;
@@ -951,25 +912,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		@include to-right-edge();
 	}
 
-	.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5{
-	  padding-top: .3em;
-	}
-
 	@include media-breakpoint-up(lg) {
 
 
 		.alignright{
 			margin-right: -190px;
 			max-width: 326px;
-		}
-
-		.entry-content ul, .entry-content ol{
-		  margin-top: 0;
-		  margin-right: 0;
-		  margin-bottom: 0;
-			padding-top: 0;
-			padding-right: 25px;
-			padding-bottom: 2em;
 		}
 
 		.entry-content .slider.alignwide, .wp-block-group{
@@ -1472,6 +1420,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		padding-top: 4vw;
 		margin-top: 5vw;
 	}
+
+	a{
+		@include underline($cloud, $sun);
+	}
 }
 
 // pardot form
@@ -1510,15 +1462,14 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		}
 
 		a{
-			color: $mediumink;
+			color: $ink;
 			@include font-size(16);
 		  @include media-breakpoint-up(md) {
 				@include font-size(14);
 		  }
-
-			&:hover, &:focus{
-				color: $ink;
-			}
+			
+			@include underline($cloud, $sun);
+		
 		}
 	}
 }
@@ -1558,6 +1509,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 		a{
 			color: $ink;
+
+			@include no-underline();
 
 			&:hover, &:focus{
 				text-decoration: none;

@@ -1461,7 +1461,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     line-height: 180%; }
     @media (min-width: 768px) {
       .block p, .block ul, .block ol {
-        font-size: 0.875rem; } }
+        font-size: 0.9375rem; } }
   .block li {
     margin-bottom: 5px; }
   .block .block-inside {
@@ -1558,8 +1558,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   .text-inset .block-inside.text-inset-inside li:before {
     color: #8B572A; }
   .text-inset .block-inside.text-inset-inside a {
-    -webkit-box-shadow: inset 0 -0.15em #8B572A;
-    box-shadow: inset 0 -0.15em #8B572A;
+    -webkit-box-shadow: inset 0 -0.1em #8B572A;
+    box-shadow: inset 0 -0.1em #8B572A;
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
@@ -1718,10 +1718,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-top: -30px; }
 
 .audio-player {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
   .audio-player .audio-content {
     position: relative;
     z-index: 2; }
+    .audio-player .audio-content h5 {
+      margin-top: 0; }
+    .audio-player .audio-content p {
+      margin-bottom: 1em; }
   .audio-player .buttons {
     margin-top: -10px; }
     .audio-player .buttons a {
@@ -1816,8 +1820,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .panel-collapsable > h5 {
       margin-left: 0; } }
   .panel-collapsable > h5 .underline-me {
-    -webkit-box-shadow: inset 0 -0.15em #FFD22A;
-    box-shadow: inset 0 -0.15em #FFD22A;
+    -webkit-box-shadow: inset 0 -0.1em #FFD22A;
+    box-shadow: inset 0 -0.1em #FFD22A;
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
@@ -1830,7 +1834,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: block;
     left: -33px;
     padding: 10px;
-    top: 0px;
+    top: -3px;
     font-size: 0.875rem; }
   .panel-collapsable > h5:hover .icon, .panel-collapsable > h5:focus .icon {
     left: -30px; }
@@ -1921,8 +1925,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding-top: 0;
   padding-bottom: 0; }
   .index-item.index-page h5 a {
-    -webkit-box-shadow: inset 0 -0.15em #fff;
-    box-shadow: inset 0 -0.15em #fff;
+    -webkit-box-shadow: inset 0 -0.1em #fff;
+    box-shadow: inset 0 -0.1em #fff;
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
@@ -1957,8 +1961,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       font-size: 1rem;
       line-height: 180%; }
       .media-coverage ul li a {
-        -webkit-box-shadow: inset 0 -0.15em #fff;
-        box-shadow: inset 0 -0.15em #fff;
+        -webkit-box-shadow: inset 0 -0.1em #fff;
+        box-shadow: inset 0 -0.1em #fff;
         -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
@@ -2009,8 +2013,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
           padding: 0 10px; } }
       .menu-block-container .menu-block #block-menu li a {
         color: #9A9A9A;
-        -webkit-box-shadow: inset 0 -0.15em #fff;
-        box-shadow: inset 0 -0.15em #fff;
+        -webkit-box-shadow: inset 0 -0.1em #fff;
+        box-shadow: inset 0 -0.1em #fff;
         -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
         transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
@@ -2184,7 +2188,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         flex-direction: row; }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-column:first-child {
         padding-right: 50px;
-        padding-top: 130px;
+        padding-top: 150px;
         margin: auto; }
         .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-column:first-child > * {
           max-width: 570px; } }
@@ -2517,11 +2521,18 @@ ul.slick-dots, .page-template-default .entry-content ul.slick-dots {
   .slick-prev:hover {
     margin-right: 4px; }
 
-pre.wp-block-verse, .wp-block-verse pre {
+pre, pre.wp-block-verse, .wp-block-verse pre {
   background: #FEFBF3;
-  font-family: 'Merriweather';
-  font-size: 1rem;
-  line-height: 190%; }
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.375rem;
+  white-space: normal;
+  line-height: 160%;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+  pre a, pre.wp-block-verse a, .wp-block-verse pre a {
+    text-decoration: underline; }
 
 .wp-block-file a:first-child {
   font-style: italic;
@@ -2560,8 +2571,8 @@ pre.wp-block-verse, .wp-block-verse pre {
     font-weight: 400; }
     .important-update p a, .entry-content .alignfull.important-update p a {
       color: #8B572A;
-      -webkit-box-shadow: inset 0 -0.15em #FAF1EB;
-      box-shadow: inset 0 -0.15em #FAF1EB;
+      -webkit-box-shadow: inset 0 -0.1em #FAF1EB;
+      box-shadow: inset 0 -0.1em #FAF1EB;
       -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
       -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
       transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
