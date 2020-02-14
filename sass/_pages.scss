@@ -61,6 +61,8 @@
 
 		a{
 			position: relative;
+			color: $grey;
+			font-weight: $font-body-weight;
 			padding-left: 25px;
 			.icon{
 				position: absolute;
@@ -371,7 +373,7 @@
 
 .index-post, .centered-content .entry-content .index-post{
 	h2{
-		@include font-size(28);
+		@include font-size(25);
 		margin-top: 0;
 		padding-top: 0;
 
@@ -510,8 +512,6 @@
 			padding-left: 0;
 			padding-bottom: 0;
 			@include font-size(28);
-			line-height: 130%;
-			color: $ink;
 			@include media-breakpoint-up(md) {
 				@include font-size(33);
 			}

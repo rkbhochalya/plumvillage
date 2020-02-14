@@ -509,12 +509,8 @@ a.has-arrow-after{
 			color: $ink;
 
 			&.side-link{
-				@include underline($mediumink, $sun);
+				@include underline(rgba($sun, 0.4), $sun);
 		
-				@include media-breakpoint-up(lg) {
-					box-shadow: none;
-					transition: all .4s cubic-bezier(.15,.53,.35,1);
-				}
 			  &:hover, &:focus {
 				  background: $sun;
 
@@ -533,14 +529,17 @@ a.has-arrow-after{
 				display: block;
 				box-shadow: none;
 				position: absolute;
-				right: -170px;
-				width: 130px;
+				right: -175px;
+				width: 160px;
 				@include font-size(15);
 				line-height: 160%;
 				color: $grey;
 				font-style: italic;
 				transition: all .4s cubic-bezier(.15,.53,.35,1);
-				margin-top: -29px;
+				margin-top: -53px;
+				padding: 20px;
+				background: $cloud;
+				border-radius: 4px;
 
 				.text{
 					display: block;
@@ -549,16 +548,16 @@ a.has-arrow-after{
 				.icon{
 					@include font-size(30);
 					position: absolute;
-					left: -54px;
-					top: -4px;
+					left: -30px;
+					top: 20px;
 					color: $freshink;
 					background: #fff;
 					transition: all .4s cubic-bezier(.15,.53,.35,1);
 				}
 			}
 			@include media-breakpoint-up(xl) {
-				right: -220px;
-				width: 180px;
+				right: -253px;
+				width: 240px;
 			}			
 		}
 	}
@@ -632,8 +631,13 @@ a.has-arrow-after{
 			}
 		}
 
-		&:not(.has-background){
-			background: $cloud;
+		&.is-style-no-padding{
+			padding: 0;
+			margin: 0 0 1.5em;
+			blockquote{
+				padding: 0;
+				margin: 0;
+			}
 		}
 
 		&.is-style-solid-color{
@@ -651,6 +655,10 @@ a.has-arrow-after{
 				margin: 0 auto;
 				text-align: center;
 			}
+		}
+
+		&.alignright:not(.has-background){
+			background: $cloud;
 		}
 
 		&.alignleft{
@@ -1164,9 +1172,11 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 
 		.menu li a{
 			color: $cloud;
+			background: none;
 		}
 		.secondary-menu-top > li:first-child a{
 			color: $ink;
+			background: $sun;
 		}
 	}
 

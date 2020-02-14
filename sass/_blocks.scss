@@ -710,6 +710,7 @@
 				display: inline-block;
 				padding: 0 5px;
 				margin-left: 0;
+				margin-bottom: 0;
 				@include media-breakpoint-up(md) {
 					padding: 0 10px;
 				}
@@ -1020,12 +1021,14 @@
 		padding-bottom: 200px;
 	}
 
-	.wp-block-pullquote.is-style-solid-color blockquote{
+	.wp-block-pullquote blockquote{
 		padding-left: 0;
+		margin-left: 0;
 
 		p{
 			padding-left: 0;
 			@include font-size(48);
+			line-height: 145%;
 		}
 	}
 }

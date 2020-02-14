@@ -2007,7 +2007,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     .menu-block-container .menu-block #block-menu li {
       display: inline-block;
       padding: 0 5px;
-      margin-left: 0; }
+      margin-left: 0;
+      margin-bottom: 0; }
       @media (min-width: 768px) {
         .menu-block-container .menu-block #block-menu li {
           padding: 0 10px; } }
@@ -2273,11 +2274,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
       margin-top: -355px;
       padding-top: 355px;
       padding-bottom: 200px; } }
-  .entry-content .wp-block-cover.alignfull:first-child .wp-block-pullquote.is-style-solid-color blockquote {
-    padding-left: 0; }
-    .entry-content .wp-block-cover.alignfull:first-child .wp-block-pullquote.is-style-solid-color blockquote p {
+  .entry-content .wp-block-cover.alignfull:first-child .wp-block-pullquote blockquote {
+    padding-left: 0;
+    margin-left: 0; }
+    .entry-content .wp-block-cover.alignfull:first-child .wp-block-pullquote blockquote p {
       padding-left: 0;
-      font-size: 3rem; }
+      font-size: 3rem;
+      line-height: 145%; }
 
 @media (max-width: 600px) {
   .wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right.tnh-landing-books {
