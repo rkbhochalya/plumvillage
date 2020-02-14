@@ -11654,14 +11654,14 @@ body #youmax, body .youmax {
 .page-template-page_full-width .entry-content p.has-text-align-center {
   margin: 0 auto; }
 
-.page-template-page_full-width .entry-content blockquote, .page-template-page_full-width .entry-content .wp-block-pullquote.is-style-solid-color blockquote {
+.page-template-page_full-width .entry-content blockquote, .page-template-page_full-width .entry-content .wp-block-pullquote blockquote {
   max-width: 600px; }
-  .page-template-page_full-width .entry-content blockquote p, .page-template-page_full-width .entry-content .wp-block-pullquote.is-style-solid-color blockquote p {
+  .page-template-page_full-width .entry-content blockquote p, .page-template-page_full-width .entry-content .wp-block-pullquote blockquote p {
     padding-left: 0;
     padding-bottom: 1em;
     margin-bottom: 0;
     font-size: 2.375rem; }
-  .page-template-page_full-width .entry-content blockquote cite, .page-template-page_full-width .entry-content .wp-block-pullquote.is-style-solid-color blockquote cite {
+  .page-template-page_full-width .entry-content blockquote cite, .page-template-page_full-width .entry-content .wp-block-pullquote blockquote cite {
     padding-left: 0; }
 
 .page-template-page_full-width .entry-content .alignfull {
@@ -11728,7 +11728,7 @@ body #youmax, body .youmax {
   .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
     padding-left: 0;
     padding-bottom: 0;
-    font-size: 1.75rem; }
+    font-size: 1.5625rem; }
     @media (min-width: 768px) {
       .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
         font-size: 2.0625rem; } }
@@ -11738,7 +11738,7 @@ body #youmax, body .youmax {
     @media (min-width: 1400px) {
       .home-landing-top .wp-block-pullquote blockquote p, .entry-content .tnh-landing-top .wp-block-pullquote blockquote p {
         padding-right: 40px;
-        font-size: 2.6875rem; } }
+        font-size: 2.3125rem; } }
 
 @media (min-width: 992px) {
   .home-landing-top .wp-block-image .alignright, .entry-content .tnh-landing-top .wp-block-image .alignright {
