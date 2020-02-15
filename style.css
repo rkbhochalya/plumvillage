@@ -9151,14 +9151,8 @@ object {
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 13px;
+  font-size: 16px;
   scroll-behavior: smooth; }
-  @media (min-width: 576px) {
-    html {
-      font-size: 14px; } }
-  @media (min-width: 768px) {
-    html {
-      font-size: 15px; } }
   @media (min-width: 992px) {
     html {
       font-size: 18px; } }
@@ -9275,13 +9269,22 @@ h1, h2, h3, h4, h5, h6,
 h1 {
   clear: both;
   font-style: italic;
-  font-size: 2.75rem; }
+  font-size: 2.5rem; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2.75rem; } }
 
 h2 {
-  font-size: 2.3125rem; }
+  font-size: 2.1875rem; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.3125rem; } }
 
 h3 {
-  font-size: 1.875rem; }
+  font-size: 1.625rem; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 1.875rem; } }
 
 h4, h5 {
   font-weight: 700;
@@ -11660,7 +11663,10 @@ body #youmax, body .youmax {
     padding-left: 0;
     padding-bottom: 1em;
     margin-bottom: 0;
-    font-size: 2.375rem; }
+    font-size: 2rem; }
+    @media (min-width: 768px) {
+      .page-template-page_full-width .entry-content blockquote p, .page-template-page_full-width .entry-content .wp-block-pullquote blockquote p {
+        font-size: 2.375rem; } }
   .page-template-page_full-width .entry-content blockquote cite, .page-template-page_full-width .entry-content .wp-block-pullquote blockquote cite {
     padding-left: 0; }
 
