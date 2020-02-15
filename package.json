@@ -13,12 +13,11 @@
   "homepage": "https://github.com/plumvillage/plumvillage#readme",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
-    "parsleyjs": "^2.9.1",
-    "select2": "^4.0.10",
-    "slick-carousel": "^1.8.1",
-    "velocity-animate": "^2.0.5"
+    "parsleyjs": "^2.9.2",
+    "select2": "^4.0.13",
+    "slick-carousel": "^1.8.1"
   }
 }
