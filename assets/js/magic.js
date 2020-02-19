@@ -8,9 +8,9 @@
 	// mega menu toggle
   $('.menu-toggle').click(function(e){
   	$(this).toggleClass('is-active');
-    $('body').toggleClass('menu-open');
+    $('body').toggleClass('menu-open').addClass('menu-transitioning');
     $('.mega-menu-container').removeClass('hidden');
-    $('#menu-mega-menu > li:first-child > a').focus()
+    $('.menu-open #menu-mega-menu > li:first-child > a').focus();
     e.preventDefault();
     e.stopPropagation();
   })
@@ -26,7 +26,8 @@
 	$('.site').on("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", function(){
 		if(!$('body').is('.menu-open')){
 			$('.mega-menu-container').addClass('hidden');
-		}
+			$('body').removeClass('menu-transitioning');
+		} 
 	})
 
 	$(window).resize(function(){

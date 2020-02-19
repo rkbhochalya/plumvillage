@@ -1274,6 +1274,11 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	background: $cloud;
 	transition: transform .4s cubic-bezier(.15,.53,.35,1);
 }
+.menu-transitioning{
+	.site{
+		overflow-y: scroll;
+	}
+}
 .menu-open{
 	overflow: hidden;
 }

@@ -83,11 +83,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
 }
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -117,236 +114,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .col {
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-basis: 0;
+  flex-grow: 1;
   max-width: 100%;
 }
 
 .row-cols-1 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 
 .row-cols-2 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 
 .row-cols-3 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.3333333333%;
-          flex: 0 0 33.3333333333%;
+  flex: 0 0 33.3333333333%;
   max-width: 33.3333333333%;
 }
 
 .row-cols-4 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
   max-width: 25%;
 }
 
 .row-cols-5 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+  flex: 0 0 20%;
   max-width: 20%;
 }
 
 .row-cols-6 > * {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 16.6666666667%;
-          flex: 0 0 16.6666666667%;
+  flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
 }
 
 .col-auto {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   width: auto;
   max-width: 100%;
 }
 
 .col-1 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 8.3333333333%;
-          flex: 0 0 8.3333333333%;
+  flex: 0 0 8.3333333333%;
   max-width: 8.3333333333%;
 }
 
 .col-2 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 16.6666666667%;
-          flex: 0 0 16.6666666667%;
+  flex: 0 0 16.6666666667%;
   max-width: 16.6666666667%;
 }
 
 .col-3 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
   max-width: 25%;
 }
 
 .col-4 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.3333333333%;
-          flex: 0 0 33.3333333333%;
+  flex: 0 0 33.3333333333%;
   max-width: 33.3333333333%;
 }
 
 .col-5 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 41.6666666667%;
-          flex: 0 0 41.6666666667%;
+  flex: 0 0 41.6666666667%;
   max-width: 41.6666666667%;
 }
 
 .col-6 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 
 .col-7 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 58.3333333333%;
-          flex: 0 0 58.3333333333%;
+  flex: 0 0 58.3333333333%;
   max-width: 58.3333333333%;
 }
 
 .col-8 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.6666666667%;
-          flex: 0 0 66.6666666667%;
+  flex: 0 0 66.6666666667%;
   max-width: 66.6666666667%;
 }
 
 .col-9 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 75%;
-          flex: 0 0 75%;
+  flex: 0 0 75%;
   max-width: 75%;
 }
 
 .col-10 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 83.3333333333%;
-          flex: 0 0 83.3333333333%;
+  flex: 0 0 83.3333333333%;
   max-width: 83.3333333333%;
 }
 
 .col-11 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 91.6666666667%;
-          flex: 0 0 91.6666666667%;
+  flex: 0 0 91.6666666667%;
   max-width: 91.6666666667%;
 }
 
 .col-12 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 
 .order-first {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  order: -1;
 }
 
 .order-last {
-  -webkit-box-ordinal-group: 14;
-      -ms-flex-order: 13;
-          order: 13;
+  order: 13;
 }
 
 .order-0 {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  order: 0;
 }
 
 .order-1 {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 
 .order-2 {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 
 .order-3 {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
 }
 
 .order-4 {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
 }
 
 .order-5 {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  order: 5;
 }
 
 .order-6 {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
+  order: 6;
 }
 
 .order-7 {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
+  order: 7;
 }
 
 .order-8 {
-  -webkit-box-ordinal-group: 9;
-      -ms-flex-order: 8;
-          order: 8;
+  order: 8;
 }
 
 .order-9 {
-  -webkit-box-ordinal-group: 10;
-      -ms-flex-order: 9;
-          order: 9;
+  order: 9;
 }
 
 .order-10 {
-  -webkit-box-ordinal-group: 11;
-      -ms-flex-order: 10;
-          order: 10;
+  order: 10;
 }
 
 .order-11 {
-  -webkit-box-ordinal-group: 12;
-      -ms-flex-order: 11;
-          order: 11;
+  order: 11;
 }
 
 .order-12 {
-  -webkit-box-ordinal-group: 13;
-      -ms-flex-order: 12;
-          order: 12;
+  order: 12;
 }
 
 .offset-1 {
@@ -395,236 +321,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media (min-width: 370px) {
   .col-xs {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-xs-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-xs-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-xs-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-xs-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-xs-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-xs-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xs-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-xs-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-xs-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xs-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-xs-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-xs-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-xs-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-xs-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-xs-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-xs-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-xs-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-xs-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-xs-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-xs-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-xs-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-xs-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-xs-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-xs-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-xs-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-xs-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-xs-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-xs-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-xs-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-xs-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-xs-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-xs-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-xs-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-xs-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-xs-0 {
@@ -677,236 +532,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 576px) {
   .col-sm {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-sm-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-sm-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-sm-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-sm-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-sm-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-sm-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-sm-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-sm-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-sm-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-sm-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-sm-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-sm-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-sm-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-sm-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-sm-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-sm-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-sm-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-sm-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-sm-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-sm-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-sm-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-sm-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-sm-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-sm-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-sm-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-sm-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-sm-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-sm-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-sm-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-sm-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-sm-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-sm-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-sm-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-sm-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-sm-0 {
@@ -959,236 +743,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 768px) {
   .col-md {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-md-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-md-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-md-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-md-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-md-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-md-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-md-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-md-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-md-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-md-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-md-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-md-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-md-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-md-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-md-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-md-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-md-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-md-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-md-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-md-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-md-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-md-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-md-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-md-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-md-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-md-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-md-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-md-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-md-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-md-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-md-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-md-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-md-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-md-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-md-0 {
@@ -1241,236 +954,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 992px) {
   .col-lg {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-lg-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-lg-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-lg-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-lg-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-lg-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-lg-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-lg-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-lg-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-lg-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-lg-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-lg-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-lg-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-lg-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-lg-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-lg-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-lg-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-lg-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-lg-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-lg-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-lg-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-lg-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-lg-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-lg-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-lg-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-lg-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-lg-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-lg-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-lg-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-lg-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-lg-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-lg-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-lg-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-lg-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-lg-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-lg-0 {
@@ -1523,236 +1165,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 1200px) {
   .col-xl {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-xl-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-xl-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-xl-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-xl-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-xl-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-xl-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xl-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-xl-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-xl-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xl-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-xl-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-xl-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-xl-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-xl-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-xl-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-xl-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-xl-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-xl-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-xl-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-xl-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-xl-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-xl-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-xl-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-xl-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-xl-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-xl-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-xl-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-xl-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-xl-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-xl-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-xl-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-xl-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-xl-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-xl-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-xl-0 {
@@ -1805,236 +1376,165 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 1400px) {
   .col-xxl {
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-basis: 0;
+    flex-grow: 1;
     max-width: 100%;
   }
 
   .row-cols-xxl-1 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .row-cols-xxl-2 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .row-cols-xxl-3 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .row-cols-xxl-4 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .row-cols-xxl-5 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 20%;
-            flex: 0 0 20%;
+    flex: 0 0 20%;
     max-width: 20%;
   }
 
   .row-cols-xxl-6 > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xxl-auto {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: auto;
     max-width: 100%;
   }
 
   .col-xxl-1 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 8.3333333333%;
-            flex: 0 0 8.3333333333%;
+    flex: 0 0 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
   .col-xxl-2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.6666666667%;
-            flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
     max-width: 16.6666666667%;
   }
 
   .col-xxl-3 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    flex: 0 0 25%;
     max-width: 25%;
   }
 
   .col-xxl-4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.3333333333%;
-            flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
   }
 
   .col-xxl-5 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 41.6666666667%;
-            flex: 0 0 41.6666666667%;
+    flex: 0 0 41.6666666667%;
     max-width: 41.6666666667%;
   }
 
   .col-xxl-6 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    flex: 0 0 50%;
     max-width: 50%;
   }
 
   .col-xxl-7 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.3333333333%;
-            flex: 0 0 58.3333333333%;
+    flex: 0 0 58.3333333333%;
     max-width: 58.3333333333%;
   }
 
   .col-xxl-8 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.6666666667%;
-            flex: 0 0 66.6666666667%;
+    flex: 0 0 66.6666666667%;
     max-width: 66.6666666667%;
   }
 
   .col-xxl-9 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
+    flex: 0 0 75%;
     max-width: 75%;
   }
 
   .col-xxl-10 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.3333333333%;
-            flex: 0 0 83.3333333333%;
+    flex: 0 0 83.3333333333%;
     max-width: 83.3333333333%;
   }
 
   .col-xxl-11 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.6666666667%;
-            flex: 0 0 91.6666666667%;
+    flex: 0 0 91.6666666667%;
     max-width: 91.6666666667%;
   }
 
   .col-xxl-12 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
   .order-xxl-first {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 
   .order-xxl-last {
-    -webkit-box-ordinal-group: 14;
-        -ms-flex-order: 13;
-            order: 13;
+    order: 13;
   }
 
   .order-xxl-0 {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
 
   .order-xxl-1 {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
 
   .order-xxl-2 {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
 
   .order-xxl-3 {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
 
   .order-xxl-4 {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 
   .order-xxl-5 {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    order: 5;
   }
 
   .order-xxl-6 {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    order: 6;
   }
 
   .order-xxl-7 {
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
+    order: 7;
   }
 
   .order-xxl-8 {
-    -webkit-box-ordinal-group: 9;
-        -ms-flex-order: 8;
-            order: 8;
+    order: 8;
   }
 
   .order-xxl-9 {
-    -webkit-box-ordinal-group: 10;
-        -ms-flex-order: 9;
-            order: 9;
+    order: 9;
   }
 
   .order-xxl-10 {
-    -webkit-box-ordinal-group: 11;
-        -ms-flex-order: 10;
-            order: 10;
+    order: 10;
   }
 
   .order-xxl-11 {
-    -webkit-box-ordinal-group: 12;
-        -ms-flex-order: 11;
-            order: 11;
+    order: 11;
   }
 
   .order-xxl-12 {
-    -webkit-box-ordinal-group: 13;
-        -ms-flex-order: 12;
-            order: 12;
+    order: 12;
   }
 
   .offset-xxl-0 {
@@ -2275,8 +1775,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .icon {
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 
@@ -2420,8 +1918,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .jump-to p a, .centered-content .jump-to p a {
   color: #9A9A9A;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   padding: 1px 1px;
 }
 .jump-to p a:hover, .jump-to p a:focus, .centered-content .jump-to p a:hover, .centered-content .jump-to p a:focus {
@@ -2526,15 +2023,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   color: #8B572A;
 }
 .text-inset .block-inside.text-inset-inside a {
-  -webkit-box-shadow: inset 0 -0.1em #8B572A;
-          box-shadow: inset 0 -0.1em #8B572A;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #8B572A;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .text-inset .block-inside.text-inset-inside a:hover, .text-inset .block-inside.text-inset-inside a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #8B572A;
-          box-shadow: inset 0 -0.4em #8B572A;
+  box-shadow: inset 0 -0.4em #8B572A;
   text-decoration: none;
 }
 
@@ -2546,8 +2039,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   cursor: pointer;
 }
 .gallery-embed .gallery-embed-inside {
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   background: #FEFBF3;
 }
@@ -2572,8 +2063,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   position: relative;
   top: 4px;
   color: #FFD22A;
-  -webkit-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .gallery-embed .gallery-embed-inside .gallery-embed-content p.gallery-embed-link a {
@@ -2584,23 +2073,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   overflow: hidden;
 }
 .gallery-embed .gallery-embed-inside .gallery-embed-img img {
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  transition: -webkit-transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  transition: transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1), -webkit-transform 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .gallery-embed:hover .gallery-embed-inside .gallery-embed-content p .icon, .gallery-embed:focus .gallery-embed-inside .gallery-embed-content p .icon {
   color: #f6c200;
 }
 .gallery-embed:hover a, .gallery-embed:focus a {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
 }
 .gallery-embed:hover img, .gallery-embed:focus img {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
+  transform: scale(1.04);
 }
 .gallery-embed.alignleft.block-narrow {
   margin-right: 0;
@@ -2613,8 +2095,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .video-embed {
   position: relative;
   z-index: 2;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   margin-top: 0;
   margin-bottom: 0;
@@ -2652,8 +2132,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-top: -17px;
   color: #fff;
   font-size: 2.1875rem;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   border-radius: 30px;
 }
@@ -2669,8 +2147,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   left: 20px;
   color: #fff;
   font-size: 2.1875rem;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   border-radius: 30px;
 }
@@ -2743,8 +2219,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   display: inline-block;
   line-height: 0;
   color: #FFD22A;
-  -webkit-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .audio-player .buttons .play-btn .icon-pauze {
@@ -2758,8 +2232,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   opacity: 0;
   margin-top: -50px;
   display: block;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   z-index: 1;
 }
@@ -2858,15 +2330,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
 }
 .panel-collapsable > h5 .underline-me {
-  -webkit-box-shadow: inset 0 -0.1em #FFD22A;
-          box-shadow: inset 0 -0.1em #FFD22A;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #FFD22A;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .panel-collapsable > h5 .underline-me:hover, .panel-collapsable > h5 .underline-me:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .panel-collapsable > h5 .icon {
@@ -2884,9 +2352,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   display: none;
 }
 .panel-collapsable.panel-open h5 .icon {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   left: -30px;
 }
 .panel-collapsable.panel-open .row-collapsable {
@@ -2932,8 +2398,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   overflow: hidden;
 }
 .link-zoom img {
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .link-zoom .icon {
@@ -2946,17 +2410,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #fff;
 }
 .link-zoom h5 span {
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .link-zoom:hover, .link-zoom:focus {
   text-decoration: none;
 }
 .link-zoom:hover img, .link-zoom:focus img {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
+  transform: scale(1.04);
 }
 .link-zoom:hover .icon, .link-zoom:focus .icon {
   color: #fff;
@@ -2966,8 +2426,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background: #222;
 }
 .link-zoom:hover h5 span, .link-zoom:focus h5 span {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 
@@ -2984,15 +2443,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   padding-bottom: 0;
 }
 .index-item.index-page h5 a {
-  -webkit-box-shadow: inset 0 -0.1em #fff;
-          box-shadow: inset 0 -0.1em #fff;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #fff;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .index-item.index-page h5 a:hover, .index-item.index-page h5 a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .index-item.index-page img {
@@ -3032,15 +2487,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   line-height: 180%;
 }
 .media-coverage ul li a {
-  -webkit-box-shadow: inset 0 -0.1em #fff;
-          box-shadow: inset 0 -0.1em #fff;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #fff;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .media-coverage ul li a:hover, .media-coverage ul li a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .media-coverage ul li a img {
@@ -3051,8 +2502,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-left: 5px;
 }
 .media-coverage ul li a .link-text {
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .media-coverage ul li a .play-middle {
@@ -3101,15 +2550,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .menu-block-container .menu-block #block-menu li a {
   color: #9A9A9A;
-  -webkit-box-shadow: inset 0 -0.1em #fff;
-          box-shadow: inset 0 -0.1em #fff;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #fff;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .menu-block-container .menu-block #block-menu li a:hover, .menu-block-container .menu-block #block-menu li a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .menu-block-container .menu-block #block-menu .sub-menu {
@@ -3133,8 +2578,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: bold;
 }
 .menu-block-container .menu-block.fix-menu-top {
-  -webkit-transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: background 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   position: fixed;
   top: 0;
@@ -3231,8 +2674,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     min-height: 600px;
     padding-top: 0;
     top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     pointer-events: none;
   }
@@ -3264,8 +2705,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .page-homepage .toggle-search path {
   fill: #fff;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .page-homepage.search-open .toggle-search path {
@@ -3275,16 +2714,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
   padding: 0;
   position: relative;
-  margin-top: -115px;
+  margin-top: -120px;
 }
 @media (min-width: 768px) {
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-    margin-top: -140px;
+    margin-top: -145px;
   }
 }
 @media (min-width: 1400px) {
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
-    margin-top: -161px;
+    margin-top: -165px;
   }
 }
 @media (max-width: 991.98px) {
@@ -3298,18 +2737,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     padding-right: 0;
   }
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns .wp-block-column:first-child {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     background: #FEFBF3;
     padding: 20px;
     margin: -120px 15px 0;
     z-index: 2;
   }
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns .wp-block-column:last-child {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns .slick-dots, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns .slick-prev, .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns .slick-next {
     margin-bottom: 90px;
@@ -3322,10 +2757,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-columns {
     min-height: 100vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .wp-block-column:first-child {
     padding-right: 50px;
@@ -3349,8 +2781,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   position: absolute;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 2;
 }
@@ -3361,8 +2791,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   position: absolute;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
 }
 @media (min-width: 768px) {
@@ -3451,7 +2879,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @media (max-width: 600px) {
   .wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right.tnh-landing-books {
-        grid-template-areas: "media-text-media" "media-text-content";
+    grid-template-areas: "media-text-media" "media-text-content";
   }
   .wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right.tnh-landing-books figure {
     max-width: 300px;
@@ -3473,15 +2901,12 @@ hr.wp-block-separator {
 }
 
 .wp-block-columns.align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 @media (max-width: 1199.98px) {
   .wp-block-columns.has-md-full-width .wp-block-column {
-    -ms-flex-preferred-size: 100% !important;
-        flex-basis: 100% !important;
+    flex-basis: 100% !important;
   }
 }
 
@@ -3494,12 +2919,8 @@ hr.wp-block-separator {
   }
 }
 .wp-block-media-text .wp-block-media-text__content .wp-block-group, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text .wp-block-media-text__content .wp-block-group {
-  -webkit-columns: 2 250px;
-     -moz-columns: 2 250px;
-          columns: 2 250px;
-  -webkit-column-gap: 2em;
-     -moz-column-gap: 2em;
-          column-gap: 2em;
+  columns: 2 250px;
+  column-gap: 2em;
 }
 .wp-block-media-text.is-image-fill .wp-block-media-text__content figure, .page-template-page_full-width .entry-content .alignwide.wp-block-media-text.is-image-fill .wp-block-media-text__content figure {
   min-height: unset;
@@ -3628,8 +3049,7 @@ hr.wp-block-separator {
     text-align: left;
   }
   .home-what-who-block .wp-block-column:last-child, .page-template-page_full-width .entry-content .wp-block-group.home-what-who-block .wp-block-column:last-child {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -3645,8 +3065,6 @@ hr.wp-block-separator {
 
 .page-template-default .wp-block-group.has-background, .post .wp-block-group.has-background {
   padding: 20px 20px 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -3678,10 +3096,8 @@ hr.wp-block-separator {
   position: absolute;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
+  object-fit: cover;
+  object-position: center center;
   width: 100%;
   height: 100%;
 }
@@ -3730,15 +3146,11 @@ ul.slick-dots li button:before, .page-template-default .entry-content ul.slick-d
   bottom: -40px;
   top: unset;
   z-index: 2;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   height: auto;
   width: auto;
   padding: 15px;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
+  transform: none;
 }
 .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
   opacity: 0.6;
@@ -3800,8 +3212,6 @@ pre a, pre.wp-block-verse a, .wp-block-verse pre a {
   font-weight: 700;
   font-size: 0.875rem;
   padding: 0.5rem 1.1rem 0.4em;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   line-height: 160%;
 }
@@ -3821,15 +3231,11 @@ pre a, pre.wp-block-verse a, .wp-block-verse pre a {
 }
 .important-update p a, .entry-content .alignfull.important-update p a {
   color: #8B572A;
-  -webkit-box-shadow: inset 0 -0.1em #FAF1EB;
-          box-shadow: inset 0 -0.1em #FAF1EB;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #FAF1EB;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .important-update p a:hover, .important-update p a:focus, .entry-content .alignfull.important-update p a:hover, .entry-content .alignfull.important-update p a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #f0d4c2;
-          box-shadow: inset 0 -0.4em #f0d4c2;
+  box-shadow: inset 0 -0.4em #f0d4c2;
   text-decoration: none;
 }
 
@@ -3853,15 +3259,11 @@ pre a, pre.wp-block-verse a, .wp-block-verse pre a {
 .editor-styles-wrapper p a, .editor-styles-wrapper ul li a, .editor-styles-wrapper ol li a {
   text-decoration: none;
   color: #222;
-  -webkit-box-shadow: inset 0 -0.1em #FFD22A;
-          box-shadow: inset 0 -0.1em #FFD22A;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em #FFD22A;
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .editor-styles-wrapper p a:hover, .editor-styles-wrapper p a:focus, .editor-styles-wrapper ul li a:hover, .editor-styles-wrapper ul li a:focus, .editor-styles-wrapper ol li a:hover, .editor-styles-wrapper ol li a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .editor-styles-wrapper p.has-large-font-size {
@@ -3869,15 +3271,11 @@ pre a, pre.wp-block-verse a, .wp-block-verse pre a {
   line-height: 155%;
 }
 .editor-styles-wrapper p.has-large-font-size a {
-  -webkit-box-shadow: inset 0 -0.1em rgba(255, 210, 42, 0.4);
-          box-shadow: inset 0 -0.1em rgba(255, 210, 42, 0.4);
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  box-shadow: inset 0 -0.1em rgba(255, 210, 42, 0.4);
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
 .editor-styles-wrapper p.has-large-font-size a:hover, .editor-styles-wrapper p.has-large-font-size a:focus {
-  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
-          box-shadow: inset 0 -0.4em #FFD22A;
+  box-shadow: inset 0 -0.4em #FFD22A;
   text-decoration: none;
 }
 .editor-styles-wrapper h4, .editor-styles-wrapper h5 {
@@ -3986,21 +3384,15 @@ figcaption {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-left: -7px;
   margin-right: -7px;
 }
 
 .col, .col-md {
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-basis: 0;
+  flex-grow: 1;
   max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
