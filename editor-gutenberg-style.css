@@ -3836,22 +3836,80 @@ pre a, pre.wp-block-verse a, .wp-block-verse pre a {
 /*--------------------------------------------------------------
 # Gutenberg
 --------------------------------------------------------------*/
+.editor-post-title__block .editor-post-title__input {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 3.25rem;
+  font-weight: 300;
+  color: #222;
+  padding-bottom: 0;
+}
+
+.editor-styles-wrapper {
+  font-size: 20px !important;
+  font-family: "pelago", sans-serif !important;
+  font-weight: 300;
+}
+.editor-styles-wrapper p a, .editor-styles-wrapper ul li a, .editor-styles-wrapper ol li a {
+  text-decoration: none;
+  color: #222;
+  -webkit-box-shadow: inset 0 -0.1em #FFD22A;
+          box-shadow: inset 0 -0.1em #FFD22A;
+  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+}
+.editor-styles-wrapper p a:hover, .editor-styles-wrapper p a:focus, .editor-styles-wrapper ul li a:hover, .editor-styles-wrapper ul li a:focus, .editor-styles-wrapper ol li a:hover, .editor-styles-wrapper ol li a:focus {
+  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
+          box-shadow: inset 0 -0.4em #FFD22A;
+  text-decoration: none;
+}
+.editor-styles-wrapper p.has-large-font-size {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 155%;
+}
+.editor-styles-wrapper p.has-large-font-size a {
+  -webkit-box-shadow: inset 0 -0.1em rgba(255, 210, 42, 0.4);
+          box-shadow: inset 0 -0.1em rgba(255, 210, 42, 0.4);
+  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+}
+.editor-styles-wrapper p.has-large-font-size a:hover, .editor-styles-wrapper p.has-large-font-size a:focus {
+  -webkit-box-shadow: inset 0 -0.4em #FFD22A;
+          box-shadow: inset 0 -0.4em #FFD22A;
+  text-decoration: none;
+}
+.editor-styles-wrapper h4, .editor-styles-wrapper h5 {
+  line-height: 160%;
+  margin-bottom: 0;
+  font-size: 0.95em !important;
+}
+.editor-styles-wrapper .wp-block-pullquote {
+  color: #222;
+}
+.editor-styles-wrapper blockquote p, .editor-styles-wrapper .block-editor-block-list__block[data-type="core/pullquote"][data-align=left] p, .editor-styles-wrapper .block-editor-block-list__block[data-type="core/pullquote"][data-align=right] p {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 25px;
+}
+.editor-styles-wrapper .blocks-gallery-caption, .editor-styles-wrapper .wp-block-embed figcaption, .editor-styles-wrapper .wp-block-image figcaption {
+  color: #9A9A9A;
+  font-size: 15px;
+}
+
 .components-button {
   margin-top: 0 !important;
 }
 
 .wp-block {
-  max-width: 710px;
+  max-width: 654px;
 }
 
-.block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .block-editor-block-list__block-edit {
+.block-editor-block-list__layout .block-editor-block-list__block[data-align=right] > .is-block-content {
   max-width: 40%;
   margin-right: -100px;
   clear: right;
-}
-
-a {
-  text-decoration: none;
 }
 
 .wp-block-cover {
@@ -3891,10 +3949,6 @@ a {
 
 .wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer {
   text-transform: none;
-}
-
-p.has-large-font-size {
-  color: #9A9A9A;
 }
 
 .editor-styles-wrapper .jump-to p {

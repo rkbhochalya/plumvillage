@@ -1,21 +1,69 @@
+// Title styles
+.editor-post-title__block .editor-post-title__input{
+	font-family: $font-headers;
+	font-style: italic;
+	@include font-size(52);
+	font-weight: 300;
+	color: #222;
+	padding-bottom: 0;
+}
+
+
+// Default Editor styles here
+.editor-styles-wrapper{
+	font-size: 20px!important;
+	font-family: $font-body!important;
+	font-weight: $font-body-weight;
+
+	p a, ul li a, ol li a{
+		text-decoration: none;
+		color: $ink;
+  	@include underline($sun, $sun);
+	}	
+
+	p.has-large-font-size{
+		font-family: $font-headers;
+		line-height: 155%;
+		a{
+			@include underline(rgba($sun, 0.4), $sun);
+		}
+	}
+
+	h4, h5{
+		line-height: 160%;
+		margin-bottom: 0;
+		font-size: 0.95em!important;
+	}
+
+	.wp-block-pullquote{
+		color: #222;
+	}
+	blockquote p, .block-editor-block-list__block[data-type="core/pullquote"][data-align="left"] p, .block-editor-block-list__block[data-type="core/pullquote"][data-align="right"] p{
+		font-family: $font-headers;
+		font-style: italic;
+		font-size: 25px;
+	}
+	.blocks-gallery-caption, .wp-block-embed figcaption, .wp-block-image figcaption{
+		color: $grey;
+		font-size: 15px;
+	}
+}
+
+
 .components-button{
 	margin-top: 0!important;
 }
 
 .wp-block{
-	max-width: 710px;
+	max-width: 654px;
 }
 
-
-.block-editor-block-list__layout .block-editor-block-list__block[data-align=right]>.block-editor-block-list__block-edit{
+.block-editor-block-list__layout .block-editor-block-list__block[data-align="right"] > .is-block-content{
 	max-width: 40%;
 	margin-right: -100px;
 	clear: right;
 }
 
-a{
-  text-decoration: none;
-}
 
 // Fix cover image being super high
 .wp-block-cover{
@@ -68,10 +116,6 @@ a{
 
 .wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer{
 	text-transform: none;
-}
-
-p.has-large-font-size{
-	color: $grey;
 }
 
 .editor-styles-wrapper .jump-to{

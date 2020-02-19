@@ -2,4 +2,4 @@
 *.map
 wpedeploy.json
 node_modules
-prepros-6.config
+prepros.config

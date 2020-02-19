@@ -105,7 +105,7 @@ if ( ! function_exists( 'plumvillage_setup' ) ) :
 	    ),
 	    array(
 	        'name' => __( 'Large', 'themeLangDomain' ),
-	        'size' => 22,
+	        'size' => 30,
 	        'slug' => 'large'
 	    )
 		) );
@@ -141,7 +141,6 @@ function plumvillage_scripts() {
 
 	//load fonts
   wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,600&display=swap');
-
   wp_enqueue_style('typkit-fonts', 'https://use.typekit.net/foc4drj.css');
 
 	// load magic
@@ -191,18 +190,6 @@ function wps_deregister_styles() {
 }
 
 
-/**
- * Enqueue gutenberg script
- */
-function gutenberg_enqueue() {
-    wp_enqueue_script(
-        'myguten-script',
-        get_template_directory_uri() . '/assets/js/gutenberg.js', // For Parent Themes
-        array('wp-blocks') // Include wp.blocks Package             
-    );
-}
-
-add_action('enqueue_block_editor_assets', 'gutenberg_enqueue');
 
 function create_post_types() {
 
@@ -588,6 +575,7 @@ function custom_attachment_link( $link, $post_id ){
 add_filter( 'attachment_link', 'custom_attachment_link', 10, 2 );
 
 
+
 // Add backend styles for Gutenberg.
 add_action( 'enqueue_block_editor_assets', 'plumvillage_add_gutenberg_assets', 100 );
 
@@ -598,7 +586,11 @@ function plumvillage_add_gutenberg_assets() {
 	// Load the theme styles within Gutenberg.
 	wp_enqueue_style( 'plumvillage-gutenberg', get_theme_file_uri( 'editor-gutenberg-style.css' ), array(), filemtime(get_stylesheet_directory( 'editor-gutenberg-style.css' )) );
 
-	wp_enqueue_script( 'plumvillage-gutenberg-js', get_template_directory_uri() . '/assets/js/gutenberg-acf.js' );
+  //load fonts
+  wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,600&display=swap');
+  wp_enqueue_style('typkit-fonts', 'https://use.typekit.net/foc4drj.css');
+
+	wp_enqueue_script( 'plumvillage-gutenberg-js', get_template_directory_uri() . '/assets/js/gutenberg.js', array('wp-blocks') );
 
 }
 
