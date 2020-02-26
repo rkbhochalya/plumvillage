@@ -13331,7 +13331,7 @@ pre, pre.wp-block-verse, .wp-block-verse pre {
   background: #FEFBF3;
   font-family: "Cormorant Garamond", serif;
   font-size: 1.375rem;
-  white-space: normal;
+  white-space: pre-wrap;
   line-height: 160%;
   margin-bottom: 1.6em;
   max-width: 100%;
