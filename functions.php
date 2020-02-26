@@ -545,6 +545,34 @@ function create_post_types() {
   register_taxonomy( 'language', array('pv_event'), $args );
 
 
+  register_post_type( 'pv_library',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Library', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Library Item', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Library', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Library', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Library Item', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Library Item', 'plumvillage' ),
+        'new_item'           => __( 'New Library Item', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Library Item', 'plumvillage' ),
+        'view_item'          => __( 'View Library Item', 'plumvillage' ),
+        'all_items'          => __( 'All Library', 'plumvillage' ),
+        'search_items'       => __( 'Search Library', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Library Item found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'show_in_menu' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-portfolio',      
+      'rewrite' => array('slug' => _x( 'library', 'URL library slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
 
 
 }

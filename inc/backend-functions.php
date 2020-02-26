@@ -23,8 +23,34 @@ function wpdocs_register_my_custom_menu_page() {
 		6
   );
   add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'manage_options',  'post.php?post=7703&action=edit', '', 'dashicons-admin-users');
+
+
+  // Show donations in all languages by default
+	global $menu, $submenu;
+	$parent = 'edit.php?post_type=give_forms';
+	if(isset($submenu[$parent]) ){
+		foreach( $submenu[$parent] as $k => $d ){
+			// var_export($d['2']);
+    	if( $d['2'] == 'give-payment-history' ) {
+      	$submenu[$parent][$k]['2'] = 'edit.php?post_type=give_forms&page=give-payment-history&lang=all';
+      	break;
+    	}
+		}
+	}
+
 }
 add_action( 'admin_menu', 'wpdocs_register_my_custom_menu_page' );
+
+
+// select submenu for donations when selected
+add_filter('parent_file', 'my_plugin_select_submenu');
+function my_plugin_select_submenu($file) {
+	global $plugin_page;
+	if ('give-payment-history' == $plugin_page) {
+	    $plugin_page = 'edit.php?post_type=give_forms&page=give-payment-history&lang=all';
+	}
+	return $file;
+}
 
 
 // Delete not needed menu items
@@ -152,8 +178,8 @@ function custom_menu_order($menu_ord) {
         'separator1', // First separator
         'edit.php?post_type=page', // Pages
         'post.php?post=7703&action=edit',
+        'edit.php?post_type=pv_library',
         'edit.php?post_type=pv_book',
-        'edit.php?post_type=event',
         'edit.php?post_type=pv_event',
         'edit.php', // Posts
         'edit-tags.php?taxonomy=practise-centres',
@@ -214,4 +240,15 @@ add_action( 'current_screen', 'so_hide_seo_backend_output_cpt', 9 );
 
 function so_hide_seo_backend_output_cpt( $current_screen ) {
 	add_filter( 'the_seo_framework_show_seo_column', '__return_false' );
+}
+
+// replace 'podcast' with 'audio' in the rss feed
+add_filter( 'ssp_archive_slug', 'ssp_modify_podcast_archive_slug' );
+function ssp_modify_podcast_archive_slug ( $slug ) {
+  return 'audio';
+}
+
+add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
+function ssp_modify_podcast_feed_slug ( $slug ) {
+  return 'audio';
 }
