@@ -1359,7 +1359,10 @@ pre, pre.wp-block-verse, .wp-block-verse pre{
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: .8em;
+	@include media-breakpoint-up(lg) {
+		padding: 1.6em;
+	}
 
 	a{
 		text-decoration: underline;
