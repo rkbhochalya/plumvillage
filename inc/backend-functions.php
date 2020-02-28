@@ -67,7 +67,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'topic' ),
   );
 
-  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews'), $args );
+  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews', 'pv_library'), $args );
 
 
   // Add new taxonomy
@@ -307,7 +307,8 @@ function create_post_types() {
       ),
       'public' => true,
       'has_archive' => false,
-      'hierarchical' => true,      
+      'hierarchical' => true,
+			'taxonomies' => array('topics'), 
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-admin-site',
       'rewrite' => array('slug' => _x( 'practice-centre', 'Practice Centre slug', 'plumvillage' )),
@@ -598,7 +599,6 @@ function custom_menu_order($menu_ord) {
         'edit.php?post_type=pv_event',
         'edit.php', // Posts
         'edit.php?post_type=practice_centre',
-        'edit-tags.php?taxonomy=practise-centres',
         'edit.php?post_type=monastics',
         'edit-comments.php',
         'edit-tags.php?taxonomy=topics',
