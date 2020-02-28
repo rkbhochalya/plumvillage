@@ -1,5 +1,420 @@
 <?php 
 
+function create_post_types() {
+
+  // Add new taxonomy, NOT hierarchical (like tags)
+  $labels = array(
+    'name'                       => _x( 'Practice Centers', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Practice Center', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Practice Centers', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Practice Centers', 'plumvillage' ),
+    'all_items'                  => __( 'All Practice Centers', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Practice Center', 'plumvillage' ),
+    'update_item'                => __( 'Edit Practice Center', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Practice Center', 'plumvillage' ),
+    'new_item_name'              => __( 'New Practice Center name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Practice Centers.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Practice Centers', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Practice Centers', 'plumvillage' ),
+    'not_found'                  => __( 'No Practice Centers found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Practice Centers', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => true,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'					=> true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array('slug' => _x( 'practise-centres', 'URL Practise Centres slug', 'plumvillage' )),
+  );
+
+  register_taxonomy( 'practise-centres', array('post', 'pv_event'), $args );
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Topics', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Topic', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Topics', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Topics', 'plumvillage' ),
+    'all_items'                  => __( 'All Topics', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Topic', 'plumvillage' ),
+    'update_item'                => __( 'Edit Topic', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Topic', 'plumvillage' ),
+    'new_item_name'              => __( 'New Topic name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Topics.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Topics', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Topics', 'plumvillage' ),
+    'not_found'                  => __( 'No Topics found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Topics', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => true,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'					=> 'post.php?post=7703&action=edit',
+    'show_in_rest'					=> true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'topic' ),
+  );
+
+  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews'), $args );
+
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Types', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Type', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Types', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Types', 'plumvillage' ),
+    'all_items'                  => __( 'All Types', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Type', 'plumvillage' ),
+    'update_item'                => __( 'Edit Type', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Type', 'plumvillage' ),
+    'new_item_name'              => __( 'New Type name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Types.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Types', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Types', 'plumvillage' ),
+    'not_found'                  => __( 'No Types found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Types', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => true,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'          => 'post.php?post=7703&action=edit',
+    'show_in_rest'          => false,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'type' ),
+  );
+
+  register_taxonomy( 'types', array('interviews'), $args );
+
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Path', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Path', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Paths', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Paths', 'plumvillage' ),
+    'all_items'                  => __( 'All Paths', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Path', 'plumvillage' ),
+    'update_item'                => __( 'Edit Path', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Path', 'plumvillage' ),
+    'new_item_name'              => __( 'New Path name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Paths.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Paths', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Paths', 'plumvillage' ),
+    'not_found'                  => __( 'No Paths found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Path', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => true,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'show_in_rest'          => true,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+  );
+
+  register_taxonomy( 'monastic_path', array('monastics'), $args );
+
+
+  // Add new post type
+	register_post_type( 'letter',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Letters', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Letter', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Letters', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Letters', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Letter', 'plumvillage' ),
+        'view_item'          => __( 'View Letter', 'plumvillage' ),
+        'all_items'          => __( 'Letters', 'plumvillage' ),
+        'search_items'       => __( 'Search Letters', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No letters found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('topics'), 
+      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-media-text',      
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/letters', 'TNH letters slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'author')
+    )
+  );
+
+	register_post_type( 'interview',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Interviews', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Interview', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Interviews', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Interviews', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Interview', 'plumvillage' ),
+        'view_item'          => __( 'View Interview', 'plumvillage' ),
+        'all_items'          => __( 'Interviews', 'plumvillage' ),
+        'search_items'       => __( 'Search Interviews', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Interviews found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('topics', 'types'), 
+      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-format-chat',      
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/interviews-with-thich-nhat-hanh', 'TNH interviews slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
+    )
+  );	
+
+  register_post_type( 'tnh_update',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Thich Nhat Hanh Updates', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Thich Nhat Hanh Update', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'TNH Update', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'TNH Update', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit TNH Update', 'plumvillage' ),
+        'view_item'          => __( 'View TNH Update', 'plumvillage' ),
+        'all_items'          => __( 'Updates', 'plumvillage' ),
+        'search_items'       => __( 'Search TNH Update', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No TNH Update found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('topics'), 
+      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-megaphone',      
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/thich-nhat-hanhs-health', 'TNH health slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'comments', 'thumbnail', 'author')
+    )
+  );  
+
+  register_post_type( 'tnh_press_release',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Thich Nhat Hanh Press Releases', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Thich Nhat Hanh Press Release', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'TNH Press Release', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'TNH Press Release', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit TNH Press Release', 'plumvillage' ),
+        'view_item'          => __( 'View TNH Press Release', 'plumvillage' ),
+        'all_items'          => __( 'Press Releases', 'plumvillage' ),
+        'search_items'       => __( 'Search TNH Press Release', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No TNH Press Release found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('topics'), 
+      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_rest' => true,
+      'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/press', 'TNH Press slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'author')
+    )
+  );
+
+  register_post_type( 'monastics',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Monastics', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Monastic', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Monastics', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Monastics', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Monastics', 'plumvillage' ),
+        'view_item'          => __( 'View Page', 'plumvillage' ),
+        'all_items'          => __( 'All Monastics', 'plumvillage' ),
+        'search_items'       => __( 'Search Monastics', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Monastics found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,      
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-groups',
+      'rewrite' => array('slug' => _x( 'monastics', 'Monastic slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
+
+  register_post_type( 'practice_centre',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Practice Centres', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Practice Centre', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Practice Centres', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Practice Centres', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'New', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New', 'plumvillage' ),
+        'new_item'           => __( 'New', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Practice Centres', 'plumvillage' ),
+        'view_item'          => __( 'View Practice Centre', 'plumvillage' ),
+        'all_items'          => __( 'All Practice Centres', 'plumvillage' ),
+        'search_items'       => __( 'Search Practice Centres', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Practice Centres found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => true,      
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-admin-site',
+      'rewrite' => array('slug' => _x( 'practice-centre', 'Practice Centre slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
+
+
+  register_post_type( 'pv_event',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Events', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Event', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Events', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Events', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Event', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Event', 'plumvillage' ),
+        'new_item'           => __( 'New Event', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Event', 'plumvillage' ),
+        'view_item'          => __( 'View Event', 'plumvillage' ),
+        'all_items'          => __( 'All Events', 'plumvillage' ),
+        'search_items'       => __( 'Search Events', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Event found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'taxonomies' => array('practise-centres', 'language'), 
+      'show_in_menu' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-calendar-alt',      
+      'rewrite' => array('slug' => _x( 'retreats/info', 'URL Retreats slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Retreat Languages', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Language', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Languages', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Languages', 'plumvillage' ),
+    'all_items'                  => __( 'All Languages', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Language', 'plumvillage' ),
+    'update_item'                => __( 'Edit Language', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Language', 'plumvillage' ),
+    'new_item_name'              => __( 'New Language name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Languages.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Languages', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Languages', 'plumvillage' ),
+    'not_found'                  => __( 'No Languages found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Retreat Languages', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'show_in_rest'          => false,
+    'show_admin_column'     => true,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'language' ),
+  );
+
+  register_taxonomy( 'language', array('pv_event'), $args );
+
+
+  register_post_type( 'pv_library',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Library', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Library Item', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Library', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Library', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Library Item', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Library Item', 'plumvillage' ),
+        'new_item'           => __( 'New Library Item', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Library Item', 'plumvillage' ),
+        'view_item'          => __( 'View Library Item', 'plumvillage' ),
+        'all_items'          => __( 'All Library', 'plumvillage' ),
+        'search_items'       => __( 'Search Library', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Library Item found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'show_in_menu' => true,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-portfolio',      
+      'rewrite' => array('slug' => _x( 'library', 'URL library slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
+
+
+}
+add_action( 'init', 'create_post_types' );
+
+
 /**
  * Register a custom menu page.
  */
@@ -182,6 +597,7 @@ function custom_menu_order($menu_ord) {
         'edit.php?post_type=pv_book',
         'edit.php?post_type=pv_event',
         'edit.php', // Posts
+        'edit.php?post_type=practice_centre',
         'edit-tags.php?taxonomy=practise-centres',
         'edit.php?post_type=monastics',
         'edit-comments.php',
@@ -248,7 +664,7 @@ function ssp_modify_podcast_archive_slug ( $slug ) {
   return 'audio';
 }
 
-add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
-function ssp_modify_podcast_feed_slug ( $slug ) {
-  return 'audio';
-}
+// add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
+// function ssp_modify_podcast_feed_slug ( $slug ) {
+//   return 'audio';
+// }
