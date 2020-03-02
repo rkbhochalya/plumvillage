@@ -52,16 +52,17 @@
 
 	foreach ( $practice_centres as $practice_centre ) {
 		$events = get_field('many2many_event_practice_centre', $practice_centre->ID);
-		$hasEvents = false;
 		if( $events ):
+			$hasEvents = false;
     	foreach( $events as $event):
-    		if(date('d/m/Y') <= get_field('end_date', $event)) :
+				$enddate = DateTime::createFromFormat('d/m/Y', get_field('end_date', $event));
+    		if(strtotime(date('Y-m-d')) <= strtotime($enddate->format('Y-m-d'))) :
     			$hasEvents = true;
     		endif;
-	   		endforeach;
-	   		if($hasEvents){
-					$event_locations[] = pv_object_to_array($practice_centre);
-	   		}
+	   	endforeach;
+   		if($hasEvents){
+				$event_locations[] = pv_object_to_array($practice_centre);
+   		}
 		endif;  
 	}
 

@@ -2,39 +2,6 @@
 
 function create_post_types() {
 
-  // Add new taxonomy, NOT hierarchical (like tags)
-  $labels = array(
-    'name'                       => _x( 'Practice Centers', 'taxonomy general name', 'plumvillage' ),
-    'singular_name'              => _x( 'Practice Center', 'taxonomy singular name', 'plumvillage' ),
-    'search_items'               => __( 'Search Practice Centers', 'plumvillage' ),
-    'popular_items'              => __( 'Popular Practice Centers', 'plumvillage' ),
-    'all_items'                  => __( 'All Practice Centers', 'plumvillage' ),
-    'parent_item'                => null,
-    'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Edit Practice Center', 'plumvillage' ),
-    'update_item'                => __( 'Edit Practice Center', 'plumvillage' ),
-    'add_new_item'               => __( 'Add new Practice Center', 'plumvillage' ),
-    'new_item_name'              => __( 'New Practice Center name', 'plumvillage' ),
-    'separate_items_with_commas' => __( 'Use commas when adding multiple Practice Centers.', 'plumvillage' ),
-    'add_or_remove_items'        => __( 'Add or remove Practice Centers', 'plumvillage' ),
-    'choose_from_most_used'      => __( 'Choose from most used Practice Centers', 'plumvillage' ),
-    'not_found'                  => __( 'No Practice Centers found.', 'plumvillage' ),
-    'menu_name'                  => __( 'Practice Centers', 'plumvillage' ),
-  );
-
-  $args = array(
-    'hierarchical'          => true,
-    'labels'                => $labels,
-    'show_ui'               => true,
-    'show_in_menu'					=> true,
-    'show_admin_column'     => true,
-    'update_count_callback' => '_update_post_term_count',
-    'query_var'             => true,
-    'rewrite'               => array('slug' => _x( 'practise-centres', 'URL Practise Centres slug', 'plumvillage' )),
-  );
-
-  register_taxonomy( 'practise-centres', array('post', 'pv_event'), $args );
-
   // Add new taxonomy
   $labels = array(
     'name'                       => _x( 'Topics', 'taxonomy general name', 'plumvillage' ),
@@ -420,15 +387,6 @@ add_action( 'init', 'create_post_types' );
  * Register a custom menu page.
  */
 function wpdocs_register_my_custom_menu_page() {
-  add_menu_page(
-		__( 'Practise Centres', 'plumvillage' ),
-		'Practice Centers',
-		'manage_options',
-		'edit-tags.php?taxonomy=practise-centres',
-		'',
-		'dashicons-admin-site',
-		6
-  );
   add_menu_page(
 		__( 'Topics', 'plumvillage' ),
 		'Topics',
