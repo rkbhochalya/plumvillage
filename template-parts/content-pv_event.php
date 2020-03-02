@@ -18,8 +18,8 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 		?>
-		<?php $terms = wp_get_post_terms(get_the_ID(), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC')); ?>
-		<?php if(!empty($terms) || get_field('start_date', get_the_ID())) : ?>
+		<?php $practice_centres = get_field('many2many_event_practice_centre'); ?>
+		<?php if(!empty($practice_centres) || get_field('start_date', get_the_ID())) : ?>
 			<div class="entry-meta">
 					<?php if(get_field('start_date', get_the_ID())) : ?>
 						<b class="entry-date">
@@ -29,15 +29,17 @@
 						</b>
 					<?php endif; ?>
 						<?php 
-							if(!empty($terms)){
+							if( $practice_centres ): 
 								echo __('at', 'plumvillage') . ' ';
-								foreach($terms as $term) {
-									if($term->parent == 0){
-										echo $term->name; //do something here
-									}
-								} 
-							} 
-						?>
+								$i = 0;
+								foreach( $practice_centres as $practice_centre):
+									if($i != 0){
+										echo ', ';
+									} 
+									$i++; ?>
+							  	<a href="<?php echo get_permalink($practice_centre->ID); ?>"><?php echo get_the_title($practice_centre); ?></a>
+								<?php endforeach; ?>
+							<?php endif; ?>
 						<?php 
 							$terms = wp_get_post_terms(get_the_ID(), 'language');
 							if(!empty($terms)){

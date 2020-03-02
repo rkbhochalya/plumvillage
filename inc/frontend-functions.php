@@ -742,10 +742,20 @@ function get_search_results() {
 }
 
 
+function get_post_names($ids){
+  if($ids){
+    $postnames = '';
+    foreach ($ids as $id) {
+      $post = get_post($id);
+      $postnames .= ' practice-centres-' . $post->post_name;
+    }
+    return $postnames;    
+  }
+}
+
 
 // Are you human? Captcha for the newsletter form
 
-// Ajax search
 add_action( 'wp_ajax_are_you_human', 'are_you_human' );
 add_action( 'wp_ajax_nopriv_are_you_human', 'are_you_human' );
 

@@ -30,20 +30,19 @@
 					</div><!-- .entry-meta -->
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 				<?php 
-					$terms = wp_get_post_terms(get_the_ID(), 'practise-centres', array('orderby' => 'parent', 'order' => 'ASC'));
-					if(!empty($terms)){ ?>
+					$practice_centres = get_field('many2many_event_practice_centre', get_the_ID());
+					if( $practice_centres ): 
+						$i = 0; ?>
 						<p class="location"><i class="icon-location"></i>
-							<?php $i = 0; ?>
-							<?php foreach($terms as $term) {
-								if($i > 0){
+							<?php foreach( $practice_centres as $practice_centre):
+								if($i != 0){
 									echo ', ';
-								}
-								echo $term->name;
-								$i++;
-							} ?>
+								} 
+								$i++; ?>
+						  	<?php echo get_the_title($practice_centre); ?>
+							<?php endforeach; ?>
 						</p>
-					<?php }
-				?>
+					<?php endif; ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
