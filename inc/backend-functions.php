@@ -305,7 +305,7 @@ function create_post_types() {
       'public' => true,
       'has_archive' => false,
       'hierarchical' => false,
-      'taxonomies' => array('practise-centres', 'language'), 
+      'taxonomies' => array('language'), 
       'show_in_menu' => true,
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-calendar-alt',      
@@ -429,20 +429,17 @@ function my_plugin_select_submenu($file) {
 
 // Delete not needed menu items
 function edit_admin_menus() {
-    global $menu;
-    global $submenu;
+    // global $menu;
+    // global $submenu;
         
-    remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=practise-centres' );
+    // remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=practise-centres' );
 }
 add_action( 'admin_menu', 'edit_admin_menus' );
 
 
-// Set active Practise Centres in menu
+// Set active Topics in menu
 add_action( 'parent_file', 'prefix_highlight_taxonomy_parent_menu' );
 function prefix_highlight_taxonomy_parent_menu( $parent_file ) {
-	if ( get_current_screen()->taxonomy == 'practise-centres' ) {
-		$parent_file = 'edit-tags.php?taxonomy=practise-centres';
-	}
 	if ( get_current_screen()->taxonomy == 'topics' ) {
 		$parent_file = 'edit-tags.php?taxonomy=topics';
 	}
