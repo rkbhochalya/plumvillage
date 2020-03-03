@@ -1689,6 +1689,18 @@ a[href="http://www.wonderplugin.com/wordpress-gallery/"]{
 	clear: both;
 }
 
+ol.comment-list{
+	margin-top: 20px;
+	li{
+		list-style: none;
+		margin: 0 0 30px 0;
+
+		.reply{
+			margin-top: -25px;
+		}
+	}
+}
+
 #comments #thrive-comments{
 	font-family: $font-body;
 	margin-top: 30px;
