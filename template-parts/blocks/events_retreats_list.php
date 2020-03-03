@@ -30,19 +30,7 @@
 		'order'                  => 'ASC',
 		'post_parent'						 => 0,
 		'orderby'                => 'menu_order',
-		'posts_per_page' 				 => 100,
-		'meta_query'=>array(
-			'compare' => 'AND',
-			 array(
-			    'key' => 'hide_in_overview',
-			    'compare' => 'EXISTS',
-			 ),
-			 array(
-			    'key' => 'hide_in_overview',
-			    'value' => true,
-			    'compare' => '!='
-			 )
-			)				
+		'posts_per_page' 				 => 100
 	);
 
 	// The Query
