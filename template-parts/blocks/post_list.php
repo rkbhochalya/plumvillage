@@ -24,7 +24,7 @@
 				'suppress_filters' 			 => 0,
 			));
 
-
+			$sticky_post_ids = [];
 			if($sticky){
 				$sticky_post_ids = get_posts( array(
 					'fields'								 => 'ids',
@@ -38,7 +38,6 @@
 				));			
 			}
 
-			$sticky_post_ids = [];
 			if(get_field('include_tnh_news')) :
 
 				$tnh_ids = get_posts( array(
@@ -115,7 +114,6 @@
 			<?php if($style == 'list') : ?><ul class="small post-list"><?php else : ?><div class="post-list"><?php endif; ?>
 				<?php while ( $sticky_posts->have_posts() ) { ?>
 					<?php $sticky_posts->the_post(); ?>
-					<p>sticky</p>
 					<?php get_template_part( 'template-parts/'.$style, get_post_type() ); ?>
 				<?php } ?>
 				<?php while ( $posts->have_posts() ) { ?>
