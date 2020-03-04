@@ -275,7 +275,6 @@ function create_post_types() {
       'public' => true,
       'has_archive' => false,
       'hierarchical' => true,
-			'taxonomies' => array('topics'), 
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-admin-site',
       'rewrite' => array('slug' => _x( 'practice-centre', 'Practice Centre slug', 'plumvillage' )),
@@ -653,3 +652,85 @@ function filter_the_title_rss( $post_post_title ) {
 }; 
          
 add_filter( 'the_title_rss', 'filter_the_title_rss', 10, 1 ); 
+
+
+// changing the admin columns for the library items
+add_filter( 'manage_pv_library_posts_columns', 'pv_library_filter_posts_columns' );
+function pv_library_filter_posts_columns( $columns ) {
+	$columns = array(
+    'cb' => $columns['cb'],
+    'title' => __( 'Title' ),
+    'dharma-teachers' => __( 'Dharma Teachers', 'plumvillage' ),
+    'location' => __( 'Location', 'plumvillage' ),
+    'taxonomy-series' => $columns['taxonomy-series'],
+    'date' => $columns['date'],
+  );
+
+  return $columns;
+}
+
+
+add_action( 'manage_pv_library_posts_custom_column', 'pv_library_column', 10, 2);
+function pv_library_column( $column, $post_id ) {
+  // Dharma Teachers column
+  if ( $column == 'dharma-teachers' ) {
+    $monastics = get_field('many2many_library_monastics', $post_id);
+    $title = '';
+    if($monastics){
+      $i = 0;
+      foreach( $monastics as $monastic) :
+        $title .= ($i == 0) ? '' : ', ';        
+        $title .= get_the_title($monastic);
+        $i++;
+      endforeach;
+    }
+    echo $title;
+  }  
+
+  if ( $column == 'location' ) {
+    $practice_centres = get_field('many2many_library_practice_centre', $post_id);
+    $title = '';
+    if($practice_centres){
+      $i = 0;
+      foreach( $practice_centres as $practice_centre) :
+        $title .= ($i == 0) ? '' : ', ';        
+        $title .= get_the_title($practice_centre);
+        $i++;
+      endforeach;
+    }
+    echo $title;
+  }  
+}
+
+// changing the admin columns for the event items
+add_filter( 'manage_pv_event_posts_columns', 'pv_event_filter_posts_columns' );
+function pv_event_filter_posts_columns( $columns ) {
+	$columns = array(
+    'cb' => $columns['cb'],
+    'title' => __( 'Title' ),
+    'location' => __( 'Location', 'plumvillage' ),
+    'date' => $columns['date'],
+  );
+
+  return $columns;
+}
+
+
+add_action( 'manage_pv_event_posts_custom_column', 'pv_event_column', 10, 2);
+function pv_event_column( $column, $post_id ) {
+
+  if ( $column == 'location' ) {
+    $practice_centres = get_field('many2many_event_practice_centre', $post_id);
+    $title = '';
+    if($practice_centres){
+      $i = 0;
+      foreach( $practice_centres as $practice_centre) :
+        $title .= ($i == 0) ? '' : ', ';        
+        $title .= get_the_title($practice_centre);
+        $i++;
+      endforeach;
+    }
+    echo $title;
+  }  
+}
+
