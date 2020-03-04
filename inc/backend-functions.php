@@ -619,10 +619,10 @@ function ssp_modify_podcast_archive_slug ( $slug ) {
   return 'audio';
 }
 
-// add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
-// function ssp_modify_podcast_feed_slug ( $slug ) {
-//   return 'audio';
-// }
+add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
+function ssp_modify_podcast_feed_slug ( $slug ) {
+  return 'audio';
+}
 
 // Podcasts
 function filter_the_title_rss( $post_post_title ) { 
