@@ -623,3 +623,33 @@ function ssp_modify_podcast_archive_slug ( $slug ) {
 // function ssp_modify_podcast_feed_slug ( $slug ) {
 //   return 'audio';
 // }
+
+// Podcasts
+function filter_the_title_rss( $post_post_title ) { 
+    // make filter magic happen here... 
+    global $post;
+    $monastics = get_field('many2many_library_monastics', $post->ID);
+    if($monastics){
+      $i = 0;
+      foreach( $monastics as $monastic) :
+        $post_post_title .= ($i == 0) ? ' — ' : ', ';        
+        $post_post_title .= get_the_title($monastic);
+        $i++;
+      endforeach;
+    }
+    $practice_centres = get_field('many2many_library_practice_centre', $post->ID);
+    if($practice_centres){
+      $i = 0;
+      foreach( $practice_centres as $practice_centre) :
+        if(!wp_get_post_parent_id($practice_centre)) :
+          $post_post_title .= ($i == 0) ? ' — ' : ', ';        
+          $post_post_title .= get_the_title($practice_centre);
+          $i++;
+        endif;
+      endforeach;
+    }
+
+    return $post_post_title; 
+}; 
+         
+add_filter( 'the_title_rss', 'filter_the_title_rss', 10, 1 ); 
