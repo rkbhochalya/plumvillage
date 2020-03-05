@@ -632,7 +632,7 @@ function filter_the_title_rss( $post_post_title ) {
       $i = 0;
       foreach( $monastics as $monastic) :
         $post_post_title .= ($i == 0) ? ' — ' : ', ';        
-        $post_post_title .= process_monastic_name(get_the_title($monastic));
+        $post_post_title .= shorten_monastic_name(get_the_title($monastic));
         $i++;
       endforeach;
     }
@@ -680,7 +680,7 @@ function pv_library_column( $column, $post_id ) {
       $i = 0;
       foreach( $monastics as $monastic) :
         $title .= ($i == 0) ? '' : ', ';        
-        $title .= process_monastic_name(get_the_title($monastic));
+        $title .= shorten_monastic_name(get_the_title($monastic));
         $i++;
       endforeach;
     }

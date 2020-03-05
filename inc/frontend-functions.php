@@ -769,7 +769,7 @@ function are_you_human() {
   } 
 }
 
-function process_monastic_name($name){
+function shorten_monastic_name($name){
 
   // shorten Brother to Br
   $long = array('Brother', 'Sister', 'Frère', 'Frere', 'Sœur', 'Soeur' );
