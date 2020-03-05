@@ -769,3 +769,17 @@ function are_you_human() {
   } 
 }
 
+function process_monastic_name($name){
+
+  // shorten Brother to Br
+  $long = array('Brother', 'Sister', 'Frère', 'Frere', 'Sœur', 'Soeur' );
+  $short =  array('Br', 'Sr', 'Fr', 'Fr', 'Sr', 'Sr');
+  $name = str_ireplace($long, $short, $name);
+
+  // remove Chan except with Chan Duc & Chan Khong
+  if(preg_match('(Chân Đức|Chan Đức|Chân Đuc|Chan Đuc|Chân Dức|Chan Dức|Chân Duc|Chan Duc|Chân Không|Chan Không|Chân Khong|Chan Khong)', $name) === 0) {
+    $name = str_ireplace(array(' Chân', ' Chan'), '', $name);
+  }
+
+  return $name;
+}
