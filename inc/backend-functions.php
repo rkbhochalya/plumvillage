@@ -612,6 +612,9 @@ function so_hide_seo_backend_output_cpt( $current_screen ) {
 	add_filter( 'the_seo_framework_show_seo_column', '__return_false' );
 }
 
+/////////////////////////////////////////////
+// PODCASTS
+
 // replace 'podcast' with 'audio' in the rss feed
 add_filter( 'ssp_archive_slug', 'ssp_modify_podcast_archive_slug' );
 function ssp_modify_podcast_archive_slug ( $slug ) {
@@ -623,7 +626,23 @@ function ssp_modify_podcast_feed_slug ( $slug ) {
   return 'audio';
 }
 
-// Podcasts
+add_filter( 'ssp_feed_item_image', 'ssp_modify_feed_item_image', 10, 5 );
+function ssp_modify_feed_item_image ( $image, $id ) {
+	if($image){
+		$image_id = get_post_thumbnail_id( $id );
+		if ( $image_id ) {
+			$image_att = wp_get_attachment_image_src( $image_id, 'square' );
+			if ( $image_att ) {
+				$image = $image_att[0];
+			}
+		}
+	}
+	return $image;
+}
+
+
+
+// Filter the rss feed title
 function filter_the_title_rss( $post_post_title ) { 
     // make filter magic happen here... 
     global $post;
