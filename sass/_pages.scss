@@ -85,6 +85,7 @@
 	color: $grey;
 	font-weight: 300;
 	@include font-size(14);
+	line-height: $font-body-lineheight;
 	a{
 		color: $grey;
 	}
@@ -92,6 +93,7 @@
 		color: $ink;
 	}
 	.entry-source a{
+		text-decoration: none;
 		@include underline(darken($freshink, 4%), $sun);
 	}
 }

@@ -9486,14 +9486,14 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
-h1, h2, h3 {
+h1, h2, h3, .h1, .h2, .h3 {
   font-family: "Cormorant Garamond", serif;
-  line-height: 155%; }
+  line-height: 155%;
+  margin-bottom: 1rem; }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0.5rem;
-  margin-bottom: 0.1rem;
   color: #222; }
 
 h1 {
@@ -9516,20 +9516,20 @@ h3 {
     h3 {
       font-size: 1.875rem; } }
 
-h4, h5 {
+h4, h5, .h4, .h5 {
   font-weight: 700;
   line-height: 160%;
   margin-bottom: 0;
   font-size: 1.125rem; }
   @media (min-width: 576px) {
-    h4, h5 {
+    h4, h5, .h4, .h5 {
       font-size: 1rem; } }
-  h4 a, h5 a {
+  h4 a, h5 a, .h4 a, .h5 a {
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
     color: #222; }
-    h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus {
+    h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, .h4 a:hover, .h4 a:focus, .h5 a:hover, .h5 a:focus {
       -webkit-box-shadow: inset 0 -0.4em #FFD22A;
       box-shadow: inset 0 -0.4em #FFD22A;
       text-decoration: none; }
@@ -11639,12 +11639,14 @@ body #youmax, body .youmax {
 .entry-content .entry-meta {
   color: #9A9A9A;
   font-weight: 300;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1.5; }
   .entry-content .entry-meta a {
     color: #9A9A9A; }
   .entry-content .entry-meta b {
     color: #222; }
   .entry-content .entry-meta .entry-source a {
+    text-decoration: none;
     -webkit-box-shadow: inset 0 -0.1em #e9e9e9;
     box-shadow: inset 0 -0.1em #e9e9e9;
     -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
