@@ -616,10 +616,10 @@ function so_hide_seo_backend_output_cpt( $current_screen ) {
 // PODCASTS
 
 // replace 'podcast' with 'audio' in the rss feed
-add_filter( 'ssp_archive_slug', 'ssp_modify_podcast_archive_slug' );
-function ssp_modify_podcast_archive_slug ( $slug ) {
-  return 'audio';
-}
+// add_filter( 'ssp_archive_slug', 'ssp_modify_podcast_archive_slug' );
+// function ssp_modify_podcast_archive_slug ( $slug ) {
+//   return 'audio-feed';
+// }
 
 add_filter( 'ssp_feed_slug', 'ssp_modify_podcast_feed_slug' );
 function ssp_modify_podcast_feed_slug ( $slug ) {
