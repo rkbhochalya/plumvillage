@@ -11872,7 +11872,8 @@ body #youmax, body .youmax {
 .index-post h2, .centered-content .entry-content .index-post h2 {
   font-size: 1.5625rem;
   margin-top: 0;
-  padding-top: 0; }
+  padding-top: 0;
+  margin-bottom: 0; }
   .index-post h2 a, .centered-content .entry-content .index-post h2 a {
     -webkit-box-shadow: inset 0 -0.1em #fff;
     box-shadow: inset 0 -0.1em #fff;
