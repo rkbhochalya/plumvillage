@@ -76,6 +76,18 @@ function register_acf_block_types() {
         )
     ));
 
+    // register All Books block.
+    acf_register_block_type(array(
+        'name'              => 'all_books',
+        'title'             => __('All Books', 'plumvillage'),
+        'description'       => __('Show All Books', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/all-books.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'book',
+        'keywords'          => array( 'books', 'all' )
+    ));
+
+
     // register a Gallery
     acf_register_block_type(array(
         'name'              => 'gallery',

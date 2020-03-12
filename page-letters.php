@@ -60,26 +60,25 @@ get_header();
 						$posts = new WP_Query( $args );
 
 						// The Loop
-						if (!$posts->have_posts() ) { ?>
-				</div>
-			</div>
-						<?php } else {
-							echo get_filter_menu($posts, 'topics'); ?>
-				</div>
-			</div>
-
+						if ($posts->have_posts() ) { ?>
+							<?php echo get_filter_menu($posts, 'topics'); ?>
+							<div class="to-left-edge to-right-edge">
+								<p>something</p>
 			<div class="row post-overview">
 				<?php while ( $posts->have_posts() ) { ?>
 					<?php $posts->the_post(); ?>
 					<?php get_template_part( 'template-parts/index', 'letter' ); ?>
 				<?php } ?>
-			</div>
+			</div></div>
 		<?php } 
 
 		// Restore original Post Data
 		wp_reset_postdata();
 
 		?>
+						</div>
+			</div>
+
 	</div>
 <?php
 get_sidebar();

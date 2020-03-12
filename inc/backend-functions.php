@@ -105,6 +105,92 @@ function create_post_types() {
 
   register_taxonomy( 'monastic_path', array('monastics'), $args );
 
+  // Add taxonomies for books
+  register_taxonomy( 'genre', 'pv_book', array(
+	  'labels' => array(
+			'name' => __( 'Genres'),
+	        'singular_name' => __( 'Genre' ),
+	        'menu_name' => __( 'Genres' ),
+			'all_items' => __( 'All genres' ),
+			'edit_item' => __( 'Edit genre' ),
+			'view_item' => __( 'View genre' ),
+			'update_item' => __( 'Update genre' ),
+			'add_new_item' => __( 'Add new genre' ),
+			'new_item_name' => __( 'New genre name' ),
+			'search_items' => __( 'Search genres' ),
+			'popular_items' => __( 'Popular genres' ),
+			'separate_items_with_commas' => __( 'Separate genres with commas' ),
+			'add_or_remove_items' => __( 'Add or remove genres' ),
+			'choose_from_most_used' => __( 'Choose from the most used genres' ),
+			'not_found' => __( 'No genres found' ),
+	  )
+  ) );
+  register_taxonomy( 'subject', 'pv_book', array(
+	  'labels' => array(
+			'name' => __( 'Subjects'),
+	        'singular_name' => __( 'Subject' ),
+	        'menu_name' => __( 'Subjects' ),
+			'all_items' => __( 'All subjects' ),
+			'edit_item' => __( 'Edit subject' ),
+			'view_item' => __( 'View subject' ),
+			'update_item' => __( 'Update subject' ),
+			'add_new_item' => __( 'Add new subject' ),
+			'new_item_name' => __( 'New subject name' ),
+			'search_items' => __( 'Search subjects' ),
+			'popular_items' => __( 'Popular subjects' ),
+			'separate_items_with_commas' => __( 'Separate subjects with commas' ),
+			'add_or_remove_items' => __( 'Add or remove subjects' ),
+			'choose_from_most_used' => __( 'Choose from the most used subjects' ),
+			'not_found' => __( 'No subjects found' ),
+	  )
+  ) );
+  register_taxonomy( 'book_author', 'pv_book', array(
+	  'labels' => array(
+			'name' => __( 'Author'),
+	        'singular_name' => __( 'Author' ),
+	        'menu_name' => __( 'Authors' ),
+			'all_items' => __( 'All authors' ),
+			'edit_item' => __( 'Edit author' ),
+			'view_item' => __( 'View author' ),
+			'update_item' => __( 'Update author' ),
+			'add_new_item' => __( 'Add new author' ),
+			'new_item_name' => __( 'New author name' ),
+			'search_items' => __( 'Search authors' ),
+			'popular_items' => __( 'Popular authors' ),
+			'separate_items_with_commas' => __( 'Separate authors with commas' ),
+			'add_or_remove_items' => __( 'Add or remove authors' ),
+			'choose_from_most_used' => __( 'Choose from the most used authors' ),
+			'not_found' => __( 'No authors found' ),
+	  )
+  ) );
+
+  // Add books post type
+  register_post_type( 'pv_book',
+    array(
+      'labels' => array(
+        'name' => __( 'Books' ),
+        'singular_name' => __( 'Book' ),
+        'menu_name' => __( 'Books' ),
+        'not_found' => __( 'No books found' ),
+        'not_found_in_trash' => __( 'No books found in the trash'),
+        'view_item' => __( 'View book' ),
+        'new_item' => __( 'New book' ),
+        'add_new_item' => __( 'Add new book' ),
+        'edit_item' => __( 'Edit book' ),
+        'search_items' => __ ( 'Search books' ),
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'menu_position' => 20,
+      'menu_icon' => 'dashicons-book',
+      'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+      'taxonomies' => array('genre', 'subject'),
+      'rewrite' => array(
+	      'slug' => 'books',
+      ),
+      'query_var' => 'pv_books',
+    )
+  );
 
   // Add new post type
 	register_post_type( 'letter',
@@ -752,4 +838,45 @@ function pv_event_column( $column, $post_id ) {
     echo $title;
   }  
 }
+
+//////////////////////////////////////////////////////
+// Order the books without articles (the, a, an, etc...) in front
+
+function wpcf_create_temp_column($fields) {
+  global $wpdb;
+  $matches = 'A|An|The|La|Les|Le';
+  $has_the = " CASE
+      WHEN $wpdb->posts.post_title regexp( '^($matches)[[:space:]]' )
+        THEN trim(substr($wpdb->posts.post_title from 4))
+      ELSE $wpdb->posts.post_title
+        END AS title2";
+  if ($has_the) {
+    $fields .= ( preg_match( '/^(\s+)?,/', $has_the ) ) ? $has_the : ", $has_the";
+  }
+  return $fields;
+}
+
+function wpcf_sort_by_temp_column ($orderby) {
+  $custom_orderby = " UPPER(title2) ASC";
+  if ($custom_orderby) {
+    $orderby = $custom_orderby;
+  }
+  return $orderby;
+}
+
+add_action( 'pre_get_posts', 'my_change_sort_order');
+function my_change_sort_order($query){
+    if(is_post_type_archive( 'pv_book' )){
+     //If you wanted it for the archive of a custom post type use:
+       //Set the order ASC or DESC
+		add_filter('posts_fields', 'wpcf_create_temp_column');
+		add_filter('posts_orderby', 'wpcf_sort_by_temp_column');
+
+       $query->set( 'order', 'ASC' );
+       //Set the orderby
+       $query->set( 'orderby', 'title' );
+
+       $query->set( 'posts_per_page', '-1' );
+    }
+};
 

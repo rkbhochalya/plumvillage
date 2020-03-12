@@ -126,14 +126,6 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       $menu_item->current = true;
     }
 
-    if($retreats){
-      $parent_slug = get_post_field( 'post_name', $post->post_parent );
-      if($parent_slug == 'register'){
-        $menu_item->classes[] = 'current-menu-item';
-        $menu_item->current = true;
-      }
-    }
-
   }
 
   if ( isset( $args->sub_menu ) ) {

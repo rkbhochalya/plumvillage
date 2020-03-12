@@ -81,6 +81,22 @@
 	}
 }
 
+@mixin to-left-edge{
+	@include media-breakpoint-up(md) {
+		margin-left: calc(-35.1%);
+	}
+	@include media-breakpoint-up(lg) {
+		margin-left: calc(-45.1%);
+	}
+	@include media-breakpoint-up(xl) {
+		margin-left: -44.9%;
+	}
+	@include media-breakpoint-up(xxl) {
+		margin-left: -52.3%;
+	}
+}
+
+
 @mixin margin-side-block{
   padding-top: 1.5em;
   padding-bottom: 1.5em;

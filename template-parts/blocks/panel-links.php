@@ -5,7 +5,7 @@ if( have_rows('links') ): ?>
         <?php if(get_field('title')) : ?>
             <h5><span class="icon icon-caret-right"></span><span class="underline-me"><?= get_field('title'); ?></span></h5>
         <?php endif; ?>
-        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('links')) > 3)) : echo 'back-to-baseline'; endif;?>">
+        <div class="row row-collapsable <?php if(($block['align'] == 'wide') && (count(get_field('links')) > 3)) : echo 'to-left-edge'; endif;?>">
             <div class="col-12">
                 <ul class="small">
                 <?php while ( have_rows('links') ) : the_row(); ?>

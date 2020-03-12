@@ -944,10 +944,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 
 	// going back to baseline //todo: fix responsive;
-	@include media-breakpoint-up(md) {
-		.back-to-baseline{
-			margin-left: calc(-34.3137254902% - 15px);
-		}
+	.back-to-baseline, .to-left-edge{
+		@include to-left-edge();
 	}
 
 }

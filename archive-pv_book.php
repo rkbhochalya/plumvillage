@@ -28,7 +28,7 @@ get_header();
 						);
 					?>				
 				</div>
-				<div class="col-md-9 centered-content">
+				<div class="col-md-9 col-lg-7 col-xxl-6 centered-content">
 					<div id="primary" class="content-area">
 						<main id="main" class="site-main">
 							<?php if ( have_posts() ) : ?>
@@ -42,52 +42,6 @@ get_header();
 							<?php endif; ?>
 						</main><!-- #main -->
 					</div><!-- #primary -->
-					<?php 
-					// WP_Query arguments
-						$args = array (
-							'post_type'              => array( 'pv_book' ),
-							'post_status'            => array( 'publish' ),
-							'nopaging'               => true,
-							'order'                  => 'ASC',
-							'orderby'                => 'title',
-							'posts_per_page' 				 => 100,
-							'meta_query'						 => array(
-								'relation' => 'OR',
-								array(
-									'key' => 'exclude_from_index',
-									'compare' => 'NOT EXISTS'
-								),
-								array(
-									'key' => 'exclude_from_index',
-									'value' => '1',
-									'compare' => '!='
-								)
-							)
-						);
-
-						// The Query
-						$posts = new WP_Query( $args );
-
-						// The Loop
-						if ($posts->have_posts() ) { ?>
-						<div class="filters">
-							<?php
-								echo get_filter_menu($posts, 'genre');
-								echo get_filter_menu($posts, 'topics'); 
-							?>
-						</div>
-						<div class="row post-overview back-to-baseline">
-							<?php while ( $posts->have_posts() ) { ?>
-								<?php $posts->the_post(); ?>
-								<?php get_template_part( 'template-parts/index', 'book' ); ?>
-							<?php } ?>
-						</div>
-		<?php } 
-
-		// Restore original Post Data
-		wp_reset_postdata();
-
-		?>
 				</div>
 			</div>
 	</div>
