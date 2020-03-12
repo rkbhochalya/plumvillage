@@ -990,7 +990,7 @@
 		}
 		.slick-dots{
 			z-index: 2;
-			bottom: 30px;
+			bottom: -2px;
 			left: 20px;
 			@include media-breakpoint-up(md) {	
 				left: 45px;
