@@ -68,29 +68,10 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
     $uri_segments = explode('/', $menu_item->url);
 
     $i = 2;
-    $about = $tnh = $letters = $last_tnh = $interviews = $tnh_updates = $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = $press = $books = false;
+    $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = false;
     foreach ($uri_segments as $slug) {
-      if($slug == 'about') : 
-        $about = true;
-      endif;
-      if($slug == 'thich-nhat-hanh') : 
-        $tnh = true;
-        $last_tnh = ($i == count($uri_segments));
-      endif;
-      if($slug == 'letters') : 
-        $letters = true;
-      endif;
-      if($slug == 'interviews-with-thich-nhat-hanh') : 
-        $interviews = true;
-      endif;
-      if($slug == 'thich-nhat-hanhs-health') : 
-        $tnh_updates = true;
-      endif;
       if($slug == 'news') : 
         $news = true;
-      endif;
-      if($slug == 'books') : 
-        $books = true;
       endif;
       if($slug == 'key-practice-texts') : 
         $practice = true;
@@ -107,49 +88,10 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       if($slug == 'when-can-you-visit-us') : 
         $retreats = true;
       endif;
-      if($slug == 'register') : 
-        $register = true;
-      endif;
       if($slug == 'articles-and-news') : 
         $articles = true;
       endif;
-      if($slug == 'press') : 
-        $press = true;
-      endif;
       $i++;
-    }
-
-    // remove 'about' active class when on tnh page or subpage
-    if($about && $tnh){
-      $menu_item->classes[4] = '';
-      $menu_item->classes[5] = '';
-    }
-
-    // add active class when on a single letter
-    if( is_singular( 'letter' ) && $letters){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }    
-    if( is_singular( 'letter' ) && $last_tnh){
-      $menu_item->classes[] = 'current-menu-item';
-    }    
-
-    // add active class when on an interview 
-    if( is_singular( 'interview' ) && $interviews){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }    
-    if( is_singular( 'interview' ) && $last_tnh){
-      $menu_item->classes[] = 'current-menu-item';
-    }    
-
-    // add active class when on a interview 
-    if( is_singular( 'tnh_update' ) && $tnh_updates){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }    
-    if( is_singular( 'tnh_update' ) && $last_tnh){
-      $menu_item->classes[] = 'current-menu-item';
     }
 
     // if in the news category
@@ -169,11 +111,6 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       $menu_item->current = true;
     }
 
-    if(is_post_type_archive('pv_book') && $books){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
     if( in_category( 'key-practice-texts' ) && $practice && (get_post_type() == 'post')){
       $menu_item->classes[] = 'current-menu-item';
       $menu_item->current = true;
@@ -189,19 +126,13 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       $menu_item->current = true;
     }
 
-    if( is_singular( 'pv_event' ) && $retreats){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
+    if($retreats){
+      $parent_slug = get_post_field( 'post_name', $post->post_parent );
+      if($parent_slug == 'register'){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
     }
-
-    if( is_singular( 'tnh_press_release' ) && $press){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-    if( is_singular( 'tnh_press_release' ) && $last_tnh){
-      $menu_item->classes[] = 'current-menu-item';
-    }
-
 
   }
 
