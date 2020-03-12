@@ -81,12 +81,44 @@ function register_acf_block_types() {
         'name'              => 'all_books',
         'title'             => __('All Books', 'plumvillage'),
         'description'       => __('Show All Books', 'plumvillage'),
-        'render_template'   => 'template-parts/blocks/all-books.php',
+        'render_template'   => 'template-parts/blocks/all-pv_book.php',
         'category'          => 'plumvillage',
         'icon'              => 'book',
         'keywords'          => array( 'books', 'all' )
     ));
 
+    // register All Interviews block.
+    acf_register_block_type(array(
+        'name'              => 'all_interviews',
+        'title'             => __('All Interviews', 'plumvillage'),
+        'description'       => __('Show All Interviews', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/all-interview.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'book',
+        'keywords'          => array( 'interviews', 'all' )
+    ));
+
+    // register All Letters block.
+    acf_register_block_type(array(
+        'name'              => 'all_letters',
+        'title'             => __('All Letters', 'plumvillage'),
+        'description'       => __('Show All Letters', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/all-letter.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'book',
+        'keywords'          => array( 'letters', 'all' )
+    ));
+
+    // register All TNH Updates block.
+    acf_register_block_type(array(
+        'name'              => 'all_tnh_updates',
+        'title'             => __('All TNH Updates', 'plumvillage'),
+        'description'       => __('Show All TNH Updates', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/all-tnh_update.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'book',
+        'keywords'          => array( 'thich nhat hanh', 'updates', 'all' )
+    ));
 
     // register a Gallery
     acf_register_block_type(array(

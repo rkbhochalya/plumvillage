@@ -11,6 +11,8 @@
 $filterType = (has_term('', 'types') ?  get_all_term_classes(get_the_id(), 'types')[0] : '');
 $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'topics')[0] : '');
 
+
+$postID = get_the_id();
 ?>
 
 
@@ -24,17 +26,17 @@ $filterTopic = (has_term('', 'topics') ?  get_all_term_classes(get_the_id(), 'to
 	<header class="entry-header">
 		<h4><a href="<?php the_permalink(); ?>#filter=<?php if($filterType) { echo '.'.$filterType;} if($filterTopic){echo '.'.$filterTopic;} ?>"><?php the_title(); ?></a></h4>
 		<div class="entry-meta">
-			<?php if(get_field('source')) : ?>
+			<?php if(get_field('source', $postID)) : ?>
 				<span class="entry-source">
 					<?php _e('Source:', 'plumvillage'); ?>
-					<?php if(get_field('source_url')) : ?>
-						<a target="_blank" href="<?php the_field('source_url'); ?>"><?php the_field('source'); ?>, <?php the_time('jS F, Y'); ?><span class="icon icon-external-link"></span></a>
+					<?php if(get_field('source_url', $postID)) : ?>
+						<a target="_blank" href="<?php the_field('source_url'); ?>"><?php the_field('source', $postID); ?>, <?php the_time('jS F, Y', $postID); ?><span class="icon icon-external-link"></span></a>
 					<?php else : ?>
-						<?php the_field('source'); ?>, <?php the_time('jS F, Y'); ?>
+						<?php the_field('source', $postID); ?>, <?php the_time('jS F, Y', $postID); ?>
 					<?php endif; ?>					
 				</span>
 				<?php else : ?>
-					<span class="entry-source"><?php the_time('jS F, Y'); ?></span>
+					<span class="entry-source"><?php the_time('jS F, Y', $postID); ?></span>
 				<?php endif; ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->

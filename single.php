@@ -40,7 +40,10 @@ get_header();
 								<h2><?php _e('Join the conversation', 'plumvillage'); ?></h2>
 								<?php comments_template(); ?>
 							</div>
-						<?php endif; ?>		
+						<?php endif; ?>
+						<?php if(get_post_type() == 'letter' || get_post_type() == 'interview' || get_post_type() == 'tnh_update'){
+							get_template_part( 'template-parts/blocks/all', get_post_type() );
+						} ?>
 				</div>
 			</div>
 		<?php endwhile; ?>

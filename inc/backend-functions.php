@@ -109,8 +109,8 @@ function create_post_types() {
   register_taxonomy( 'genre', 'pv_book', array(
 	  'labels' => array(
 			'name' => __( 'Genres'),
-	        'singular_name' => __( 'Genre' ),
-	        'menu_name' => __( 'Genres' ),
+	        'singular_name' => __( 'Genre', 'plumvillage' ),
+	        'menu_name' => __( 'Genres', 'plumvillage' ),
 			'all_items' => __( 'All genres' ),
 			'edit_item' => __( 'Edit genre' ),
 			'view_item' => __( 'View genre' ),
@@ -128,8 +128,8 @@ function create_post_types() {
   register_taxonomy( 'subject', 'pv_book', array(
 	  'labels' => array(
 			'name' => __( 'Subjects'),
-	        'singular_name' => __( 'Subject' ),
-	        'menu_name' => __( 'Subjects' ),
+	        'singular_name' => __( 'Subject', 'plumvillage' ),
+	        'menu_name' => __( 'Subjects', 'plumvillage' ),
 			'all_items' => __( 'All subjects' ),
 			'edit_item' => __( 'Edit subject' ),
 			'view_item' => __( 'View subject' ),
@@ -147,8 +147,8 @@ function create_post_types() {
   register_taxonomy( 'book_author', 'pv_book', array(
 	  'labels' => array(
 			'name' => __( 'Author'),
-	        'singular_name' => __( 'Author' ),
-	        'menu_name' => __( 'Authors' ),
+	        'singular_name' => __( 'Author', 'plumvillage' ),
+	        'menu_name' => __( 'Authors', 'plumvillage' ),
 			'all_items' => __( 'All authors' ),
 			'edit_item' => __( 'Edit author' ),
 			'view_item' => __( 'View author' ),
@@ -168,9 +168,9 @@ function create_post_types() {
   register_post_type( 'pv_book',
     array(
       'labels' => array(
-        'name' => __( 'Books' ),
-        'singular_name' => __( 'Book' ),
-        'menu_name' => __( 'Books' ),
+        'name' => __( 'Books', 'plumvillage' ),
+        'singular_name' => __( 'Book', 'plumvillage' ),
+        'menu_name' => __( 'Books', 'plumvillage' ),
         'not_found' => __( 'No books found' ),
         'not_found_in_trash' => __( 'No books found in the trash'),
         'view_item' => __( 'View book' ),
@@ -186,7 +186,7 @@ function create_post_types() {
       'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
       'taxonomies' => array('genre', 'subject'),
       'rewrite' => array(
-	      'slug' => 'books',
+	      'slug' => _x( 'books', 'Book slug', 'plumvillage' ),
       ),
       'query_var' => 'pv_books',
     )
