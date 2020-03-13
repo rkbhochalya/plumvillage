@@ -418,7 +418,7 @@ function get_filter_menu($posts, $taxonomy){
       $i = 0;
       ?>
       <div class="filter-block center-without-border">
-        <h5 class="filter-title"><?php echo __("Filter by ", "plumvillage") . $tax->labels->singular_name; ?></h5>
+        <h5 class="filter-title"><?php echo __("Filter by", "plumvillage") .' '. $tax->labels->singular_name; ?></h5>
         <div class="filter-list"><a href="#filter=*" class="reset-filter selected" data-filter="*"> <?php _e("Show Everything", "plumvillage"); ?></a>,
           <?php foreach ($value as $term_id => $term) {
             echo '<a href="#filter='.$key.'-'.$term[0].'" class="filter-products trigger-'.$key.'-'.$term[0].'" data-filter=".'.$key.'-'.$term[0].'">'.$term[1].'</a>';      
