@@ -10754,7 +10754,8 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   max-width: 870px;
   margin: 0 auto; }
   .fancybox-caption__body h4 {
-    margin-bottom: 4px; }
+    margin-bottom: 4px;
+    color: #fff; }
 
 .fancybox-button:hover,
 .fancybox-button:focus {

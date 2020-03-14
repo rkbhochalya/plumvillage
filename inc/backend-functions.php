@@ -26,7 +26,7 @@ function create_post_types() {
     'hierarchical'          => true,
     'labels'                => $labels,
     'show_ui'               => true,
-    'show_in_menu'					=> 'post.php?post=7703&action=edit',
+    'show_in_menu'					=> 'tnh',
     'show_in_rest'					=> true,
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
@@ -34,7 +34,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'topic' ),
   );
 
-  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews', 'pv_library'), $args );
+  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews', 'pv_video'), $args );
 
 
   // Add new taxonomy
@@ -61,7 +61,7 @@ function create_post_types() {
     'hierarchical'          => true,
     'labels'                => $labels,
     'show_ui'               => true,
-    'show_in_menu'          => 'post.php?post=7703&action=edit',
+    'show_in_menu'          => 'tnh',
     'show_in_rest'          => false,
     'show_admin_column'     => true,
     'update_count_callback' => '_update_post_term_count',
@@ -185,6 +185,7 @@ function create_post_types() {
       'menu_icon' => 'dashicons-book',
       'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
       'taxonomies' => array('genre', 'subject'),
+      'show_in_menu' => 'library',      
       'rewrite' => array(
 	      'slug' => _x( 'books', 'Book slug', 'plumvillage' ),
       ),
@@ -215,7 +216,7 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,
       'taxonomies' => array('topics'), 
-      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_menu' => 'tnh',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-media-text',      
       'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/letters', 'TNH letters slug', 'plumvillage' )),
@@ -245,7 +246,7 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,
       'taxonomies' => array('topics', 'types'), 
-      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_menu' => 'tnh',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-format-chat',      
       'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/interviews-with-thich-nhat-hanh', 'TNH interviews slug', 'plumvillage' )),
@@ -275,7 +276,7 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,
       'taxonomies' => array('topics'), 
-      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_menu' => 'tnh',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-megaphone',      
       'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/thich-nhat-hanhs-health', 'TNH health slug', 'plumvillage' )),
@@ -305,7 +306,7 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,
       'taxonomies' => array('topics'), 
-      'show_in_menu' => 'post.php?post=7703&action=edit',
+      'show_in_menu' => 'tnh',
       'show_in_rest' => true,
       'rewrite' => array('slug' => _x( 'about/thich-nhat-hanh/press', 'TNH Press slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'author')
@@ -432,33 +433,32 @@ function create_post_types() {
   );
 
   register_taxonomy( 'language', array('pv_event'), $args );
-
-
-  register_post_type( 'pv_library',
+  
+  register_post_type( 'pv_video',
     array(
       'labels' => array(
-        'name'               => _x( 'Library', 'post type general name', 'plumvillage' ),
-        'singular_name'      => _x( 'Library Item', 'post type singular name', 'plumvillage' ),
-        'menu_name'          => _x( 'Library', 'admin menu', 'plumvillage'),
-        'name_admin_bar'     => _x( 'Library', 'add new on admin bar', 'plumvillage' ),
-        'add_new'            => __( 'Add Library Item', 'plumvillage' ),
-        'add_new_item'       => __( 'Add New Library Item', 'plumvillage' ),
-        'new_item'           => __( 'New Library Item', 'plumvillage' ),
-        'edit_item'          => __( 'Edit Library Item', 'plumvillage' ),
-        'view_item'          => __( 'View Library Item', 'plumvillage' ),
-        'all_items'          => __( 'All Library', 'plumvillage' ),
-        'search_items'       => __( 'Search Library', 'plumvillage' ),
+        'name'               => _x( 'Video', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Video Item', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Video', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Video', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Video Item', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Video Item', 'plumvillage' ),
+        'new_item'           => __( 'New Video Item', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Video Item', 'plumvillage' ),
+        'view_item'          => __( 'View Video Item', 'plumvillage' ),
+        'all_items'          => __( 'Videos', 'plumvillage' ),
+        'search_items'       => __( 'Search Video', 'plumvillage' ),
         'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
         'not_found'          => __( 'Nothing found.', 'plumvillage' ),
-        'not_found_in_trash' => __( 'No Library Item found in the trash.', 'plumvillage' )
+        'not_found_in_trash' => __( 'No Video Item found in the trash.', 'plumvillage' )
       ),
       'public' => true,
       'has_archive' => false,
       'hierarchical' => false,
-      'show_in_menu' => true,
+      'show_in_menu' => 'library',
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-portfolio',      
-      'rewrite' => array('slug' => _x( 'library', 'URL library slug', 'plumvillage' )),
+      'rewrite' => array('slug' => _x( 'video', 'URL video slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
@@ -481,8 +481,10 @@ function wpdocs_register_my_custom_menu_page() {
 		'dashicons-tag',
 		6
   );
-  add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'manage_options',  'post.php?post=7703&action=edit', '', 'dashicons-admin-users');
 
+  add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'manage_options',  'tnh', '', 'dashicons-admin-users');
+
+  add_menu_page('Library', 'Library', 'manage_options',  'library', '', 'dashicons-portfolio');
 
   // Show donations in all languages by default
 	global $menu, $submenu;
@@ -633,9 +635,8 @@ function custom_menu_order($menu_ord) {
         'index.php', // Dashboard
         'separator1', // First separator
         'edit.php?post_type=page', // Pages
-        'post.php?post=7703&action=edit',
-        'edit.php?post_type=pv_library',
-        'edit.php?post_type=pv_book',
+        'tnh',
+        'library',
         'edit.php?post_type=pv_event',
         'edit.php', // Posts
         'edit.php?post_type=practice_centre',
@@ -760,8 +761,8 @@ add_filter( 'the_title_rss', 'filter_the_title_rss', 10, 1 );
 
 
 // changing the admin columns for the library items
-add_filter( 'manage_pv_library_posts_columns', 'pv_library_filter_posts_columns' );
-function pv_library_filter_posts_columns( $columns ) {
+add_filter( 'manage_pv_video_posts_columns', 'pv_video_filter_posts_columns' );
+function pv_video_filter_posts_columns( $columns ) {
 	$columns = array(
     'cb' => $columns['cb'],
     'title' => __( 'Title' ),
@@ -775,8 +776,8 @@ function pv_library_filter_posts_columns( $columns ) {
 }
 
 
-add_action( 'manage_pv_library_posts_custom_column', 'pv_library_column', 10, 2);
-function pv_library_column( $column, $post_id ) {
+add_action( 'manage_pv_video_posts_custom_column', 'pv_video_column', 10, 2);
+function pv_video_column( $column, $post_id ) {
   // Dharma Teachers column
   if ( $column == 'dharma-teachers' ) {
     $monastics = get_field('many2many_library_monastics', $post_id);
