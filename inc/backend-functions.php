@@ -20,7 +20,7 @@ function create_post_types() {
     'choose_from_most_used'      => __( 'Choose from most used Topics', 'plumvillage' ),
     'not_found'                  => __( 'No Topics found.', 'plumvillage' ),
     'menu_name'                  => __( 'Topics', 'plumvillage' ),
-  );
+  ); 
 
   $args = array(
     'hierarchical'          => true,
