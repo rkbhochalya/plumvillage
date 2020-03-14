@@ -733,7 +733,7 @@ function ssp_modify_feed_item_image ( $image, $id ) {
 function filter_the_title_rss( $post_post_title ) { 
     // make filter magic happen here... 
     global $post;
-    $monastics = get_field('many2many_library_monastics', $post->ID);
+    $monastics = get_field('many2many_video_monastics', $post->ID);
     if($monastics){
       $i = 0;
       foreach( $monastics as $monastic) :
@@ -742,7 +742,7 @@ function filter_the_title_rss( $post_post_title ) {
         $i++;
       endforeach;
     }
-    $practice_centres = get_field('many2many_library_practice_centre', $post->ID);
+    $practice_centres = get_field('many2many_video_practice_centre', $post->ID);
     if($practice_centres){
       $i = 0;
       foreach( $practice_centres as $practice_centre) :
@@ -780,7 +780,7 @@ add_action( 'manage_pv_video_posts_custom_column', 'pv_video_column', 10, 2);
 function pv_video_column( $column, $post_id ) {
   // Dharma Teachers column
   if ( $column == 'dharma-teachers' ) {
-    $monastics = get_field('many2many_library_monastics', $post_id);
+    $monastics = get_field('many2many_video_monastics', $post_id);
     $title = '';
     if($monastics){
       $i = 0;
@@ -794,7 +794,7 @@ function pv_video_column( $column, $post_id ) {
   }  
 
   if ( $column == 'location' ) {
-    $practice_centres = get_field('many2many_library_practice_centre', $post_id);
+    $practice_centres = get_field('many2many_video_practice_centre', $post_id);
     $title = '';
     if($practice_centres){
       $i = 0;

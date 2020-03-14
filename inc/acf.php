@@ -522,8 +522,8 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
     
 }
 
-add_filter('acf/update_value/name=many2many_library_monastics', 'bidirectional_acf_update_value', 10, 3);
-add_filter('acf/update_value/name=many2many_library_practice_centre', 'bidirectional_acf_update_value', 10, 3);
+add_filter('acf/update_value/name=many2many_video_monastics', 'bidirectional_acf_update_value', 10, 3);
+add_filter('acf/update_value/name=many2many_video_practice_centre', 'bidirectional_acf_update_value', 10, 3);
 add_filter('acf/update_value/name=many2many_monastic_practice_centre', 'bidirectional_acf_update_value', 10, 3);
 add_filter('acf/update_value/name=many2many_event_practice_centre', 'bidirectional_acf_update_value', 10, 3);
 
