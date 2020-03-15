@@ -990,10 +990,11 @@
 		}
 		.slick-dots{
 			z-index: 2;
-			bottom: -2px;
+			bottom: 30px;
 			left: 20px;
 			@include media-breakpoint-up(md) {	
 				left: 45px;
+				bottom: -2px;
 			}
 			li{ 
 				button::before{

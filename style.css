@@ -13074,11 +13074,12 @@ body #youmax, body .youmax {
           right: 75px; } }
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
       z-index: 2;
-      bottom: -2px;
+      bottom: 30px;
       left: 20px; }
       @media (min-width: 768px) {
         .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots {
-          left: 45px; } }
+          left: 45px;
+          bottom: -2px; } }
       .page-template-page_full-width .wp-block-group.alignfull.home-landing-top .slider .slick-dots li button::before {
         color: #fff;
         opacity: 0.6;
