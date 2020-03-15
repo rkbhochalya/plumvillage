@@ -8872,7 +8872,7 @@ body.compensate-for-scrollbar {
   content: "";
   font-size: 12px;
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: -20px; }
 
 .icon {
@@ -11014,6 +11014,7 @@ ol.comment-list {
     overflow: visible;
     font-weight: 300;
     font-style: italic;
+    font-size: 0.9375rem;
     border-radius: 0 !important;
     padding: 0;
     height: auto;

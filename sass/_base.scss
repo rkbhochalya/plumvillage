@@ -1949,6 +1949,7 @@ ol.comment-list{
 		overflow: visible;
 		font-weight: 300;
 		font-style: italic;
+		@include font-size(15);
 		border-radius: 0!important;
 		padding: 0;
 		height: auto;
