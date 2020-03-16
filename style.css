@@ -9594,6 +9594,12 @@ big {
 .has-ink-background-color {
   background: #222 !important; }
 
+.has-stamp-background-color {
+  background: #EA4334 !important; }
+
+.has-fresh-stamp-background-color {
+  background: #fdecea !important; }
+
 .has-grey-background-color {
   background: #9A9A9A !important; }
 
@@ -9623,6 +9629,23 @@ big {
 
 .has-ink-color {
   color: #222 !important; }
+
+.has-stamp-color, .entry-content .has-stamp-color {
+  color: #EA4334 !important; }
+  .has-stamp-color a, .entry-content .has-stamp-color a {
+    color: #EA4334 !important;
+    -webkit-box-shadow: inset 0 -0.1em rgba(234, 67, 52, 0.8);
+    box-shadow: inset 0 -0.1em rgba(234, 67, 52, 0.8);
+    -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1); }
+    .has-stamp-color a:hover, .has-stamp-color a:focus, .entry-content .has-stamp-color a:hover, .entry-content .has-stamp-color a:focus {
+      -webkit-box-shadow: inset 0 -0.4em rgba(234, 67, 52, 0.2);
+      box-shadow: inset 0 -0.4em rgba(234, 67, 52, 0.2);
+      text-decoration: none; }
+
+.has-fresh-stamp-color {
+  color: #fdecea !important; }
 
 .has-grey-color {
   color: #9A9A9A !important; }

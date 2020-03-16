@@ -582,11 +582,21 @@ function tabor_gutenberg_color_palette() {
 				'slug' => 'earth',
 				'color' => '#8B572A',
 			),
-			array(
-				'name'  => esc_html__( 'Ink', 'plumvillage' ),
-				'slug' => 'ink',
-				'color' => '#000',
-			),
+      array(
+        'name'  => esc_html__( 'Ink', 'plumvillage' ),
+        'slug' => 'ink',
+        'color' => '#000',
+      ),
+      array(
+        'name'  => esc_html__( 'Stamp', 'plumvillage' ),
+        'slug' => 'stamp',
+        'color' => '#EA4334',
+      ),
+      array(
+        'name'  => esc_html__( 'Fresh Stamp', 'plumvillage' ),
+        'slug' => 'fresh-stamp',
+        'color' => '#fdecea',
+      ),
 			array(
 				'name'  => esc_html__( 'Grey', 'plumvillage' ),
 				'slug' => 'grey',
@@ -625,6 +635,8 @@ function tabor_gutenberg_color_palette() {
 		)
 	);
 }
+
+
 add_action( 'after_setup_theme', 'tabor_gutenberg_color_palette' );
 
 // Reorder the admin menu

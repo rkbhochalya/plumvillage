@@ -257,6 +257,12 @@ big {
 .has-ink-background-color{
 	background: $ink!important;
 }
+.has-stamp-background-color{
+	background: $stamp!important;
+}
+.has-fresh-stamp-background-color{
+	background: $freshstamp!important;
+}
 .has-grey-background-color{
 	background: $grey!important;
 }
@@ -288,6 +294,17 @@ big {
 }
 .has-ink-color{
 	color: $ink!important;
+}
+.has-stamp-color, .entry-content .has-stamp-color{
+	color: $stamp!important;
+
+	a{
+		color: $stamp!important;
+		@include underline(rgba($stamp, .8), rgba($stamp, .2));
+	}
+}
+.has-fresh-stamp-color{
+	color: $freshstamp!important;
 }
 .has-grey-color{
 	color: $grey!important;
