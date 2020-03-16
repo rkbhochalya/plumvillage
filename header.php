@@ -69,7 +69,7 @@
 	<?php if($showImportantUpdate) : ?>
 		<div class="block important-update">
 			<div class="block-inside">
-				<p><?php _e('Update:', 'plumvillage'); ?> <a class="has-arrow-after" href="<?php echo get_field('link')['url']; ?>">Plum Village France and many of our other practice centres are temporarily closed in response to the coronavirus outbreak. Click here for the latest updates and how to help.<?php the_field('content'); ?></a></p>
+				<p><?php _e('Update:', 'plumvillage'); ?> <a class="has-arrow-after" href="<?php echo get_field('important_update_link', 'options')['url']; ?>"><?php the_field('important_update_text', 'options'); ?></a></p>
 			</div>
 		</div>
 	<?php endif; ?>

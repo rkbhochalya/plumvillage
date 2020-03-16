@@ -11241,6 +11241,8 @@ body #youmax, body .youmax {
 
 .admin-bar .menu-toggle {
   top: 45px; }
+  .admin-bar .menu-toggle.secondary-menu-toggle {
+    top: 12px; }
 
 .admin-bar .menu-block-container .menu-block.fix-menu-top {
   top: 32px; }
@@ -13014,7 +13016,8 @@ body #youmax, body .youmax {
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
   padding: 0;
   position: relative;
-  margin-top: -120px; }
+  margin-top: -120px;
+  top: 0; }
   @media (min-width: 768px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
       margin-top: -144px; } }

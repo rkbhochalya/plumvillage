@@ -2385,7 +2385,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
   padding: 0;
   position: relative;
-  margin-top: -120px; }
+  margin-top: -120px;
+  top: 0; }
   @media (min-width: 768px) {
     .page-template-page_full-width .wp-block-group.alignfull.home-landing-top {
       margin-top: -144px; } }

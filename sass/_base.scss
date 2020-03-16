@@ -2270,6 +2270,10 @@ body #youmax, body .youmax{
 .admin-bar{
 	.menu-toggle{
 		top: 45px;
+
+		&.secondary-menu-toggle{
+			top: 12px;
+		}
 	}
 	.menu-block-container .menu-block.fix-menu-top{
 		top: 32px;
