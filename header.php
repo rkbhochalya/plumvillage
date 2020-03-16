@@ -34,6 +34,12 @@
 
 <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'plumvillage' ); ?></a>
 
+<button class="hamburger hamburger--squeeze menu-toggle main-menu-toggle unbutton float-left" type="button" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
 <div class="mega-menu-container hidden">
 			<?php
 			wp_nav_menu( array(
@@ -58,14 +64,23 @@
 			) );
 		?>
 </div>
-<button class="hamburger hamburger--squeeze menu-toggle unbutton float-left" type="button" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-
-<div id="page" class="site">			
+<div id="page" class="site">
+	<?php $showImportantUpdate = get_field('show_important_update', 'options'); ?>
+	<?php if($showImportantUpdate) : ?>
+		<div class="block important-update">
+			<div class="block-inside">
+				<p><?php _e('Update:', 'plumvillage'); ?> <a class="has-arrow-after" href="<?php echo get_field('link')['url']; ?>">Plum Village France and many of our other practice centres are temporarily closed in response to the coronavirus outbreak. Click here for the latest updates and how to help.<?php the_field('content'); ?></a></p>
+			</div>
+		</div>
+	<?php endif; ?>
 	<header id="masthead" class="site-header">
+		<?php if($showImportantUpdate) : ?>
+			<button class="hamburger hamburger--squeeze menu-toggle secondary-menu-toggle unbutton float-left" type="button" aria-label="<?php _e('Toggle Mega Menu', 'plumvillage'); ?>" aria-controls="primary-menu" aria-expanded="false">
+			  <span class="hamburger-box">
+			    <span class="hamburger-inner"></span>
+			  </span>
+			</button>		
+		<?php endif; ?>
 		<nav id="site-navigation" class="main-navigation">
 			<div id="top-navigation">
 				<?php

@@ -1115,6 +1115,40 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	}
 }
 
+.site-header .menu-toggle{
+	position: absolute;
+}
+
+.has-important-update .secondary-menu-toggle{
+	display: none;
+}
+
+@include media-breakpoint-up(md) {
+	.has-important-update{
+		.main-menu-toggle{
+			display: none;
+		}
+		.secondary-menu-toggle{
+			display: block;
+		}
+
+		&.menu-open{
+			.main-menu-toggle{
+				display: block;
+			}
+		}
+	}
+
+	.important-update-hidden{
+		.main-menu-toggle{
+			display: block;
+		}
+		.secondary-menu-toggle{
+			display: none;
+		}
+	}
+}
+
 .secondary-menu-top > .wpml-ls-item{
 	display: none;
 }
@@ -1315,6 +1349,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	width: 100%;
 	content: '';
 	position: absolute;
+	z-index: 99;
 	left: 0;
 	top: 0;
 	background:$cloud;

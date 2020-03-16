@@ -446,7 +446,9 @@ function add_slug_body_class( $classes ) {
     }
   }
 
-
+  if(get_field('show_important_update', 'options')){
+    $classes[] = 'has-important-update';
+  }
 
   return $classes;
 }

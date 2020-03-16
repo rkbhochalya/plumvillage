@@ -10370,6 +10370,24 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   .menu-toggle:hover, .menu-toggle:focus {
     color: #8B572A; }
 
+.site-header .menu-toggle {
+  position: absolute; }
+
+.has-important-update .secondary-menu-toggle {
+  display: none; }
+
+@media (min-width: 768px) {
+  .has-important-update .main-menu-toggle {
+    display: none; }
+  .has-important-update .secondary-menu-toggle {
+    display: block; }
+  .has-important-update.menu-open .main-menu-toggle {
+    display: block; }
+  .important-update-hidden .main-menu-toggle {
+    display: block; }
+  .important-update-hidden .secondary-menu-toggle {
+    display: none; } }
+
 .secondary-menu-top > .wpml-ls-item {
   display: none; }
 
@@ -10548,6 +10566,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   width: 100%;
   content: '';
   position: absolute;
+  z-index: 99;
   left: 0;
   top: 0;
   background: #fff;
