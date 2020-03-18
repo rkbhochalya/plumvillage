@@ -6,5 +6,6 @@
 //@prepros-append ../../node_modules/parsleyjs/dist/parsley.js
 //@prepros-append ../../node_modules/slick-carousel/slick/slick.js
 //@prepros-append ../../node_modules/select2/dist/js/select2.js
+//@prepros-append hyperaudio-lite.js
 //@prepros-append audio.js
 //@prepros-append magic.js

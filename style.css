@@ -9376,6 +9376,54 @@ object {
   padding-top: 100%; }
 
 /*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* Trint Styles */
+#hypertranscript .strikethrough {
+  text-decoration: line-through; }
+
+#hypertranscript .annotation,
+#hypertranscript .parannotation {
+  opacity: 0.7; }
+
+#hypertranscript span.highlight-true {
+  background-color: rgba(255, 207, 1, 0.36) !important; }
+
+#hypertranscript span.highlight-blue {
+  background-color: rgba(96, 160, 255, 0.36) !important; }
+
+#hypertranscript span.highlight-green {
+  background-color: rgba(90, 171, 0, 0.36) !important; }
+
+#hypertranscript span.highlight-red {
+  background-color: rgba(255, 0, 89, 0.36) !important; }
+
+#hypertranscript span.highlight-purple {
+  background-color: rgba(221, 86, 249, 0.36) !important; }
+
+#hypertranscript header {
+  font-size: 200%; }
+
+#hypertranscript a {
+  cursor: pointer;
+  color: #000; }
+
+#hypertranscript .active ~ span {
+  color: #ccc; }
+
+#hypertranscript p.active ~ p span {
+  color: #ccc; }
+
+#hypertranscript span.search-match {
+  background-color: #9cacc7 !important; }
+
+#hypertranscript sub:before {
+  content: '\231C'; }
+
+#hypertranscript sub.highlight-duration:before {
+  content: '\231D'; }
+
+/*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
 html {
