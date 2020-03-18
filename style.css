@@ -8916,7 +8916,7 @@ button.unbutton {
 
 .btn-lg {
   font-size: 0.875rem;
-  padding: 1.14rem 1rem .85rem; }
+  padding: 1.04rem 1rem .95rem; }
 
 .btn-light:hover {
   background-color: #fcf2d7;
@@ -11120,7 +11120,7 @@ ol.comment-list {
       margin: 5px 0 4px;
       padding: 0;
       font-size: 0.875rem;
-      font-weight: 400; }
+      font-weight: 600; }
       #comments #thrive-comments .tcm-background-color-ac p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-h:hover span p .add-comment-icon, #comments #thrive-comments .tcm-background-color-ac-active:active p .add-comment-icon {
         display: none; }
   #comments #thrive-comments .tcm-comment-content .tcm-comment-additional-fields .tcm-guest {
@@ -13425,20 +13425,25 @@ pre, pre.wp-block-verse, .wp-block-verse pre {
   font-weight: 400;
   line-height: 160%; }
 
-.wp-block-button .wp-block-button__link {
-  background: #FFD22A;
-  color: #222;
-  border-radius: .3rem;
-  font-weight: 700;
-  font-size: 0.875rem;
-  padding: 0.5rem 1.1rem 0.4em;
-  -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
-  line-height: 160%; }
-  .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
-    text-decoration: none;
-    background: #f6c200; }
+.wp-block-button {
+  margin-bottom: 1.5em; }
+  .wp-block-button .wp-block-button__link {
+    background: #FFD22A;
+    color: #222;
+    border-radius: .3rem;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.5rem 1.1rem 0.4em;
+    -webkit-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    -o-transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
+    line-height: 160%; }
+    .wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus {
+      text-decoration: none;
+      background: #f6c200; }
+  .wp-block-button.is-style-large .wp-block-button__link {
+    font-size: .875rem;
+    padding: 1.04rem 3rem .95rem; }
 
 .important-update, .entry-content .alignfull.important-update {
   background: #FAF1EB;

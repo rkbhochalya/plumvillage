@@ -1394,6 +1394,8 @@ pre, pre.wp-block-verse, .wp-block-verse pre{
 // Button Block
 
 .wp-block-button{
+	margin-bottom: 1.5em;
+
 	.wp-block-button__link{
 		background: $sun;
 		color: $ink;
@@ -1407,6 +1409,13 @@ pre, pre.wp-block-verse, .wp-block-verse pre{
 		&:hover, &:focus{
 			text-decoration: none;
 			background: darken($sun, 10);
+		}
+	}
+
+	&.is-style-large{
+		.wp-block-button__link{
+			font-size: .875rem;
+			padding: 1.04rem 3rem .95rem;
 		}
 	}
 }

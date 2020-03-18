@@ -20,7 +20,7 @@ button.unbutton{
 }
 .btn-lg{
 	@include font-size(14);
-	padding: 1.14rem 1rem .85rem;
+	padding: 1.04rem 1rem .95rem;
 }
 .btn-light:hover{
 	background-color: darken($freshsun, 6);

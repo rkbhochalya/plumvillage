@@ -30,6 +30,12 @@ wp.domReady( () => {
 		}
 	]);
 
+	wp.blocks.registerBlockStyle('core/button', [
+		{
+			name: 'large',
+			label: 'Large'
+		}
+	]);
 
 } );
 
