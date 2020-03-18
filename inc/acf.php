@@ -417,6 +417,17 @@ function register_acf_block_types() {
         'keywords'          => array( 'monastics' )
     ));
 
+    // Important Update
+    acf_register_block_type(array(
+        'name'              => 'newsletter_signup',
+        'title'             => __('Newsletter Signup'),
+        'description'       => __('Show the newsletter signup form'),
+        'render_template'   => 'template-parts/blocks/newsletter-signup.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'groups',
+        'keywords'          => array( 'newsletter', 'form', 'signup' )
+    ));
+
 }
 
 // Check if function exists and hook into setup.

@@ -73,7 +73,7 @@
   $('.js-off').removeClass('js-off');
 
   $('.validate-section-1').on('click', function(e){
-    $('#pardot-subscribe').parsley().whenValidate({
+    $(this).closest('form').parsley().whenValidate({
       group: 'section-1'
     }).done(function() {
       $('.section-1').addClass('hide');
