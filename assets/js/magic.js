@@ -73,11 +73,12 @@
   $('.js-off').removeClass('js-off');
 
   $('.validate-section-1').on('click', function(e){
-    $(this).closest('form').parsley().whenValidate({
+  	$thisform = $(this).closest('form');
+    $thisform.parsley().whenValidate({
       group: 'section-1'
     }).done(function() {
-      $('.section-1').addClass('hide');
-      $('.section-2').removeClass('hide');
+      $thisform.find('.section-1').addClass('hide');
+      $thisform.find('.section-2').removeClass('hide');
     });
     e.preventDefault();
   })

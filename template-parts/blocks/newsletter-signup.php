@@ -1,11 +1,11 @@
-<div class="pfah-wrapper">
+<div class="pfah-wrapper <?php if(isset($block)) : ?> is-block<?php endif; ?>">
 	<form class="subscribe-footer-form pfah-form validate" data-pv-form-action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" action="/" method="post">
 	     <div class="section-1">
 		    <div class="form-row">
-		          <div class="col">
+		          <div class="col<?php if(isset($block)) : ?>-6<?php endif; ?>">
 		                <input type="text" class="form-control form-control-lg" name="firstname" placeholder="<?php _e('First Name', 'plumvillage'); ?>" required data-parsley-group="section-1"/>
 		          </div>
-		          <div class="col">
+		          <div class="col<?php if(isset($block)) : ?>-6<?php endif; ?>">
 			    <input type="text" class="form-control form-control-lg" name="lastname" placeholder="<?php _e('Last Name', 'plumvillage'); ?>" required data-parsley-group="section-1"/>
 		    </div>
 		    <div class="col-12 col-md">
@@ -259,7 +259,7 @@
 		    </div>
 		  </div>
 			<div class="form-row">
-				<div class="col-12 col-md">
+				<div class="col-12 <?php if(!isset($block)) : ?>col-md<?php endif; ?>">
 					<select class="form-control form-control-lg" name="language" required data-parsley-group="section-1">
 						<option value="" disabled selected><?php _e('Language', 'plumvillage'); ?></option>
 						<option value="English"><?php _e("English"); ?></option>
@@ -271,7 +271,7 @@
 						<option value="Vietnamese"><?php _e("Vietnamese"); ?></option>
 					</select>
 				</div>
-				<div class="col-12 col-sm-8 col-md-6">
+				<div class="col-12 <?php if(!isset($block)) : ?>col-sm-8 col-md-6<?php endif; ?>">
 					<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required data-parsley-group="section-1" />	
 				</div>
 				<div class="col">
