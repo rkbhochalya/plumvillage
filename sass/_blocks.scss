@@ -166,6 +166,7 @@
   padding-bottom: 56.25%; /* 16:9 */
   padding-top: 0;
   height: 0;
+  margin-top: 1px;
 
 	iframe {
 	  position: absolute;
@@ -186,10 +187,6 @@
 			padding-bottom: 76%;
 		}
 	}
-}
-
-.entry-content > .wp-block-embed:first-child{
-	margin-top: 1px;
 }
 
 .gallery-embed{
