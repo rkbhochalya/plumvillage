@@ -166,9 +166,15 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       unset( $sorted_menu_items[$key] );
     }
   }
-  return $sorted_menu_items;
-  } else {
+  
+  if(count($sorted_menu_items) > 1){
     return $sorted_menu_items;
+  }
+
+  } else {
+    if(count($sorted_menu_items) > 1){
+      return $sorted_menu_items;
+    }
   }
 }
 

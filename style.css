@@ -10346,6 +10346,15 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 .main-navigation .mega-menu-top li > a:hover, .main-navigation .mega-menu-top li > a:focus {
   background: rgba(255, 255, 255, 0.8); }
 
+.main-navigation .mega-menu-top .menu-item-live a {
+  background-color: rgba(234, 67, 52, 0.2); }
+  .main-navigation .mega-menu-top .menu-item-live a:hover {
+    background-color: rgba(234, 67, 52, 0.1);
+    color: #EA4334; }
+
+.main-navigation .mega-menu-top .menu-item-live.current-menu-item > a, .main-navigation .mega-menu-top .menu-item-live.current-page-item > a {
+  color: #EA4334; }
+
 .secondary-menu-top {
   float: right; }
   .secondary-menu-top > li:first-child a {

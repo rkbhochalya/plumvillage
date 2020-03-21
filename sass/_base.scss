@@ -1081,7 +1081,20 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		.current-menu-ancestor > a,
 		li > a:hover, li > a:focus {
 			background: rgba(255,255,255,0.8);
-		}		
+		}	
+		.menu-item-live{
+			a{
+				background-color: rgba($stamp, 0.2);
+
+				&:hover{
+					background-color: rgba($stamp, 0.1);
+					color: $stamp;
+				}
+			}
+			&.current-menu-item > a, &.current-page-item > a{
+				color: $stamp;
+			}
+		}
 	}
 }
 
