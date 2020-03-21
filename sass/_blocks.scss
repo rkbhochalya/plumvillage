@@ -161,6 +161,36 @@
 }
 
 
+.wp-block-embed.is-type-video{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 0;
+  height: 0;
+
+	iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	&.alignwide{
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 84.75%;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-bottom: 78.4%;
+		}
+		@include media-breakpoint-up(xxl) {
+			padding-bottom: 76%;
+		}
+	}
+}
+
+.entry-content > .wp-block-embed:first-child{
+	margin-top: 1px;
+}
 
 .gallery-embed{
   cursor: pointer;

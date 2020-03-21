@@ -12438,6 +12438,31 @@ body #youmax, body .youmax {
 .wp-block-gallery li:before {
   display: none; }
 
+.wp-block-embed.is-type-video {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 0;
+  height: 0; }
+  .wp-block-embed.is-type-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  @media (min-width: 992px) {
+    .wp-block-embed.is-type-video.alignwide {
+      padding-bottom: 84.75%; } }
+  @media (min-width: 1200px) {
+    .wp-block-embed.is-type-video.alignwide {
+      padding-bottom: 78.4%; } }
+  @media (min-width: 1400px) {
+    .wp-block-embed.is-type-video.alignwide {
+      padding-bottom: 76%; } }
+
+.entry-content > .wp-block-embed:first-child {
+  margin-top: 1px; }
+
 .gallery-embed {
   cursor: pointer; }
   .gallery-embed .gallery-embed-inside {
