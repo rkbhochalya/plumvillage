@@ -10663,6 +10663,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
 
 .single .entry-header > .entry-meta, .page .entry-header > .entry-meta {
   margin-right: -16px; }
+  .single .entry-header > .entry-meta .language-right, .page .entry-header > .entry-meta .language-right {
+    float: right;
+    margin-right: 15px; }
 
 .site-footer {
   border-top: 1px solid #F3F3F3;

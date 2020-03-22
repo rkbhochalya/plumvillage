@@ -11,6 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<div class="entry-meta">
+			<?php show_posts_other_languages(); ?>
+		</div>
+
 		<?php if((get_post_type() == 'letter') || (get_post_type() == 'tnh_update')) : ?><div class="entry-meta"><?php the_time('jS F, Y'); ?></div><?php endif; ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

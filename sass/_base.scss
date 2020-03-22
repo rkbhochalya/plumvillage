@@ -1483,6 +1483,11 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 .single, .page {
 	.entry-header > .entry-meta{
 		margin-right: -16px;
+
+		.language-right{
+			float: right;
+			margin-right: 15px;
+		}
 	}
 }
 

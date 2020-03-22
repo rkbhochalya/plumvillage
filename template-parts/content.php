@@ -14,6 +14,9 @@
 		<?php if ( get_post_type() === 'post' ) : ?>
 			<div class="entry-meta">
 				<?php plumvillage_posted_on(); ?>
+
+				<?php show_posts_other_languages(); ?>
+
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 

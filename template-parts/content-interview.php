@@ -27,6 +27,9 @@
 				<?php else : ?>
 					<?php the_time('jS F, Y'); ?>
 				<?php endif; ?>
+
+				<?php show_posts_other_languages(); ?>
+
 			</div>	
 	</header><!-- .entry-header -->
 

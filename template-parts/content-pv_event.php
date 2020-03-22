@@ -21,6 +21,9 @@
 				<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
 				<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
 			</span>
+
+			<?php show_posts_other_languages(); ?>
+
 		</div><!-- .entry-meta -->
 
 		<?php

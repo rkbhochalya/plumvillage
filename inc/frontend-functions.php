@@ -720,3 +720,16 @@ function shorten_monastic_name($name){
 
   return $name;
 }
+
+function show_posts_other_languages(){
+  $languages = apply_filters( 'wpml_active_languages', NULL );
+
+  foreach ($languages as $language) {
+    if(ICL_LANGUAGE_CODE != $language['code']) {
+      $translatedId = apply_filters( 'wpml_object_id', get_the_ID(), get_post_type(), FALSE, $language['code'] );
+      if($translatedId){ ?>
+        <a class="language-right" href="<?php echo get_permalink($translatedId); ?>"><?php echo $language['native_name']; ?></a>
+      <?php }
+    }
+  }  
+}
