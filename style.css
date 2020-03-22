@@ -11346,6 +11346,14 @@ body #youmax, body .youmax {
     color: #222;
     display: inline-block;
     margin-right: 3px; }
+  .index-event.index-item .entry-meta .event-cancelled {
+    display: inline-block;
+    background: #EA4334;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 0px 4px;
+    color: #fff;
+    margin-right: 5px; }
 
 .index-event.index-item p.location {
   margin: 5px 0 7px;
@@ -11362,6 +11370,15 @@ body #youmax, body .youmax {
     background: #fdfaf7; }
   .index-event.index-item a:hover .icon-external-link, .index-event.index-item a:focus .icon-external-link {
     color: rgba(139, 87, 42, 0.4); }
+
+.event-cancelled {
+  display: inline-block;
+  background: #EA4334;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 0px 4px;
+  color: #fff;
+  margin-right: 5px; }
 
 .index-event.index-item.index-event-repeat .entry-meta {
   line-height: 160%;
@@ -11381,12 +11398,7 @@ body #youmax, body .youmax {
 
 .single-pv_event .centered-content .entry-meta {
   position: relative;
-  padding: 20px 0 20px 33px; }
-  .single-pv_event .centered-content .entry-meta:before {
-    content: url(assets/images/calendar.svg);
-    position: absolute;
-    top: 22px;
-    left: 0; }
+  padding: 0; }
 
 .single-pv_event form.left {
   float: left; }

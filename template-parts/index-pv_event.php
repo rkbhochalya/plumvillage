@@ -23,6 +23,10 @@
 			<header class="entry-header"> 
 					<div class="entry-meta">
 						<span class="entry-date">
+							<?php $status = get_field('event_status', get_the_ID()); ?>
+							<?php if($status && ($status == 'EventCancelled')) : ?>
+								<span class="event-cancelled"><?php _e('Cancelled', 'plumvillage'); ?></span>
+							<?php endif; ?>
 							<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
 							<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
 							<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 

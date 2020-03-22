@@ -826,8 +826,9 @@ function pv_event_filter_posts_columns( $columns ) {
 	$columns = array(
     'cb' => $columns['cb'],
     'title' => __( 'Title' ),
-    'location' => __( 'Location', 'plumvillage' ),
-    'date' => $columns['date'],
+    'startdate' => __('Start Date', 'plumvillage'),
+    'enddate' => __('End Date', 'plumvillage'),
+    'location' => __( 'Location', 'plumvillage' )
   );
 
   return $columns;
@@ -849,7 +850,15 @@ function pv_event_column( $column, $post_id ) {
       endforeach;
     }
     echo $title;
-  }  
+  }
+
+  if($column == 'startdate'){
+    echo get_field('start_date', $post_id);
+  }
+
+  if($column == 'enddate'){
+    echo get_field('end_date', $post_id);
+  }
 }
 
 //////////////////////////////////////////////////////

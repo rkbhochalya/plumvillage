@@ -11,6 +11,18 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header"> 
+		<div class="entry-meta">
+			<span class="entry-date">
+				<?php $status = get_field('event_status', get_the_ID()); ?>
+				<?php if($status && ($status == 'EventCancelled')) : ?>
+					<span class="event-cancelled"><?php _e('Cancelled', 'plumvillage'); ?></span>
+				<?php endif; ?>
+				<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
+				<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
+				<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
+			</span>
+		</div><!-- .entry-meta -->
+
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -21,26 +33,21 @@
 		<?php $practice_centres = get_field('many2many_event_practice_centre'); ?>
 		<?php if(!empty($practice_centres) || get_field('start_date', get_the_ID())) : ?>
 			<div class="entry-meta">
-					<?php if(get_field('start_date', get_the_ID())) : ?>
-						<b class="entry-date">
-							<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
-							<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
-							<?php echo $startDate->format('M j') . ' - ' . $endDate->format('M j, Y'); ?> 
-						</b>
+				<?php 
+					$practice_centres = get_field('many2many_event_practice_centre', get_the_ID());
+					if( $practice_centres ): 
+						$i = 0; ?>
+						<p class="location"><i class="icon-location"></i>
+							<?php foreach( $practice_centres as $practice_centre):
+								if($i != 0){
+									echo ', ';
+								} 
+								$i++; ?>
+						  	<?php echo get_the_title($practice_centre); ?>
+							<?php endforeach; ?>
+						</p>
 					<?php endif; ?>
-						<?php 
-							if( $practice_centres ): 
-								echo __('at', 'plumvillage') . ' ';
-								$i = 0;
-								foreach( $practice_centres as $practice_centre):
-									if($i != 0){
-										echo ', ';
-									} 
-									$i++; ?>
-							  	<a href="<?php echo get_permalink($practice_centre->ID); ?>"><?php echo get_the_title($practice_centre); ?></a>
-								<?php endforeach; ?>
-							<?php endif; ?>
-						<?php 
+					<?php 
 							$terms = wp_get_post_terms(get_the_ID(), 'language');
 							if(!empty($terms)){
 								echo '<br />' . __('Languages', 'plumvillage') . ': ';

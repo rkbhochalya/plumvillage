@@ -487,7 +487,7 @@ function add_schema_data_to_events(){
       // Provide search engines with the site name and address 
       'name'      => get_the_title($post),
       'url'       => get_the_permalink($post),
-      // Provide the company address
+      'eventAttendanceMode' => 'OfflineEventAttendanceMode'
     );
 
     if (has_post_thumbnail($post)) {
@@ -506,18 +506,24 @@ function add_schema_data_to_events(){
       $schema['endDate'] = $endDate->format('Y-m-d');
     }
 
+    $status = get_field('event_status', get_the_ID($post), false);
+    if($status){
+      $schema['eventStatus'] = 'https://schema.org/'.$status;
+    }
+
     $schema['description'] = get_the_limited_excerpt(get_the_ID(), 35);
 
-    $terms = wp_get_post_terms(get_the_ID($post), 'practise-centres', array('orderby' => 'parent', 'order' => 'DESC'));
-    if(!empty($terms)){
-      foreach($terms as $term) {
-        if($term->parent == 0){ 
+    $practice_centres = get_field('many2many_event_practice_centre');
+    if( $practice_centres ): 
+      $i = 0;
+      foreach( $practice_centres as $practice_centre):
+        if(wp_get_post_parent_id($practice_centre) == 0){
 
           $schema['location'] = array();
 
           $place = array(
             '@type'   => "Place",
-            'name'    => $term->name,
+            'name'    => get_the_title($practice_centre),
             'address' => array()
           );
 
@@ -525,27 +531,27 @@ function add_schema_data_to_events(){
             "@type"   => "PostalAddress"
           );
 
-          if(get_field('address_street', $term)){
-            $address["streetAddress"] = get_field('address_street', $term) . get_field('address_street_2', $term);
+          if(get_field('address_street', $practice_centre)){
+            $address["streetAddress"] = get_field('address_street', $practice_centre) . get_field('address_street_2', $practice_centre);
           }
-          if(get_field('address_postcode', $term)){
-            $address["postalCode"] = get_field('address_postcode', $term);
+          if(get_field('address_postcode', $practice_centre)){
+            $address["postalCode"] = get_field('address_postcode', $practice_centre);
           }
-          if(get_field('address_city', $term)){
-            $address["addressLocality"] = get_field('address_city', $term);
+          if(get_field('address_city', $practice_centre)){
+            $address["addressLocality"] = get_field('address_city', $practice_centre);
           }
-          if(get_field('address_state', $term)){
-            $address["addressRegion"] = get_field('address_state', $term);
+          if(get_field('address_state', $practice_centre)){
+            $address["addressRegion"] = get_field('address_state', $practice_centre);
           }
-          if(get_field('address_country', $term)){
-            $address["addressCountry"] = get_field('address_country', $term);
+          if(get_field('address_country', $practice_centre)){
+            $address["addressCountry"] = get_field('address_country', $practice_centre);
           }
 
           array_push($place['address'], $address);
           array_push($schema['location'], $place);
         }
-      }
-    }
+      endforeach;
+    endif;
 
     if(isset($schema['location']) && isset($schema['startDate'])){
       echo '<script type="application/ld+json">' . json_encode($schema) . '</script>';

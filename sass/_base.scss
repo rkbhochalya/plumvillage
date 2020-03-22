@@ -2409,6 +2409,15 @@ body #youmax, body .youmax{
 			display: inline-block;
 			margin-right: 3px;
 		}
+		.event-cancelled{
+			display: inline-block;
+			background: $stamp;
+			text-transform: uppercase;
+			border-radius: 3px;
+			padding: 0px 4px;
+			color: $cloud;
+			margin-right: 5px;
+		}
 	}
 	p.location{
 		margin: 5px 0 7px;
@@ -2431,6 +2440,17 @@ body #youmax, body .youmax{
 		}
 	}
 }
+
+.event-cancelled{
+	display: inline-block;
+	background: $stamp;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 0px 4px;
+	color: $cloud;
+	margin-right: 5px;
+}
+
 
 .index-event.index-item.index-event-repeat{
 	.entry-meta{
@@ -2461,14 +2481,7 @@ body #youmax, body .youmax{
 
 	.centered-content .entry-meta{
 		position: relative;
-		padding: 20px 0 20px 33px;
-
-		&:before{
-	    content: url(assets/images/calendar.svg);
-	    position: absolute;
-	    top: 22px;
-	    left: 0;
-		}
+		padding: 0;
 	}
 
 	form.left{
