@@ -1,5 +1,5 @@
-<div class="pfah-wrapper pardot-subscribe <?php if(isset($block)) : ?> is-block<?php endif; ?>">
-	<form class="subscribe-footer-form pfah-form validate" data-pv-form-action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" action="/" method="post">
+<div class="pfah-wrapper <?php if(isset($block)) : ?> is-block<?php endif; ?>">
+	<form class="subscribe-footer-form pfah-form pardot-subscribe validate" data-pv-form-action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" action="/" method="post">
 	     <div class="section-1">
 		    <div class="form-row">
 		          <div class="col<?php if(isset($block)) : ?>-6<?php endif; ?>">
