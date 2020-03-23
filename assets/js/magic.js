@@ -68,7 +68,7 @@
   // only post form if javascript is active
   $('.pardot-subscribe').each(function(){
   	$form = $(this);
-  	$form.attr({'action' : $('#pardot-subscribe').data('pvFormAction')})
+  	$form.attr({'action' : $form.data('pvFormAction')})
   	$form.find('.btn').prop("disabled", false);
   })
 

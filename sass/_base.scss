@@ -1084,7 +1084,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		}	
 		.menu-item-live{
 			a{
-				background-color: rgba($stamp, 0.2);
+				background-color: color.scale($stamp, $lightness: 20%);
 
 				&:hover{
 					background-color: rgba($stamp, 0.1);
