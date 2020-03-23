@@ -66,9 +66,11 @@
   $('.form-move-aside').attr({'aria-hidden' : true})
 
   // only post form if javascript is active
-  $('#pardot-subscribe').attr({'action' : $('#pardot-subscribe').data('pvFormAction')})
-
-  $('#pardot-subscribe .btn').prop("disabled", false);
+  $('.pardot-subscribe').each(function(){
+  	$form = $(this);
+  	$form.attr({'action' : $('#pardot-subscribe').data('pvFormAction')})
+  	$form.find('.btn').prop("disabled", false);
+  })
 
   $('.js-off').removeClass('js-off');
 

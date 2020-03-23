@@ -1,4 +1,4 @@
-<div class="pfah-wrapper <?php if(isset($block)) : ?> is-block<?php endif; ?>">
+<div class="pfah-wrapper pardot-subscribe <?php if(isset($block)) : ?> is-block<?php endif; ?>">
 	<form class="subscribe-footer-form pfah-form validate" data-pv-form-action="https://go.plumvillage.org/l/288242/2019-07-17/mwbvq" action="/" method="post">
 	     <div class="section-1">
 		    <div class="form-row">
@@ -275,7 +275,7 @@
 					<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required data-parsley-group="section-1" />	
 				</div>
 				<div class="col">
-		   		<button class="btn btn-lg btn-primary validate-section-1">Next</button>
+		   		<button disabled class="btn btn-lg btn-primary validate-section-1">Next</button>
 				</div>
 				<div class="form-move-aside">
 					<label for="pardot_extra_field">Comments</label>
@@ -296,7 +296,7 @@
 				</div>
 				<div class="col">
 		   		<input type="hidden" name="newsletter" value="true">
-					<input type="submit" value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />
+					<input type="submit" disabled value="<?php _e('Subscribe', 'plumvillage'); ?>" required="required" class="btn btn-lg btn-primary" />		
 				</div>
 			</div>
 		</div>
