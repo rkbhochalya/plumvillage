@@ -11138,7 +11138,8 @@ ol.comment-list {
   #comments #thrive-comments .tcm-comment-content .tcm-comment-additional-fields .tcm-guest {
     width: 100%; }
   #comments #thrive-comments .tcm_receive_notif_container {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    font-size: 15px; }
     #comments #thrive-comments .tcm_receive_notif_container .checkmark {
       background: #F5F5EF;
       top: 0; }
