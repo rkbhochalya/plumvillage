@@ -1,0 +1,171 @@
+<wpml-config>
+  <admin-texts>
+    <key name="storing_consent"/>
+    <key name="tcm_labels_option">
+      <key name="number_of_comments">
+        <key name="text"/>
+      </key>
+      <key name="show_comments_first">
+        <key name="text"/>
+      </key>
+      <key name="newest">
+        <key name="text"/>
+      </key>
+      <key name="oldest">
+        <key name="text"/>
+      </key>
+      <key name="top_rated">
+        <key name="text"/>
+      </key>
+      <key name="enter_comment">
+        <key name="text"/>
+      </key>
+      <key name="load_comments">
+        <key name="text"/>
+      </key>
+      <key name="add_comment">
+        <key name="text"/>
+      </key>
+      <key name="reply_to_user">
+        <key name="text"/>
+      </key>
+      <key name="commenting_as">
+        <key name="text"/>
+      </key>
+      <key name="social_account">
+        <key name="text"/>
+      </key>
+      <key name="guest_comment">
+        <key name="text"/>
+      </key>
+      <key name="name">
+        <key name="text"/>
+      </key>
+      <key name="email">
+        <key name="text"/>
+      </key>
+      <key name="website">
+        <key name="text"/>
+      </key>
+      <key name="submit_comment">
+        <key name="text"/>
+      </key>
+      <key name="vote">
+        <key name="text"/>
+      </key>
+      <key name="share">
+        <key name="text"/>
+      </key>
+      <key name="copy_url">
+        <key name="text"/>
+      </key>
+      <key name="close_comments">
+        <key name="text"/>
+      </key>
+      <key name="email_address">
+        <key name="text"/>
+      </key>
+      <key name="subscribe">
+        <key name="text"/>
+      </key>
+      <key name="unsubscribe">
+        <key name="text"/>
+      </key>
+      <key name="logout_change">
+        <key name="text"/>
+      </key>
+      <key name="login_on_website">
+        <key name="text"/>
+      </key>
+      <key name="signin_facebook">
+        <key name="text"/>
+      </key>
+      <key name="signin_google">
+        <key name="text"/>
+      </key>
+      <key name="comment_content_missing">
+        <key name="text"/>
+      </key>
+      <key name="author_name_required">
+        <key name="text"/>
+      </key>
+      <key name="isRequired">
+        <key name="text"/>
+      </key>
+      <key name="need_register">
+        <key name="text"/>
+      </key>
+      <key name="login_submit_comment">
+        <key name="text"/>
+      </key>
+      <key name="comment_duplicate">
+        <key name="text"/>
+      </key>
+      <key name="comment_flood">
+        <key name="text"/>
+      </key>
+      <key name="spam_comment">
+        <key name="text"/>
+      </key>
+      <key name="rest_cookie_invalid_nonce">
+        <key name="text"/>
+      </key>
+      <key name="tcm_receive_notifications">
+        <key name="text"/>
+      </key>
+      <key name="remember_me">
+        <key name="text"/>
+      </key>
+      <key name="storing_consent">
+        <key name="text"/>
+      </key>
+    </key>
+    <key name="tcm_notification_labels">
+      <key name="email_subject">
+        <key name="text"/>
+      </key>
+      <key name="content_title">
+        <key name="text"/>
+      </key>
+      <key name="comment_posted">
+        <key name="text"/>
+      </key>
+      <key name="reply_to">
+        <key name="text"/>
+      </key>
+      <key name="signed_up">
+        <key name="text"/>
+      </key>
+      <key name="unsubscribe">
+        <key name="text"/>
+      </key>
+      <key name="replied_comment">
+        <key name="text"/>
+      </key>
+      <key name="unsubscribe_text">
+        <key name="text"/>
+      </key>
+      <key name="post_email_subject">
+        <key name="text"/>
+      </key>
+      <key name="post_content_title">
+        <key name="text"/>
+      </key>
+      <key name="post_comment_posted">
+        <key name="text"/>
+      </key>
+      <key name="post_reply_to">
+        <key name="text"/>
+      </key>
+      <key name="post_signed_up">
+        <key name="text"/>
+      </key>
+      <key name="post_unsubscribe">
+        <key name="text"/>
+      </key>
+      <key name="post_unsubscribe_text">
+        <key name="text"/>
+      </key>
+    </key>
+  </admin-texts>
+</wpml-config>
