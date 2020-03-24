@@ -10347,9 +10347,9 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption {
   background: rgba(255, 255, 255, 0.8); }
 
 .main-navigation .mega-menu-top .menu-item-live a {
-  background-color: rgba(234, 67, 52, 0.2); }
+  background-color: #fbd9d6; }
   .main-navigation .mega-menu-top .menu-item-live a:hover {
-    background-color: rgba(234, 67, 52, 0.1);
+    background-color: #fdeceb;
     color: #EA4334; }
 
 .main-navigation .mega-menu-top .menu-item-live.current-menu-item > a, .main-navigation .mega-menu-top .menu-item-live.current-page-item > a {

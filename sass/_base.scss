@@ -1084,10 +1084,10 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		}	
 		.menu-item-live{
 			a{
-				background-color: color.scale($stamp, $lightness: 20%);
+				background-color: scale-color($stamp, $lightness: 80%);
 
 				&:hover{
-					background-color: rgba($stamp, 0.1);
+					background-color: scale-color($stamp, $lightness: 90%);
 					color: $stamp;
 				}
 			}
