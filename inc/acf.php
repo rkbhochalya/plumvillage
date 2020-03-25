@@ -173,7 +173,6 @@ function register_acf_block_types() {
         'category'          => 'plumvillage',
         'icon'              => 'video-alt3',
         'keywords'          => array( 'video', 'embed' ),
-        'align'             => 'right',
         'supports'          => array(
             'align'     => array('right')
         )
