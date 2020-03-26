@@ -66,51 +66,56 @@
 						?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-		<?php if(get_field('event_type') == 'day') : ?>
+		<?php if((get_field('event_type') == 'day') && have_rows('dates', get_the_ID())) : ?>
 			<div class="block event-list alignright">
 				<div class="block-inside">
-			<article class='index-event index-item index-event-repeat'>
-				<h4><?php _e('Upcoming dates', 'plumvillage'); ?></h4>
-				<?php $di = 1; ?>
-				<?php $maxItems = 3; ?>
-				<?php while( have_rows('dates', get_the_ID()) ): the_row(); ?>
-					<?php if(get_sub_field('date')) : ?>
-						<?php
-							$date = new DateTime(get_sub_field('date', false));
-							$now = new DateTime();
-							if($date > $now) : 
-								if($maxItems == ($di - 1)) : ?>
-									<div class="load-more-container">
-									 		<div class="center-without-border load-more"><a href="#"><?php _e('Load More', 'plumvillage'); ?></a></div>
-									 		<div class="load-hide">
-									<?php endif; ?>
-									<div class="entry-meta">
-										<b>
-											<?php
-													$practise_centres = get_sub_field('practise_centre');
-													echo $date->format('M j, Y') . ', ';
-													$pi = 1;
-											?>
-										</b>
-											<?php foreach($practise_centres as $practise_centre) { ?>
-							    			<?php if (get_field('url', $practise_centre)) : ?><a href="<?php the_field('url', $practise_centre); ?>"><?php endif; ?>
-							    				<?php echo $practise_centre->name; ?><?php if (get_field('url', $practise_centre)) : ?></a><?php endif; 
-						    				if(count($practise_centres) > $pi) : echo ', '; endif; 
-												$pi++;
-											} ?>
-									</div>
-								<?php if((count(get_field('dates', get_the_ID())) == $di) && ($maxItems < $di)) : ?>
-										 		</div>
-										 	</div>
+					<article class='index-event index-item index-event-repeat'>
+						<h4><?php _e('Upcoming dates', 'plumvillage'); ?></h4>
+						<?php $di = 1; ?>
+						<?php $maxItems = 3; ?>
+						<?php while( have_rows('dates', get_the_ID()) ): the_row(); ?>
+							<?php if(get_sub_field('date')) : ?>
+								<?php
+									$date = new DateTime(get_sub_field('date', false));
+									$now = new DateTime();
+									if($date > $now) : 
+										if($maxItems == ($di - 1)) : ?>
+											<div class="load-more-container">
+											 		<div class="center-without-border load-more"><a href="#"><?php _e('Load More', 'plumvillage'); ?></a></div>
+											 		<div class="load-hide">
+											<?php endif; ?>
+											<div class="entry-meta">
+												<b>
+													<?php
+															echo $date->format('M j, Y') . ', ';
+													?>
+												</b>
+													<?php $practice_centres = get_sub_field('practise_centre');
+													if( $practice_centres ): 
+														$pi = 0; ?>
+														<p class="location"><i class="icon-location"></i>
+															<?php foreach( $practice_centres as $practice_centre):
+																if($pi != 0){
+																	echo ', ';
+																} 
+																$pi++; ?>
+														  	<?php echo get_the_title($practice_centre); ?>
+															<?php endforeach; ?>
+														</p>
+													<?php endif; ?>
+											</div>
+										<?php if((count(get_field('dates', get_the_ID())) == $di) && ($maxItems < $di)) : ?>
+												 		</div>
+												 	</div>
+										<?php endif; ?>
+										<?php $di++; ?>
+									<?php endif; ?>								
 								<?php endif; ?>
-								<?php $di++; ?>
-							<?php endif; ?>								
-						<?php endif; ?>
-				<?php endwhile; ?>
-					</div>
-				</div>
-			</article>
-		<?php endif; ?>
+						<?php endwhile; ?>
+							</div>
+						</div>
+					</article>
+				<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
