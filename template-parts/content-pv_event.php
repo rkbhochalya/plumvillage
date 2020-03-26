@@ -17,9 +17,11 @@
 				<?php if($status && ($status == 'EventCancelled')) : ?>
 					<span class="event-cancelled"><?php _e('Cancelled', 'plumvillage'); ?></span>
 				<?php endif; ?>
-				<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
-				<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
-				<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
+				<?php if(get_field('start_date', get_the_ID(), false)) : ?>
+					<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
+					<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>
+					<?php echo $startDate->format('M j') . ' <span class="has-normal-weight">until</span> ' . $endDate->format('M j, Y'); ?> 
+				<?php endif; ?>
 			</span>
 
 			<?php show_posts_other_languages(); ?>
