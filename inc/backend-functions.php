@@ -904,3 +904,57 @@ function my_change_sort_order($query){
     }
 };
 
+
+//////////////////////////////////////////////////////////////////////
+// Add filter in post list of events
+
+add_action( 'restrict_manage_posts', 'wpse45436_admin_posts_filter_restrict_manage_posts' );
+function wpse45436_admin_posts_filter_restrict_manage_posts(){
+    $type = 'post';
+    if (isset($_GET['post_type'])) {
+        $type = $_GET['post_type'];
+    }
+
+    //only add filter to post type you want
+    if ('pv_event' == $type){
+        //change this to the list of values you want to show
+        //in 'label' => 'value' format
+        $values = array(
+            'Retreat' => 'retreat', 
+            'Day Event' => 'day',
+            'Online Event' => 'online',
+        );
+        ?>
+        <select name="event_type">
+        <option value=""><?php _e('Choose event type', 'wose45436'); ?></option>
+        <?php
+            $current_v = isset($_GET['event_type'])? $_GET['event_type']:'';
+            foreach ($values as $label => $value) {
+                printf
+                    (
+                        '<option value="%s"%s>%s</option>',
+                        $value,
+                        $value == $current_v? ' selected="selected"':'',
+                        $label
+                    );
+                }
+        ?>
+        </select>
+        <?php
+    }
+}
+
+
+add_filter( 'parse_query', 'wpse45436_posts_filter' );
+
+function wpse45436_posts_filter( $query ){
+    global $pagenow;
+    $type = 'post';
+    if (isset($_GET['post_type'])) {
+        $type = $_GET['post_type'];
+    }
+    if ( 'pv_event' == $type && is_admin() && $pagenow=='edit.php' && isset($_GET['event_type']) && $_GET['event_type'] != '') {
+        $query->query_vars['meta_key'] = 'event_type';
+        $query->query_vars['meta_value'] = $_GET['event_type'];
+    }
+}
