@@ -585,15 +585,16 @@
   // online events block
   $('.index-online-event').on('click', function(e){
   	var $el = $(this);
-  	var $openTime = $el.data('start-time') - 900;
+  	var $openTime = $el.data('start-time') - 4500;
   	var $date = new Date()  
 		var $now = Math.round($date.getTime() / 1000)  
 
   	if(!$el.is('.open')){
 	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();
-  		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
-  		console.log(window[$el.data('embed-link')]);
-  		$el.find('.not-ready').addClass('hide');
+	  	if($now > $openTime){
+	  		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
+	  		$el.find('.not-ready').addClass('hide');
+	  	}
   	}
 
   	e.preventDefault();

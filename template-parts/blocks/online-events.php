@@ -98,8 +98,8 @@
 								</div>
 							</figure>
 							<p class="not-ready"><?php echo sprintf(__('We are not yet ready for %s, please refresh this page 10 minutes before the event starts.', 'plumvillage'), get_the_title($event['id'])); ?></p>	
-							<?php echo $event['content']; ?>
 						<?php endif; ?>
+						<?php echo $event['content']; ?>
 					</div>
 				</div>
 			<?php } ?>
