@@ -23,6 +23,9 @@ h4{
 		.index-online-date{
 			display: none;
 		}
+		.day-name{
+			display: none;
+		}
 	}
 	&.next-same-day{
 		padding-bottom: 10px;
@@ -48,6 +51,11 @@ h4{
 	.index-online-time{
 		font-weight: 400;
 		@include font-size(14);
+		
+		.day-name{
+			text-transform: uppercase;
+			color: $grey;
+		}
 
 		.live-now{
 			text-transform: uppercase;

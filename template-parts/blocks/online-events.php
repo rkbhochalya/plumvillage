@@ -62,7 +62,7 @@
 					<div class="index-online-header">
 						<div class="index-online-time">
 							<?php if($now) : ?><span class="live-now"><?php _e('live now', 'plumvillage'); ?></span><?php endif; ?>
-							<span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span></div>
+							<span class="day-name"><?php echo date('l', $startTime); ?> </span> <span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span></div>
 						<h4 class="entry-title"><?php echo get_the_title($event['id']); ?></h4>
 					</div>
 					<div class="index-online-content">
