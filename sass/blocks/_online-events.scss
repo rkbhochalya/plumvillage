@@ -74,20 +74,16 @@ h4{
 			position: relative;
 		}
 
-		.index-online-location{
-			color: $grey;
-			font-weight: 300;
-			display: inline-block;
-			line-height: 150%;
-		}
 	}
 	h4.entry-title{
 		font-weight: 300;
 		@include font-size(18);
 		margin-top: 0;
 
-		small{
+		small.index-online-location{
 			margin-left: 0;
+			line-height: 150%;
+			display: inline-block;
 		}
 	}
 	
