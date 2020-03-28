@@ -346,7 +346,7 @@ function register_acf_block_types() {
         'supports'          => array(
             'align'     => false
         )
-    ));    
+    ));
 
     // register events list
     acf_register_block_type(array(
@@ -428,7 +428,6 @@ function register_acf_block_types() {
     ));
 
     // All online events
-    $blockName = 'online-events';
     acf_register_block_type(array(
         'name'              => 'online-events',
         'title'             => __('All Online Events'),
