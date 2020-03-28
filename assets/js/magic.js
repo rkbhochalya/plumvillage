@@ -592,6 +592,7 @@
   	if(!$el.is('.open')){
 	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();
   		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
+  		console.log(window[$el.data('embed-link')]);
   		$el.find('.not-ready').addClass('hide');
   	}
 
@@ -601,7 +602,7 @@
   $('.index-online-event .btn-close').on('click', function(e){
   	$el = $(this).closest('.index-online-event');
 
-  	$el.removeClass('open').find('iframte').remove();
+  	$el.removeClass('open').find('iframe').remove();
   	e.stopPropagation();
   })
 

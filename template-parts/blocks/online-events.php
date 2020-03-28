@@ -71,13 +71,13 @@
 						<h4 class="entry-title">
 							<?php echo get_the_title($event['id']); ?>
 							<?php if( $event['practice_centres'] ): 
-								$i = 0; ?>
+								$pi = 0; ?>
 								<small class="index-online-location"><?php _e('at', 'plumvillage'); ?> 
 									<?php foreach( $event['practice_centres'] as $practice_centre):
-										if($i != 0){
+										if($pi != 0){
 											echo ', ';
 										} 
-										$i++; ?>
+										$pi++; ?>
 								  	<?php echo get_the_title($practice_centre); ?>
 									<?php endforeach; ?>
 								</small>
@@ -88,7 +88,7 @@
 						<?php if($event['youtube_livestream_url']) : ?>
 							<script>var $liveVideo<?php echo $i; ?> = '<iframe src="<?php echo $event['youtube_livestream_url']; ?>&amp;autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>';</script>
 							<figure class="hide wp-block-embed alignwide is-type-video is-provider-youtube">
-								<div class="wp-block-embed__wrapper dropzone"><iframe src="<?php echo $event['youtube_livestream_url']; ?>&amp;autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
+								<div class="wp-block-embed__wrapper dropzone">
 								</div>
 							</figure>
 							<p class="not-ready"><?php echo sprintf(__('We are not yet ready for %s, please refresh this page 10 minutes before the event starts.', 'plumvillage'), get_the_title($event['id'])); ?></p>	
