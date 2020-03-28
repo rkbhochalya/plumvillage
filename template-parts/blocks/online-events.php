@@ -97,7 +97,7 @@
 								<div class="wp-block-embed__wrapper dropzone">
 								</div>
 							</figure>
-							<p class="not-ready"><?php echo sprintf(__('We are not yet ready for %s, please refresh this page 10 minutes before the event starts.', 'plumvillage'), get_the_title($event['id'])); ?></p>	
+							<p class="not-ready"><?php echo sprintf(__('We are not yet ready for the %s, please refresh this page 10 minutes before the event starts.', 'plumvillage'), get_the_title($event['id'])); ?></p>	
 						<?php endif; ?>
 						<?php echo $event['content']; ?>
 					</div>
