@@ -581,6 +581,34 @@
   	e.preventDefault();
   })
 
+
+  // online events block
+  $('.index-online-event').on('click', function(e){
+  	var $el = $(this);
+  	var $openTime = $el.data('start-time') - 900;
+  	var $date = new Date()  
+		var $now = Math.round($date.getTime() / 1000)  
+
+  	if(!$el.is('.open')){
+	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();
+	  	if($now > $openTime){
+	  		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
+	  		$el.find('.not-ready').addClass('hide');
+	  	}
+  	}
+
+  	e.preventDefault();
+  })
+	
+  $('.index-online-event .btn-close').on('click', function(e){
+  	$el = $(this).closest('.index-online-event');
+
+  	$el.removeClass('open').find('iframte').remove();
+  	e.stopPropagation();
+  })
+
+  $('.is-live-now:first-child').trigger('click');
+
 })(jQuery);
 
 /* the binary Great Common Divisor calculator */

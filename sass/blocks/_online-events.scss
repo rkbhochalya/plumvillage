@@ -1,0 +1,117 @@
+
+h4{
+	small{
+		color: $grey;
+		margin-left: 5px;
+		font-weight: 300;
+	}
+}
+
+.online-events-list{
+	margin-top: 10px;
+}
+.index-online-event{
+	border-top: 1px solid $freshink;
+	padding: 20px 0;
+	position: relative;
+
+	&.prev-same-day{
+		border-top: none;
+		padding-left: 70px;
+		padding-top: 10px;
+
+		.index-online-date{
+			display: none;
+		}
+	}
+	&.next-same-day{
+		padding-bottom: 10px;
+	}
+
+	.index-online-date{
+		width: 70px;
+		float: left;
+		text-align: center;
+		padding-right: 15px;
+
+		.date-month{
+			color: $grey;
+			text-transform: uppercase;
+			font-weight: 300;
+		}
+		.date-date{
+			font-weight: 700;
+			line-height: 100%;
+			@include font-size(20);
+		}
+	}
+	.index-online-time{
+		font-weight: 400;
+		@include font-size(14);
+
+		.live-now{
+			text-transform: uppercase;
+			background: $stamp;
+			display: inline-block;
+			color: $cloud;
+			font-weight: 700;
+			padding: 0 4px 1px;
+			border-radius: 2px;
+			margin-right: 5px;
+			@include font-size(13);
+			line-height: 130%;
+			top: -1px;
+			position: relative;
+		}
+	}
+	h4.entry-title{
+		font-weight: 300;
+		@include font-size(18);
+		margin-top: 0;
+	}
+	
+	.index-online-content{
+		padding: 20px 0 0;
+		display: none;
+
+		.not-ready{
+			background: $freshearth;
+			color: $earth;
+			@include font-size(16);
+			padding: 15px 20px;
+		}
+	}
+
+	.btn-close{
+		position: absolute;
+		right: 0;
+		top: 10px;
+		color: $grey;
+		display: none;
+		text-decoration: none;
+
+		&:hover{
+			color: $ink;
+		}
+	}
+
+	&.open{
+		.index-online-content{
+			display: block;
+		}
+		.btn-close{
+			display: block;
+		}
+
+		&:hover{
+			background: inherit;
+			cursor: inherit;
+		}
+	}
+
+	&:hover{
+		background: $freshink;
+		cursor: pointer;
+		transition: all .4s cubic-bezier(.15,.53,.35,1);		
+	}
+}

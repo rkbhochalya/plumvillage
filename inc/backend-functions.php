@@ -392,9 +392,8 @@ function create_post_types() {
       'has_archive' => false,
       'hierarchical' => false,
       'taxonomies' => array('language'), 
-      'show_in_menu' => true,
+      'show_in_menu' => 'events',      
       'show_in_rest' => true,
-      'menu_icon' => 'dashicons-calendar-alt',      
       'rewrite' => array('slug' => _x( 'retreats/info', 'URL Retreats slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
@@ -433,7 +432,36 @@ function create_post_types() {
   );
 
   register_taxonomy( 'language', array('pv_event'), $args );
-  
+ 
+  register_post_type( 'pv_online_event',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Online Events', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Online Event', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Online Events', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Online Events', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Online Event', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Online Event', 'plumvillage' ),
+        'new_item'           => __( 'New Online Event', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Online Event', 'plumvillage' ),
+        'view_item'          => __( 'View Online Event', 'plumvillage' ),
+        'all_items'          => __( 'All Online Events', 'plumvillage' ),
+        'search_items'       => __( 'Search Online Events', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Online Event found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'show_in_menu' => 'events',      
+      'show_in_rest' => true,
+      'rewrite' => array('slug' => _x( 'online-events', 'URL Retreats slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+    )
+  );
+
+
   register_post_type( 'pv_video',
     array(
       'labels' => array(
@@ -485,6 +513,7 @@ function wpdocs_register_my_custom_menu_page() {
   add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'manage_options',  'tnh', '', 'dashicons-admin-users');
 
   add_menu_page('Library', 'Library', 'manage_options',  'library', '', 'dashicons-portfolio');
+  add_menu_page('Events', 'Events', 'manage_options',  'events', '', 'dashicons-calendar-alt');
 
   // Show donations in all languages by default
 	global $menu, $submenu;
@@ -649,7 +678,7 @@ function custom_menu_order($menu_ord) {
         'edit.php?post_type=page', // Pages
         'tnh',
         'library',
-        'edit.php?post_type=pv_event',
+        'events',
         'edit.php', // Posts
         'edit.php?post_type=practice_centre',
         'edit.php?post_type=monastics',
@@ -904,57 +933,12 @@ function my_change_sort_order($query){
     }
 };
 
+//////////////////////////////////////////////////////
+// Compare the dates of the online events
 
-//////////////////////////////////////////////////////////////////////
-// Add filter in post list of events
-
-add_action( 'restrict_manage_posts', 'wpse45436_admin_posts_filter_restrict_manage_posts' );
-function wpse45436_admin_posts_filter_restrict_manage_posts(){
-    $type = 'post';
-    if (isset($_GET['post_type'])) {
-        $type = $_GET['post_type'];
-    }
-
-    //only add filter to post type you want
-    if ('pv_event' == $type){
-        //change this to the list of values you want to show
-        //in 'label' => 'value' format
-        $values = array(
-            'Retreat' => 'retreat', 
-            'Day Event' => 'day',
-            'Online Event' => 'online',
-        );
-        ?>
-        <select name="event_type">
-        <option value=""><?php _e('Choose event type', 'wose45436'); ?></option>
-        <?php
-            $current_v = isset($_GET['event_type'])? $_GET['event_type']:'';
-            foreach ($values as $label => $value) {
-                printf
-                    (
-                        '<option value="%s"%s>%s</option>',
-                        $value,
-                        $value == $current_v? ' selected="selected"':'',
-                        $label
-                    );
-                }
-        ?>
-        </select>
-        <?php
-    }
-}
-
-
-add_filter( 'parse_query', 'wpse45436_posts_filter' );
-
-function wpse45436_posts_filter( $query ){
-    global $pagenow;
-    $type = 'post';
-    if (isset($_GET['post_type'])) {
-        $type = $_GET['post_type'];
-    }
-    if ( 'pv_event' == $type && is_admin() && $pagenow=='edit.php' && isset($_GET['event_type']) && $_GET['event_type'] != '') {
-        $query->query_vars['meta_key'] = 'event_type';
-        $query->query_vars['meta_value'] = $_GET['event_type'];
-    }
+function date_compare($a, $b)
+{
+  $t1 = strtotime($a['start_date_time']);
+  $t2 = strtotime($b['start_date_time']);
+  return $t1 - $t2;
 }

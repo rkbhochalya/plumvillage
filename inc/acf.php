@@ -427,6 +427,18 @@ function register_acf_block_types() {
         'keywords'          => array( 'newsletter', 'form', 'signup' )
     ));
 
+    // All online events
+    $blockName = 'online-events';
+    acf_register_block_type(array(
+        'name'              => 'online-events',
+        'title'             => __('All Online Events'),
+        'description'       => __('Show all the online events'),
+        'render_template'   => 'template-parts/blocks/online-events.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'groups',
+        'keywords'          => array( 'online', 'events' )
+    ));
+
 }
 
 // Check if function exists and hook into setup.
