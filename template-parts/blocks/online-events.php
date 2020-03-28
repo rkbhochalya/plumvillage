@@ -88,7 +88,7 @@
 						<?php if($event['youtube_livestream_url']) : ?>
 							<script>var $liveVideo<?php echo $i; ?> = '<iframe src="<?php echo $event['youtube_livestream_url']; ?>&amp;autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>';</script>
 							<figure class="hide wp-block-embed alignwide is-type-video is-provider-youtube">
-								<div class="wp-block-embed__wrapper dropzone">
+								<div class="wp-block-embed__wrapper dropzone"><iframe src="<?php echo $event['youtube_livestream_url']; ?>&amp;autoplay=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" width="560" height="315" frameborder="0"></iframe>
 								</div>
 							</figure>
 							<p class="not-ready"><?php echo sprintf(__('We are not yet ready for %s, please refresh this page 10 minutes before the event starts.', 'plumvillage'), get_the_title($event['id'])); ?></p>	
