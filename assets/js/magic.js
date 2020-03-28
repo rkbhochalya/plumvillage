@@ -591,10 +591,8 @@
 
   	if(!$el.is('.open')){
 	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();
-	  	if($now > $openTime){
-	  		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
-	  		$el.find('.not-ready').addClass('hide');
-	  	}
+  		$el.find('.wp-block-embed.hide').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
+  		$el.find('.not-ready').addClass('hide');
   	}
 
   	e.preventDefault();

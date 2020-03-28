@@ -44,7 +44,9 @@
 			$hasEvents = false;
     	foreach( $events as $event):
 				$enddate = DateTime::createFromFormat('d/m/Y', get_field('end_date', $event));
+    		// if(strtotime(date('Y-m-d')) <= strtotime($enddate->format('Y-m-d'))) :
     			$hasEvents = true;
+    		// endif;
 	   	endforeach;
    		if($hasEvents){
 				$event_locations[] = pv_object_to_array($practice_centre);
