@@ -12,6 +12,8 @@
 
 	$allevents = array();
 
+	$currentTime = strtotime(current_time('mysql')); 
+
 	// The Loop
 	if ($events->have_posts() ) {
 		while ( $events->have_posts() ) {
@@ -27,7 +29,7 @@
 				$row['startTime'] = strtotime($row['start_date_time']);
 				$row['endTime'] = strtotime(date('d-m-Y ', $row['startTime']) . $row['end_time']);
 				$row['practice_centres'] = get_field('many2many_event_practice_centre', $row['id']);
-				if($row['endTime'] > time()){
+				if($row['endTime'] > $currentTime){
 					$allevents[] = $row;
 				}
 			}
@@ -54,7 +56,11 @@
 				$endTime = strtotime(date('d-m-Y ', $startTime) . $event['end_time']);
 
 				// is it happening now?
-				$now = (($startTime < time()) && ($endTime > time())); ?>
+				$now = (($startTime < $currentTime) && ($endTime > $currentTime)); 
+
+				?>
+
+
 
 				<div class="index-online-event <?php if($prevsameDay): ?>prev-same-day<?php endif; ?> <?php if($nextSameDay): ?>next-same-day<?php endif; ?> <?php if($now) : ?>is-live-now<?php endif; ?>" data-embed-link="$liveVideo<?php echo $i; ?>" data-start-time="<?php echo $startTime; ?>" data-end-time="<?php echo $endTime; ?>">
 					<button class="btn btn-link btn-close"><i class="icon icon-close"></i></button>
