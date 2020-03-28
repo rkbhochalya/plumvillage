@@ -48,6 +48,9 @@ h4{
 			@include font-size(20);
 		}
 	}
+	.index-online-header{
+		padding-left: 70px;
+	}
 	.index-online-time{
 		font-weight: 400;
 		@include font-size(14);
@@ -75,6 +78,8 @@ h4{
 		.index-online-location{
 			color: $grey;
 			font-weight: 300;
+			display: inline-block;
+			line-height: 150%;
 		}
 	}
 	h4.entry-title{
