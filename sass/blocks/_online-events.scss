@@ -71,11 +71,20 @@ h4{
 			top: -1px;
 			position: relative;
 		}
+
+		.index-online-location{
+			color: $grey;
+			font-weight: 300;
+		}
 	}
 	h4.entry-title{
 		font-weight: 300;
 		@include font-size(18);
 		margin-top: 0;
+
+		small{
+			margin-left: 0;
+		}
 	}
 	
 	.index-online-content{

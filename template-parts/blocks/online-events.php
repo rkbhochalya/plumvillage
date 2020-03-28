@@ -18,12 +18,15 @@
 			$events->the_post(); 
 			$dates = get_field('dates', get_the_ID());
 
+
+
 			foreach($dates as $row){
 				$row['id'] = get_the_ID();
 				$row['youtube_livestream_url'] = get_field('youtube_livestream_url', $row['id']);
 				$row['content'] = get_the_content();
 				$row['startTime'] = strtotime($row['start_date_time']);
 				$row['endTime'] = strtotime(date('d-m-Y ', $row['startTime']) . $row['end_time']);
+				$row['practice_centres'] = get_field('many2many_event_practice_centre', $row['id']);
 				if($row['endTime'] > time()){
 					$allevents[] = $row;
 				}
@@ -62,8 +65,24 @@
 					<div class="index-online-header">
 						<div class="index-online-time">
 							<?php if($now) : ?><span class="live-now"><?php _e('live now', 'plumvillage'); ?></span><?php endif; ?>
-							<span class="day-name"><?php echo date('l', $startTime); ?> </span> <span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span></div>
-						<h4 class="entry-title"><?php echo get_the_title($event['id']); ?></h4>
+							<span class="day-name"><?php echo date('l', $startTime); ?> </span> 
+							<span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span>
+						</div>
+						<h4 class="entry-title">
+							<?php echo get_the_title($event['id']); ?>
+							<?php if( $event['practice_centres'] ): 
+								$i = 0; ?>
+								<small class="index-online-location"><?php _e('at', 'plumvillage'); ?> 
+									<?php foreach( $event['practice_centres'] as $practice_centre):
+										if($i != 0){
+											echo ', ';
+										} 
+										$i++; ?>
+								  	<?php echo get_the_title($practice_centre); ?>
+									<?php endforeach; ?>
+								</small>
+							<?php endif; ?>								
+						</h4>
 					</div>
 					<div class="index-online-content">
 						<?php if($event['youtube_livestream_url']) : ?>
