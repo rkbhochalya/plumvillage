@@ -29,7 +29,7 @@
 				$row['startTime'] = strtotime($row['start_date_time']);
 				$row['endTime'] = strtotime(date('d-m-Y ', $row['startTime']) . $row['end_time']);
 				$row['practice_centres'] = get_field('many2many_event_practice_centre', $row['id']);
-				if($row['endTime'] > $currentTime){
+				if(date('Ymd') <= date('Ymd', $row['startTime'])){
 					$allevents[] = $row;
 				}
 			}
@@ -57,12 +57,14 @@
 
 				// is it happening now?
 				$now = (($startTime < $currentTime) && ($endTime > $currentTime)); 
+				$today = date('Ymd') == date('Ymd', $event['startTime']);
+				$past = $endTime < $currentTime;
 
 				?>
 
 
 
-				<div class="index-online-event <?php if($prevsameDay): ?>prev-same-day<?php endif; ?> <?php if($nextSameDay): ?>next-same-day<?php endif; ?> <?php if($now) : ?>is-live-now<?php endif; ?>" data-embed-link="$liveVideo<?php echo $i; ?>" data-start-time="<?php echo $startTime; ?>" data-end-time="<?php echo $endTime; ?>">
+				<div class="index-online-event <?php if($prevsameDay): ?>prev-same-day<?php endif; ?> <?php if($nextSameDay): ?>next-same-day<?php endif; ?> <?php if($now) : ?>is-live-now<?php endif; ?> <?php if($past): ?>past<?php endif; ?>" data-load-livestream="<?php if($today && $event['youtube_livestream_url']){echo 'true'; }; ?>" data-embed-link="$liveVideo<?php echo $i; ?>" data-start-time="<?php echo $startTime; ?>" data-end-time="<?php echo $endTime; ?>">
 					<button class="btn btn-link btn-close"><i class="icon icon-close"></i></button>
 					<div class="index-online-date">
 						<div class="date-month"><?php echo date('M', $startTime); ?></div>
