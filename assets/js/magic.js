@@ -378,6 +378,8 @@
 		if($postOverview.is('.show-filters')){
 			$postOverview.css({'min-height' : $('.filter-block-horizontal').outerHeight()});
 		} else {
+			// reset filters and remove min height of the container
+			$('.reset-filter').trigger('click');
 			$postOverview.css({'min-height' : 0});
 		}
 
