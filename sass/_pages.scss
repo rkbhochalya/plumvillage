@@ -270,8 +270,65 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Filter
 
+.post-overview{
+
+	&.post-overview-with-filters{
+		border-top: 1px solid rgba($grey, 0.3);
+	}
+
+	.filter-block{
+		display: none;
+		position: absolute;
+		z-index: 9;
+		right: 0;
+		top: 20px;
+		width: 35%;
+		padding-right: 20px;
+		background: $cloud;
+
+		.filter-list{
+			a:not(.hide){
+				display: block;
+			}
+		}
+	}
+	&.show-filters{
+		.filter-block{
+			display: block;
+		}
+	}
+}
+
+.toggle-show-filters{
+	float: right;
+	width: 35%;
+	padding-right: 20px;
+
+	.btn{
+		padding-left: 0;
+		padding-top: 0;
+		color: $ink;
+		font-weight: 300;
+		text-transform: uppercase;
+
+		.label-show{
+			display: none;
+		}
+	}
+
+	&.show-filters .btn{
+		.label-show{
+			display: inline;
+		}
+		.label-hide{
+			display: none;
+		}
+	}
+}
+
 .filter-block{
 	max-width: 655px;
+
 	.filter-list{
 		color: $grey;
 		font-weight: 300;
@@ -281,7 +338,6 @@
 
 		a{
 			color: $grey;
-
 			&.selected{
 				color: $ink;
 			}
@@ -329,7 +385,6 @@
 }
 
 .filters{
-
 	.filter-block:first-child{
 		padding-bottom: 10px;
 		hr{
@@ -337,6 +392,7 @@
 		}
 	}
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Press

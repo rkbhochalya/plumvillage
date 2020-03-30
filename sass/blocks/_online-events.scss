@@ -14,20 +14,35 @@ h4{
 	border-top: 1px solid $freshink;
 	padding: 20px 0;
 	position: relative;
+	width: 100%;
+
+	.show-filters &{
+		margin-right: 240px;
+		width: 60%;
+	}
 
 	&.prev-same-day{
 		border-top: none;
 		padding-top: 10px;
 
-		.index-online-date{
+		.index-online-date, .day-name{
 			display: none;
 		}
-		.day-name{
-			display: none;
+
+		.items-filtered &{
+			border-top: 1px solid $freshink;
+			padding-top: 20px;
+			.index-online-date, .day-name{
+				display: inline;
+			}
 		}
 	}
 	&.next-same-day{
 		padding-bottom: 10px;
+
+		.items-filtered &{
+			padding-bottom: 20px;
+		}
 	}
 
 	&.past{
@@ -146,6 +161,6 @@ h4{
 	&:hover{
 		background: $freshink;
 		cursor: pointer;
-		transition: all .4s cubic-bezier(.15,.53,.35,1);		
+		transition: background .4s cubic-bezier(.15,.53,.35,1);		
 	}
 }

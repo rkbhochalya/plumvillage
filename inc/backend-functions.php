@@ -401,7 +401,7 @@ function create_post_types() {
 
   // Add new taxonomy
   $labels = array(
-    'name'                       => _x( 'Retreat Languages', 'taxonomy general name', 'plumvillage' ),
+    'name'                       => _x( 'Languages', 'taxonomy general name', 'plumvillage' ),
     'singular_name'              => _x( 'Language', 'taxonomy singular name', 'plumvillage' ),
     'search_items'               => __( 'Search Languages', 'plumvillage' ),
     'popular_items'              => __( 'Popular Languages', 'plumvillage' ),
@@ -431,7 +431,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'language' ),
   );
 
-  register_taxonomy( 'language', array('pv_event'), $args );
+  register_taxonomy( 'language', array('pv_event', 'pv_online_event'), $args );
  
   register_post_type( 'pv_online_event',
     array(
@@ -454,12 +454,47 @@ function create_post_types() {
       'public' => true,
       'has_archive' => false,
       'hierarchical' => false,
+      'taxonomies' => array('language', 'event_type'), 
       'show_in_menu' => 'events',      
       'show_in_rest' => true,
       'rewrite' => array('slug' => _x( 'online-events', 'URL Retreats slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
     )
   );
+
+  // Add new taxonomy
+  $labels = array(
+    'name'                       => _x( 'Event Type', 'taxonomy general name', 'plumvillage' ),
+    'singular_name'              => _x( 'Event Type', 'taxonomy singular name', 'plumvillage' ),
+    'search_items'               => __( 'Search Event Types', 'plumvillage' ),
+    'popular_items'              => __( 'Popular Event Types', 'plumvillage' ),
+    'all_items'                  => __( 'All Event Types', 'plumvillage' ),
+    'parent_item'                => null,
+    'parent_item_colon'          => null,
+    'edit_item'                  => __( 'Edit Event Type', 'plumvillage' ),
+    'update_item'                => __( 'Edit Event Type', 'plumvillage' ),
+    'add_new_item'               => __( 'Add new Event Type', 'plumvillage' ),
+    'new_item_name'              => __( 'New Event Type name', 'plumvillage' ),
+    'separate_items_with_commas' => __( 'Use commas when adding multiple Event Types.', 'plumvillage' ),
+    'add_or_remove_items'        => __( 'Add or remove Event Types', 'plumvillage' ),
+    'choose_from_most_used'      => __( 'Choose from most used Event Types', 'plumvillage' ),
+    'not_found'                  => __( 'No Event Types found.', 'plumvillage' ),
+    'menu_name'                  => __( 'Retreat Event Types', 'plumvillage' ),
+  );
+
+  $args = array(
+    'hierarchical'          => false,
+    'labels'                => $labels,
+    'show_ui'               => false,
+    'show_in_menu'          => false,
+    'show_in_rest'          => false,
+    'show_admin_column'     => false,
+    'update_count_callback' => '_update_post_term_count',
+    'query_var'             => true,
+    'rewrite'               => array( 'slug' => 'event-type' ),
+  );
+
+  register_taxonomy( 'event_type', array('pv_online_event'), $args );
 
 
   register_post_type( 'pv_video',

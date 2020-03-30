@@ -317,6 +317,12 @@
       hashFilter = $('.filter-list .selected').data('filter');
     }
 
+    if(hashFilter != '*'){
+    	$grid.addClass('items-filtered');
+    } else {
+    	$grid.removeClass('items-filtered');
+    }
+
     // filter isotope
     $maxItems = $('.filter-list').data('filterMax') ? $('.filter-list').data('filterMax') : 99999;
 
@@ -361,6 +367,28 @@
 
   // trigger event handler to init Isotope
   onHashchange();
+
+
+  // toggle the sidebar filters
+	$('.toggle-show-filters .btn').on('click', function(){
+		$postOverview = $('.post-overview');
+		$postOverview.toggleClass('show-filters');
+		$(this).closest('.toggle-show-filters').toggleClass('show-filters');
+
+		if($postOverview.is('.show-filters')){
+			$postOverview.css({'min-height' : $('.filter-block-horizontal').outerHeight()});
+		} else {
+			$postOverview.css({'min-height' : 0});
+		}
+
+		$grid.isotope('layout');
+	})
+
+	if($(window).width() > 400){
+		$('.toggle-show-filters .btn').trigger('click')
+	}
+
+
 
 
 	$('.gallery-images').each(function(){
@@ -439,7 +467,7 @@
 	}
 
   // if the filter list is too long, make it togglable
-  $('.filter-list').each(function(){
+  $('.filter-block:not(.filter-block-horizontal) .filter-list').each(function(){
   	if($(this).height() > 40 && !$(this).is('.show-all')){
   		$(this).addClass('too-high')
   	}
@@ -587,20 +615,32 @@
   	var $el = $(this);
 
   	if(!$el.is('.open')){
-	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();
+	  	$el.addClass('open').siblings('.open').removeClass('open').find('iframe').remove();	  	
+
 	  	if($el.data('loadLivestream')){
 	  		$el.find('.wp-block-embed').removeClass('hide').find('.dropzone').addClass('live').html(window[$el.data('embed-link')]);
 	  		$el.find('.not-ready').addClass('hide');
+
+	  		// hide the filters if they are showing
+		  	if($('.toggle-show-filters').is('.show-filters')){
+					$('.toggle-show-filters .btn').trigger('click')
+		  	}
 	  	}
   	}
+
+  	// redo the layout last
+		$grid.isotope('layout');
 
   	e.preventDefault();
   })
 	
   $('.index-online-event .btn-close').on('click', function(e){
   	$el = $(this).closest('.index-online-event');
-
   	$el.removeClass('open').find('iframe').remove();
+
+		// redo the layout last
+		$grid.isotope('layout');
+
   	e.stopPropagation();
   })
 
