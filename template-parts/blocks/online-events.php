@@ -175,6 +175,7 @@
 							<?php if($now) : ?><span class="live-now"><?php _e('live now', 'plumvillage'); ?></span><?php endif; ?>
 							<span class="day-name"><?php echo date('l', $startTime); ?> </span> 
 							<span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span>
+							<span class="gmt-offset"><?php 	echo 'GMT+' . get_option('gmt_offset'); ?></span>
 						</div>
 						<h4 class="entry-title">
 							<?php echo get_the_title($event['id']); ?>
