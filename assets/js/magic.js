@@ -381,6 +381,7 @@
 			if($(window).width() < 575){
 		    $grid.isotope( 'stamp', $('.filter-block-horizontal') );
 			} else {
+		    $('.index-online-event.open .btn-close').trigger('click');
 				$grid.isotope( 'unstamp', $('.filter-block-horizontal') );
 			}
 		} else {
