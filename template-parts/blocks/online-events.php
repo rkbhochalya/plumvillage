@@ -178,18 +178,31 @@
 						</div>
 						<h4 class="entry-title">
 							<?php echo get_the_title($event['id']); ?>
-							<?php if( $event['filters']['practice_centres'] ): 
-								$pi = 0; ?>
-								<small class="index-online-location"><?php _e('at', 'plumvillage'); ?> 
+							<small class="index-online-location">
+								<?php if($event['filters']['language']) : 
+									$li = 0;
+									_e('in', 'plumvillage'); ?> 
+									<?php foreach( $event['filters']['language'] as $term_id):
+										if($li != 0){
+											echo ', ';
+										} 
+										$li++;
+										$term = get_term_by('id', $term_id, 'language'); 
+										echo $term->name;
+									endforeach;
+								endif;
+								if( $event['filters']['practice_centres'] ): 
+									$pi = 0;
+									echo ', ' . __('at', 'plumvillage'); ?> 
 									<?php foreach( $event['filters']['practice_centres'] as $practice_centre):
 										if($pi != 0){
 											echo ', ';
 										} 
-										$pi++; ?>
-								  	<?php echo get_the_title($practice_centre); ?>
-									<?php endforeach; ?>
-								</small>
-							<?php endif; ?>								
+										$pi++;
+								  	echo get_the_title($practice_centre);
+									endforeach;
+								endif; ?>
+							</small>
 						</h4>
 					</div>
 					<div class="index-online-content">
