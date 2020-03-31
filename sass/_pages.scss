@@ -278,17 +278,21 @@
 
 	.filter-block{
 		display: none;
-		position: absolute;
 		z-index: 9;
 		right: 0;
-		top: 20px;
-		width: 35%;
-		padding-right: 20px;
-		background: $cloud;
+		top: 0;
+		padding-top: 20px;
+		position: absolute;
+		width: 100%;
 
-		.filter-list{
-			a:not(.hide){
-				display: block;
+		@include media-breakpoint-up(sm) {
+			width: 35%;
+			padding-right: 20px;
+
+			.filter-list{
+				a:not(.hide){
+					display: block;
+				}
 			}
 		}
 	}
@@ -301,26 +305,39 @@
 
 .toggle-show-filters{
 	float: right;
-	width: 35%;
-	padding-right: 20px;
 
-	.btn{
-		padding-left: 0;
-		padding-top: 0;
-		color: $ink;
-		font-weight: 300;
+	@include media-breakpoint-up(sm) {
+		width: 35%;
+		padding-right: 20px;
+	}
+
+	.btn-link{
+		padding: 0;
+		color: $grey;
+		font-weight: 400;
 		text-transform: uppercase;
+		text-decoration: none;
 
-		.label-show{
+		&:hover{
+			color: $ink;
+		}
+
+		i.icon{
+			margin: 4px 8px 0 0;
+			float: left;
+			color: $ink;
+		}
+
+		.label-hide{
 			display: none;
 		}
 	}
 
 	&.show-filters .btn{
-		.label-show{
+		.label-hide{
 			display: inline;
 		}
-		.label-hide{
+		.label-show{
 			display: none;
 		}
 	}
@@ -334,8 +351,11 @@
 		font-weight: 300;
 		@include font-size(15);
 		line-height: 180%;
-		padding-bottom: 30px;
+		padding-bottom: 10px;
 
+		@include media-breakpoint-up(sm) {
+			padding-bottom: 30px;
+		}
 		a{
 			color: $grey;
 			&.selected{

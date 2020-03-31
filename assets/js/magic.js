@@ -377,6 +377,12 @@
 
 		if($postOverview.is('.show-filters')){
 			$postOverview.css({'min-height' : $('.filter-block-horizontal').outerHeight()});
+
+			if($(window).width() < 575){
+		    $grid.isotope( 'stamp', $('.filter-block-horizontal') );
+			} else {
+				$grid.isotope( 'unstamp', $('.filter-block-horizontal') );
+			}
 		} else {
 			// reset filters and remove min height of the container
 			$('.reset-filter').trigger('click');

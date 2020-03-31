@@ -31,7 +31,7 @@
 
 @mixin is-icon{
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: '#{$icomoon-font-family}' !important;
+  font-family: 'pv-icons' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -120,4 +120,22 @@
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+  -moz-transform: rotate($degrees);
+  -ms-transform: rotate($degrees);
+  -o-transform: rotate($degrees);
+  transform: rotate($degrees);
+}
+
+@mixin icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+  -moz-transform: scale($horiz, $vert);
+  -ms-transform: scale($horiz, $vert);
+  -o-transform: scale($horiz, $vert);
+  transform: scale($horiz, $vert);
 }

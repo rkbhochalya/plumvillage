@@ -91,6 +91,7 @@
 
 		<div class="toggle-show-filters">
 			<button class="btn btn-link">
+				<i class="icon icon-filters"></i>
 				<span class="label-show"><?php _e('Show', 'plumvillage'); ?></span>
 				<span class="label-hide"><?php _e('Hide', 'plumvillage'); ?></span>
 				<?php _e('Filters', 'plumvillage'); ?>
@@ -98,7 +99,7 @@
 		</div>
 		<h4><?php _e('Upcoming Online Events', 'plumvillage'); ?> <small><?php echo count($allevents) . ' ' . __('items', 'plumvillage'); ?></small></h4>
 
-		<div class="online-events-list post-overview post-overview-with-filters" data-isotope-layoutmode="vertical">
+		<div class="online-events-list post-overview post-overview-with-filters" data-isotope-layoutmode="masonry">
 			<div class="filter-block filter-block-horizontal">
 				<?php foreach ($filters as $key => $filter) { ?>
 					<b>

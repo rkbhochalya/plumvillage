@@ -1,0 +1,48 @@
+
+
+
+[class^="icon-"], [class*=" icon-"]{
+  @include is-icon();
+}
+
+.dropdown-arrow-comments:before{
+  @include is-icon();
+	content: $icon-caret-down;
+	font-size: 8px;
+	color: $ink;
+	position: relative;
+	top: -3px;
+}
+.reply-icon-container:before{
+  @include is-icon();
+	content: $icon-reply;
+	font-size: 12px;
+	position: absolute;
+	top: 7px;
+	left: -20px;
+}
+
+.icon{
+	transition: all .4s cubic-bezier(.15,.53,.35,1);
+}
+
+.icon-bg{
+  position: relative;
+}
+
+.icon-bg:before{
+	position: relative;
+	z-index: 1;
+}
+
+.icon-bg:after{
+	content: '';
+	height: 80%;
+	width: 80%;
+	position: absolute;
+	background: $ink;
+	left: 10%;
+	top: 10%;
+	z-index: 0;
+	border-radius: 30px;
+}

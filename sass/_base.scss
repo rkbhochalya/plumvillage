@@ -188,6 +188,15 @@ h4, h5, .h4, .h5{
 		}
 	}	
 }
+
+h4{
+	small{
+		color: $grey;
+		font-weight: 300;
+		display: inline-block;
+	}
+}
+
 h6{
 	color: $mediumink;
 	@include font-size(16);

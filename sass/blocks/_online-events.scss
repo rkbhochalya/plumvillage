@@ -1,12 +1,4 @@
 
-h4{
-	small{
-		color: $grey;
-		margin-left: 5px;
-		font-weight: 300;
-	}
-}
-
 .online-events-list{
 	margin-top: 10px;
 }
@@ -16,11 +8,12 @@ h4{
 	position: relative;
 	width: 100%;
 
-	.show-filters &{
-		margin-right: 240px;
-		width: 60%;
+	@include media-breakpoint-up(sm) {
+		.show-filters &{
+			margin-right: 240px;
+			width: 60%;
+		}
 	}
-
 	&.prev-same-day{
 		border-top: none;
 		padding-top: 10px;
