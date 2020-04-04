@@ -1,7 +1,27 @@
 
 		<?php 
 
-		$style = get_field('style') ? get_field('style') : 'list';
+		$classes = isset($block['className']) ? $block['className'] : false;
+		$style = 'list';
+
+	  $image_large = false;
+
+		if($classes){
+			if ( strstr( $classes, 'is-style-small-list-thumbnails' ) ) {
+			  $style = 'index-small';
+			} else if(strstr( $classes, 'is-style-small-list' ) ){
+			  $style = 'list';
+			} else if(strstr( $classes, 'is-style-medium-list' ) ){
+			  $style = 'index';
+			} else if(strstr( $classes, 'is-style-horizontal-list-large' ) ){
+			  $style = 'index-horizontal';
+			  $image_large = true;
+			} else if(strstr( $classes, 'is-style-horizontal-list' ) ){
+			  $style = 'index-horizontal';
+ 			}
+		}
+
+		set_query_var('image_large', $image_large);
 
 		$maxPosts = get_field('max_posts') ? get_field('max_posts') : 3;
 		$category = get_field('category') ? get_field('category') : 0;

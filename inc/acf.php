@@ -249,7 +249,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register a Press Releases and Updates Block
+    // Show Quotes Panel
     acf_register_block_type(array(
         'name'              => 'quotes_panel',
         'title'             => __('Quotes Panel'),
@@ -264,7 +264,7 @@ function register_acf_block_types() {
         )
     ));    
  
-    // register a Press Releases and Updates Block
+    // Press Releases and Updates Block
     acf_register_block_type(array(
         'name'              => 'press_releases',
         'title'             => __('Press Releases & Updates'),
@@ -278,7 +278,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // register a Press Releases and Updates Block
+    // Show the Media Coverate section
     acf_register_block_type(array(
         'name'              => 'media_coverage',
         'title'             => __('Media Coverage Section'),
@@ -292,7 +292,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register a Press Releases and Updates Block
+    // Show the Page Menu
     acf_register_block_type(array(
         'name'              => 'page_menu',
         'title'             => __('Page Menu'),
@@ -306,12 +306,12 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register post list
+    // Latest Posts
     acf_register_block_type(array(
         'name'              => 'post_list',
         'title'             => __('Latest Posts'),
         'description'       => __('A list of latest posts'),
-        'render_template'   => 'template-parts/blocks/post_list.php',
+        'render_template'   => 'template-parts/blocks/posts.php',
         'category'          => 'plumvillage',
         'icon'              => 'list-view',
         'keywords'          => array( 'post', 'list' ),
@@ -320,7 +320,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register custom post list
+    // Latest TNH Posts
     acf_register_block_type(array(
         'name'              => 'post_list_tnh',
         'title'             => __('Latest TNH Posts'),
@@ -334,7 +334,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register events list
+    // List of Retreats
     acf_register_block_type(array(
         'name'              => 'event_retreat_list',
         'title'             => __('Retreats List'),
@@ -348,7 +348,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // register events list
+    // Days of Mindfulness
     acf_register_block_type(array(
         'name'              => 'event_days_list',
         'title'             => __('Days of Mindfulness List'),
@@ -377,7 +377,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // Latest Youtube Videos
+    // Latest Youtube Video
     acf_register_block_type(array(
         'name'              => 'latest_youtube',
         'title'             => __('Latest Youtube Videos'),
@@ -405,7 +405,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // Important Update
+    // Overview Monastics
     acf_register_block_type(array(
         'name'              => 'overview_monastics',
         'title'             => __('Monastics'),
@@ -437,6 +437,8 @@ function register_acf_block_types() {
         'icon'              => 'groups',
         'keywords'          => array( 'online', 'events' )
     ));
+
+
 
 }
 

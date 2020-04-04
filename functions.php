@@ -81,6 +81,7 @@ if ( ! function_exists( 'plumvillage_setup' ) ) :
 
 		// Add custom image size
     add_image_size( 'landscape', 480, 290, true ); 
+    add_image_size( 'landscape-large', 720, 435, true ); 
     add_image_size( 'square', 720, 720, true ); 
 
 		// Add theme support for wide and full alignment.

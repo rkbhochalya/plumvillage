@@ -7,29 +7,23 @@
  * @package Plum_Village
  */
 
+	$design = get_field('design');
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('index-post index-item index-small'); ?>>
-	<div class="row">
-		<?php if(has_post_thumbnail()) : ?>
-		<div class="col-2 col-md-3"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></div>
-		<div class="col-10 col-md-9">
-		<?php else : ?>
-		<div class="col-md-12">
+	<?php if(has_post_thumbnail()) : ?>
+		<a class="float-right entry-image" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+	<?php endif; ?>
+	<header class="entry-header"> 
+		<h2>
+			<a href="<?php echo get_permalink(); ?>">
+				<?php if(get_field('top_title', get_the_ID())) : ?><span class="top-title"><?php the_field('top_title', get_the_ID()); ?></span> <?php endif; ?>
+				<span class="index-title"><?php the_title(); ?></span>
+			</a>
+		</h2>
+			<?php if(isset($design) && $design['show_date']) : ?>
+			<div class="entry-meta"> <?php plumvillage_posted_on(); ?></div><!-- .entry-meta -->
 		<?php endif; ?>
-			<header class="entry-header"> 
-					<div class="entry-meta">
-						<?php
-						plumvillage_posted_on();
-						?>
-					</div><!-- .entry-meta -->
-				<?php
-					the_title( '<p><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
-
-				if ( 'post' === get_post_type() ) :
-					?>
-				<?php endif; ?>
-			</header><!-- .entry-header -->
-		</div>
-	</div>
+	</header><!-- .entry-header -->
 </article><!-- #post-<?php the_ID(); ?> -->
