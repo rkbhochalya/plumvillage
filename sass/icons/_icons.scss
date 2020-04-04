@@ -1,9 +1,6 @@
 /*------------------------
 	icons
 -------------------------*/
-@function unicode($str) {
-  @return unquote("\"\\#{$str}\"");
-}
 
 $icon-search-big-animated: unicode(ea02);
 $icon-search-small: unicode(ea03);

@@ -2,11 +2,13 @@
 
 Contributors: Maarten Hunink
 
-Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 0.1.0
+Stable tag: 0.2.0
 
 Current theme used on the Plum Village website.
+
+== Requires ==
+Wordpress > 5.0
+Advanced Custom Fields Pro
 
 == Description ==
 
