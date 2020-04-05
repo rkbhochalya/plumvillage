@@ -1811,6 +1811,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .index-horizontal-large h2 a .top-title {
   display: block;
+  line-height: 130%;
   font-size: 1.625rem;
 }
 .index-horizontal-large h2 a .top-title:after {

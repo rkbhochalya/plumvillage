@@ -67,6 +67,7 @@
 
 		a .top-title{
 			display: block;
+			line-height: 130%;
 			@include font-size(26);
 			&:after{
 				display: none;
