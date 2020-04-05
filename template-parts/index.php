@@ -7,8 +7,13 @@
  * @package Plum_Village
  */
 
-?>
+	$design = get_field('design');
 
+	if(!isset($design)){
+		$design = array('show_date' => true, 'show_excerpt' => true, 'show_comment_count' => true);
+	}
+
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('index-post index-item'); ?>>
 	<div class="row">
 		<?php if(has_post_thumbnail()) : ?>
@@ -18,25 +23,35 @@
 		<div class="col-md-12">
 		<?php endif; ?>
 			<header class="entry-header"> 
-					<div class="entry-meta">
-						<?php
-						plumvillage_posted_on();
-						?>
-					</div><!-- .entry-meta -->
-				<?php
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-
-				if ( 'post' === get_post_type() ) :
-					?>
+				<?php if(isset($design) && $design['show_date']) : ?>
+						<div class="entry-meta">
+							<?php plumvillage_posted_on(); ?>
+						</div><!-- .entry-meta -->
 				<?php endif; ?>
+				<h2>
+					<a href="<?php echo get_permalink(); ?>">
+						<?php 
+							$topics = get_the_terms(get_the_ID(), 'topics');
+							if($topics){ ?>
+								<span class="top-title">
+									<?php foreach ($topics as $topic) {
+										echo $topic->name;
+									} ?>
+								</span>
+						<?php } ?>
+						<span class="index-title"><?php the_title(); ?></span>
+					</a>
+				</h2>
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<p><?php echo get_the_limited_excerpt(get_the_ID(), 50); ?></p>
-			</div><!-- .entry-content -->
-			
-			<?php if(get_comments_number() > 0) : ?>
-				<footer class="entry-footer">
+			<?php if(isset($design) && $design['show_excerpt']) : ?>
+				<div class="entry-content">
+					<p><?php echo get_the_limited_excerpt(get_the_ID(), 50); ?></p>
+				</div><!-- .entry-content -->
+			<?php endif; ?>
+
+			<?php if((get_comments_number() > 0) && isset($design) && $design['show_comment_count']) : ?>
+				<footer class="index-footer">
 					<a href="<?php the_permalink(); ?>#comments"><span class="icon icon-reply"></span><?php echo get_comments_number() . ' ' . __('responses', 'plumvillage'); ?></a>			
 				</footer>
 			<?php endif; ?>			

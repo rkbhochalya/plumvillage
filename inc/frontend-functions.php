@@ -243,6 +243,7 @@ function get_video_thumb_from_iframe($iframe){
 
 
 function beautifulVideoEmbed($iframe, $videoId = 1, $featured_image = false, $inline = false, $target = false){
+
   // use preg_match to find iframe src
   preg_match('/src="(.+?)"/', $iframe, $matches);
 

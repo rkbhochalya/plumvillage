@@ -16,11 +16,15 @@ button.unbutton{
 .btn{
 	font-weight: 700;
 	@include font-size(14);
-	padding: 0.5rem 1.1rem 0.4em;
+	padding: 0.4rem 1.1rem 0.4em;
 }
 .btn-lg{
 	@include font-size(14);
 	padding: 1.04rem 1rem .95rem;
+}
+.btn-sm{
+	padding: 0.25rem 0.7rem;
+	@include font-size(12);
 }
 .btn-light:hover{
 	background-color: darken($freshsun, 6);
@@ -33,11 +37,15 @@ button.unbutton{
 	background: lighten($sun, 20);
 	border-color: lighten($sun, 18);
 }
-
 .btn-light.btn-super-light{
 	background-color: rgba(255,255,255,0.25);
 	border-color: rgba(255,255,255,0.25);
 	font-weight: 300;
+}
+
+.btn-outline-light{
+	color: $ink;
+	border-color: $freshink;
 }
 
 .btn-primary:focus, .btn-primary.focus{

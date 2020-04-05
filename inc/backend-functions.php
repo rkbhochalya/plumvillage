@@ -34,7 +34,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'topic' ),
   );
 
-  register_taxonomy( 'topics', array('letter', 'pv_book', 'interviews', 'pv_video'), $args );
+  register_taxonomy( 'topics', array('post', 'letter', 'pv_book', 'interviews', 'pv_video'), $args );
 
 
   // Add new taxonomy

@@ -37,6 +37,37 @@ wp.domReady( () => {
 		}
 	]);
 
+	wp.blocks.registerBlockStyle('core/button', [
+		{
+			name: 'large',
+			label: 'Large'
+		}
+	]);
+
+
+	wp.blocks.registerBlockStyle('acf/post-list', [
+		{
+			name: 'small-list',
+			label: 'List'
+		},
+		{
+			name: 'small-list-thumbnails',
+			label: 'List with Thumbnails'
+		},
+		{
+			name: 'medium-list',
+			label: 'Large list with Thumbnails'
+		},
+		{
+			name: 'horizontal-list',
+			label: 'Horizontal posts'
+		},
+		{
+			name: 'horizontal-list-large',
+			label: 'Large horizontal posts'
+		}		
+	]);
+
 } );
 
 

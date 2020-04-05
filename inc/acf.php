@@ -176,7 +176,21 @@ function register_acf_block_types() {
         'supports'          => array(
             'align'     => array('right')
         )
-    ));    
+    ));
+
+    // register a Gallery Embed
+    acf_register_block_type(array(
+        'name'              => 'library_video_embed',
+        'title'             => __('Library Video Embed', 'plumvillage'),
+        'description'       => __('Embed a Video from the Library', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/library-video-embed.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'video-alt3',
+        'keywords'          => array( 'video', 'embed', 'library' ),
+        'supports'          => array(
+            'align'     => array('left', 'right', 'center')
+        )
+    ));        
 
     // register a Audio Embed
     acf_register_block_type(array(
@@ -249,7 +263,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register a Press Releases and Updates Block
+    // Show Quotes Panel
     acf_register_block_type(array(
         'name'              => 'quotes_panel',
         'title'             => __('Quotes Panel'),
@@ -264,7 +278,7 @@ function register_acf_block_types() {
         )
     ));    
  
-    // register a Press Releases and Updates Block
+    // Press Releases and Updates Block
     acf_register_block_type(array(
         'name'              => 'press_releases',
         'title'             => __('Press Releases & Updates'),
@@ -278,7 +292,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // register a Press Releases and Updates Block
+    // Show the Media Coverate section
     acf_register_block_type(array(
         'name'              => 'media_coverage',
         'title'             => __('Media Coverage Section'),
@@ -292,7 +306,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register a Press Releases and Updates Block
+    // Show the Page Menu
     acf_register_block_type(array(
         'name'              => 'page_menu',
         'title'             => __('Page Menu'),
@@ -306,12 +320,12 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register post list
+    // Latest Posts
     acf_register_block_type(array(
         'name'              => 'post_list',
         'title'             => __('Latest Posts'),
         'description'       => __('A list of latest posts'),
-        'render_template'   => 'template-parts/blocks/post_list.php',
+        'render_template'   => 'template-parts/blocks/posts.php',
         'category'          => 'plumvillage',
         'icon'              => 'list-view',
         'keywords'          => array( 'post', 'list' ),
@@ -320,7 +334,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register custom post list
+    // Latest TNH Posts
     acf_register_block_type(array(
         'name'              => 'post_list_tnh',
         'title'             => __('Latest TNH Posts'),
@@ -334,7 +348,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // register events list
+    // List of Retreats
     acf_register_block_type(array(
         'name'              => 'event_retreat_list',
         'title'             => __('Retreats List'),
@@ -348,7 +362,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // register events list
+    // Days of Mindfulness
     acf_register_block_type(array(
         'name'              => 'event_days_list',
         'title'             => __('Days of Mindfulness List'),
@@ -377,7 +391,7 @@ function register_acf_block_types() {
         )
     ));    
 
-    // Latest Youtube Videos
+    // Latest Youtube Video
     acf_register_block_type(array(
         'name'              => 'latest_youtube',
         'title'             => __('Latest Youtube Videos'),
@@ -405,7 +419,7 @@ function register_acf_block_types() {
         )
     ));
 
-    // Important Update
+    // Overview Monastics
     acf_register_block_type(array(
         'name'              => 'overview_monastics',
         'title'             => __('Monastics'),
@@ -427,15 +441,26 @@ function register_acf_block_types() {
         'keywords'          => array( 'newsletter', 'form', 'signup' )
     ));
 
-    // All online events
+    // Online events
     acf_register_block_type(array(
         'name'              => 'online-events',
-        'title'             => __('All Online Events'),
-        'description'       => __('Show all the online events'),
+        'title'             => __('Online Events'),
+        'description'       => __('Show the online events'),
         'render_template'   => 'template-parts/blocks/online-events.php',
         'category'          => 'plumvillage',
-        'icon'              => 'groups',
+        'icon'              => 'calendar-alt',
         'keywords'          => array( 'online', 'events' )
+    ));
+
+    // Online events
+    acf_register_block_type(array(
+        'name'              => 'text-separator',
+        'title'             => __('Text Separator'),
+        'description'       => __('Show a text seperator'),
+        'render_template'   => 'template-parts/blocks/text-separator.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'minus',
+        'keywords'          => array( 'text', 'separator' )
     ));
 
 }
