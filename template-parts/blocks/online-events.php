@@ -107,7 +107,7 @@
 		<?php endif; ?>
 		<h4><?php _e('Upcoming Online Events', 'plumvillage'); ?> <small><?php echo count($allevents) . ' ' . __('items', 'plumvillage'); ?></small></h4>
 
-		<div class="online-events-list post-overview <?php if($showFilters) : ?>post-overview-with-filters<?php endif; ?>" data-isotope-layoutmode="masonry">
+		<div class="online-events-list <?php if($showFilters) : ?>post-overview post-overview-with-filters<?php endif; ?>" data-isotope-layoutmode="masonry">
 			<?php if($showFilters) : ?>
 				<div class="filter-block filter-block-horizontal">
 					<?php foreach ($filters as $key => $filter) { ?>
