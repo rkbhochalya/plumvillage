@@ -176,7 +176,21 @@ function register_acf_block_types() {
         'supports'          => array(
             'align'     => array('right')
         )
-    ));    
+    ));
+
+    // register a Gallery Embed
+    acf_register_block_type(array(
+        'name'              => 'library_video_embed',
+        'title'             => __('Library Video Embed', 'plumvillage'),
+        'description'       => __('Embed a Video from the Library', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/library-video-embed.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'video-alt3',
+        'keywords'          => array( 'video', 'embed', 'library' ),
+        'supports'          => array(
+            'align'     => array('left', 'right', 'center')
+        )
+    ));        
 
     // register a Audio Embed
     acf_register_block_type(array(
@@ -427,18 +441,27 @@ function register_acf_block_types() {
         'keywords'          => array( 'newsletter', 'form', 'signup' )
     ));
 
-    // All online events
+    // Online events
     acf_register_block_type(array(
         'name'              => 'online-events',
-        'title'             => __('All Online Events'),
-        'description'       => __('Show all the online events'),
+        'title'             => __('Online Events'),
+        'description'       => __('Show the online events'),
         'render_template'   => 'template-parts/blocks/online-events.php',
         'category'          => 'plumvillage',
-        'icon'              => 'groups',
+        'icon'              => 'calendar-alt',
         'keywords'          => array( 'online', 'events' )
     ));
 
-
+    // Online events
+    acf_register_block_type(array(
+        'name'              => 'text-separator',
+        'title'             => __('Text Separator'),
+        'description'       => __('Show a text seperator'),
+        'render_template'   => 'template-parts/blocks/text-separator.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'minus',
+        'keywords'          => array( 'text', 'separator' )
+    ));
 
 }
 

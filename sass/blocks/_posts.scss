@@ -28,7 +28,7 @@
 				@include underline($cloud, $sun);
 			}
 		}
-	}
+	}	
 }
 
 .index-small{
@@ -67,7 +67,7 @@
 
 		a .top-title{
 			display: block;
-			@include font-size(30);
+			@include font-size(26);
 			&:after{
 				display: none;
 			}

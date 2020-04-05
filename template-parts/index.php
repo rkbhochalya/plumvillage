@@ -30,7 +30,15 @@
 				<?php endif; ?>
 				<h2>
 					<a href="<?php echo get_permalink(); ?>">
-						<?php if(get_field('top_title', get_the_ID())) : ?><span class="top-title"><?php the_field('top_title', get_the_ID()); ?></span> <?php endif; ?>
+						<?php 
+							$topics = get_the_terms(get_the_ID(), 'topics');
+							if($topics){ ?>
+								<span class="top-title">
+									<?php foreach ($topics as $topic) {
+										echo $topic->name;
+									} ?>
+								</span>
+						<?php } ?>
 						<span class="index-title"><?php the_title(); ?></span>
 					</a>
 				</h2>
@@ -43,7 +51,7 @@
 			<?php endif; ?>
 
 			<?php if((get_comments_number() > 0) && isset($design) && $design['show_comment_count']) : ?>
-				<footer class="entry-footer">
+				<footer class="index-footer">
 					<a href="<?php the_permalink(); ?>#comments"><span class="icon icon-reply"></span><?php echo get_comments_number() . ' ' . __('responses', 'plumvillage'); ?></a>			
 				</footer>
 			<?php endif; ?>			

@@ -42,7 +42,7 @@
 			</div><!-- .entry-content -->
 			
 			<?php if(get_comments_number() > 0) : ?>
-				<footer class="entry-footer">
+				<footer class="index-footer">
 					<a href="<?php the_permalink(); ?>#comments"><span class="icon icon-reply"></span><?php echo get_comments_number() . ' ' . __('responses', 'plumvillage'); ?></a>			
 				</footer>
 			<?php endif; ?>			

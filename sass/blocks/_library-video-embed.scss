@@ -1,0 +1,20 @@
+.video-embed{
+	&.aligncenter{
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	h4{
+		margin-top: 20px;
+		margin-bottom: 3px;
+	}
+	h2{
+		margin-top: 20px;
+		font-style: italic;
+	}
+}
+
+.index-meta{
+	color: $grey;
+	@include font-size(14);
+}

@@ -1,0 +1,17 @@
+.text-separator{
+	border-top: 1px solid $freshink;
+	border-bottom: 1px solid $freshink;
+	text-align: center;
+	font-family: $font-headers;
+	padding: 15px 0;
+	margin: 50px 0;
+
+	p, {
+		margin: 0 auto;
+		@include font-size(19);
+	}
+}
+
+.page-template-page_full-width .entry-content .text-separator p{
+	max-width: 100%;
+}

@@ -29,7 +29,7 @@
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<footer class="entry-footer">
+	<footer class="index-footer">
 		<?php plumvillage_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer><!-- .index-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
