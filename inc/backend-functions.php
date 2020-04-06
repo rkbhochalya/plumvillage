@@ -485,7 +485,7 @@ function create_post_types() {
   $args = array(
     'hierarchical'          => false,
     'labels'                => $labels,
-    'show_ui'               => false,
+    'show_ui'               => true,
     'show_in_menu'          => false,
     'show_in_rest'          => false,
     'show_admin_column'     => false,
