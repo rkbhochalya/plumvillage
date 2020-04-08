@@ -635,12 +635,11 @@
 					$('.toggle-show-filters .btn').trigger('click')
 		  	}
 	  	}
+	  	e.preventDefault();
   	}
 
   	// redo the layout last
 		$grid.isotope('layout');
-
-  	e.preventDefault();
   })
 	
   $('.index-online-event .btn-close').on('click', function(e){
