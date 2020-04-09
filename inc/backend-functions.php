@@ -183,7 +183,7 @@ function create_post_types() {
       'has_archive' => false,
       'menu_position' => 20,
       'menu_icon' => 'dashicons-book',
-      'supports' => array('title', 'editor', 'thumbnail', 'revisions'),
+      'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author'),
       'taxonomies' => array('genre', 'subject'),
       'show_in_menu' => 'library',      
       'rewrite' => array(
@@ -337,7 +337,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-groups',
       'rewrite' => array('slug' => _x( 'monastics', 'Monastic slug', 'plumvillage' )),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
@@ -365,7 +365,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-admin-site',
       'rewrite' => array('slug' => _x( 'practice-centre', 'Practice Centre slug', 'plumvillage' )),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
@@ -395,7 +395,7 @@ function create_post_types() {
       'show_in_menu' => 'events',      
       'show_in_rest' => true,
       'rewrite' => array('slug' => _x( 'retreats/info', 'URL Retreats slug', 'plumvillage' )),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
@@ -458,7 +458,7 @@ function create_post_types() {
       'show_in_menu' => 'events',      
       'show_in_rest' => true,
       'rewrite' => array('slug' => _x( 'online-events', 'URL Retreats slug', 'plumvillage' )),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
@@ -522,7 +522,7 @@ function create_post_types() {
       'show_in_rest' => true,
       'menu_icon' => 'dashicons-portfolio',      
       'rewrite' => array('slug' => _x( 'video', 'URL video slug', 'plumvillage' )),
-      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail')
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
