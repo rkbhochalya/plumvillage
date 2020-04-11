@@ -2604,11 +2604,15 @@ body #youmax, body .youmax{
 		height: 100%;
 		width: 100%;
 	}
-	.toggle-search{
+	#top-navigation .toggle-search{
 		position: fixed;
 		text-decoration: none;
-		z-index: 2;
 		padding: 10px;
+		top: 25px;
+		right: 15px;
+		@include media-breakpoint-up(md) {
+			top: 15px;
+		}		
 
 		&:hover, &:focus{
 			color: $earth;
