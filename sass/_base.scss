@@ -41,7 +41,7 @@ figure {
 }
 
 ::selection{
-	background: $sun;
+	background: scale-color($sun, $lightness: 50%);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -523,8 +523,7 @@ a.has-arrow-after{
 				@include media-breakpoint-up(lg) {
 					margin-right: -60px;
 					background: $cloud;
-					margin-bottom: 0;
-					padding-bottom: 2rem;
+					margin-bottom: 2rem;
 				}
 
 				@include media-breakpoint-up(xxl) {

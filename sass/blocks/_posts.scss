@@ -62,7 +62,7 @@
 
 .index-horizontal-large{
 	h2{
-		@include font-size(44);
+		@include font-size(37);
 		margin-bottom: 20px;
 
 		a .top-title{
@@ -76,7 +76,7 @@
 	}
 	p{
 		font-family: $font-headers;
-		@include font-size(24);
+		@include font-size(22);
 	}
 }
 

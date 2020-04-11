@@ -440,10 +440,11 @@
 
 .index-post, .centered-content .entry-content .index-post{
 	h2{
-		@include font-size(25);
+		@include font-size(26);
 		margin-top: 0;
 		padding-top: 0;
 		margin-bottom: 0;
+		font-style: italic;
 
 		a{
 			@include underline($cloud, $sun);

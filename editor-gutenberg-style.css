@@ -1806,7 +1806,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .index-horizontal-large h2 {
-  font-size: 2.75rem;
+  font-size: 2.3125rem;
   margin-bottom: 20px;
 }
 .index-horizontal-large h2 a .top-title {
@@ -1819,7 +1819,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .index-horizontal-large p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
 }
 
 .text-separator {
