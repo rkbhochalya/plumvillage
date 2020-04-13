@@ -1716,17 +1716,18 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 		padding: 30px;
 	}
 
-	p.has-large-font-size{
-		margin-right: 0;
-		padding-bottom: 15px;
-		@include font-size(24);
+	.entry-content{
+		p.has-large-font-size{
+			margin: 0;
+			padding-bottom: 15px;
+			@include font-size(24);
+		}
+
+		p{
+			@include font-size(16);
+		}		
 	}
 }
-
-.fancybox-slide--html .fancybox-close-small{
-
-}
-
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Wonder Plugin
