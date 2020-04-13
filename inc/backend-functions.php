@@ -181,11 +181,10 @@ function create_post_types() {
       ),
       'public' => true,
       'has_archive' => false,
-      'menu_position' => 20,
-      'menu_icon' => 'dashicons-book',
       'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'author'),
       'taxonomies' => array('genre', 'subject'),
-      'show_in_menu' => 'library',      
+      'show_in_menu' => 'library',
+      'show_in_rest' => true,      
       'rewrite' => array(
 	      'slug' => _x( 'books', 'Book slug', 'plumvillage' ),
       ),
