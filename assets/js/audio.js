@@ -117,9 +117,6 @@ function calculateCurrentValue(currentTime) {
           isPlaying = false;
           audioPlayer.addClass('pausing').removeClass('playing');
         } else {
-        	if($('.audio-player.playing').length){
-        		$('.audio-player.playing').find('.play-btn').trigger('click')
-        	}
           player[0].play();
           audioPlayer.addClass('playing').removeClass('pausing');
           isPlaying = true;
