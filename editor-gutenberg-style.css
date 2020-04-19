@@ -1819,7 +1819,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .index-horizontal-large p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.375rem;
+  font-size: 1.3125rem;
+  line-height: 1.6;
 }
 
 .text-separator {

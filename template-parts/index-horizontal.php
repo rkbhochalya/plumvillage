@@ -14,7 +14,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('index-post index-item index-horizontal'.$image_large); ?>>
 	<?php if(has_post_thumbnail()) : ?>
 		<a class="entry-image" href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail('landschap'.$image_large); ?>	
+			<?php the_post_thumbnail('landscape'.$image_large); ?>
 		</a>
 	<?php endif; ?>
 	<header class="index-header">
