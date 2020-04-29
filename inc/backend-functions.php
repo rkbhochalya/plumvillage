@@ -544,10 +544,10 @@ function wpdocs_register_my_custom_menu_page() {
 		6
   );
 
-  add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'manage_options',  'tnh', '', 'dashicons-admin-users');
+  add_menu_page('Thich Nhat Hanh', 'Thich Nhat Hanh', 'edit_posts',  'tnh', '', 'dashicons-admin-users');
 
-  add_menu_page('Library', 'Library', 'manage_options',  'library', '', 'dashicons-portfolio');
-  add_menu_page('Events', 'Events', 'manage_options',  'events', '', 'dashicons-calendar-alt');
+  add_menu_page('Library', 'Library', 'edit_posts',  'library', '', 'dashicons-portfolio');
+  add_menu_page('Events', 'Events', 'edit_posts',  'events', '', 'dashicons-calendar-alt');
 
   // Show donations in all languages by default
 	global $menu, $submenu;
