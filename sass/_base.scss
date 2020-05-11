@@ -158,6 +158,7 @@ h1{
 	}
 }
 h2{
+	font-style: italic;
 	@include font-size(35);
 	@include media-breakpoint-up(md) {
 		@include font-size(37);

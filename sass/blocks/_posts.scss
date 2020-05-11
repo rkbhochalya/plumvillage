@@ -1,3 +1,19 @@
+.top-title{
+	font-weight: 900;
+	font-style: normal;
+	color: $earth;
+	padding-right: 30px;
+	display: inline-block;
+	position: relative;
+
+	&:after{
+		content: '/';
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
 .index-post{
 	h2{
 		line-height: 140%;
@@ -5,22 +21,10 @@
 			@include no-underline();
 			
 			.top-title{
-				font-weight: 900;
-				font-style: normal;
-				color: $earth;
 				padding-right: 15px;
-				display: inline-block;
-				position: relative;
 
 				&:hover{
 					text-decoration: underline;
-				}
-
-				&:after{
-					content: '/';
-					position: absolute;
-					right: 0;
-					top: 0;
 				}
 			}
 

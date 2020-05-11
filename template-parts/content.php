@@ -20,13 +20,18 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-		?>
+		<h1 class="entry-title">
+			<?php 
+				$topics = get_the_terms(get_the_ID(), 'topics');
+				if($topics){ ?>
+					<span class="top-title">
+						<?php foreach ($topics as $topic) {
+							echo $topic->name;
+						} ?>
+					</span>
+			<?php } ?>
+			<?php the_title(); ?>
+		</h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
