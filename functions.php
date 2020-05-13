@@ -189,6 +189,22 @@ function wps_deregister_styles() {
     wp_dequeue_script('give-stripe-payment-request-js');
     wp_dequeue_script('give_recurring_script');
 
+
+    // remove seriously simple podcasting styles
+    wp_dequeue_style( 'ssp-block-gizmo-fonts-style' );
+    wp_deregister_style( 'ssp-block-gizmo-fonts-style' );
+    wp_dequeue_style( 'ssp-block-style' );
+    wp_deregister_style( 'ssp-block-style' );
+    wp_dequeue_style( 'ssp-block-fonts-style' );
+    wp_deregister_style( 'ssp-block-fonts-style' );
+    wp_dequeue_style( 'ssp-frontend-player' );
+    wp_deregister_style( 'ssp-frontend-player' );
+
+    // remove elasticpress style
+    wp_dequeue_style( 'elasticpress-related-posts-block' );
+    wp_deregister_style( 'elasticpress-related-posts-block' );
+    
+
 }
 
 
