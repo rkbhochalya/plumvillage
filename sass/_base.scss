@@ -1446,7 +1446,7 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	img{
 		max-width: 70vw;
 	  @include media-breakpoint-up(md) {
-	  	max-width: 400px;
+	  	max-height: 83px;
 	  }
 	}
 	.site-title{
