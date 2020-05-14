@@ -707,6 +707,8 @@ function are_you_human() {
   } 
 }
 
+
+// Shorten Brother to Br, etc...
 function shorten_monastic_name($name){
 
   // shorten Brother to Br
@@ -722,6 +724,7 @@ function shorten_monastic_name($name){
   return $name;
 }
 
+// Add a link in the top right with the other languages of that post
 function show_posts_other_languages(){
   $languages = apply_filters( 'wpml_active_languages', NULL );
 
@@ -734,3 +737,28 @@ function show_posts_other_languages(){
     }
   }  
 }
+
+
+// Add topic to title
+
+function add_topic_to_title($title){
+  global $post;
+
+  if(get_post_type() == 'post'){
+    $topics = get_the_terms(get_the_ID(), 'topics');
+    if($topics){
+      foreach ($topics as $topic) {
+        if(is_array($title)){
+          $title['title'] = $topic->name . ' / ' . $title['title'];
+        } else {
+          $title = $topic->name . ' / ' . $title;
+        }
+      }
+    }
+  }
+
+  return $title;
+}
+
+add_filter('document_title_parts', 'add_topic_to_title');
+add_filter( 'the_seo_framework_title_from_generation', 'add_topic_to_title', 10, 2 );
