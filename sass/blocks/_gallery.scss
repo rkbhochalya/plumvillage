@@ -1,0 +1,15 @@
+.wp-block-gallery{
+	.blocks-gallery-grid .blocks-gallery-item figure{
+		figcaption{
+			transition: all .4s cubic-bezier(.15,.53,.35,1);
+			background: linear-gradient(0deg,rgba(0,0,0,.4),rgba(0,0,0,.3) 50%,transparent);
+			@include font-size(14);
+			color: transparent;
+		}
+
+		&:hover figcaption{
+			color: $cloud;
+			text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+		}
+	}
+}
