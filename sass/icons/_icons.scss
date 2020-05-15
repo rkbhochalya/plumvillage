@@ -1,11 +1,10 @@
 /*------------------------
-	icons
+  icons
 -------------------------*/
 @function unicode($str) {
   @return unquote("\"\\#{$str}\"");
 }
 
-$icon-search-big-animated: unicode(ea02);
 $icon-search-small: unicode(ea03);
 $icon-close-small: unicode(ea04);
 $icon-search-small-animated: unicode(ea05);
@@ -31,7 +30,7 @@ $icon-star: unicode(ea18);
 $icon-transcript: unicode(ea19);
 $icon-twitter: unicode(ea1a);
 $icon-book: unicode(ea1b);
-$icon-youtube: unicode(ea1c);
+$icon-video: unicode(ea1c);
 $icon-zoom: unicode(ea1d);
 $icon-arrow-tiny: unicode(ea1e);
 $icon-article: unicode(ea1f);
@@ -40,10 +39,6 @@ $icon-caret-down: unicode(ea21);
 $icon-arrow-right: unicode(ea22);
 $icon-website: unicode(ea23);
 $icon-filters: unicode(ea24);
-
-.icon-search-big-animated::before {
-  content: $icon-search-big-animated;
-}
 
 .icon-search-small::before {
   content: $icon-search-small;
@@ -145,8 +140,8 @@ $icon-filters: unicode(ea24);
   content: $icon-book;
 }
 
-.icon-youtube::before {
-  content: $icon-youtube;
+.icon-video::before {
+  content: $icon-video;
 }
 
 .icon-zoom::before {

@@ -9,6 +9,6 @@
 		<li><a class="link-twitter" aria-label="Plum Village Twitter" target="_blank" href="<?php the_field('twitter', 'options'); ?>"><span class="icon-twitter"></span></a></li>
 	<?php endif; ?>
 	<?php if(get_field('youtube', 'options')) : ?>
-		<li><a class="link-youtube" aria-label="Plum Village Youtube" target="_blank" href="<?php the_field('youtube', 'options'); ?>"><span class="icon-youtube"></span></a></li>
+		<li><a class="link-youtube" aria-label="Plum Village Youtube" target="_blank" href="<?php the_field('youtube', 'options'); ?>"><span class="icon-video"></span></a></li>
 	<?php endif; ?>
 </ul>
