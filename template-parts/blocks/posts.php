@@ -127,12 +127,13 @@
 		elseif(get_field('show') == 'popular') :
 
 				$posts = new WP_Query(array(
-					'post_type' 			=> 'any',
-					'orderby'					=> 'comment_count',
-					'posts_per_page'	=> $maxPosts,
-					'date_query' 			=> array(
-					  'after' 				=> date('Y-m-d', strtotime('-30 days')) 
-					)					
+					'post_type' 					=> 'any',
+					'orderby'							=> 'comment_count',
+					'posts_per_page'			=> $maxPosts,
+					'ignore_sticky_posts' => 1,
+					'date_query' 					=> array(
+					  'after' 						=> date('Y-m-d', strtotime('-30 days')) 
+					),
 				));
 
 		else :
