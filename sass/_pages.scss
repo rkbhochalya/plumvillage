@@ -737,3 +737,76 @@
     }
 	}
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Audio
+
+.audio-content{
+	h1{
+		text-align: center;
+	}
+	.player, .speaker{
+		display: none;
+	}
+	.audio-player{
+		.seek-obj-container{
+			margin-top: 0;
+			opacity: 1;
+
+				progress[value] {
+				  -webkit-appearance: none;
+				  appearance: none;
+				  background-color: scale-color($sun, $lightness: 70%);
+				  color: $sun;
+				  height: 10px;
+				  border: none;
+					border-radius: 10px;
+				}
+
+				progress::-webkit-progress-bar {
+				  background-color: $freshsun;
+				  border-radius: 2px;
+				  color: $sun;
+					border-radius: 10px;
+				}
+
+				progress::-webkit-progress-value {
+				  background-color: $sun;
+					border-radius: 10px;
+				}
+
+				progress::-moz-progress-bar{
+					background-color: $sun;
+					border-radius: 10px;
+				}
+
+		}
+		.buttons{
+			text-align: center;
+			margin: 25px 0 40px;
+
+			.play-btn{
+				margin-right: 0;
+ 				.icon{
+					@include font-size(50);
+				}				
+			}
+		}		
+	}
+
+	&.fancybox-content{
+		background: $freshsun;
+		min-height: 100%;
+		padding: 0;
+
+		> .row{
+			margin-left: 0;
+			margin-right: 0;
+			min-height: 100vh;
+			padding: 7% 0;
+		}
+
+	}
+
+}

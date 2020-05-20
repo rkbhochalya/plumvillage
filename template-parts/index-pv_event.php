@@ -25,7 +25,9 @@
 						<span class="entry-date">
 							<?php $status = get_field('event_status', get_the_ID()); ?>
 							<?php if($status && ($status == 'EventCancelled')) : ?>
-								<span class="event-cancelled"><?php _e('Cancelled', 'plumvillage'); ?></span>
+								<span class="event-label event-cancelled"><?php _e('Cancelled', 'plumvillage'); ?></span>
+							<?php elseif($status && ($status == 'EventToBeConfirmed')) : ?>
+								<span class="event-label event-to-be-confirmed"><?php _e('To Be Confirmed'); ?></span>
 							<?php endif; ?>
 							<?php $startDate = new DateTime(get_field('start_date', get_the_ID(), false));?>
 							<?php $endDate = new DateTime(get_field('end_date', get_the_ID(), false));?>

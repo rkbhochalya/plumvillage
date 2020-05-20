@@ -34,7 +34,7 @@ function create_post_types() {
     'rewrite'               => array( 'slug' => 'topic' ),
   );
 
-  register_taxonomy( 'topics', array('post', 'letter', 'pv_book', 'interviews', 'pv_video'), $args );
+  register_taxonomy( 'topics', array('post', 'letter', 'pv_book', 'interviews', 'pv_video', 'pv_audio'), $args );
 
 
   // Add new taxonomy
@@ -519,12 +519,38 @@ function create_post_types() {
       'hierarchical' => false,
       'show_in_menu' => 'library',
       'show_in_rest' => true,
-      'menu_icon' => 'dashicons-portfolio',      
       'rewrite' => array('slug' => _x( 'video', 'URL video slug', 'plumvillage' )),
       'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
     )
   );
 
+  register_post_type( 'pv_audio',
+    array(
+      'labels' => array(
+        'name'               => _x( 'Audio', 'post type general name', 'plumvillage' ),
+        'singular_name'      => _x( 'Audio Item', 'post type singular name', 'plumvillage' ),
+        'menu_name'          => _x( 'Audio', 'admin menu', 'plumvillage'),
+        'name_admin_bar'     => _x( 'Audio', 'add new on admin bar', 'plumvillage' ),
+        'add_new'            => __( 'Add Audio Item', 'plumvillage' ),
+        'add_new_item'       => __( 'Add New Audio Item', 'plumvillage' ),
+        'new_item'           => __( 'New Audio Item', 'plumvillage' ),
+        'edit_item'          => __( 'Edit Audio Item', 'plumvillage' ),
+        'view_item'          => __( 'View Audio Item', 'plumvillage' ),
+        'all_items'          => __( 'Audio', 'plumvillage' ),
+        'search_items'       => __( 'Search Audio', 'plumvillage' ),
+        'parent_item_colon'  => __( 'Parent:', 'plumvillage' ),
+        'not_found'          => __( 'Nothing found.', 'plumvillage' ),
+        'not_found_in_trash' => __( 'No Audio Item found in the trash.', 'plumvillage' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'hierarchical' => false,
+      'show_in_menu' => 'library',
+      'show_in_rest' => true,
+      'rewrite' => array('slug' => _x( 'audio', 'URL audio slug', 'plumvillage' )),
+      'supports' => array( 'title', 'editor', 'excerpt', 'page-attributes', 'thumbnail', 'author')
+    )
+  );
 
 }
 add_action( 'init', 'create_post_types' );

@@ -7,13 +7,15 @@
  * @package Plum_Village
  */
 
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {} else {
+$isAjax = !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
+
+if(!$isAjax) {
 	get_header();
-}
+} 
 ?>
 	
 	<div class="container book-content">
-		<?php if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') : ?>
+		<?php if($isAjax) : ?>
 			<button data-fancybox-close="" class="d-none d-lg-block d-xl-block d-xxl-block fancybox-button fancybox-close-small" title="Close"><span class="icon-close"></span></button>
 		<?php endif; ?>
 		<div class="row">
@@ -72,6 +74,6 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 	</div><!-- #primary -->
 
 <?php
-if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {} else {
+if(!$isAjax){
 	get_footer();
 }
