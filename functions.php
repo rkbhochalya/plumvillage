@@ -146,7 +146,8 @@ function plumvillage_scripts() {
   wp_enqueue_style('typkit-fonts', 'https://use.typekit.net/foc4drj.css');
 
 	// load magic
-	wp_enqueue_script( 'plumvillage-js-scripts', get_template_directory_uri() . '/assets/js/scripts-dist.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/scripts-dist.js' ), true );
+  wp_enqueue_script( 'plumvillage-js-trint', get_template_directory_uri() . '/assets/js/trint-player.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/trint-player.js' ), true );
+  wp_enqueue_script( 'plumvillage-js-scripts', get_template_directory_uri() . '/assets/js/scripts-dist.js', array(), filemtime( get_stylesheet_directory() . '/assets/js/scripts-dist.js' ), true );
   wp_localize_script( 'plumvillage-js-scripts', 'pvAjax', array( 
     'ajaxurl' => admin_url( 'admin-ajax.php' ), 
     'maybetry' => __('Maybe try breathing', 'plumvillage'),
