@@ -39,11 +39,11 @@
 }
 
 #hypertranscript .active ~ span {
-  color: #ccc;
+  color: $grey;
 }
 
 #hypertranscript p.active ~ p span {
-  color: #ccc;
+  color: $grey;
 }
 
 #hypertranscript span.search-match {

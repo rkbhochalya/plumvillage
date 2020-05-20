@@ -1676,10 +1676,12 @@ figcaption, .wp-block-image figcaption, .wp-block-embed figcaption{
 	background: $earth;
 }
 
+.fancybox-slide--html{
+	padding: 0;
+}
+
 @include media-breakpoint-down(sm) {
 	.fancybox-slide--html{
-		padding: 0;
-
 		.wp-post-image{
 			margin: 0 auto;
 			display: block;
@@ -2423,7 +2425,7 @@ body #youmax, body .youmax{
 			display: inline-block;
 			margin-right: 3px;
 		}
-		.event-cancelled{
+		.event-label{
 			display: inline-block;
 			background: $stamp;
 			text-transform: uppercase;
@@ -2431,6 +2433,13 @@ body #youmax, body .youmax{
 			padding: 0px 4px;
 			color: $cloud;
 			margin-right: 5px;
+		}
+		.event-cancelled{
+			background: $stamp;
+			color: $cloud;
+		}
+		.event-to-be-confirmed{
+			background: $earth;
 		}
 	}
 	p.location{
@@ -2455,7 +2464,7 @@ body #youmax, body .youmax{
 	}
 }
 
-.event-cancelled{
+.event-label{
 	display: inline-block;
 	background: $stamp;
 	text-transform: uppercase;
@@ -2463,6 +2472,12 @@ body #youmax, body .youmax{
 	padding: 0px 4px;
 	color: $cloud;
 	margin-right: 5px;
+}
+.event-cancelled{
+	background: $stamp;
+}
+.event-to-be-confirmed{
+	background: $earth;
 }
 
 

@@ -4,7 +4,7 @@
         <?php while ( have_rows('audio') ) : the_row(); ?>
             
             <?php $file = get_sub_field('file'); ?>
-            <div class="audio-player">
+            <div class="audio-player audio-player-wrapper">
               <div class="audio-wrapper" class="player-container" href="javascript:;">
                 <audio class="player">
                   <source src="<?php echo $file['url']; ?>" type="audio/mp3">

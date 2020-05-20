@@ -2298,39 +2298,39 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   margin-top: -30px;
 }
 
-.audio-player {
+.audio-player-wrapper {
   margin-bottom: 20px;
 }
-.audio-player .audio-content {
+.audio-player-wrapper .audio-content {
   position: relative;
   z-index: 2;
 }
-.audio-player .audio-content h5 {
+.audio-player-wrapper .audio-content h5 {
   margin-top: 0;
 }
-.audio-player .audio-content p {
+.audio-player-wrapper .audio-content p {
   margin-bottom: 1em;
 }
-.audio-player .buttons {
+.audio-player-wrapper .buttons {
   margin-top: -10px;
 }
-.audio-player .buttons a {
+.audio-player-wrapper .buttons a {
   cursor: pointer;
 }
-.audio-player .buttons .play-btn {
+.audio-player-wrapper .buttons .play-btn {
   cursor: pointer;
   display: inline-block;
   line-height: 0;
   color: #FFD22A;
   transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
-.audio-player .buttons .play-btn .icon-pauze {
+.audio-player-wrapper .buttons .play-btn .icon-pauze {
   display: none;
 }
-.audio-player .buttons .play-btn:hover, .audio-player .buttons .play-btn:focus {
+.audio-player-wrapper .buttons .play-btn:hover, .audio-player-wrapper .buttons .play-btn:focus {
   color: #222;
 }
-.audio-player .seek-obj-container {
+.audio-player-wrapper .seek-obj-container {
   position: relative;
   opacity: 0;
   margin-top: -50px;
@@ -2338,11 +2338,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   transition: all 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
   z-index: 1;
 }
-.audio-player .seek-obj-container progress {
+.audio-player-wrapper .seek-obj-container progress {
   width: 100%;
   cursor: pointer;
 }
-.audio-player .seek-obj-container progress[value] {
+.audio-player-wrapper .seek-obj-container progress[value] {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -2351,27 +2351,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   height: 10px;
   border: none;
 }
-.audio-player .seek-obj-container progress::-webkit-progress-bar {
+.audio-player-wrapper .seek-obj-container progress::-webkit-progress-bar {
   background-color: white;
   border-radius: 2px;
   color: #FFD22A;
 }
-.audio-player .seek-obj-container progress::-webkit-progress-value {
+.audio-player-wrapper .seek-obj-container progress::-webkit-progress-value {
   background-color: #FFD22A;
 }
-.audio-player .seek-obj-container progress::-moz-progress-bar {
+.audio-player-wrapper .seek-obj-container progress::-moz-progress-bar {
   background-color: #FFD22A;
 }
-.audio-player .seek-obj-container .end-time {
+.audio-player-wrapper .seek-obj-container .end-time {
   float: right;
 }
-.audio-player.playing .play-btn .icon-pauze {
+.audio-player-wrapper.playing .play-btn .icon-pauze {
   display: inline-block;
 }
-.audio-player.playing .play-btn .icon-play-small {
+.audio-player-wrapper.playing .play-btn .icon-play-small {
   display: none;
 }
-.audio-player.playing .seek-obj-container {
+.audio-player-wrapper.playing .seek-obj-container {
   margin-top: 0;
   opacity: 1;
 }

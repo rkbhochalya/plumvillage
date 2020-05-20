@@ -85,7 +85,7 @@ function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
       if($slug == 'songs') : 
         $songs = true;
       endif;
-      if($slug == 'when-can-you-visit-us') : 
+      if($slug == 'retreats') : 
         $retreats = true;
       endif;
       if($slug == 'articles-and-news') : 
@@ -508,7 +508,7 @@ function add_schema_data_to_events(){
     }
 
     $status = get_field('event_status', get_the_ID($post), false);
-    if($status){
+    if($status && in_array($status, array('EventScheduled', 'EventCancelled', 'EventMovedOnline', 'EventPostponed', 'EventRescheduled'))){
       $schema['eventStatus'] = 'https://schema.org/'.$status;
     }
 

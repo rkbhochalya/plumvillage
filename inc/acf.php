@@ -207,6 +207,21 @@ function register_acf_block_types() {
         )
     ));    
 
+    // register a Audio Embed V2
+    acf_register_block_type(array(
+        'name'              => 'library_audio_embed',
+        'title'             => __('Library Audio Embed', 'plumvillage'),
+        'description'       => __('Embed an audio file from the library', 'plumvillage'),
+        'render_template'   => 'template-parts/blocks/library-audio-embed.php',
+        'category'          => 'plumvillage',
+        'icon'              => 'format-audio',
+        'keywords'          => array( 'audio', 'embed' ),
+        'supports'          => array(
+            'align'     => array('right')
+        )
+    ));    
+
+
     // register a Books Block
     acf_register_block_type(array(
         'name'              => 'books',

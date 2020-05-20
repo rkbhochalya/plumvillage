@@ -186,6 +186,10 @@
 		type: 'image'
 	})
 
+	if($('#hypertranscript').length){
+		hyperaudiolite.init('hypertranscript', 'hyperplayer');	
+	}
+
 	if ($('.wp-block-gallery')) {
 
     $('.blocks-gallery-item').click(function() {
@@ -653,6 +657,105 @@
   })
 
   $('.is-live-now:first').trigger('click');
+
+  // open audio in fancybox
+  $('.fancybox-open-audio').fancybox({
+		touch: false,
+		slideShow: false,  	
+  	type: 'ajax',
+		afterShow : function( instance, current ) {
+			if($('#hypertranscript').length){
+				hyperaudiolite.init('hypertranscript', 'hyperplayer');	
+			}
+			initPlayers($('.fancybox-content .audio-player'), true);
+		}		  	
+  })
+
+  ////////////////////////////////
+  // Audio player
+  function initPlayers($el, $autoplay = false){
+    $el.each(function(){
+      // Variables
+      // ----------------------------------------------------------
+      // audio embed object
+      var audioPlayer = $(this);
+      var playerContainer = audioPlayer.find('.player-container'),
+        player = audioPlayer.find('.player'),
+        isPlaying = false,
+        playBtn = audioPlayer.find('.play-btn');
+
+      // Controls Listeners
+      // ----------------------------------------------------------
+
+      playBtn.on('click', function(e) {
+        togglePlay()
+        e.preventDefault();
+      });
+
+      var length = player[0].duration
+      var current_time = player[0].currentTime;
+
+      var audio = new Audio();
+      $(audio).on("loadedmetadata", function(){
+        var totalLength = calculateTotalValue(audio.duration)
+        audioPlayer.find('.end-time').text(totalLength);
+      });
+      audio.src = player.find('source').attr('src');
+
+      player.on('timeupdate', function(){
+        var length = player[0].duration
+        var current_time = player[0].currentTime;
+
+        // calculate total length of value
+        var totalLength = calculateTotalValue(length)
+        audioPlayer.find('.end-time').text(totalLength);
+
+        // calculate current value time
+        var currentTime = calculateCurrentValue(current_time);
+        audioPlayer.find('.start-time').text(currentTime);
+
+        var progressbar = audioPlayer.find('.seek-obj');
+        progressbar[0].value = (player[0].currentTime / player[0].duration);
+        progressbar.on("click", seek);
+
+        if (player[0].currentTime == player[0].duration) {
+          playBtn.removeClass('pause');
+        }
+
+        function seek(event) {
+          var percent = event.offsetX / this.offsetWidth;
+          player[0].currentTime = percent * player[0].duration;
+          progressbar[0].value = percent / 100;
+        }
+
+        if(player[0].paused === false){
+        	isPlaying = true;
+          audioPlayer.addClass('playing').removeClass('pausing');
+        }
+
+      })
+      // Controls & Sounds Methods
+      // ----------------------------------------------------------
+      function togglePlay() {
+        if (player[0].paused === false) {
+          player[0].pause();
+          isPlaying = false;
+          audioPlayer.addClass('pausing').removeClass('playing');
+        } else {
+          player[0].play();
+          audioPlayer.addClass('playing').removeClass('pausing');
+          isPlaying = true;
+        }
+      }
+
+      if($autoplay){
+      	playBtn.trigger('click')
+      }
+
+    })
+  }
+
+  initPlayers($('.audio-player'));  
 
 })(jQuery);
 

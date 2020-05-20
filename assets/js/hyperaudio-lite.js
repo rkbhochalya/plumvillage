@@ -94,15 +94,15 @@ var hyperaudiolite = (function() {
           }
         }
 
-        if (currentParaIndex != paraIndex) {
-          Velocity(words[i].parentNode, 'scroll', {
-            container: hypertranscript,
-            duration: 800,
-            delay: 0,
-          });
+        // if (currentParaIndex != paraIndex) {
+        //   Velocity(words[i].parentNode, 'scroll', {
+        //     container: hypertranscript,
+        //     duration: 800,
+        //     delay: 0,
+        //   });
 
-          paraIndex = currentParaIndex;
-        }
+        //   paraIndex = currentParaIndex;
+        // }
 
         break;
       }
