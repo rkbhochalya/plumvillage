@@ -678,17 +678,21 @@
       // Variables
       // ----------------------------------------------------------
       // audio embed object
-      var audioPlayer = $(this);
-      var playerContainer = audioPlayer.find('.player-container'),
+      var audioPlayer = $(this),
+      	playerContainer = audioPlayer.find('.player-container'),
         player = audioPlayer.find('.player'),
-        isPlaying = false,
         playBtn = audioPlayer.find('.play-btn');
 
       // Controls Listeners
       // ----------------------------------------------------------
 
       playBtn.on('click', function(e) {
-        togglePlay()
+        if (player[0].paused === false) {
+          player[0].pause();
+        	audioPlayer.addClass('loading');
+        } else {
+          player[0].play();
+        }
         e.preventDefault();
       });
 
@@ -700,6 +704,19 @@
         var totalLength = calculateTotalValue(audio.duration)
         audioPlayer.find('.end-time').text(totalLength);
       });
+
+      player.on('playing', function(){
+        audioPlayer.addClass('playing').removeClass('pausing loading');
+      })
+
+      player.on('pause', function(){
+        audioPlayer.addClass('pausing').removeClass('playing loading');
+      })      
+
+      player.on('waiting', function(){
+        audioPlayer.addClass('loading').removeClass('pausing playing');
+      })
+
       audio.src = player.find('source').attr('src');
 
       player.on('timeupdate', function(){
@@ -728,25 +745,7 @@
           progressbar[0].value = percent / 100;
         }
 
-        if(player[0].paused === false){
-        	isPlaying = true;
-          audioPlayer.addClass('playing').removeClass('pausing');
-        }
-
       })
-      // Controls & Sounds Methods
-      // ----------------------------------------------------------
-      function togglePlay() {
-        if (player[0].paused === false) {
-          player[0].pause();
-          isPlaying = false;
-          audioPlayer.addClass('pausing').removeClass('playing');
-        } else {
-          player[0].play();
-          audioPlayer.addClass('playing').removeClass('pausing');
-          isPlaying = true;
-        }
-      }
 
       if($autoplay){
       	playBtn.trigger('click')

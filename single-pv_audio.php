@@ -32,6 +32,7 @@ if(!$isAjax) {
                   <a class="play-btn link-with-icon sunny-link" href="#" aria-label="<?php _e('Play Audio', 'plumvillage'); ?> - <?php the_sub_field('title'); ?>">
                       <span class="icon icon-play-small icon-sun"></span>
                       <span class="icon icon-pauze"></span>
+				              <span class="spinner"><span class="spinner-border" role="status"></span></span>
                   </a>
               </div>
               <audio class="player" id="hyperplayer" style="z-index: 5000000; position:relative;" src="<?php echo $audioFile['url']; ?>" type="<?php echo $audioFile['mime_type']; ?>" controls></audio>

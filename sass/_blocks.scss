@@ -401,6 +401,14 @@
 	  	color: $sun;
 			transition: color .4s cubic-bezier(.15,.53,.35,1);
 
+			.spinner{
+				background: $ink;
+				color: $cloud;
+				padding: 9px;
+				border-radius: 50%;
+				display: none;
+			}
+
 	  	.icon-pauze{
 	  		display: none;
 	  	}
@@ -451,6 +459,10 @@
  	}
 
   &.playing {	
+	  .seek-obj-container{
+			margin-top: 0;
+			opacity: 1;
+		}		
 	  .play-btn {
 	    .icon-pauze{
 	    	display: inline-block;
@@ -460,11 +472,15 @@
 	    }
 	  }
 	}
-	&.playing{
-	  .seek-obj-container{
-			margin-top: 0;
-			opacity: 1;
-		}		
+	&.loading{
+		.play-btn {
+			.icon-pauze, .icon-play-small{
+				display: none;
+			}
+			.spinner{
+				display: inline-block;
+			}
+		}
 	}
 }
 

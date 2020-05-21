@@ -2324,6 +2324,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   color: #FFD22A;
   transition: color 0.4s cubic-bezier(0.15, 0.53, 0.35, 1);
 }
+.audio-player-wrapper .buttons .play-btn .spinner {
+  background: #222;
+  color: #fff;
+  padding: 9px;
+  border-radius: 50%;
+  display: none;
+}
 .audio-player-wrapper .buttons .play-btn .icon-pauze {
   display: none;
 }
@@ -2365,15 +2372,21 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .audio-player-wrapper .seek-obj-container .end-time {
   float: right;
 }
+.audio-player-wrapper.playing .seek-obj-container {
+  margin-top: 0;
+  opacity: 1;
+}
 .audio-player-wrapper.playing .play-btn .icon-pauze {
   display: inline-block;
 }
 .audio-player-wrapper.playing .play-btn .icon-play-small {
   display: none;
 }
-.audio-player-wrapper.playing .seek-obj-container {
-  margin-top: 0;
-  opacity: 1;
+.audio-player-wrapper.loading .play-btn .icon-pauze, .audio-player-wrapper.loading .play-btn .icon-play-small {
+  display: none;
+}
+.audio-player-wrapper.loading .play-btn .spinner {
+  display: inline-block;
 }
 
 .panel {

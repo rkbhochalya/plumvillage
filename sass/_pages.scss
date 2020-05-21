@@ -776,11 +776,13 @@
 		.buttons{
 			text-align: center;
 			margin: 25px 0 40px;
+			line-height: 0;
 
 			.play-btn{
 				margin-right: 0;
  				.icon{
-					@include font-size(50);
+					font-size: 3rem;
+					top:0;
 				}				
 			}
 		}		
