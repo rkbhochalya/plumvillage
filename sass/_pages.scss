@@ -282,6 +282,9 @@
 				a:not(.hide){
 					display: block;
 				}
+				a.child-filter{
+					margin-left: 20px;
+				}
 			}
 		}
 	}

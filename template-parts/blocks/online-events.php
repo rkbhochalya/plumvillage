@@ -90,6 +90,12 @@
 	arsort($filters['language']);
 	arsort($filters['practice_centres']);
 
+
+	// for the practice centres, replace count with the post array, so we can use it later to check for parent/child
+	foreach ($filters['practice_centres'] as $key => $value) {
+		$filters['practice_centres'][$key] = get_post($key);
+	}
+
 	// sort all events
 	usort($allevents, 'date_compare');
 	
@@ -121,7 +127,7 @@
 							} ?>
 						</b>	
 						<div class="filter-list">
-							<a href="#filter=*" class="hide reset-filter selected" data-filter="*"> Show Everything</a>
+							<a href="#filter=*" class="reset-filter selected" data-filter="*"> Show Everything</a>
 							<?php if($key != 'practice_centres'){
 								foreach ($filter as $term_id => $count) {
 									$term = get_term_by('id', $term_id, $key); 
@@ -129,11 +135,20 @@
 									<a href="#filter=<?php echo $class; ?>" class="filter-products trigger-<?php echo $class; ?>" data-filter=".<?php echo $class; ?>"><?php echo $term->name; ?></a>
 					 			<?php }
 							} else {
-								foreach ($filter as $post_id => $count) {
-									$post = get_post($post_id);
-									$class = $key . '-' . $post->post_name; ?>
-									<a href="#filter=<?php echo $class; ?>" class="filter-products trigger-<?php echo $class; ?>" data-filter=".<?php echo $class; ?>"><?php echo $post->post_title; ?></a>
-					 			<?php }
+								foreach ($filter as $post_id => $post) {
+									if(!$post->post_parent){
+										$class = $key . '-' . $post->post_name; ?>
+										<a href="#filter=<?php echo $class; ?>" class="filter-products trigger-<?php echo $class; ?>" data-filter=".<?php echo $class; ?>"><?php echo $post->post_title; ?></a>
+										<?php // check if this page has children
+										foreach ($filter as $child_post_id => $child_post) {
+											if($post_id == $child_post->post_parent){
+												$class = $key . '-' . $child_post->post_name; ?>
+												<a href="#filter=<?php echo $class; ?>" class="filter-products child-filter trigger-<?php echo $class; ?>" data-filter=".<?php echo $class; ?>"><?php echo $child_post->post_title; ?></a>
+											<?php 
+											}
+										}
+									}
+					 			}
 							} ?>
 						</div>
 					<?php } ?>
