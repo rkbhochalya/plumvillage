@@ -275,7 +275,7 @@
 					<input type="email" class="form-control form-control-lg" name="email" placeholder="<?php _e('Email', 'plumvillage'); ?>" required data-parsley-group="section-1" />	
 				</div>
 				<div class="col">
-		   		<button disabled class="btn btn-lg btn-primary validate-section-1">Next</button>
+		   		<button disabled class="btn btn-lg btn-primary validate-section-1"><?php _e('Next', 'plumvillage'); ?></button>
 				</div>
 				<div class="form-move-aside">
 					<label for="pardot_extra_field">Comments</label>
