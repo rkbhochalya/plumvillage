@@ -26,7 +26,7 @@ if ( has_blocks( $post->post_content ) ) {
 
 <div class="jump-to align<?php echo $block['align']; if(isset($block['className'])){ echo ' ' . $block['className']; } ?>" id="<?php echo $jump_to_url; ?>">
 	<hr>
-	<p><span class="label">Jump To <span class="icon icon-arrow-tiny"></span></span>
+	<p><span class="label"><?php _e('Jump To', 'plumvillage'); ?> <span class="icon icon-arrow-tiny"></span></span>
 	<?php 
 		if(!empty($sections) && !$is_preview){
 			$i = 0;
