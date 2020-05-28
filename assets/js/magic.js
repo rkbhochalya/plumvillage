@@ -450,9 +450,9 @@
 
   if($('.has-important-update').length){
 
-  	$menuTop = $('.site-header').offset().top;
+  	$updateHeight = $('.site-header').offset().top;
   	$(document).scroll(function(){
-  		if($(document).scrollTop() > $menuTop){
+  		if($(document).scrollTop() > $updateHeight){
   			$('body').addClass('important-update-hidden');
   		} else {
   			$('body').removeClass('important-update-hidden');
