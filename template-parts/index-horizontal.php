@@ -25,15 +25,7 @@
 			<?php endif; ?>
 		<h2>
 			<a href="<?php echo get_permalink(); ?>">
-				<?php 
-					$topics = get_the_terms(get_the_ID(), 'topics');
-					if($topics){ ?>
-						<span class="top-title">
-							<?php foreach ($topics as $topic) {
-								echo $topic->name;
-							} ?>
-						</span>
-				<?php } ?>
+				<?php add_topics_to_title(get_the_terms(get_the_ID(), 'topics')); ?>
 				<span class="index-title"><?php the_title(); ?></span>
 			</a>
 		</h2>

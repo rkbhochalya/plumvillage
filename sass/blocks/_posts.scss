@@ -2,16 +2,13 @@
 	font-weight: 900;
 	font-style: normal;
 	color: $earth;
-	padding-right: 30px;
 	display: inline-block;
 	position: relative;
+}
 
-	&:after{
-		content: '/';
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
+h1.entry-title .top-title{
+	display: inline;
+	padding-right: 0;
 }
 
 .index-post{
@@ -21,7 +18,6 @@
 			@include no-underline();
 			
 			.top-title{
-				padding-right: 15px;
 
 				&:hover{
 					text-decoration: underline;
@@ -73,7 +69,8 @@
 			display: block;
 			line-height: 130%;
 			@include font-size(26);
-			&:after{
+			
+			.slash{
 				display: none;
 			}
 		}
@@ -82,10 +79,5 @@
 		font-family: $font-headers;
 		@include font-size(21);
 		line-height: 1.6;
-	}
-}
-
-.index-horizontal{
-	h2{
 	}
 }

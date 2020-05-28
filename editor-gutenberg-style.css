@@ -1744,15 +1744,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-weight: 900;
   font-style: normal;
   color: #8B572A;
-  padding-right: 30px;
   display: inline-block;
   position: relative;
 }
-.top-title:after {
-  content: "/";
-  position: absolute;
-  right: 0;
-  top: 0;
+
+h1.entry-title .top-title {
+  display: inline;
+  padding-right: 0;
 }
 
 .index-post h2 {
@@ -1763,9 +1761,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .index-post h2 a:hover, .index-post h2 a:focus {
   box-shadow: none;
-}
-.index-post h2 a .top-title {
-  padding-right: 15px;
 }
 .index-post h2 a .top-title:hover {
   text-decoration: underline;
@@ -1818,7 +1813,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   line-height: 130%;
   font-size: 1.625rem;
 }
-.index-horizontal-large h2 a .top-title:after {
+.index-horizontal-large h2 a .top-title .slash {
   display: none;
 }
 .index-horizontal-large p {

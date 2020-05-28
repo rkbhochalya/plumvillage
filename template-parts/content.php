@@ -22,15 +22,9 @@
 
 		<h1 class="entry-title">
 			<?php 
-				$topics = get_the_terms(get_the_ID(), 'topics');
-				if($topics){ ?>
-					<span class="top-title">
-						<?php foreach ($topics as $topic) {
-							echo $topic->name;
-						} ?>
-					</span>
-			<?php } ?>
-			<?php the_title(); ?>
+				add_topics_to_title(get_the_terms(get_the_ID(), 'topics'));
+				the_title(); 
+			?>
 		</h1>
 	</header><!-- .entry-header -->
 

@@ -739,9 +739,22 @@ function show_posts_other_languages(){
 }
 
 
-// Add topic to title
+// Add topics to the title
+function add_topics_to_title($topics){
+  $ti = 0;
+  if($topics) : ?>  
+    <span class="top-title">
+      <?php foreach ($topics as $topic) {
+        if($ti > 0) { echo ', '; }; ?><span class="top-title-item"><?php echo $topic->name; ?></span><?php $ti++;
+      } ?>
+    <span class="slash">/</span></span>
+  <?php endif;
+}
 
-function add_topic_to_title($title){
+
+
+// Add topics to the document title
+function add_topics_to_document_title($title){
   global $post;
 
   if(get_post_type() == 'post'){
@@ -760,5 +773,5 @@ function add_topic_to_title($title){
   return $title;
 }
 
-add_filter('document_title_parts', 'add_topic_to_title');
-add_filter( 'the_seo_framework_title_from_generation', 'add_topic_to_title', 10, 2 );
+add_filter('document_title_parts', 'add_topics_to_document_title');
+add_filter( 'the_seo_framework_title_from_generation', 'add_topics_to_document_title', 10, 2 );
