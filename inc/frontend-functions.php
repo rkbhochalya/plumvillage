@@ -55,126 +55,130 @@ add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
 
 // filter_hook function to react on sub_menu flag
 function my_wp_nav_menu_objects_sub_menu( $sorted_menu_items, $args ) {
-  $post = get_queried_object();   
-  $parent = false;
-  foreach ( $sorted_menu_items as $menu_item ) {
-    // var_export($menu_item);
-    // var_export($menu_item->current);
-    // var_export($menu_item->current_item_ancestor);
-    // var_export($menu_item->current_item_parent);
-    // echo '<br />';
-    // echo '<br />';
- 
-    $uri_segments = explode('/', $menu_item->url);
-
-    $i = 2;
-    $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = false;
-    foreach ($uri_segments as $slug) {
-      if($slug == 'news') : 
-        $news = true;
-      endif;
-      if($slug == 'key-practice-texts') : 
-        $practice = true;
-      endif;
-      if($slug == 'chanting') : 
-        $chanting = true;
-      endif;
-      if($slug == 'sutra') : 
-        $sutra = true;
-      endif;
-      if($slug == 'songs') : 
-        $songs = true;
-      endif;
-      if($slug == 'retreats') : 
-        $retreats = true;
-      endif;
-      if($slug == 'articles-and-news') : 
-        $articles = true;
-      endif;
-      $i++;
-    }
-
-    // if in the news category
-    if( in_category( array('news', 'articles') ) && $articles && (get_post_type() == 'post')){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
-    if($practice &! $parent && in_category(array('chanting', 'sutra', 'key-practice-texts', 'songs'))){
-      $menu_item->classes[] = 'current-menu-ancestor';
-      $menu_item->current = true;
-      $parent = true;
-    }
-
-    if( in_category( 'chanting' ) && $chanting && (get_post_type() == 'post')){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
-    if( in_category( 'key-practice-texts' ) && $practice && (get_post_type() == 'post')){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
-    if( in_category( 'sutra' ) && $sutra && (get_post_type() == 'post')){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
-    if( in_category( 'songs' ) && $songs && (get_post_type() == 'post')){
-      $menu_item->classes[] = 'current-menu-item';
-      $menu_item->current = true;
-    }
-
-  }
-
   if ( isset( $args->sub_menu ) ) {
-    $root_id = 0;
-    // find the current menu item
+    $post = get_queried_object();   
+    $parent = false;
     foreach ( $sorted_menu_items as $menu_item ) {
-      if ( $menu_item->current ) {
-        // set the root id based on whether the current menu item has a parent or not
-      $root_id = ( $menu_item->menu_item_parent ) ? $menu_item->menu_item_parent : $menu_item->ID;
-      break;
+      // var_export($menu_item);
+      // var_export($menu_item->current);
+      // var_export($menu_item->current_item_ancestor);
+      // var_export($menu_item->current_item_parent);
+      // echo '<br />';
+      // echo '<br />';
+   
+      $uri_segments = explode('/', $menu_item->url);
+
+      $i = 2;
+      $news = $chanting = $practice = $sutra = $songs = $retreats = $articles = false;
+      foreach ($uri_segments as $slug) {
+        if($slug == 'news') : 
+          $news = true;
+        endif;
+        if($slug == 'key-practice-texts') : 
+          $practice = true;
+        endif;
+        if($slug == 'chanting') : 
+          $chanting = true;
+        endif;
+        if($slug == 'sutra') : 
+          $sutra = true;
+        endif;
+        if($slug == 'songs') : 
+          $songs = true;
+        endif;
+        if($slug == 'retreats') : 
+          $retreats = true;
+        endif;
+        if($slug == 'articles-and-news') : 
+          $articles = true;
+        endif;
+        $i++;
+      }
+
+      // if in the news category
+      if( in_category( array('news', 'articles') ) && $articles && (get_post_type() == 'post')){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
+
+      if($practice &! $parent && in_category(array('chanting', 'sutra', 'key-practice-texts', 'songs'))){
+        $menu_item->classes[] = 'current-menu-ancestor';
+        $menu_item->current = true;
+        $parent = true;
+      }
+
+      if( in_category( 'chanting' ) && $chanting && (get_post_type() == 'post')){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
+
+      if( in_category( 'key-practice-texts' ) && $practice && (get_post_type() == 'post')){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
+
+      if( in_category( 'sutra' ) && $sutra && (get_post_type() == 'post')){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
+
+      if( in_category( 'songs' ) && $songs && (get_post_type() == 'post')){
+        $menu_item->classes[] = 'current-menu-item';
+        $menu_item->current = true;
+      }
+
     }
-  }
-  // find the top level parent
-  if ( ! isset( $args->direct_parent ) ) {
-    $prev_root_id = $root_id;
-    while ( $prev_root_id != 0 ) {
+
+    if ( isset( $args->sub_menu ) ) {
+      $root_id = 0;
+      // find the current menu item
       foreach ( $sorted_menu_items as $menu_item ) {
-        if ( $menu_item->ID == $prev_root_id ) {
-          $prev_root_id = $menu_item->menu_item_parent;
-          // don't set the root_id to 0 if we've reached the top of the menu
-          if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
-            break;
+        if ( $menu_item->current ) {
+          // set the root id based on whether the current menu item has a parent or not
+        $root_id = ( $menu_item->menu_item_parent ) ? $menu_item->menu_item_parent : $menu_item->ID;
+        break;
+      }
+    }
+    // find the top level parent
+    if ( ! isset( $args->direct_parent ) ) {
+      $prev_root_id = $root_id;
+      while ( $prev_root_id != 0 ) {
+        foreach ( $sorted_menu_items as $menu_item ) {
+          if ( $menu_item->ID == $prev_root_id ) {
+            $prev_root_id = $menu_item->menu_item_parent;
+            // don't set the root_id to 0 if we've reached the top of the menu
+            if ( $prev_root_id != 0 ) $root_id = $menu_item->menu_item_parent;
+              break;
+            }
           }
         }
       }
+
+      $menu_item_parents = array();
+      foreach ( $sorted_menu_items as $key => $item ) {
+        // init menu_item_parents
+        if ( $item->ID == $root_id ) $menu_item_parents[] = $item->ID;
+
+        if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
+        // part of sub-tree: keep!
+          $menu_item_parents[] = $item->ID;
+        } else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
+        // not part of sub-tree: away with it!
+        unset( $sorted_menu_items[$key] );
+      }
     }
-
-    $menu_item_parents = array();
-    foreach ( $sorted_menu_items as $key => $item ) {
-      // init menu_item_parents
-      if ( $item->ID == $root_id ) $menu_item_parents[] = $item->ID;
-
-      if ( in_array( $item->menu_item_parent, $menu_item_parents ) ) {
-      // part of sub-tree: keep!
-        $menu_item_parents[] = $item->ID;
-      } else if ( ! ( isset( $args->show_parent ) && in_array( $item->ID, $menu_item_parents ) ) ) {
-      // not part of sub-tree: away with it!
-      unset( $sorted_menu_items[$key] );
-    }
-  }
-  
-  if(count($sorted_menu_items) > 1){
-    return $sorted_menu_items;
-  }
-
-  } else {
+    
     if(count($sorted_menu_items) > 1){
       return $sorted_menu_items;
     }
+
+    } else {
+      if(count($sorted_menu_items) > 1){
+        return $sorted_menu_items;
+      }
+    }
+  } else {
+    return $sorted_menu_items;    
   }
 }
 
