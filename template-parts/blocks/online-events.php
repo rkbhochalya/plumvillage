@@ -199,14 +199,14 @@
 					<article class="index-online-event <?php echo $classes; ?><?php if($prevsameDay): ?>prev-same-day<?php endif; ?> <?php if($nextSameDay): ?>next-same-day<?php endif; ?> <?php if($now) : ?>is-live-now<?php endif; ?> <?php if($past): ?>past<?php endif; ?>" data-load-livestream="<?php if($today && $event['youtube_livestream_url']){echo 'true'; }; ?>" data-embed-link="$liveVideo<?php echo $i; ?>" data-start-time="<?php echo $startTime; ?>" data-end-time="<?php echo $endTime; ?>">
 						<button class="btn btn-link btn-close"><i class="icon icon-close"></i></button>
 						<div class="index-online-date">
-							<div class="date-month"><?php echo date('M', $startTime); ?></div>
-							<div class="date-date"><?php echo date('j', $startTime); ?></div>
+							<div class="date-month"><?php echo date_i18n('M', $startTime); ?></div>
+							<div class="date-date"><?php echo date_i18n('j', $startTime); ?></div>
 						</div>
 						<div class="index-online-header">
 							<div class="index-online-time">
 								<?php if($now) : ?><span class="live-now"><?php _e('live now', 'plumvillage'); ?></span><?php endif; ?>
-								<span class="day-name"><?php echo date('l', $startTime); ?> </span> 
-								<span class="start-time"><?php echo date('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date('H:i', $endTime); ?></span>
+								<span class="day-name"><?php echo date_i18n('l', $startTime); ?> </span> 
+								<span class="start-time"><?php echo date_i18n('H:i', $startTime); ?></span> - <span class="end-time"><?php echo date_i18n('H:i', $endTime); ?></span>
 								<span class="gmt-offset"><?php 	echo 'GMT+' . get_option('gmt_offset'); ?></span>
 							</div>
 							<h4 class="entry-title">
